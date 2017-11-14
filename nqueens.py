@@ -89,7 +89,7 @@ def gen_symmetries(n, solution):
 
 	return symmetries
 
-def ∑(n, one_solution=False):
+def n_queens(n, one_solution=False):
 	g_solver = pywrapcp.Solver("n-queens")
 	q = [g_solver.IntVar(0, n - 1, "x%i" % i) for i in range(n)]
 
