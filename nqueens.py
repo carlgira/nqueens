@@ -142,33 +142,34 @@ def count_sols(n):
 
 #s = [count_sols(i) for i in range(7, 13)]
 
-
-'''
-print(np.sum(monitor.unique_solutions, axis=0))
+m =n_queens(14)
 
 
-def comb(ll, stack=[], r=[]):
-	if len(ll) == 0:
-		r.append(stack)
-		return stack
 
-	for v in ll[0]:
-		l = stack.copy()
-		l.append(v)
-		if len(ll) > 1:
-			comb(ll[1:], l)
-		else:
-			comb([], l)
+print(m.all_solutions)
 
-	return r
+for s in m.all_solutions:
+	l = [s[i]-s[i+1] for i in range(len(s)-1)]
+	if len(set(l)) == 2:
+		print(s, l, len(set(l)))
 
 
-l = comb(g)
-print(l)
-print(np.shape(l))
 
 
-o = [np.sum(x, axis=0) for x in l]
-print(o)
-'''
 
+
+#print_board([2,0,3,1,4])
+
+# [4, 1, 8, 5, 2, 6, 3, 0, 7]
+
+#### 1/3 pi
+# [4, 1, 8, 5, 2, 6, 3, 0, 7] 2/9 pi
+
+
+# [3, 5, 7, 2, 0, 6, 4, 1] 8
+
+
+# [2, 8, 5, 3, 0, 6, 4, 1, 7] [-6, 3, 2, 3, -6, 2, 3, -6] 3
+# [1, 7, 4, 2, 8, 5, 3, 0, 6] [-6, 3, 2, -6, 3, 2, 3, -6] 3
+
+# [1, 8, 5, 2, 6, 3, 0, 7, 4]
