@@ -3,16 +3,19 @@ import math
 from scipy.spatial.distance import pdist
 import matplotlib.pyplot as plt
 from scipy.optimize import minimize
+from scipy.spatial import distance
 
 def create_polar_graphs(n):
 
 	phi = (1 + math.sqrt(5))/2
 	c = pow(phi, 2/math.pi)
-	c1 = math.pow(phi, 1/(2*math.pi)) # 7 OK
-	#c1 = math.pow(phi, 2/(3*math.pi)) # 5 OK
-	#c1 = math.pow(phi, 3/(5*math.pi)) # 6
-	#c1 = math.pow(phi, 1/(3*math.pi)) # 9
+	#c1 = math.pow(phi, 2/(3*math.pi)) # 5 OK 1.107512291
+	#c1 = 1.095 # 6
+	c1 = math.pow(phi, 1/(2*math.pi)) # 7 OK 1.0795963709
+	c1 = 1.061242868 # 8
+	c1 = math.pow(phi, 1/(4*math.pi)) # 7 OK 1.0795963709
 
+	#c1 = math.pow(phi, 1/(3*math.pi)) # 9
 
 	angle = math.pi*2/n
 	angles = [angle*(i+1) for i in range(n)]
@@ -36,58 +39,88 @@ def create_polar_graphs(n):
 
 	fig = plt.figure()
 
+	for theta, fraction, e in zip(angles, fractions, range(n)):
 
-	h = 0
-	for theta, fraction in zip(angles, fractions):
-		ax = plt.subplot2grid((1, 1), (0, 0), projection='polar')
-		rsc_i = [math.pow(c, 2*math.pi/n - 2*math.pi + (2*math.pi/n)*i) for i in range(n)]
-		thetasc_i = [math.log(rc, c1) + 12*math.pi - theta for rc in rsc_i]
+		sol_i = []
+		for f,o in zip(fractions,range(n)):
+			thetasc_i = np.pi * np.arange(f, 12, 2)
+			rsc_i = [spiral_func_i(t, c1 ,theta) for t in thetasc_i]
 
-		theta_i_g = np.pi * np.arange(0, 12 - fraction, 0.01)
-		r_values_i_g = [spiral_func_i(t, c ,theta) for t in theta_i_g]
-		rsc_i_g_l = [spiral_func_i(t, c1, theta) for t in theta_i_g]
-		ax.plot(theta_i_g, r_values_i_g, c='b')
-		ax.plot(theta_i_g, rsc_i_g_l, c='y')
+			ax = plt.subplot2grid((1, 1), (0, 0), projection='polar')
+			ax.scatter(thetas[o], rs[o], c='y')
+			ax.scatter(thetasc_i, rsc_i, c='b')
 
-		xc_i = rsc_i*np.cos(thetasc_i)
-		yc_i = rsc_i*np.sin(thetasc_i)
-
-		dist_i = np.sqrt((xc-xc_i)**2 + (yc-yc_i)**2)
-
-		sol_i = np.argmin(dist_i, axis=0)
-		min_dist_i = np.sum(np.min(dist_i, axis=0))
-		print(sol_i, min_dist_i, is_valid(n, sol_i))
-		if is_valid(n, sol_i) and sol_i.tolist() not in sols:
-			sols.append(sol_i.tolist())
-
-		rsc_d = [math.pow(c, -(2*math.pi/n)*(i)) for i in range(n)]
-		thetasc_d = [math.log(rc, c1) - 2*math.pi + theta for rc in rsc_d]
-
-		theta_d_g = np.arange(2*math.pi - theta, 10*math.pi, 0.01)
-		r_values_d_g = [spiral_func_d(t, c, theta) for t in theta_d_g]
-		rsc_d_g_l = [spiral_func_d(t, c1, theta) for t in theta_d_g]
-		ax.plot(theta_d_g, r_values_d_g, c='g')
-		ax.plot(theta_d_g, rsc_d_g_l, c='r')
-
-		xc_d = rsc_d*np.cos(thetasc_d)
-		yc_d = rsc_d*np.sin(thetasc_d)
-
-		dist_d = np.sqrt((xc-xc_d)**2 + (yc-yc_d)**2)
-
-		sol_d = np.argmin(dist_d, axis=0)
-		min_dist_d = np.sum(np.min(dist_d, axis=0))
-		print(sol_d, min_dist_d, is_valid(n, sol_d))
-		if is_valid(n, sol_d) and sol_d.tolist() not in sols:
-			sols.append(sol_d.tolist())
-
-		ax.scatter(thetas.tolist(), rs.tolist(), color='black')
-		ax.scatter(thetasc_i, rsc_i, color='red')
-		ax.scatter(thetasc_d, rsc_d, color='green')
+			theta_i_g = np.pi * np.arange(f, 12 - fraction, 0.01)
+			r_values_i_g = [spiral_func_i(t, c ,theta) for t in theta_i_g]
+			rsc_i_g_l = [spiral_func_i(t, c1, theta) for t in theta_i_g]
+			ax.plot(theta_i_g, r_values_i_g, c='b')
+			ax.plot(theta_i_g, rsc_i_g_l, c='r')
 
 
-		h = h + 1
 
-		plt.show()
+			xc_i = (rsc_i*np.cos(thetasc_i))
+			yc_i = (rsc_i*np.sin(thetasc_i))
+
+			cords_i = [[x,y] for x,y in zip(xc_i, yc_i)]
+			cords = [[x,y] for x,y in zip(xc[o], yc[o])]
+
+			dist_i = distance.cdist(cords, cords_i)
+
+			sol_i_pos = np.unravel_index(dist_i.argmin(), dist_i.shape)[0]
+			sol_i.append(sol_i_pos)
+
+			#plt.show()
+
+		print("r", sol_i, is_valid(n, sol_i))
+		if is_valid(n, sol_i) and sol_i not in sols:
+			sols.append(sol_i)
+
+		sol_d = []
+		for f,o in zip(fractions,range(n)):
+			thetasc_d = np.pi * np.arange(f , n+2 , 2)
+			rsc_d = np.array([spiral_func_d(t, c1, 2*math.pi - theta) for t in thetasc_d])
+
+
+			#thetasc_d = rsc_d[np.where(rsc_d > r[0])]
+			#rsc_d = rsc_d[np.where(rsc_d > r[0])]
+
+
+			ax = plt.subplot2grid((1, 1), (0, 0), projection='polar')
+
+			ax.scatter(thetas[o], rs[o], c='y')
+			ax.scatter(thetasc_d, rsc_d, c='g')
+
+			theta_d_g = np.pi * np.arange(fraction, n+2, 0.01)
+			r_values_d_g = [spiral_func_d(t, c , 2*math.pi - theta) for t in theta_d_g]
+			rsc_d_g_l = [spiral_func_d(t, c1, 2*math.pi - theta) for t in theta_d_g]
+			ax.plot(theta_d_g, r_values_d_g, c='b')
+
+			ax.plot(theta_d_g, rsc_d_g_l, c='g')
+
+
+
+			xc_d = (rsc_d*np.cos(thetasc_d))
+			yc_d = (rsc_d*np.sin(thetasc_d))
+
+
+			cords_d = [[x,y] for x,y in zip(xc_d, yc_d)]
+			cords = [[x,y] for x,y in zip(xc[o], yc[o])]
+
+			dist_d = distance.cdist(cords, cords_d)
+
+
+
+			sol_d_pos = np.unravel_index(dist_d.argmin(), dist_d.shape)
+			sol_d.append(sol_d_pos[0])
+
+
+			#plt.show()
+
+
+		print("g", sol_d, is_valid(n, sol_d))
+		if is_valid(n, sol_d) and sol_d not in sols:
+			sols.append(sol_d)
+
 
 	return sols
 
@@ -98,7 +131,7 @@ def is_valid(n, vec):
 	return n == len(set(vec)) and (n == len(set(vec[i]+i for i in cols)) == len(set(vec[i]-i for i in cols)))
 
 
-o = create_polar_graphs(7)
+o = create_polar_graphs(14)
 print(o)
 
 
