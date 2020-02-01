@@ -1,7 +1,12 @@
 import numpy as np
 import nqueens
 import math
+import matplotlib as mpl
+mpl.use('TkAgg')
 import matplotlib.pyplot as plt
+
+
+
 from matplotlib import gridspec
 from matplotlib.patches import Polygon
 from matplotlib.collections import PatchCollection
@@ -63,10 +68,6 @@ def PolyArea(x,y):
 def create_polar_graphs(n):
 	monitor = nqueens.n_queens(n)
 	groups = monitor.group_solutions()
-	#print(np.shape(groups))
-	#groups[0].append( [3, 0, 4, 1, 2, 5] )
-	#print(np.shape(groups))
-
 
 	phi = (1 + math.sqrt(5))/2
 	c = pow(phi, 2/math.pi)

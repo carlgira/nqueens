@@ -89,9 +89,22 @@ def gen_symmetries(n, solution):
 
 	return symmetries
 
-def n_queens(n, one_solution=False):
+def n_queens(n, sol=None ,one_solution=False):
 	g_solver = pywrapcp.Solver("n-queens")
+
+
 	q = [g_solver.IntVar(0, n - 1, "x%i" % i) for i in range(n)]
+
+	if sol is not None and len(sol) > 0:
+		for l, m, i in zip(sol[0], sol[1], range(n)):
+			q[l] = g_solver.IntVar(m, m, "x%i" % i)
+
+		for i, v in enumerate(sol[2]):
+
+			if i not in sol[0]:
+				g_solver.Add(q[i] != v)
+
+
 
 	g_solver.Add(g_solver.AllDifferent(q))
 	g_solver.Add(g_solver.AllDifferent([q[i] + i for i in range(n)]))
@@ -139,37 +152,3 @@ def count_sols(n):
 		v = np.array(psols.groupby(i).count().values)
 		r.append(v[:,0].tolist())
 	return np.array(r)
-
-#s = [count_sols(i) for i in range(7, 13)]
-
-m =n_queens(14)
-
-
-
-print(m.all_solutions)
-
-for s in m.all_solutions:
-	l = [s[i]-s[i+1] for i in range(len(s)-1)]
-	if len(set(l)) == 2:
-		print(s, l, len(set(l)))
-
-
-
-
-
-
-#print_board([2,0,3,1,4])
-
-# [4, 1, 8, 5, 2, 6, 3, 0, 7]
-
-#### 1/3 pi
-# [4, 1, 8, 5, 2, 6, 3, 0, 7] 2/9 pi
-
-
-# [3, 5, 7, 2, 0, 6, 4, 1] 8
-
-
-# [2, 8, 5, 3, 0, 6, 4, 1, 7] [-6, 3, 2, 3, -6, 2, 3, -6] 3
-# [1, 7, 4, 2, 8, 5, 3, 0, 6] [-6, 3, 2, -6, 3, 2, 3, -6] 3
-
-# [1, 8, 5, 2, 6, 3, 0, 7, 4]
