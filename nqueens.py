@@ -1,6 +1,8 @@
 from ortools.constraint_solver import pywrapcp
 import numpy as np
 import pandas as pd
+import pickle
+import os.path
 
 
 class SearchMonitor(pywrapcp.SearchMonitor):
@@ -89,9 +91,38 @@ def gen_symmetries(n, solution):
 
 	return symmetries
 
-def n_queens(n, sol=None ,one_solution=False):
+def get_star_sols(n):
+	center_value = n//2
 	g_solver = pywrapcp.Solver("n-queens")
 
+	q = [g_solver.IntVar(0, n - 1, "x%i" % i) for i in range(n)]
+	q[center_value] = g_solver.IntVar(center_value, center_value, "x%i" % center_value)
+
+	g_solver.Add(g_solver.AllDifferent(q))
+	g_solver.Add(g_solver.AllDifferent([q[i] + i for i in range(n)]))
+	g_solver.Add(g_solver.AllDifferent([q[i] - i for i in range(n)]))
+	for i in range(center_value):
+		g_solver.Add(q[i] + q[-i-1] == n-1)
+
+	db = g_solver.Phase(q, g_solver.CHOOSE_MIN_SIZE_LOWEST_MAX,g_solver.ASSIGN_CENTER_VALUE)
+
+	g_solver.Solve(db)
+
+	g_solver.NewSearch(db)
+
+	sols = []
+	nsols = 0
+	while g_solver.NextSolution():
+		nsols +=1
+		pass
+
+	print(n, nsols)
+	print("WallTime:", g_solver.WallTime(), "ms")
+
+	g_solver.EndSearch()
+
+def n_queens(n, sol=None ,one_solution=False):
+	g_solver = pywrapcp.Solver("n-queens")
 
 	q = [g_solver.IntVar(0, n - 1, "x%i" % i) for i in range(n)]
 
@@ -99,20 +130,27 @@ def n_queens(n, sol=None ,one_solution=False):
 		for l, m, i in zip(sol[0], sol[1], range(n)):
 			q[l] = g_solver.IntVar(m, m, "x%i" % i)
 
-		for i, v in enumerate(sol[2]):
-
-			if i not in sol[0]:
-				g_solver.Add(q[i] != v)
-
-
+		#for i, v in enumerate(sol[2]):
+		#	if i not in sol[0]:
+		#		g_solver.Add(q[i] != v)
 
 	g_solver.Add(g_solver.AllDifferent(q))
 	g_solver.Add(g_solver.AllDifferent([q[i] + i for i in range(n)]))
 	g_solver.Add(g_solver.AllDifferent([q[i] - i for i in range(n)]))
 
+
 	db = g_solver.Phase(q, g_solver.CHOOSE_MIN_SIZE_LOWEST_MAX,g_solver.ASSIGN_CENTER_VALUE)
 
 	monitor = SearchMonitor(g_solver, q, one_solution)
+
+	print(os.path.exists('.' + str(n) + '_all'), sol is None)
+	if os.path.exists('.' + str(n) + '_all') and sol is None:
+		all_solutions = pickle.load( open( '.' + str(n) + '_all', "rb" ) )
+		unique_solutions = pickle.load( open( '.' + str(n) + '_unique', "rb" ) )
+		monitor.all_solutions = all_solutions
+		monitor.unique_solutions = unique_solutions
+		return monitor
+
 	g_solver.Solve(db, monitor)
 
 	g_solver.NewSearch(db)
@@ -127,8 +165,12 @@ def n_queens(n, sol=None ,one_solution=False):
 	print("unique_solutions:" , len(monitor.unique_solutions))
 	print("WallTime:", g_solver.WallTime(), "ms")
 
-	return monitor
 
+	if sol is None and one_solution is None:
+		pickle.dump( monitor.all_solutions, open( '.' + str(n) + '_all', "wb" ) )
+		pickle.dump( monitor.unique_solutions, open( '.' + str(n) + '_unique', "wb" ) )
+
+	return monitor
 
 
 def print_board(b):
@@ -152,3 +194,6 @@ def count_sols(n):
 		v = np.array(psols.groupby(i).count().values)
 		r.append(v[:,0].tolist())
 	return np.array(r)
+
+
+

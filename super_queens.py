@@ -1,10 +1,11 @@
 import numpy as np
 import matplotlib as mpl
-mpl.use('TkAgg')
 import matplotlib.pyplot as plt
 from fractions import Fraction
 import math
 import itertools
+import nqueens
+from collections import Counter
 #from ortools.linear_solver import pywraplp
 from ortools.constraint_solver import pywrapcp
 
@@ -87,10 +88,7 @@ def gen_symmetries(solution):
         r270[n - 1 - solution[index]] = index
 
     symmetries.append(r270)
-
-
     return symmetries
-
 
 def clean_data(radious, theta, r, f=True):
     radious = np.array(radious)
@@ -103,73 +101,133 @@ def clean_data(radious, theta, r, f=True):
     theta = theta[-len(radious):]
     return radious, theta
 
+def polar_2_cartesian(theta, r, x0=0.0, y0=0.0):
+    return r*np.cos(theta) + x0 , r*np.sin(theta) + y0
 
-def draw(n, c1, c2, sol):
 
-    f = [(2*i)/n for i in range(n)]
+class Spiral2D:
+    def __init__(self):
+        self.x0 = 0.0
+        self.y0 = 0.0
 
-    a = [(math.pi*2*i)/n for i in range(n)]
-    r = [spiral1(c1, 10*math.pi + math.pi*2/n, aa) for aa in a]
 
-    an = [(math.pi*2*i)/n for i in range(n)]
-    rn = [spiral1(c1, 10*math.pi + math.pi/n, aa) for aa in an]
+    def draw(self, c1, c2, sol):
+        n = len(sol)
+        f = [(2*i)/n for i in range(n)]
 
-    a = np.array(a)
-    r = np.array(r)
+        a = [(math.pi*2*i)/n for i in range(n)]
+        r = [spiral1(c1, 10*math.pi + math.pi*2/n, aa) for aa in a]
 
-    an = np.array(an)
-    rn = np.array(rn)
+        an = [(math.pi*2*i)/n for i in range(n)]
+        rn = [spiral1(c1, 10*math.pi + math.pi/n, aa) for aa in an]
 
-    fig = plt.figure(figsize=(10, 10))
-    ax = plt.subplot2grid((1, 1), (0, 0), projection='polar')
+        a = np.array(a)
+        r = np.array(r)
 
-    # Circles of principal
-    for rr in r:
-        theta = np.pi * np.arange(0, 2, 0.01)
-        #ax.plot(theta, [rr]*len(theta))
+        an = np.array(an)
+        rn = np.array(rn)
 
-    # Circles of sencondary
-    for rr in rn:
-        theta = np.pi * np.arange(0, 2, 0.01)
-        #ax.plot(theta, [rr]*len(theta))
+        fig = plt.figure(figsize=(10, 10))
+        ax = plt.subplot2grid((1, 1), (0, 0))
 
-    for aa, ff in zip(a, f):
-        theta1 = np.pi * np.arange(0, 12 - ff, 0.01)
-        radious1 = [spiral1(c1, t, aa) for t in theta1]
-        radious1, theta1 = clean_data(radious1, theta1, r[0])
+        # Circles of principal
+        for rr in r:
+            theta = np.pi * np.arange(0, 2, 0.01)
+            X, Y = polar_2_cartesian(theta, [rr]*len(theta), self.x0, self.y0)
+            #ax.plot(X, Y)
 
-        theta2 = np.pi * np.arange(2 - ff, 12, 0.01)
-        radious2 = [spiral2(c1, t, aa) for t in theta2]
-        radious2, theta2 = clean_data(radious2, theta2, r[0], False)
+        # Circles of sencondary
+        for rr in rn:
+            theta = np.pi * np.arange(0, 2, 0.01)
+            X, Y = polar_2_cartesian(theta, [rr]*len(theta), self.x0, self.y0)
+            #ax.plot(X, Y)
 
-        #ax.plot(theta1, radious1, c='b')
-        #ax.plot(theta2, radious2, c='r')
+        for aa, ff in zip(a, f):
+            theta1 = np.pi * np.arange(0, 12 - ff, 0.01)
+            radious1 = [spiral1(c1, t, aa) for t in theta1]
+            radious1, theta1 = clean_data(radious1, theta1, r[0])
 
-        ts1 = [spiral1_inv(c1, t, aa) for t in r]
-        #ax.scatter(ts1, r, s=20, c='y')
+            theta2 = np.pi * np.arange(2 - ff, 12, 0.01)
+            radious2 = [spiral2(c1, t, aa) for t in theta2]
+            radious2, theta2 = clean_data(radious2, theta2, r[0], False)
 
-        ts2 = [spiral1_inv(c1, t, aa) for t in rn]
-        #ax.scatter(ts2, rn, s=20, c='g')
+            X, Y = polar_2_cartesian(theta1, radious1, self.x0, self.y0)
+            #ax.plot(X, Y, c='b')
 
-    theta3 = np.pi * np.arange(0, 12 - f[0], 0.01)
-    radious3 = [spiral1(c2, t, a[0]) for t in theta3]
-    radious3, theta3 = clean_data(radious3, theta3, r[0])
+            X, Y = polar_2_cartesian(theta2, radious2, self.x0, self.y0)
+            #ax.plot(X, Y, c='r')
 
-    theta4 = np.pi * np.arange(2 - f[0], 12, 0.01)
-    radious4 = [spiral2(c2, t, a[0]) for t in theta4]
-    radious4, theta4 = clean_data(radious4, theta4, r[0], False)
+            ts1 = [spiral1_inv(c1, t, aa) for t in r]
+            X, Y = polar_2_cartesian(ts1, r, self.x0, self.y0)
+            #ax.scatter(X, Y, s=20, c='y')
 
-    ax.plot(theta3, radious3, c='black')
-    ax.plot(theta4, radious4, c='gray')
+            ts2 = [spiral1_inv(c1, t, aa) for t in rn]
+            X, Y = polar_2_cartesian(ts2, rn, self.x0, self.y0)
+            #ax.scatter(X, Y, s=20, c='g')
 
-    tt = [a[v] for v in sol]
-    ax.scatter(tt, r, s=30, c='black')
+        tt = [a[v] for v in sol]
+        X0, Y0 = polar_2_cartesian(tt, r, self.x0, self.y0)
+        ax.scatter(X0, Y0, s=30, c='black')
 
-    ax.set_rmax(1)
-    plt.pause(0.001)
-    plt.show()
+        n = n//2 -1
+        f = [(2*i)/n for i in range(n)]
+        a = [(math.pi*2*i)/n for i in range(n)]
+        r = [spiral1(c1, 10*math.pi + math.pi*2/n, aa) for aa in a]
 
-#draw(7, math.pow(phi, 2/(math.pi)), math.pow(phi, 1/(2*math.pi)), [4, 1, 5, 2, 6, 3, 0])
+        an = [(math.pi*2*i)/n for i in range(n)]
+        rn = [spiral1(c1, 10*math.pi + math.pi/n, aa) for aa in an]
+
+        a = np.array(a)
+        r = np.array(r)
+
+        an = np.array(an)
+        rn = np.array(rn)
+        for i in range(len(a)):
+            theta_min = a[i] - 12*math.pi - math.log(r[0], c2)
+            theta3 = np.pi * np.arange(theta_min/math.pi, 12 - f[i], 0.01)
+            radious3 = [spiral1(c2, t, a[i]) for t in theta3]
+            radious3, theta3 = clean_data(radious3, theta3, r[0])
+
+            X, Y = polar_2_cartesian(theta3, radious3, X0[len(X0)//2], Y0[len(Y0)//2])
+            ax.plot(X, Y, c='blue')
+
+            theta_max = 12*math.pi - a[i] - math.log(r[-1], c2)
+            theta4 = np.arange(2*math.pi - a[i], theta_max, 0.01)
+            radious4 = [spiral2(c2, t, an[i]) for t in theta4]
+            radious4, theta4 = clean_data(radious4, theta4, r[0], False)
+
+            X, Y = polar_2_cartesian(theta4, radious4, X0[len(X0)//2], Y0[len(Y0)//2])
+            ax.plot(X, Y, c='red')
+
+        plt.show()
+
+
+'''
+        theta_min = a[0] - 12*math.pi - math.log(r[0], c2)
+        theta3 = np.pi * np.arange(theta_min/math.pi, 12 - f[0], 0.01)
+        radious3 = [spiral1(c2, t, a[0]) for t in theta3]
+        radious3, theta3 = clean_data(radious3, theta3, r[0])
+
+        X, Y = polar_2_cartesian(theta3, radious3, X0[n//2], Y0[n//2])
+        ax.plot(X, Y, c='blue')
+
+        theta_max = 12*math.pi - a[0] - math.log(r[-1], c2)
+        theta4 = np.arange(2*math.pi - a[5], theta_max, 0.01)
+        radious4 = [spiral2(c2, t, an[5]) for t in theta4]
+        radious4, theta4 = clean_data(radious4, theta4, r[0], False)
+
+        X, Y = polar_2_cartesian(theta4, radious4, X0[n//2], Y0[n//2])
+        ax.plot(X, Y, c='red')
+'''
+
+
+
+
+#spiral = Spiral2D()
+#spiral.draw(math.pow(phi, 2/(math.pi)), math.pow(phi, 1/(4*math.pi)), [4,8,0,9,3,5,0,0,0,0,0])
+
+
+
 
 
 class SuperQueens:
@@ -232,7 +290,11 @@ class SuperQueens:
 
     def validate(self, sol):
 
+        n = len(sol)-1
         if len(sol) != self.n:
+            return False
+
+        if np.sum(sol) != n*(n+1)/2:
             return False
 
         if len(sol) != len(set(sol)):
@@ -266,7 +328,6 @@ class SuperQueens:
 
             q = SuperQueens(nn)
 
-            print(nn)
             rr = []
             rrv = []
             ii = 1
@@ -283,7 +344,6 @@ class SuperQueens:
                     rrv.append(tuple(s1[:,1].tolist()))
                     rrv.append(tuple(s2[:,1].tolist()))
 
-            print(len(rr), rr, rrv)
 
     def all_filters(self):
         filters = []
@@ -333,8 +393,6 @@ class SuperQueens:
 
                             if self.validate(r.tolist()) and not np.logical_and(filter, ff).any():
                                 r_list = r.tolist()
-                                print(np.sum(filter), sols[i], sols[j], ff, np.sum(ff), r.tolist(), np.where(sol1 == sol2)[0])
-                                print(gen_symmetries(r.tolist()))
 
                                 a_flag = False
 
@@ -368,23 +426,10 @@ class SuperQueens:
                                                             'sol2': sol2.tolist()}])
 
 
-        for i in range(len(sols_sym)):
-            print(sols_sym[i])
-            print()
-            for j in sorted(set([tuple(v) for v in filter_formats[i]])):
-                print(j)
-            print()
-
-
-        for i in range(len(sfilters)):
-            print("i", i+1)
-            print()
-            for j in sorted(set([tuple(v) for v in sfilters[i]])):
-                print(j)
-            print()
-
-    def init_sols(self):
+    def init_sols(self, l=None):
         max_c = int(self.n/2)
+        if l is not None:
+            max_c = l
         sols = []
 
         for d in range(1, max_c):
@@ -395,6 +440,37 @@ class SuperQueens:
                 sols.append(s2[:,1])
 
         return sols
+
+    def init_sols_label(self):
+        max_c = int(self.n/2)
+        sols = []
+
+        for d in range(1, max_c):
+            c = math.pow(phi, 1/(d*math.pi))
+            for i, a in enumerate(self.a):
+                s1, s2 = self.get_sol(c, a)
+                sols.append([s1[:,1], d, i])
+                sols.append([s2[:,1], -d, i])
+
+        return sols
+
+    def groups_init_sols(self):
+        max_c = int(self.n/2)
+        sols1 = []
+        sols2 = []
+
+        for d in range(1, max_c):
+            c = math.pow(phi, 1/(d*math.pi))
+            sol1 = []
+            sol2 = []
+            for i, a in enumerate(self.a):
+                s1, s2 = self.get_sol(c, a)
+                sol1.append(list(s1[:,1]))
+                sol2.append(list(s2[:,1]))
+            sols1.append(sol1)
+            sols2.append(sol2)
+
+        return sols1, sols2
 
     def found_filters1(self, sols):
         all_filters = self.all_filters()
@@ -413,9 +489,6 @@ class SuperQueens:
                             ffn = np.logical_not(ff)
                             r = ff*sol1 + ffn*sol2
 
-                            if self.validate(r.tolist()) and not np.isin(r, sols).all():
-                                print(np.sum(filter), i, j, sols[i], sols[j], ff, np.sum(ff), r.tolist(), np.where(sol1 == sol2)[0])
-                                print(gen_symmetries(r.tolist()))
 
     def get_sols(self, c1):
         sols = []
@@ -424,6 +497,13 @@ class SuperQueens:
             sols.append(s1[:,1].tolist())
             sols.append(s2[:,1].tolist())
         return sols
+
+    def get_all_sols(self):
+        result = []
+        for v in range(1, math.ceil(self.n/2)):
+            c1 = math.pow(phi, v/(math.pi))
+            result.extend(self.get_sols(c1))
+        return result
 
     def solve_eq(self):
 
@@ -465,7 +545,7 @@ class SuperQueens:
 
             filter = s1[:,1] == s2[:,1]
             if np.sum(filter) == 1:
-                #print("ok", r, s1[:,1], s2[:,1 ])
+
 
                 all_filters = self.all_filters()
                 for f in all_filters:
@@ -475,31 +555,12 @@ class SuperQueens:
                         rr = ff*s1[:,1] + ffn*s2[:,1 ]
 
                         if self.validate(rr.tolist()) and not np.logical_and(filter, ff).any():
-                            print(r)
                             sss.append(r)
-                            print("ok2", np.sum(filter), ff, np.sum(ff), rr.tolist(), np.where(s1[:,1 ] == s2[:,1 ])[0])
                             sols.append(tuple(rr.tolist()))
 
-            else:
-                print("ko", np.sum(filter), r, s1[:,1], s2[:,1 ])
-
-
-
-
-        print(len(sols), len(set(sols)))
         sols = [list(s) for s in set(sols)]
 
-        for i, s in enumerate(sols):
-            sym = gen_symmetries(list(s))
-
-            for e, ss in enumerate(sols):
-
-                if i != e and ss in sym:
-                    print(ss, i, e, "is sym")
-
-
         sss.sort()
-        print("ss", sss)
 
     def new_sols(self):
 
@@ -516,10 +577,6 @@ class SuperQueens:
 
         ffn = np.logical_not(ff)
         r = ff*s1[:,1] + ffn*s2[:,1]
-
-        if self.validate(r.tolist()):
-            print("valid", r.tolist())
-
 
     def solve_eq1(self, value):
 
@@ -560,18 +617,345 @@ class SuperQueens:
 
         while solver.NextSolution():
             r = [v.Value() for v in q]
-            print(r)
+
+    '''
+        Other solutions out of the trivial ones of the spirals
+    '''
+    def other_sols(self, init_sols, all_sols):
+        init_sols = [list(sol) for sol in init_sols]
+        r = []
+        for sol in all_sols:
+            if sol not in init_sols:
+                r.append(sol)
+        return r, init_sols
+
+    '''
+        Stats of how similar is a regular solution against the trivial spiral ones
+    '''
+    def check_most_similar_init(self):
+        other_sols, init_sols = self.other_sols(self.init_sols(), nqueens.n_queens(self.n).all_solutions)
+        other_sols = [np.array(o) for o in other_sols]
+        init_sols = [np.array(i) for i in init_sols]
+        return self.check_most_similar(other_sols, init_sols)
+
+    '''
+        Stats of how similar is a regular solution against the spiral ones
+    '''
+    def check_most_similar(self, other_sols, init_sols):
+
+        if len(other_sols) == 0:
+            return {}, {}
+        d = {}
+        g = {}
+        for o in range(self.n):
+            g[o] = []
+
+        for osol in other_sols:
+            m = -1
+            f = []
+            s = None
+            for isol in init_sols:
+                v = np.sum(osol == isol)
+                if m < v:
+                    m = v
+                    f = osol == isol
+                    s = isol
+            d[tuple(osol)] = m
+            g[m].append([s, f])
+
+        values = list(d.values())
+        unique, counts = np.unique(values, return_counts=True)
+        dd = dict(zip(unique, counts))
+        ddd = {}
+        for k in dd.keys():
+            ddd[k] = dd[k]/len(other_sols)
 
 
-q = SuperQueens(7)
-s = q.init_sols()
-import nqueens
+        gg = {}
+        for k in g.keys():
+            if len(g[k]) > 0:
+              gg[k] = g[k]
 
-print(s)
+        '''
+        if len(list(gg.values())[-1]) > 0:
+            #init_sols.extend(list(gg.values())[-1])
+            #init_sols = list(gg.values())[-1]
+            #init_sols = [np.array(o) for o in init_sols]
+            #other_sols = [list(o) for o in other_sols]
+            #oo, _ = self.other_sols(init_sols, other_sols)
+            #oo = [np.array(o) for o in oo]
+            ma = np.argmax(list(dd.values()))
+            init_sols.extend(list(gg.values())[ma])
+            oo, _ = self.other_sols(init_sols, nqueens.n_queens(self.n).all_solutions)
+            oo = [np.array(o) for o in oo]
+            self.check_most_similar(oo, init_sols)
+        '''
 
-qq = nqueens.n_queens(7).all_solutions
-ts = [tuple(x) for x in s]
-a = [l for l in qq if tuple(l) not in ts]
+        return dd, ddd
 
-print(len(a), a)
+    '''
+        Stats of how similar is a regular solution against the trivial spiral ones
+    '''
+    def check_all_similar_init(self):
+        all_solutions = nqueens.n_queens(self.n).all_solutions
+        other_sols, init_sols = self.other_sols(self.init_sols(), all_solutions)
+        other_sols = [np.array(o) for o in other_sols]
+        init_sols = [np.array(i) for i in init_sols]
+        return self.check_all_similar(other_sols, init_sols)
 
+    '''
+            Stats of all possible transformations of the init to the other solutions
+    '''
+    def check_all_similar(self, other_sols, init_sols, i=0):
+
+        val = 4
+        if len(other_sols) == 0:
+            return {}, {}
+        d = {}
+        g = []
+        m = []
+
+        for isol in init_sols[i:]:
+            d[tuple(isol)] = []
+            for osol in other_sols:
+                v = np.sum(osol == isol)
+                if v == self.n-val:
+                    m.append([isol, isol == osol, osol])
+
+                    d[tuple(isol)].append([osol, isol, osol == isol])
+                    if len(g) == 0 or len(np.where(np.sum(g == osol, axis=1) == self.n)[0]) == 0:
+                        g.append(osol)
+                        syms = np.array(nqueens.gen_symmetries(self.n, osol))
+                        for sym in syms:
+                            if len(np.where(np.sum(other_sols == sym, axis=1) == self.n)[0]) > 0 and \
+                                    len(np.where(np.sum(g == sym, axis=1) == self.n)[0]) == 0:
+                                g.append(sym)
+
+
+        #values = d.values()
+        #unique, counts = np.unique(values, return_counts=True)
+        #dd = dict(zip(unique, counts))
+
+        if len(g) == 0:
+            return
+
+        if len(g) > 0:
+            isize = len(init_sols)
+            init_sols.extend(g)
+            oo, _ = self.other_sols(init_sols, nqueens.n_queens(self.n).all_solutions)
+            oo = [np.array(o) for o in oo]
+            #self.check_all_similar(oo, init_sols, isize)
+
+        return m
+
+    def check_star_sols(self):
+        q = nqueens.n_queens(self.n)
+        init_sols = self.init_sols()
+        all_sols = q.all_solutions
+        other_sols, _ = self.other_sols(init_sols, all_sols)
+        other_sols = [np.array(sol) for sol in other_sols]
+        init_sols_labels = self.init_sols_label()
+
+        def check_sol(sol):
+            n = len(sol)
+            val = n//2
+            if sol[val] != val:
+                return False
+            return ((np.flip(sol[:val]) + sol[val+1:]) == n-1).all()
+
+        center_sol_i = [sol for sol in init_sols_labels if check_sol(sol[0])]
+        center_sol_o = [sol for sol in other_sols if check_sol(sol)]
+
+        return center_sol_i, center_sol_o
+
+    def maks_of_others(self):
+        q = nqueens.n_queens(self.n)
+        s = SuperQueens(self.n)
+        init_sols = s.init_sols()
+        all_sols = q.all_solutions
+        other_sols, _ = self.other_sols(init_sols, all_sols)
+        other_sols = [np.array(sol) for sol in other_sols]
+        init_sols_labels = s.init_sols_label()
+
+        center_sol_i, center_sol_o = self.check_star_sols()
+
+        masks = []
+        groups = []
+
+        for osol in other_sols:
+            for isol in init_sols_labels:
+                if np.sum(osol == isol[0]) >= self.n - 2:
+                    masks.append([ (osol == isol[0]).astype(int).tolist(), isol[0].tolist(), osol.tolist(), isol[1], isol[2]])
+
+        for e, m in enumerate(masks):
+            sol = m[2]
+            syms = nqueens.gen_symmetries(self.n, sol)
+            syms.append(sol)
+            flag = False
+            for i, group in enumerate(groups):
+                check = [sym for sym in syms if sym in group]
+                if len(check) > 0:
+                    flag = True
+                    masks[e].append(i)
+                    groups[i].append(sol)
+
+            if not flag:
+                masks[e].append(len(groups))
+                groups.append([sol])
+
+        masks.sort(key=lambda e: e[3])
+
+        groups = []
+        gmasks = []
+
+        for m in masks:
+            sol = m[2]
+            syms = nqueens.gen_symmetries(self.n, sol)
+            syms.append(sol)
+            flag = False
+            for i, group in enumerate(groups):
+                check = [sym for sym in syms if sym in group]
+                if len(check) > 0:
+                    flag = True
+                    groups[i].append(sol)
+                    gmasks[i].append(m[0])
+                    break
+            if not flag:
+                groups.append([sol])
+                gmasks.append([m[0]])
+
+        '''
+        
+        flag = False
+        r = []
+        for i in range(len(masks)):
+            for e in range(i+1, len(masks)):
+                if np.all(masks[i][0] | masks[e][0]):
+                    m1 = np.copy(masks[i][2])
+                    m1[masks[e][0]] = masks[e][1][[masks[e][0]]]
+                    if self.validate(m1.tolist()):
+                        r.append(m1)
+
+        o = []
+        for other in other_sols:
+            if not (np.sum(np.equal(r, other), axis=1) == self.n).any():
+                o.append(other)
+        '''
+
+        #return r #, o
+
+    def get_masks(self, sol):
+        s = SuperQueens(self.n)
+        init_sols = s.init_sols()
+
+        masks = []
+        for isol in init_sols:
+                masks.append([np.sum(sol == isol), sol == isol, isol, sol])
+
+        return masks
+
+    def poly_info(self):
+        sols = nqueens.n_queens(self.n).all_solutions
+
+        c = math.pow(phi, 2/(math.pi))
+        a = [(math.pi*2*i)/n for i in range(n)]
+        r = [spiral1(c, 10*math.pi + math.pi*2/n, aa) for aa in a]
+
+        a = np.array(a)
+        r = np.array(r)
+
+        init_sols = self.init_sols()
+        other_sols, _ = self.other_sols(init_sols, sols)
+        other_sols = [np.array(sol) for sol in other_sols]
+
+
+        def line(p1, p2):
+            A = (p1[1] - p2[1])
+            B = (p2[0] - p1[0])
+            C = (p1[0]*p2[1] - p2[0]*p1[1])
+            return A, B, -C
+
+        def intersection(L1, L2):
+            D  = L1[0] * L2[1] - L1[1] * L2[0]
+            Dx = L1[2] * L2[1] - L1[1] * L2[2]
+            Dy = L1[0] * L2[2] - L1[2] * L2[0]
+            if D != 0:
+                x = Dx / D
+                y = Dy / D
+                return x,y
+            else:
+                return False
+
+        def distance(p1,p2):
+            x1, y1 = p1
+            x2, y2 = p2
+            dist = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
+            return dist
+
+        def perimeter(x, y):
+            r = distance([x[0], y[0]], [x[-1], y[-1]])
+            for i in range(len(x)-1):
+                r += distance([x[i], y[i]], [x[i+1], y[i+1]])
+            return r
+
+        def PolyArea(x, y):
+            return 0.5*np.abs(np.dot(x,np.roll(y,1))-np.dot(y,np.roll(x,1)))
+
+
+        def calc(sols):
+            sums_angles = []
+            min_angles = []
+            max_angles = []
+            permimeters = []
+            for index, sol in enumerate(sols):
+                tt = [a[v] for v in sol]
+                X, Y = polar_2_cartesian(tt, r)
+                angles = []
+
+                for e in range(0, self.n):
+                    ia = -1
+                    ic = -1
+                    if e == 0:
+                        ia = np.where(sol == self.n-1)[0][0]
+                    else:
+                        ia = np.where(sol == e-1)[0][0]
+                    ib = np.where(sol == e)[0][0]
+
+                    if e == self.n-1:
+                        ic = np.where(sol == 0)[0][0]
+                    else:
+                        ic = np.where(sol == e+1)[0][0]
+
+                    A = np.array([X[ia], Y[ia]])
+                    B = np.array([X[ib], Y[ib]])
+                    C = np.array([X[ic], Y[ic]])
+
+                    ba = A - B
+                    bc = C - B
+                    cosine_angle = np.dot(ba, bc) / (np.linalg.norm(ba) * np.linalg.norm(bc))
+                    angle = np.degrees(np.arccos(cosine_angle))
+
+                    L1 = line(A, C)
+                    L2 = line([0,0], B)
+
+                    R = intersection(L1, L2)
+                    if  distance([0,0], B) < distance([0,0], R):
+                        angle = 360 - angle
+                    angles.append(angle)
+
+                permimeters.append(round(PolyArea(X, Y), 5))
+                sums_angles.append(round(sum(angles)))
+                min_angles.append(round(min(angles), 5))
+                max_angles.append(round(max(angles), 5))
+
+            sorted(sums_angles)
+            sorted(min_angles)
+            sorted(max_angles)
+
+            return sums_angles, min_angles, max_angles, permimeters
+
+        all_sols = [np.array(sol) for sol in sols]
+        sums_angles, min_angles, max_angles, permimeters = calc(all_sols)
+
+        all_permutations = [np.array(list(sol)) for sol in list(itertools.permutations(list(range(self.n))))]
+        sums_angles, min_angles, max_angles, permimeters = calc(all_permutations)
