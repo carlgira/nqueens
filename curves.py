@@ -1,12 +1,14 @@
 import numpy as np
 import math
-
+import matplotlib.pyplot as plt
 
 # Acceleration due to gravity (m.s-2); final position of bead (m).
 x1, y1 = 1, 1
 x2, y2 = 2, 1.65
-theta = np.linspace(0, 2*np.pi, 100)
 N = 100
+theta = np.linspace(0, 2*np.pi, N)
+
+eps = np.finfo(float).eps
 
 def get_equation(p1, p2):
     x1, y1 = p1
@@ -35,15 +37,21 @@ def cycloid(p1, p2, N=100):
     d = np.linalg.norm(np.array(p1)-np.array(p2))
     r = d/(2*np.pi)
 
-    theta = np.linspace(0, 2*np.pi, N)
+    theta = np.linspace(0, np.pi, N)
     x = r * (theta - np.sin(theta))
     y = r * (1 - np.cos(theta))
+
+    plt.plot(x,y)
+    plt.show()
 
     s = 1 if y2 > y1 else -1
     tr = s*(math.acos(abs(x2-x1)/d) + math.pi)
 
-    xr = math.cos(tr)*x - math.sin(tr)*y + x2
-    yr = math.sin(tr)*x + math.cos(tr)*y + y2
+    xr = y*np.cos(theta)
+    yr = y*np.sin(theta)
+
+    #xr = math.cos(tr)*x - math.sin(tr)*y + x2
+    #yr = math.sin(tr)*x + math.cos(tr)*y + y2
 
     return xr, yr
 
@@ -123,6 +131,33 @@ def circle(pt1, pt2, sagitta=None):
 
     return x, y
 
+
+def orbit_smooth(r1, r2):
+    radious = abs(r1-r2)
+    # Line
+    #r = np.linspace(r1, r2, N)
+
+    # Circle
+    #xx = np.linspace(0, radious, N)
+    #r = -np.sqrt(radious * radious - xx * xx) + r2
+    #if r1 > r2:
+    #    r = -r
+
+    # Real
+    xx = np.linspace(-1, 0.5, N)
+    r = radious/2*np.tanh(4*xx)
+    if r1 > r2:
+        r = -r
+    r += -np.min(r)
+
+    #plt.scatter(xx, r)
+    #plt.show()
+
+    x = r*np.cos(theta) + r1
+    y = r*np.sin(theta) + r1
+    return x, y
+
+
 def orbit(p1, p2):
     x1, y1 = p1
     x2, y2 = p2
@@ -200,10 +235,27 @@ def helix(p1, p2, N=100):
     return x, y
 
 
+def circular_motion(n, sol, f, r, t=1, v0=0, points=100):
+    a = [f*(i+1) for i in range(n)]
+    print(a)
+    print(np.sin(a).tolist())
 
+    y = []
+    y.append(a[sol[0]])
+    yf = a[sol[0]]
+    for i in range(len(sol)-1):
+        if a[sol[i+1]] > a[sol[i]]:
+            yf = a[sol[i+1]]
+        else:
+            yf = 2*np.pi - (a[sol[i]] - a[sol[i+1]])
 
-# Plot a figure comparing the four paths.'
-import matplotlib.pyplot as plt
+        acc = (yf - y[-1] - v0*t)*2/t*t
+        time = np.linspace(0.1, 1, points)
+        yy = 0.5*acc*time*time + v0*time + y[-1]
+        y.extend(yy.tolist())
+        v0 = acc*t + v0
+
+    return y, r*np.sin(y)
 
 
 def gg(t):
@@ -212,8 +264,27 @@ def gg(t):
     plt.plot(x, y)
     plt.show()
 
+
+def orbit_spiral(r):
+
+    x_all = np.array([])
+    y_all = np.array([])
+    for i in range(len(r)-1):
+        x, y = spiral((r[i],0), (r[i+1],0))
+        if i != len(r)-2:
+            x_all = np.concatenate([x_all, x[:-1]])
+            y_all = np.concatenate([y_all, y[:-1]])
+        else:
+            x_all = np.concatenate([x_all, x])
+            y_all = np.concatenate([y_all, y])
+
+    return x_all, y_all
+
+
+
 '''
 fig, ax = plt.subplots()
+
 p1 = (x1, y1)
 p2 = (x2, y2)
 
@@ -248,5 +319,43 @@ ax.plot(x, y, lw=4, alpha=0.5)
 #    x, y = circle(p1, p2, sagitta)
 #    ax.plot(x, y, lw=4, alpha=0.5)
 
+plt.show()
+'''
+
+'''
+n = 5
+points=100
+fig, ax = plt.subplots()
+x, y = circular_motion(n, [1, 4, 2, 3], 2*np.pi/n, 1, points=points)
+print(x)
+print('x', x[::points], np.sin(x[::points]), np.arcsin(np.sin(x[::points])))
+print('y', y[::points])
+ax.plot(np.linspace(0, 4*2*np.pi/5, len(y)), y)
+plt.show()
+#[2.5, 6.2, 3.7, 5.0]
+'''
+
+
+'''
+r =[0.1, 0.3, 0.5,  0.2, 0.1]
+v = 0
+x_all = np.array([])
+y_all = np.array([])
+for i in range(len(r)-1):
+    x, y = spiral((r[i],0), (r[i+1],0))
+    if i != len(r)-2:
+        x_all = np.concatenate([x_all, x[:-1]])
+        y_all = np.concatenate([y_all, y[:-1]])
+    else:
+        x_all = np.concatenate([x_all, x])
+        y_all = np.concatenate([y_all, y])
+    plt.scatter(x,y)
+
+plt.plot(x_all, y_all)
+plt.show()
+
+plt.plot(x_all)
+plt.plot(y_all)
+plt.plot(y_all + x_all)
 plt.show()
 '''

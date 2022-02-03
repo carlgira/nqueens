@@ -6,7 +6,7 @@ import os.path
 
 
 class SearchMonitor(pywrapcp.SearchMonitor):
-	def __init__(self, solver, q,one_solution=False):
+	def __init__(self, solver, q,one_solution=False, unique_solution=True):
 		pywrapcp.SearchMonitor.__init__(self, solver)
 		self.q = q
 		self.all_solutions = []
@@ -14,19 +14,24 @@ class SearchMonitor(pywrapcp.SearchMonitor):
 		self.count_symmetries = [0]*7
 		self.n = len(self.q)
 		self.one_solution = one_solution
+		self.unique_solution = unique_solution
 
 	def AcceptSolution(self):
 		qval = [self.q[i].Value() for i in range(self.n)]
 		self.all_solutions.append(qval)
 
-		symmetries = [vv in self.unique_solutions for vv in gen_symmetries(self.n, qval)]
-		self.count_symmetries = [i+v for i,v in zip(symmetries, self.count_symmetries)]
+		if self.unique_solution:
+			symmetries = [vv in self.unique_solutions for vv in gen_symmetries(self.n, qval)]
+			self.count_symmetries = [i+v for i,v in zip(symmetries, self.count_symmetries)]
 
-		if sum(symmetries) == 0:
-			self.unique_solutions.append(qval)
+			if sum(symmetries) == 0:
+				self.unique_solutions.append(qval)
 
 		return self.one_solution
 
+	def RefuteDecision(self, d):
+		qval = [self.q[i].Value() for i in range(self.n)]
+		print('bad', qval)
 
 	def group_solutions(self):
 		r = []
@@ -41,6 +46,7 @@ def gen_symmetries(n, solution):
 
 	symmetries = []
 
+	#x(r[i]=j) → r[n−i+1]=j
 	x = list(range(n))
 	for index in range(n):
 		x[n - 1 - index] = solution[index]
@@ -121,7 +127,7 @@ def get_star_sols(n):
 
 	g_solver.EndSearch()
 
-def n_queens(n, sol=None ,one_solution=False):
+def n_queens(n, sol=None ,one_solution=False, unique_solution=True):
 	g_solver = pywrapcp.Solver("n-queens")
 
 	q = [g_solver.IntVar(0, n - 1, "x%i" % i) for i in range(n)]
@@ -141,14 +147,15 @@ def n_queens(n, sol=None ,one_solution=False):
 
 	db = g_solver.Phase(q, g_solver.CHOOSE_MIN_SIZE_LOWEST_MAX,g_solver.ASSIGN_CENTER_VALUE)
 
-	monitor = SearchMonitor(g_solver, q, one_solution)
+	monitor = SearchMonitor(g_solver, q, one_solution, unique_solution)
 
-	print(os.path.exists('.' + str(n) + '_all'), sol is None)
 	if os.path.exists('.' + str(n) + '_all') and sol is None:
-		all_solutions = pickle.load( open( '.' + str(n) + '_all', "rb" ) )
-		unique_solutions = pickle.load( open( '.' + str(n) + '_unique', "rb" ) )
+		all_solutions = pickle.load(open('.' + str(n) + '_all', "rb"))
 		monitor.all_solutions = all_solutions
-		monitor.unique_solutions = unique_solutions
+
+		if os.path.exists('.' + str(n) + '_unique') and sol is None:
+			unique_solutions = pickle.load(open('.' + str(n) + '_unique', "rb"))
+			monitor.unique_solutions = unique_solutions
 		return monitor
 
 	g_solver.Solve(db, monitor)
@@ -165,10 +172,10 @@ def n_queens(n, sol=None ,one_solution=False):
 	print("unique_solutions:" , len(monitor.unique_solutions))
 	print("WallTime:", g_solver.WallTime(), "ms")
 
-
-	if sol is None and one_solution is None:
-		pickle.dump( monitor.all_solutions, open( '.' + str(n) + '_all', "wb" ) )
-		pickle.dump( monitor.unique_solutions, open( '.' + str(n) + '_unique', "wb" ) )
+	if sol is None and not one_solution and not os.path.exists('.' + str(n) + '_all'):
+		pickle.dump(monitor.all_solutions, open('.' + str(n) + '_all', "wb"))
+		if len(monitor.unique_solutions) > 0:
+			pickle.dump(monitor.unique_solutions, open('.' + str(n) + '_unique', "wb"))
 
 	return monitor
 
@@ -195,5 +202,22 @@ def count_sols(n):
 		r.append(v[:,0].tolist())
 	return np.array(r)
 
+def validate(sol):
+	if len(sol) != len(set(sol)):
+		return False
+
+	v1 = [sol[i] + i for i in range(len(sol))]
+
+	if len(v1) != len(set(v1)):
+		return False
+
+	v2 = [sol[i] - i for i in range(len(sol))]
+
+	if len(v2) != len(set(v2)):
+		return False
+	return True
 
 
+
+
+print(n_queens(7).all_solutions)
