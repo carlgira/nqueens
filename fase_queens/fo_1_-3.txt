@@ -1,0 +1,1 @@
+N=8 sim3 M=1 (P=12, AMAX=1, R=2000): 24 grupos, media 4.00  tamanos: 5 5 5 5 5 5 5 5 4 5 4 4 4 4 4 4 4 4 3 3 3 3 2 1

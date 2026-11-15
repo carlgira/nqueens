@@ -1,0 +1,86 @@
+N=11 grupo2=0 control=0 U=2592 V0=8 listas=17932 max=2
+hist 1:17848 2:84
+aciertos=2 filas_apartadas 5:12 7:24 8:36 9:12
+top aciertos=2 a_una=2 lista=0 6 2 2 0 6 5 4 3 2 3 
+top aciertos=2 a_una=2 lista=0 10 10 3 5 4 7 10 2 5 10 
+top aciertos=2 a_una=2 lista=0 8 5 2 10 0 9 5 5 6 5 
+top aciertos=2 a_una=2 lista=0 8 6 8 8 5 6 7 8 9 1 
+top aciertos=2 a_una=2 lista=0 0 0 0 0 7 6 7 4 0 9 
+top aciertos=2 a_una=2 lista=0 4 10 4 5 8 3 5 7 9 0 
+top aciertos=2 a_una=2 lista=0 1 6 9 1 4 7 6 8 1 1 
+top aciertos=2 a_una=2 lista=0 2 4 6 8 6 7 10 9 7 7 
+N=11 grupo2=0 control=1 U=2592 V0=8 listas=20736 max=1
+hist 1:20736
+N=11 grupo2=0 control=2 U=2592 V0=8 listas=18016 max=1
+hist 1:18016
+N=13 grupo2=0 control=0 U=69188 V0=192 listas=10725956 max=8
+hist 1:10710938 2:14070 3:638 4:196 5:84 6:14 7:8 8:8
+aciertos=2 filas_apartadas 2:124 3:144 4:540 5:520 6:1472 7:1960 8:2648 9:2522 10:3028 11:1104 12:8
+aciertos=3 filas_apartadas 2:72 3:4 4:28 5:112 6:86 7:168 8:6 9:44 10:66 11:52
+aciertos=4 filas_apartadas 2:22 3:24 4:94 5:8 7:24 11:24
+aciertos=5 filas_apartadas 2:10 3:28 4:8 11:38
+aciertos=6 filas_apartadas 2:6 3:8
+aciertos=7 filas_apartadas 2:4 3:4
+aciertos=8 filas_apartadas 3:8
+top aciertos=8 a_una=2 lista=0 6 10 10 11 10 10 10 10 10 10 10 10 
+top aciertos=8 a_una=2 lista=0 12 12 8 2 12 12 12 12 12 12 12 12 
+top aciertos=8 a_una=2 lista=0 0 0 0 0 0 0 0 12 0 0 4 10 
+top aciertos=8 a_una=2 lista=0 1 1 5 11 1 1 1 1 1 1 1 1 
+top aciertos=8 a_una=2 lista=0 0 0 0 0 0 0 0 1 0 0 9 3 
+top aciertos=8 a_una=2 lista=0 7 3 3 2 3 3 3 3 3 3 3 3 
+top aciertos=8 a_una=2 lista=0 0 0 0 0 0 0 0 10 4 0 0 12 
+top aciertos=8 a_una=2 lista=0 0 0 0 0 0 0 0 3 9 0 0 1 
+N=13 grupo2=0 control=1 U=69188 V0=192 listas=13282670 max=2
+hist 1:13282588 2:82
+aciertos=2 filas_apartadas 8:10 9:18 10:42 11:12
+top aciertos=2 a_una=0 lista=0 3 6 4 4 8 12 4 10 6 5 11 5 
+top aciertos=2 a_una=1 lista=0 0 6 10 10 9 3 6 0 0 11 7 3 
+top aciertos=2 a_una=0 lista=0 2 4 1 0 3 6 10 2 10 8 0 6 
+top aciertos=2 a_una=1 lista=0 9 10 1 8 9 9 11 2 9 10 2 11 
+top aciertos=2 a_una=0 lista=0 6 4 9 9 10 3 5 4 9 3 12 4 
+top aciertos=2 a_una=1 lista=0 8 2 0 3 0 1 0 0 9 3 1 12 
+top aciertos=2 a_una=0 lista=0 12 2 12 0 3 9 12 8 12 4 1 3 
+top aciertos=2 a_una=0 lista=0 6 1 11 1 1 10 7 12 5 1 7 3 
+N=13 grupo2=0 control=2 U=69188 V0=192 listas=10742350 max=2
+hist 1:10742300 2:50
+aciertos=2 filas_apartadas 7:1 8:3 9:12 10:20 11:14
+top aciertos=2 a_una=0 lista=0 8 12 10 3 12 2 7 8 5 2 6 3 
+top aciertos=2 a_una=1 lista=0 11 4 12 5 8 8 6 5 4 5 8 2 
+top aciertos=2 a_una=1 lista=0 9 0 6 1 11 4 12 8 0 11 3 0 
+top aciertos=2 a_una=0 lista=0 11 7 4 8 7 7 4 4 4 7 8 7 
+top aciertos=2 a_una=0 lista=0 5 5 9 2 6 6 2 4 11 9 1 5 
+top aciertos=2 a_una=0 lista=0 9 11 11 8 9 8 12 11 3 5 2 2 
+top aciertos=2 a_una=0 lista=0 7 4 9 7 1 6 10 11 6 11 10 9 
+top aciertos=2 a_una=0 lista=0 10 5 4 10 4 12 7 5 4 9 3 5 
+N=13 grupo2=1 control=0 U=71216 V0=192 listas=10755154 max=8
+hist 1:10739542 2:14586 3:638 4:270 5:88 6:14 7:8 8:8
+aciertos=2 filas_apartadas 2:124 3:144 4:540 5:520 6:1480 7:1960 8:3120 9:2534 10:3052 11:1104 12:8
+aciertos=3 filas_apartadas 2:72 3:4 4:28 5:112 6:86 7:168 8:6 9:44 10:66 11:52
+aciertos=4 filas_apartadas 2:22 3:24 4:168 5:8 7:24 11:24
+aciertos=5 filas_apartadas 2:10 3:28 4:12 11:38
+aciertos=6 filas_apartadas 2:6 3:8
+aciertos=7 filas_apartadas 2:4 3:4
+aciertos=8 filas_apartadas 3:8
+top aciertos=8 a_una=2 lista=0 6 10 10 11 10 10 10 10 10 10 10 10 
+top aciertos=8 a_una=2 lista=0 12 12 8 2 12 12 12 12 12 12 12 12 
+top aciertos=8 a_una=2 lista=0 0 0 0 0 0 0 0 12 0 0 4 10 
+top aciertos=8 a_una=2 lista=0 1 1 5 11 1 1 1 1 1 1 1 1 
+top aciertos=8 a_una=2 lista=0 0 0 0 0 0 0 0 1 0 0 9 3 
+top aciertos=8 a_una=2 lista=0 7 3 3 2 3 3 3 3 3 3 3 3 
+top aciertos=8 a_una=2 lista=0 0 0 0 0 0 0 0 10 4 0 0 12 
+top aciertos=8 a_una=2 lista=0 0 0 0 0 0 0 0 3 9 0 0 1 
+N=17 grupo2=0 control=0 U=497141 V0=456 listas=226410624 max=2
+hist 1:226409952 2:672
+aciertos=2 filas_apartadas 2:1 4:3 5:2 6:11 7:6 8:22 9:28 10:69 11:101 12:158 13:156 14:103 15:12
+top aciertos=2 a_una=0 lista=0 1 7 3 1 0 0 1 1 0 0 2 0 2 8 0 8 
+top aciertos=2 a_una=0 lista=0 3 2 14 16 7 16 1 6 6 9 6 4 6 3 14 6 
+top aciertos=2 a_una=0 lista=0 5 6 7 1 9 0 3 12 1 10 1 14 6 1 2 7 
+top aciertos=2 a_una=0 lista=0 10 7 6 9 6 7 4 1 2 1 2 1 15 6 9 16 
+top aciertos=2 a_una=0 lista=0 8 14 8 11 1 12 0 14 8 2 8 7 2 8 1 15 
+top aciertos=2 a_una=0 lista=0 11 0 14 0 2 1 14 5 3 3 13 2 5 0 8 4 
+top aciertos=2 a_una=0 lista=0 14 16 14 11 16 14 16 11 0 10 16 11 0 12 14 12 
+top aciertos=2 a_una=0 lista=0 0 0 4 3 7 14 8 8 11 3 8 8 7 6 4 11 
+N=17 grupo2=0 control=1 U=497141 V0=456 listas=226696296 max=1
+hist 1:226696296
+N=17 grupo2=0 control=2 U=497141 V0=456 listas=226411296 max=1
+hist 1:226411296

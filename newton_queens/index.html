@@ -1,0 +1,674 @@
+<meta charset="utf-8">
+<title>Newton Queens — el caos colapsa en orden</title>
+<style>
+  :root {
+    color-scheme: dark;
+    --bg:        #070a10;
+    --bg-grad:   #0b1018;
+    --panel:     #0f1620;
+    --panel-2:   #131c28;
+    --line:      #1e2a3a;
+    --ink:       #e6edf6;
+    --ink-dim:   #8ea0b6;
+    --ink-faint: #56677d;
+    --teal:      #4fe0cf;
+    --teal-deep: #1c6f68;
+    --amber:     #ffb454;
+    --violet:    #7b6cff;
+    --red:       #ff556e;
+    --green:     #77e6a0;
+    --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+    --sans: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+      radial-gradient(1200px 700px at 78% -10%, #12202e 0%, transparent 55%),
+      radial-gradient(900px 600px at 0% 110%, #14101f 0%, transparent 50%),
+      linear-gradient(180deg, var(--bg-grad), var(--bg));
+    color: var(--ink);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 0.1px;
+  }
+
+  .wrap {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 34px 22px 60px;
+  }
+
+  /* ---------- header ---------- */
+  header { margin-bottom: 22px; }
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--teal);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .eyebrow::before {
+    content: ""; width: 26px; height: 1px; background: var(--teal-deep);
+  }
+  h1 {
+    font-size: clamp(30px, 5vw, 50px);
+    line-height: 1.02;
+    margin: 12px 0 10px;
+    font-weight: 700;
+    letter-spacing: -1.2px;
+    text-wrap: balance;
+  }
+  h1 .accent { color: var(--teal); }
+  .lede {
+    max-width: 60ch;
+    color: var(--ink-dim);
+    font-size: 15.5px;
+    line-height: 1.55;
+    margin: 0;
+  }
+  .eq {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--ink-faint);
+    margin-top: 16px;
+    padding: 10px 14px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: linear-gradient(180deg, rgba(255,255,255,.02), transparent);
+    display: inline-block;
+    overflow-x: auto;
+    max-width: 100%;
+    white-space: nowrap;
+  }
+  .eq b { color: var(--teal); font-weight: 600; }
+  .eq .g { color: var(--amber); }
+  .eq .r { color: var(--red); }
+
+  /* ---------- main layout ---------- */
+  .stage {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) 320px;
+    gap: 20px;
+    margin-top: 26px;
+    align-items: start;
+  }
+  @media (max-width: 860px) {
+    .stage { grid-template-columns: 1fr; }
+  }
+
+  .boardwrap {
+    position: relative;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+    background: #05070b;
+    box-shadow: 0 30px 80px -40px rgba(0,0,0,.9), inset 0 0 0 1px rgba(255,255,255,.02);
+    aspect-ratio: 1 / 1;
+  }
+  canvas#board { display: block; width: 100%; height: 100%; }
+
+  .phase-badge {
+    position: absolute; top: 12px; left: 12px;
+    font-family: var(--mono); font-size: 11px; letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 6px 11px; border-radius: 999px;
+    background: rgba(8,12,18,.7); backdrop-filter: blur(6px);
+    border: 1px solid var(--line); color: var(--ink-dim);
+    display: flex; align-items: center; gap: 8px;
+    transition: color .4s, border-color .4s;
+  }
+  .phase-badge .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--amber); box-shadow: 0 0 10px var(--amber);
+    transition: background .4s, box-shadow .4s;
+  }
+
+  /* ---------- side panel ---------- */
+  .panel {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: linear-gradient(180deg, var(--panel-2), var(--panel));
+    padding: 16px 16px 18px;
+  }
+  .panel + .panel { margin-top: 16px; }
+  .panel h2 {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--ink-faint);
+    margin: 0 0 14px; font-weight: 600;
+  }
+
+  .readout { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 10px; }
+  .metric { }
+  .metric .k {
+    font-family: var(--mono); font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; color: var(--ink-faint);
+  }
+  .metric .v {
+    font-family: var(--mono); font-size: 25px; font-weight: 600;
+    line-height: 1.1; margin-top: 3px;
+    font-variant-numeric: tabular-nums;
+  }
+  .metric .v.teal { color: var(--teal); }
+  .metric .v.red  { color: var(--red); }
+  .metric .v.green{ color: var(--green); }
+
+  .bar {
+    grid-column: 1 / -1;
+    height: 6px; border-radius: 3px; background: #0a121b;
+    overflow: hidden; border: 1px solid var(--line); margin-top: 2px;
+  }
+  .bar > i { display: block; height: 100%; width: 0%;
+    background: linear-gradient(90deg, var(--violet), var(--amber));
+    transition: width .1s linear; }
+
+  /* controls */
+  .ctrl { margin-bottom: 15px; }
+  .ctrl:last-child { margin-bottom: 4px; }
+  .ctrl label {
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-family: var(--mono); font-size: 11px; letter-spacing: .5px;
+    color: var(--ink-dim); margin-bottom: 7px;
+  }
+  .ctrl label .val { color: var(--teal); font-size: 12px; }
+  .ctrl label .sub { color: var(--ink-faint); text-transform: none; letter-spacing: 0; }
+
+  input[type=range] {
+    -webkit-appearance: none; appearance: none;
+    width: 100%; height: 4px; border-radius: 3px;
+    background: linear-gradient(90deg, var(--teal-deep), #22303f);
+    outline: none; cursor: pointer;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none; width: 15px; height: 15px; border-radius: 50%;
+    background: var(--teal); border: 2px solid #05202020; cursor: pointer;
+    box-shadow: 0 0 0 3px rgba(79,224,207,.15), 0 2px 6px rgba(0,0,0,.5);
+  }
+  input[type=range]::-moz-range-thumb {
+    width: 15px; height: 15px; border-radius: 50%; border: none;
+    background: var(--teal); cursor: pointer;
+  }
+  input[type=range]:focus-visible { box-shadow: 0 0 0 2px var(--teal); }
+
+  .segmented { display: flex; gap: 6px; }
+  .segmented button {
+    flex: 1; font-family: var(--mono); font-size: 13px;
+    padding: 8px 0; border-radius: 8px; cursor: pointer;
+    background: #0b131c; color: var(--ink-dim);
+    border: 1px solid var(--line); transition: all .15s;
+  }
+  .segmented button[aria-pressed="true"] {
+    background: rgba(79,224,207,.12); color: var(--teal);
+    border-color: var(--teal-deep);
+  }
+  .segmented button:hover { border-color: var(--teal-deep); color: var(--ink); }
+
+  .actions { display: flex; gap: 8px; margin-top: 4px; }
+  .actions button {
+    flex: 1; font-family: var(--sans); font-size: 13.5px; font-weight: 600;
+    padding: 11px 0; border-radius: 9px; cursor: pointer;
+    border: 1px solid var(--line); background: #0b131c; color: var(--ink);
+    transition: all .15s; letter-spacing: .2px;
+  }
+  .actions button.primary {
+    background: linear-gradient(180deg, #58e6d4, #2fb6a8);
+    color: #04231f; border-color: transparent;
+    box-shadow: 0 6px 18px -8px rgba(79,224,207,.6);
+  }
+  .actions button:hover { transform: translateY(-1px); }
+  .actions button:active { transform: translateY(0); }
+  .actions button:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+
+  footer {
+    margin-top: 30px; color: var(--ink-faint);
+    font-size: 12.5px; line-height: 1.6; max-width: 70ch;
+  }
+  footer code { font-family: var(--mono); color: var(--ink-dim);
+    background: #0b131c; padding: 1px 6px; border-radius: 5px; border: 1px solid var(--line); }
+  footer .legend { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 12px; }
+  footer .legend span { display: flex; align-items: center; gap: 7px; font-family: var(--mono); font-size: 11px; }
+  footer .legend .sw { width: 12px; height: 12px; border-radius: 3px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Sistema dinámico disipativo · N-Reinas</div>
+    <h1>El caos <span class="accent">colapsa</span> en orden</h1>
+    <p class="lede">
+      N reinas soltadas como partículas en un plano continuo. No hay búsqueda ni backtracking:
+      solo <b>F = m·a</b>. Un campo tipo cartón de huevos las atrae hacia las casillas enteras,
+      una repulsión anisotrópica las expulsa de cada fila, columna y diagonal compartida, y la
+      fricción disipa el caos hasta el reposo. El punto de equilibrio <em>es</em> una solución.
+    </p>
+    <div class="eq">
+      m·r&#775;&#775;<sub>i</sub> = &minus;&nabla;<span class="g">U<sub>grid</sub></span>(r<sub>i</sub>)
+      &minus; &Sigma;<sub>j&ne;i</sub> &nabla;<span class="r">U<sub>rep</sub></span>(i,j)
+      &minus; <b>&gamma;</b>·r&#775;<sub>i</sub>
+    </div>
+  </header>
+
+  <div class="stage">
+    <div class="boardwrap">
+      <div class="phase-badge"><span class="dot" id="phaseDot"></span><span id="phaseText">turbulencia</span></div>
+      <canvas id="board"></canvas>
+    </div>
+
+    <div>
+      <div class="panel">
+        <h2>Telemetría</h2>
+        <div class="readout">
+          <div class="metric"><div class="k">Paso</div><div class="v" id="mStep">0</div></div>
+          <div class="metric"><div class="k">Conflictos</div><div class="v red" id="mConf">–</div></div>
+          <div class="metric"><div class="k">Temperatura</div><div class="v teal" id="mTemp">0.00</div></div>
+          <div class="metric"><div class="k">U repulsión</div><div class="v" id="mRep">0.0</div></div>
+          <div class="bar"><i id="tempBar"></i></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Tablero</h2>
+        <div class="ctrl">
+          <div class="segmented" id="nSeg">
+            <button data-n="6">6</button>
+            <button data-n="8" aria-pressed="true">8</button>
+            <button data-n="10">10</button>
+            <button data-n="12">12</button>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="primary" id="btnRestart">Reiniciar caos</button>
+          <button id="btnPause">Pausa</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Constantes físicas</h2>
+        <div class="ctrl">
+          <label>A · gravedad del tablero <span class="val" id="lA">4.0</span></label>
+          <input type="range" id="A" min="1" max="10" step="0.5" value="4">
+        </div>
+        <div class="ctrl">
+          <label>B · fuerza de repulsión <span class="val" id="lB">18</span></label>
+          <input type="range" id="B" min="4" max="40" step="1" value="18">
+        </div>
+        <div class="ctrl">
+          <label>&sigma; · ancho del rayo <span class="val" id="lS">0.60</span></label>
+          <input type="range" id="S" min="0.2" max="1.1" step="0.05" value="0.6">
+        </div>
+        <div class="ctrl">
+          <label>&gamma; · fricción <span class="val" id="lG">1.10</span></label>
+          <input type="range" id="G" min="0.3" max="3" step="0.1" value="1.1">
+        </div>
+        <div class="ctrl">
+          <label>T&#8320; · caos inicial <span class="val" id="lT">1.8</span></label>
+          <input type="range" id="T" min="0" max="4" step="0.1" value="1.8">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="legend">
+      <span><span class="sw" style="background:linear-gradient(90deg,#7b6cff,#ffb454)"></span> potencial U<sub>grid</sub> (pozos = casillas)</span>
+      <span><span class="sw" style="background:#4fe0cf"></span> reina (partícula)</span>
+      <span><span class="sw" style="background:#ff556e"></span> línea de ataque</span>
+      <span><span class="sw" style="background:#77e6a0"></span> cristalizado</span>
+    </div>
+    Mueve cualquier constante en caliente y observa cómo cambia el atractor. Sube <code>&sigma;</code> y las
+    reinas se repelen desde lejos; súbelo poco y solo reaccionan cuando se alinean perfectamente. Si el sistema
+    se congela con conflictos (un mínimo local), se re-calienta solo y vuelve a intentarlo — recocido simulado físico.
+  </footer>
+</div>
+
+<script>
+(() => {
+  "use strict";
+  const TAU = Math.PI * 2;
+
+  // ---------------- physics engine (mirrors newton_queens.py) --------------
+  const P = { N: 8, A: 4.0, B: 18.0, sigma: 0.6, gamma: 1.1, mass: 1.0,
+              wall_k: 30.0, dt: 0.01, cooling: 0.999, T_min: 1e-4 };
+  let pos, vel, T, steps, paused = false;
+
+  function reset() {
+    const N = P.N;
+    pos = []; vel = [];
+    for (let i = 0; i < N; i++) {
+      pos.push([Math.random() * (N - 1), Math.random() * (N - 1)]);
+      vel.push([0, 0]);
+    }
+    T = +document.getElementById('T').value;
+    steps = 0;
+    buildField();
+  }
+
+  // gaussian
+  const g = (s, s2) => Math.exp(-(s * s) / s2);
+
+  function forces(p, v) {
+    const N = P.N, A = P.A, B = P.B, s2 = 2 * P.sigma * P.sigma;
+    const coef = B / (P.sigma * P.sigma);
+    const F = new Array(N);
+    for (let i = 0; i < N; i++) {
+      const xi = p[i][0], yi = p[i][1];
+      // egg-carton grid field
+      let fx = -TAU * A * Math.sin(TAU * xi);
+      let fy = -TAU * A * Math.sin(TAU * yi);
+      // anisotropic repulsion
+      for (let j = 0; j < N; j++) {
+        if (j === i) continue;
+        const dx = xi - p[j][0], dy = yi - p[j][1];
+        const u = dx - dy, w = dx + dy;
+        const T1 = g(dx, s2), T2 = g(dy, s2), T3 = g(u, s2), T4 = g(w, s2);
+        fx += coef * (dx * T1 + u * T3 + w * T4);
+        fy += coef * (dy * T2 - u * T3 + w * T4);
+      }
+      // soft walls
+      const lo = 0, hi = N - 1;
+      if (xi < lo) fx += P.wall_k * (lo - xi);
+      if (xi > hi) fx -= P.wall_k * (xi - hi);
+      if (yi < lo) fy += P.wall_k * (lo - yi);
+      if (yi > hi) fy -= P.wall_k * (yi - hi);
+      // viscous friction
+      fx -= P.gamma * v[i][0];
+      fy -= P.gamma * v[i][1];
+      F[i] = [fx, fy];
+    }
+    return F;
+  }
+
+  const addv = (a, b, s) => a.map((r, i) => [r[0] + s * b[i][0], r[1] + s * b[i][1]]);
+  const acc  = (F) => F.map(f => [f[0] / P.mass, f[1] / P.mass]);
+
+  function rk4() {
+    const dt = P.dt;
+    const a1 = acc(forces(pos, vel)),                    k1p = vel;
+    const p2 = addv(pos, k1p, dt/2), v2 = addv(vel, a1, dt/2);
+    const a2 = acc(forces(p2, v2)),                      k2p = v2;
+    const p3 = addv(pos, k2p, dt/2), v3 = addv(vel, a2, dt/2);
+    const a3 = acc(forces(p3, v3)),                      k3p = v3;
+    const p4 = addv(pos, k3p, dt),   v4 = addv(vel, a3, dt);
+    const a4 = acc(forces(p4, v4)),                      k4p = v4;
+    for (let i = 0; i < P.N; i++) {
+      pos[i][0] += dt/6 * (k1p[i][0] + 2*k2p[i][0] + 2*k3p[i][0] + k4p[i][0]);
+      pos[i][1] += dt/6 * (k1p[i][1] + 2*k2p[i][1] + 2*k3p[i][1] + k4p[i][1]);
+      vel[i][0] += dt/6 * (a1[i][0] + 2*a2[i][0] + 2*a3[i][0] + a4[i][0]);
+      vel[i][1] += dt/6 * (a1[i][1] + 2*a2[i][1] + 2*a3[i][1] + a4[i][1]);
+    }
+    // thermal noise (annealing)
+    if (T > P.T_min) {
+      const sd = T * Math.sqrt(dt);
+      for (let i = 0; i < P.N; i++) {
+        vel[i][0] += gauss() * sd;
+        vel[i][1] += gauss() * sd;
+      }
+      T *= P.cooling;
+    }
+    steps++;
+  }
+
+  let spare = null;
+  function gauss() { // Box-Muller
+    if (spare !== null) { const s = spare; spare = null; return s; }
+    let u = 0, w = 0;
+    do { u = Math.random(); } while (u === 0);
+    w = Math.random();
+    const mag = Math.sqrt(-2 * Math.log(u));
+    spare = mag * Math.sin(TAU * w);
+    return mag * Math.cos(TAU * w);
+  }
+
+  // ---------------- board / conflicts --------------------------------------
+  const board = () => pos.map(([x, y]) => [
+    Math.min(P.N - 1, Math.max(0, Math.round(x))),
+    Math.min(P.N - 1, Math.max(0, Math.round(y)))]);
+
+  function conflicts(b) {
+    const pairs = [];
+    for (let i = 0; i < b.length; i++)
+      for (let j = i + 1; j < b.length; j++) {
+        const [xi, yi] = b[i], [xj, yj] = b[j];
+        if (xi === xj || yi === yj || Math.abs(xi - xj) === Math.abs(yi - yj))
+          pairs.push([i, j]);
+      }
+    return pairs;
+  }
+  function solved(b) {
+    const seen = new Set(b.map(c => c[0] + ',' + c[1]));
+    return seen.size === P.N && conflicts(b).length === 0;
+  }
+  function maxSpeed() {
+    let m = 0;
+    for (const [vx, vy] of vel) m = Math.max(m, Math.hypot(vx, vy));
+    return m;
+  }
+
+  // ---------------- rendering ----------------------------------------------
+  const cv = document.getElementById('board');
+  const ctx = cv.getContext('2d');
+  let W = 0, H = 0, DPR = 1, field = null;
+
+  function fit() {
+    DPR = Math.min(2, window.devicePixelRatio || 1);
+    const r = cv.getBoundingClientRect();
+    W = Math.round(r.width); H = Math.round(r.height);
+    cv.width = W * DPR; cv.height = H * DPR;
+    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    buildField();
+  }
+
+  // map board coords -> pixels. domain [-0.5, N-0.5]
+  const mapX = x => ((x + 0.5) / P.N) * W;
+  const mapY = y => H - ((y + 0.5) / P.N) * H;   // y up
+
+  // egg-carton potential heatmap, cached to offscreen canvas
+  function buildField() {
+    if (!W) return;
+    const res = 200;
+    const off = document.createElement('canvas');
+    off.width = res; off.height = res;
+    const octx = off.getContext('2d');
+    const img = octx.createImageData(res, res);
+    const N = P.N;
+    // colour ramp: deep violet -> teal-dark -> amber (wells bright)
+    const ramp = (t) => {
+      // t in [0,1], 1 = well bottom (bright)
+      const c0 = [12, 14, 28], c1 = [40, 30, 80], c2 = [30, 95, 105], c3 = [255, 180, 84];
+      let a, b, f;
+      if (t < 0.5)      { a = c0; b = c1; f = t / 0.5; }
+      else if (t < 0.8) { a = c1; b = c2; f = (t - 0.5) / 0.3; }
+      else              { a = c2; b = c3; f = (t - 0.8) / 0.2; }
+      return [a[0] + (b[0]-a[0])*f, a[1] + (b[1]-a[1])*f, a[2] + (b[2]-a[2])*f];
+    };
+    for (let py = 0; py < res; py++) {
+      for (let px = 0; px < res; px++) {
+        const x = -0.5 + (px / res) * N;
+        const y = -0.5 + ((res - py) / res) * N;
+        // U_grid = -A(cos+cos); wells (min) where cos=1. normalise potential depth.
+        const u = -(Math.cos(TAU * x) + Math.cos(TAU * y)); // in [-2,2], -2 at well
+        const t = 1 - (u + 2) / 4; // 1 at well bottom, 0 at peak
+        const [r, gc, bl] = ramp(t);
+        const k = (py * res + px) * 4;
+        img.data[k] = r; img.data[k+1] = gc; img.data[k+2] = bl; img.data[k+3] = 255;
+      }
+    }
+    octx.putImageData(img, 0, 0);
+    field = off;
+  }
+
+  let flash = 0;
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    // potential field
+    if (field) {
+      ctx.globalAlpha = 0.9;
+      ctx.imageSmoothingEnabled = true;
+      ctx.drawImage(field, 0, 0, W, H);
+      ctx.globalAlpha = 1;
+    }
+    // grid lines at integer cells
+    ctx.strokeStyle = 'rgba(230,237,246,0.06)';
+    ctx.lineWidth = 1;
+    for (let k = 0; k < P.N; k++) {
+      ctx.beginPath(); ctx.moveTo(mapX(k), 0); ctx.lineTo(mapX(k), H); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(0, mapY(k)); ctx.lineTo(W, mapY(k)); ctx.stroke();
+    }
+
+    const b = board();
+    const conf = conflicts(b);
+    const isSolved = solved(b);
+    const cellR = (W / P.N) * 0.42;
+
+    // attack beams between conflicting cells
+    flash = (flash + 0.08) % TAU;
+    const pulse = 0.35 + 0.25 * Math.sin(flash);
+    ctx.lineCap = 'round';
+    for (const [i, j] of conf) {
+      const x1 = mapX(b[i][0]), y1 = mapY(b[i][1]);
+      const x2 = mapX(b[j][0]), y2 = mapY(b[j][1]);
+      ctx.strokeStyle = `rgba(255,85,110,${pulse})`;
+      ctx.lineWidth = 2;
+      ctx.shadowColor = 'rgba(255,85,110,0.8)'; ctx.shadowBlur = 12;
+      ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
+    }
+    ctx.shadowBlur = 0;
+
+    // ghost target squares (rounded cells)
+    for (const [cx, cy] of b) {
+      const gx = mapX(cx), gy = mapY(cy), s = (W / P.N) * 0.72;
+      ctx.strokeStyle = isSolved ? 'rgba(119,230,160,0.35)' : 'rgba(79,224,207,0.18)';
+      ctx.lineWidth = 1;
+      ctx.strokeRect(gx - s/2, gy - s/2, s, s);
+    }
+
+    // queens (continuous positions) as glowing particles
+    const col = isSolved ? [119,230,160] : [79,224,207];
+    for (let i = 0; i < P.N; i++) {
+      const x = mapX(pos[i][0]), y = mapY(pos[i][1]);
+      const speed = Math.hypot(vel[i][0], vel[i][1]);
+      const glow = Math.min(1, 0.4 + speed * 0.5);
+      const grad = ctx.createRadialGradient(x, y, 0, x, y, cellR * 2.2);
+      grad.addColorStop(0, `rgba(${col[0]},${col[1]},${col[2]},${0.9})`);
+      grad.addColorStop(0.3, `rgba(${col[0]},${col[1]},${col[2]},${0.35 * glow})`);
+      grad.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath(); ctx.arc(x, y, cellR * 2.2, 0, TAU); ctx.fill();
+      // core
+      ctx.fillStyle = `rgb(${col[0]},${col[1]},${col[2]})`;
+      ctx.beginPath(); ctx.arc(x, y, cellR * 0.5, 0, TAU); ctx.fill();
+      ctx.strokeStyle = 'rgba(255,255,255,0.85)'; ctx.lineWidth = 1.5;
+      ctx.stroke();
+    }
+
+    updateTelemetry(conf.length, isSolved);
+  }
+
+  // ---------------- phase + telemetry --------------------------------------
+  const $ = id => document.getElementById(id);
+  let reheatTimer = 0;
+
+  function phaseOf(isSolved) {
+    if (isSolved) return ['cristalizado', getComputedStyle(document.documentElement).getPropertyValue('--green')];
+    if (T > 0.4)  return ['turbulencia', getComputedStyle(document.documentElement).getPropertyValue('--amber')];
+    if (T > 0.02) return ['enfriando',   getComputedStyle(document.documentElement).getPropertyValue('--teal')];
+    return ['asentando', getComputedStyle(document.documentElement).getPropertyValue('--violet')];
+  }
+
+  function updateTelemetry(nConf, isSolved) {
+    $('mStep').textContent = steps;
+    const cEl = $('mConf');
+    cEl.textContent = isSolved ? '0' : nConf;
+    cEl.className = 'v ' + (isSolved ? 'green' : (nConf ? 'red' : 'green'));
+    $('mTemp').textContent = T.toFixed(3);
+    const e = repEnergy();
+    $('mRep').textContent = e.toFixed(1);
+    const T0 = +$('T').value || 1e-6;
+    $('tempBar').style.width = Math.min(100, (T / Math.max(T0, 0.001)) * 100) + '%';
+
+    const [txt, colvar] = phaseOf(isSolved);
+    $('phaseText').textContent = txt;
+    $('phaseText').style.color = colvar;
+    $('phaseDot').style.background = colvar;
+    $('phaseDot').style.boxShadow = '0 0 10px ' + colvar;
+  }
+
+  function repEnergy() {
+    const s2 = 2 * P.sigma * P.sigma;
+    let e = 0;
+    for (let i = 0; i < P.N; i++)
+      for (let j = i + 1; j < P.N; j++) {
+        const dx = pos[i][0]-pos[j][0], dy = pos[i][1]-pos[j][1];
+        e += g(dx,s2)+g(dy,s2)+g(dx-dy,s2)+g(dx+dy,s2);
+      }
+    return P.B * e;
+  }
+
+  // ---------------- main loop ----------------------------------------------
+  function loop() {
+    if (!paused) {
+      const sub = 3;                 // physics substeps per frame
+      for (let k = 0; k < sub; k++) rk4();
+
+      // auto-reheat if frozen in a local minimum with conflicts
+      const b = board();
+      if (T <= P.T_min * 5 && maxSpeed() < 2e-3) {
+        if (!solved(b)) {
+          reheatTimer++;
+          if (reheatTimer > 30) {      // stuck -> kick the system back into chaos
+            T = Math.max(0.6, (+$('T').value) * 0.7);
+            reheatTimer = 0;
+          }
+        }
+      } else reheatTimer = 0;
+    }
+    draw();
+    requestAnimationFrame(loop);
+  }
+
+  // ---------------- wiring -------------------------------------------------
+  const bind = (id, label, fmt, key) => {
+    const el = $(id);
+    const upd = () => {
+      P[key] = parseFloat(el.value);
+      $(label).textContent = fmt(P[key]);
+      if (key === 'A') buildField();
+    };
+    el.addEventListener('input', upd); upd();
+  };
+  bind('A', 'lA', v => v.toFixed(1), 'A');
+  bind('B', 'lB', v => v.toFixed(0), 'B');
+  bind('S', 'lS', v => v.toFixed(2), 'sigma');
+  bind('G', 'lG', v => v.toFixed(2), 'gamma');
+  $('T').addEventListener('input', () => { $('lT').textContent = (+$('T').value).toFixed(1); });
+
+  document.querySelectorAll('#nSeg button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#nSeg button').forEach(b => b.setAttribute('aria-pressed', 'false'));
+      btn.setAttribute('aria-pressed', 'true');
+      P.N = +btn.dataset.n;
+      reset();
+    });
+  });
+
+  $('btnRestart').addEventListener('click', reset);
+  const pauseBtn = $('btnPause');
+  pauseBtn.addEventListener('click', () => {
+    paused = !paused;
+    pauseBtn.textContent = paused ? 'Seguir' : 'Pausa';
+  });
+
+  window.addEventListener('resize', fit);
+
+  fit();
+  reset();
+  loop();
+})();
+</script>

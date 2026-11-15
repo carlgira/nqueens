@@ -1,0 +1,46 @@
+{"clase": 3, "K": 3, "tam_clase": 8, "nucleo": [[1, 3]], "desconocidas": [], "seg": 2.5}
+{"clase": 0, "K": 3, "tam_clase": 8, "nucleo": [[1, -4]], "desconocidas": [], "seg": 2.5}
+{"clase": 8, "K": 3, "tam_clase": 8, "nucleo": [[3, -1]], "desconocidas": [], "seg": 2.5}
+{"clase": 5, "K": 3, "tam_clase": 8, "nucleo": [[4, -1]], "desconocidas": [], "seg": 3.1}
+{"clase": 6, "K": 3, "tam_clase": 8, "nucleo": [[4, 2]], "desconocidas": [], "seg": 3.2}
+{"clase": 1, "K": 3, "tam_clase": 8, "nucleo": [[2, 4]], "desconocidas": [], "seg": 3.5}
+{"clase": 7, "K": 3, "tam_clase": 8, "nucleo": [[2, -3]], "desconocidas": [], "seg": 3.6}
+{"clase": 9, "K": 3, "tam_clase": 8, "nucleo": [[1, 4]], "desconocidas": [], "seg": 3.8}
+{"clase": 10, "K": 3, "tam_clase": 8, "nucleo": [[2, -3]], "desconocidas": [], "seg": 4.0}
+{"clase": 4, "K": 3, "tam_clase": 8, "nucleo": [[4, 2]], "desconocidas": [], "seg": 4.8}
+{"clase": 16, "K": 3, "tam_clase": 8, "nucleo": [[2, 4]], "desconocidas": [], "seg": 2.3}
+{"clase": 14, "K": 3, "tam_clase": 8, "nucleo": [[1, 3]], "desconocidas": [], "seg": 3.0}
+{"clase": 19, "K": 3, "tam_clase": 8, "nucleo": [[4, 2]], "desconocidas": [], "seg": 2.2}
+{"clase": 15, "K": 3, "tam_clase": 8, "nucleo": [[1, 3]], "desconocidas": [], "seg": 2.9}
+{"clase": 12, "K": 3, "tam_clase": 8, "nucleo": [[2, 4]], "desconocidas": [], "seg": 3.7}
+{"clase": 18, "K": 3, "tam_clase": 4, "nucleo": [[1, -4]], "desconocidas": [], "seg": 2.6}
+{"clase": 17, "K": 3, "tam_clase": 8, "nucleo": [[3, -2]], "desconocidas": [], "seg": 3.0}
+{"clase": 20, "K": 3, "tam_clase": 8, "nucleo": [[3, -1]], "desconocidas": [], "seg": 2.7}
+{"clase": 13, "K": 3, "tam_clase": 8, "nucleo": [[4, 1]], "desconocidas": [], "seg": 4.5}
+{"clase": 21, "K": 3, "tam_clase": 8, "nucleo": [[4, 2]], "desconocidas": [], "seg": 2.5}
+{"clase": 24, "K": 3, "tam_clase": 8, "nucleo": [[1, -3]], "desconocidas": [], "seg": 2.7}
+{"clase": 26, "K": 3, "tam_clase": 8, "nucleo": [[2, 4]], "desconocidas": [], "seg": 2.3}
+{"clase": 27, "K": 3, "tam_clase": 4, "nucleo": [[2, -3]], "desconocidas": [], "seg": 2.5}
+{"clase": 28, "K": 3, "tam_clase": 8, "nucleo": [[1, 2]], "desconocidas": [], "seg": 2.6}
+{"clase": 25, "K": 3, "tam_clase": 8, "nucleo": [[2, -3]], "desconocidas": [], "seg": 3.5}
+{"clase": 35, "K": 3, "tam_clase": 8, "nucleo": [[1, -3]], "desconocidas": [], "seg": 2.8}
+{"clase": 31, "K": 3, "tam_clase": 8, "nucleo": [[4, 3]], "desconocidas": [], "seg": 3.4}
+{"clase": 39, "K": 3, "tam_clase": 4, "nucleo": [[2, -4]], "desconocidas": [], "seg": 2.8}
+{"clase": 33, "K": 3, "tam_clase": 8, "nucleo": [[1, 3]], "desconocidas": [], "seg": 3.5}
+{"clase": 40, "K": 3, "tam_clase": 4, "nucleo": [[3, -1]], "desconocidas": [], "seg": 2.2}
+{"clase": 29, "K": 3, "tam_clase": 8, "nucleo": [[3, 1]], "desconocidas": [], "seg": 4.6}
+{"clase": 42, "K": 3, "tam_clase": 8, "nucleo": [[1, -3]], "desconocidas": [], "seg": 2.7}
+{"clase": 37, "K": 4, "tam_clase": 8, "nucleo": [], "desconocidas": [], "seg": 5.3}
+{"clase": 38, "K": 4, "tam_clase": 8, "nucleo": [], "desconocidas": [], "seg": 8.6}
+{"clase": 32, "K": 4, "tam_clase": 8, "nucleo": [[4, 1], [3, -2]], "desconocidas": [], "seg": 16.8}
+{"clase": 36, "K": 4, "tam_clase": 8, "nucleo": [[4, 2], [1, -3]], "desconocidas": [], "seg": 17.1}
+{"clase": 23, "K": 2, "tam_clase": 8, "nucleo": [[1, -3], [3, 2]], "desconocidas": [], "seg": 0.9}
+{"clase": 34, "K": 2, "tam_clase": 8, "nucleo": [[1, -3], [3, 1]], "desconocidas": [], "seg": 0.8}
+{"clase": 22, "K": 4, "tam_clase": 8, "nucleo": [[4, 2], [1, -3]], "desconocidas": [], "seg": 19.5}
+{"clase": 45, "K": 4, "tam_clase": 8, "nucleo": [[1, -4], [2, -3]], "desconocidas": [], "seg": 14.1}
+{"clase": 41, "K": 5, "tam_clase": 8, "nucleo": [], "desconocidas": [], "seg": 30.9}
+{"clase": 30, "K": 5, "tam_clase": 8, "nucleo": [], "desconocidas": [], "seg": 34.8}
+{"clase": 11, "K": 5, "tam_clase": 8, "nucleo": [], "desconocidas": [], "seg": 41.1}
+{"clase": 2, "K": 5, "tam_clase": 8, "nucleo": [], "desconocidas": [], "seg": 44.6}
+{"clase": 44, "K": 5, "tam_clase": 8, "nucleo": [], "desconocidas": [], "seg": 43.5}
+{"clase": 43, "K": 5, "tam_clase": 8, "nucleo": [], "desconocidas": [], "seg": 44.5}

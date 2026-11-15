@@ -1,0 +1,46 @@
+{"clase": 9, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 4], [2, 6], [4, 2]], "exacto": true, "cota_inferior": 3, "libre": null, "seg": 0.8, "delta": 0.001, "time_limit": 120}
+{"clase": 6, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[2, 3], [3, 5], [4, 2]], "exacto": true, "cota_inferior": 3, "libre": null, "seg": 0.9, "delta": 0.001, "time_limit": 120}
+{"clase": 8, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 4], [2, 3], [3, 8]], "exacto": true, "cota_inferior": 3, "libre": null, "seg": 0.9, "delta": 0.001, "time_limit": 120}
+{"clase": 3, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 3], [2, 4], [4, 7]], "exacto": true, "cota_inferior": 3, "libre": null, "seg": 1.0, "delta": 0.001, "time_limit": 120}
+{"clase": 1, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[2, 4], [3, 2], [4, 6]], "exacto": true, "cota_inferior": 3, "libre": null, "seg": 1.1, "delta": 0.001, "time_limit": 120}
+{"clase": 4, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[2, 3], [3, 5], [4, 2]], "exacto": true, "cota_inferior": 3, "libre": null, "seg": 1.1, "delta": 0.001, "time_limit": 120}
+{"clase": 0, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 5], [3, 8], [4, 6]], "exacto": true, "cota_inferior": 3, "libre": null, "seg": 1.2, "delta": 0.001, "time_limit": 120}
+{"clase": 12, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[2, 4], [3, 2], [4, 6]], "exacto": true, "cota_inferior": 3, "libre": null, "seg": 0.6, "delta": 0.001, "time_limit": 120}
+{"clase": 10, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 2], [2, 6], [3, 4]], "exacto": true, "cota_inferior": 3, "libre": null, "seg": 0.7, "delta": 0.001, "time_limit": 120}
+{"clase": 5, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 6], [2, 5], [4, 8]], "exacto": true, "cota_inferior": 3, "libre": null, "seg": 1.7, "delta": 0.001, "time_limit": 120}
+{"clase": 7, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 4], [2, 6], [4, 8]], "exacto": true, "cota_inferior": 3, "libre": null, "seg": 1.7, "delta": 0.001, "time_limit": 120}
+{"clase": 16, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 6], [2, 4], [3, 8]], "exacto": true, "cota_inferior": 3, "libre": null, "seg": 0.8, "delta": 0.001, "time_limit": 120}
+{"clase": 13, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 3], [2, 4], [4, 1]], "exacto": true, "cota_inferior": 3, "libre": null, "seg": 1.1, "delta": 0.001, "time_limit": 120}
+{"clase": 14, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 3], [3, 7], [4, 7]], "exacto": true, "cota_inferior": 3, "libre": null, "seg": 1.2, "delta": 0.001, "time_limit": 120}
+{"clase": 15, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 3], [2, 4], [4, 7]], "exacto": true, "cota_inferior": 3, "libre": null, "seg": 1.3, "delta": 0.001, "time_limit": 120}
+{"clase": 20, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[2, 4], [3, 8], [4, 7]], "exacto": true, "cota_inferior": 3, "libre": null, "seg": 1.0, "delta": 0.001, "time_limit": 120}
+{"clase": 18, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 5], [2, 3], [4, 7]], "exacto": true, "cota_inferior": 3, "libre": null, "seg": 1.2, "delta": 0.001, "time_limit": 120}
+{"clase": 19, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 6], [2, 8], [4, 2]], "exacto": true, "cota_inferior": 3, "libre": null, "seg": 1.1, "delta": 0.001, "time_limit": 120}
+{"clase": 23, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 6], [3, 2]], "exacto": true, "cota_inferior": 2, "libre": null, "seg": 0.6, "delta": 0.001, "time_limit": 120}
+{"clase": 17, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 5], [3, 7], [4, 1]], "exacto": true, "cota_inferior": 3, "libre": null, "seg": 1.4, "delta": 0.001, "time_limit": 120}
+{"clase": 21, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 6], [2, 8], [4, 2]], "exacto": true, "cota_inferior": 3, "libre": null, "seg": 1.2, "delta": 0.001, "time_limit": 120}
+{"clase": 24, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 6], [2, 5], [3, 5]], "exacto": true, "cota_inferior": 3, "libre": null, "seg": 1.0, "delta": 0.001, "time_limit": 120}
+{"clase": 26, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[2, 4], [3, 2], [4, 6]], "exacto": true, "cota_inferior": 3, "libre": null, "seg": 1.0, "delta": 0.001, "time_limit": 120}
+{"clase": 27, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[2, 6], [3, 1], [4, 8]], "exacto": true, "cota_inferior": 3, "libre": null, "seg": 1.1, "delta": 0.001, "time_limit": 120}
+{"clase": 25, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[2, 6], [3, 1], [4, 8]], "exacto": true, "cota_inferior": 3, "libre": null, "seg": 1.2, "delta": 0.001, "time_limit": 120}
+{"clase": 29, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[2, 5], [2, 6], [3, 1]], "exacto": true, "cota_inferior": 3, "libre": null, "seg": 1.1, "delta": 0.001, "time_limit": 120}
+{"clase": 28, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 2], [2, 3], [4, 1]], "exacto": true, "cota_inferior": 3, "libre": null, "seg": 1.2, "delta": 0.001, "time_limit": 120}
+{"clase": 34, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 6], [3, 1]], "exacto": true, "cota_inferior": 2, "libre": null, "seg": 0.7, "delta": 0.001, "time_limit": 120}
+{"clase": 31, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 2], [2, 8], [4, 3]], "exacto": true, "cota_inferior": 3, "libre": null, "seg": 1.3, "delta": 0.001, "time_limit": 120}
+{"clase": 35, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 6], [3, 2], [4, 1]], "exacto": true, "cota_inferior": 3, "libre": null, "seg": 1.0, "delta": 0.001, "time_limit": 120}
+{"clase": 33, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 3], [3, 7], [4, 7]], "exacto": true, "cota_inferior": 3, "libre": null, "seg": 1.4, "delta": 0.001, "time_limit": 120}
+{"clase": 22, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 6], [2, 5], [3, 4], [4, 2]], "exacto": true, "cota_inferior": 4, "libre": null, "seg": 3.2, "delta": 0.001, "time_limit": 120}
+{"clase": 39, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 2], [2, 5], [4, 3]], "exacto": true, "cota_inferior": 3, "libre": [0.875, 2.5], "seg": 0.5, "delta": 0.001, "time_limit": 120}
+{"clase": 42, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 6], [2, 5], [4, 2]], "exacto": true, "cota_inferior": 3, "libre": null, "seg": 0.8, "delta": 0.001, "time_limit": 120}
+{"clase": 32, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 5], [1, 6], [3, 7], [4, 1]], "exacto": true, "cota_inferior": 4, "libre": null, "seg": 2.8, "delta": 0.001, "time_limit": 120}
+{"clase": 37, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 3], [2, 5], [4, 2], [4, 8]], "exacto": true, "cota_inferior": 4, "libre": null, "seg": 2.0, "delta": 0.001, "time_limit": 120}
+{"clase": 36, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 3], [1, 6], [3, 4], [4, 2]], "exacto": true, "cota_inferior": 4, "libre": null, "seg": 3.1, "delta": 0.001, "time_limit": 120}
+{"clase": 40, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[2, 3], [2, 4], [3, 8]], "exacto": true, "cota_inferior": 3, "libre": null, "seg": 2.5, "delta": 0.001, "time_limit": 120}
+{"clase": 45, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 5], [2, 6], [3, 1], [4, 7]], "exacto": true, "cota_inferior": 4, "libre": null, "seg": 2.7, "delta": 0.001, "time_limit": 120}
+{"clase": 38, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 3], [1, 4], [4, 1], [4, 2]], "exacto": true, "cota_inferior": 4, "libre": null, "seg": 3.0, "delta": 0.001, "time_limit": 120}
+{"clase": 30, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 3], [1, 6], [2, 5], [3, 8], [4, 1]], "exacto": true, "cota_inferior": 5, "libre": null, "seg": 6.3, "delta": 0.001, "time_limit": 120}
+{"clase": 41, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 3], [1, 4], [2, 3], [2, 6], [3, 5]], "exacto": true, "cota_inferior": 5, "libre": null, "seg": 7.0, "delta": 0.001, "time_limit": 120}
+{"clase": 43, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 7], [3, 1], [3, 4], [4, 1], [4, 6]], "exacto": true, "cota_inferior": 5, "libre": null, "seg": 8.3, "delta": 0.001, "time_limit": 120}
+{"clase": 44, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 2], [2, 3], [2, 6], [3, 4], [4, 7]], "exacto": true, "cota_inferior": 5, "libre": null, "seg": 9.9, "delta": 0.001, "time_limit": 120}
+{"clase": 11, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 4], [1, 5], [3, 1], [4, 7], [4, 8]], "exacto": true, "cota_inferior": 5, "libre": null, "seg": 10.4, "delta": 0.001, "time_limit": 120}
+{"clase": 2, "n_clases": 46, "nodeg": true, "fisico": false, "sup_k": [[1, 3], [1, 5], [3, 4], [4, 1], [4, 2]], "exacto": true, "cota_inferior": 5, "libre": null, "seg": 11.4, "delta": 0.001, "time_limit": 120}

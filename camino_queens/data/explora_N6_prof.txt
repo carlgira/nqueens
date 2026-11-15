@@ -1,0 +1,34 @@
+N = 6   soluciones 4   tableros posibles 1947792   modo profundidad   repeticiones 300
+  distancias exactas entre soluciones (saltos):  6:4 8:2   (pares)
+  matriz de distancias:
+        0  1  2  3
+    0   0  8  6  6
+    1   8  0  6  6
+    2   6  6  0  8
+    3   6  6  8  0
+  capas desde la solución 0 (distancia: tableros [soluciones]): 0:1[1] 1:36 2:566 3:5126 4:29591 5:113160 6:287167[2] 7:470566 8:481505[1] 9:319696 10:155375 11:60374 12:19117 13:4668 14:796 15:48
+  tablero más lejano de una solución: 15 saltos
+
+  --- 300 experimentos al azar ---
+  tableros explorados hasta tener todas          mín   242951   10%   759080   mediana  1455154   90%  1847038   máx  1945925
+  profundidad máxima del árbol al terminar     mín     9426   10%    34129   mediana    88035   90%   165435   máx   183844
+  explorados al aparecer la solución n.º 1     mín      203   10%    75148   mediana   290193   90%   753462   máx  1708959
+  explorados al aparecer la solución n.º 2     mín   115249   10%   327419   mediana   818587   90%  1492429   máx  1854931
+  explorados al aparecer la solución n.º 3     mín   242951   10%   759080   mediana  1455154   90%  1847038   máx  1945925
+  profundidad (camino) de la solución n.º 1    mín        7   10%     2798   mediana    11436   90%    33784   máx   126749
+  profundidad (camino) de la solución n.º 2    mín     4365   10%    13015   mediana    37503   90%    92576   máx   168423
+  profundidad (camino) de la solución n.º 3    mín     9426   10%    34129   mediana    88035   90%   161261   máx   183102
+  tableros entre la 1.ª y la 2.ª               mín      362   10%    65911   mediana   416578   90%  1055358   máx  1630931
+  tableros entre la 2.ª y la 3.ª               mín     1919   10%    69408   mediana   435681   90%  1012982   máx  1696067
+  primera solución encontrada según su distancia al inicio:  d=6: 67.3 %  d=8: 32.7 %
+  órdenes exactos (inicio: soluciones en orden): 24 distintos en 300 experimentos; los más frecuentes:
+       20×  1: 3 0 2
+       19×  3: 1 0 2
+       17×  3: 2 1 0
+       15×  1: 0 2 3
+       15×  3: 2 0 1
+       14×  1: 3 2 0
+  secuencias de distancias al inicio: 3 distintos en 300 experimentos; los más frecuentes:
+      104×  6,6,8
+       98×  6,8,6
+       98×  8,6,6

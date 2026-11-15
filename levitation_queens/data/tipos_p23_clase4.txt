@@ -1,0 +1,6 @@
+p=23 clase 4: 396 orbitas de traslacion, 5 orbitas del grupo completo (orden 176)
+    176 orbitas de traslacion en  1 orbitas completas: otra: 1+1+1+1 pendientes [.,.,.,.]
+     88 orbitas de traslacion en  1 orbitas completas: otra: 2+1+1 pendientes [.,.,.]
+     44 orbitas de traslacion en  1 orbitas completas: HAZ 3+1 [s,s] |H|=22
+     44 orbitas de traslacion en  1 orbitas completas: HAZ 3+1 [s,s] |H|=22 / RADIAL [.,.,s,s]  (3 coberturas)
+     44 orbitas de traslacion en  1 orbitas completas: RADIAL [.,.,s,s]

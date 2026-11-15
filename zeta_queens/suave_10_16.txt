@@ -1,0 +1,56 @@
+
+N=10 Q=724 tramo=109 orbitas=67 cobertura=0.735 una_candidata=0.463 varias=0.537
+  primera   en u: CV=3.34 max=27 | en soluciones: hueco medio=1.64 CV=1.018 max=9 error_curva=7.82
+  azar      en u: CV=2.47 max=20 | en soluciones: hueco medio=1.64 CV=0.719 max=7 error_curva=11.64
+  tv        en u: CV=2.87 max=23 | en soluciones: hueco medio=1.64 CV=0.919 max=11 error_curva=6.78
+  entropia  en u: CV=2.50 max=20 | en soluciones: hueco medio=1.62 CV=0.596 max=5 error_curva=6.59
+  huecos    en u: CV=2.48 max=20 | en soluciones: hueco medio=1.61 CV=0.458 max=4 error_curva=8.92
+  ritmo     en u: CV=2.49 max=19 | en soluciones: hueco medio=1.64 CV=0.695 max=7 error_curva=5.87
+
+N=11 Q=2680 tramo=402 orbitas=269 cobertura=0.794 una_candidata=0.602 varias=0.398
+  primera   en u: CV=5.42 max=63 | en soluciones: hueco medio=1.49 CV=1.088 max=21 error_curva=15.08
+  azar      en u: CV=3.78 max=48 | en soluciones: hueco medio=1.49 CV=0.611 max=7 error_curva=19.25
+  tv        en u: CV=3.76 max=46 | en soluciones: hueco medio=1.50 CV=0.689 max=8 error_curva=10.37
+  entropia  en u: CV=3.75 max=46 | en soluciones: hueco medio=1.49 CV=0.658 max=8 error_curva=9.96
+  huecos    en u: CV=3.58 max=42 | en soluciones: hueco medio=1.48 CV=0.435 max=4 error_curva=16.87
+  ritmo     en u: CV=4.53 max=63 | en soluciones: hueco medio=1.49 CV=0.760 max=13 error_curva=7.29
+
+N=12 Q=14200 tramo=2130 orbitas=1386 cobertura=0.776 una_candidata=0.567 varias=0.433
+  primera   en u: CV=10.63 max=276 | en soluciones: hueco medio=1.54 CV=1.953 max=77 error_curva=83.73
+  azar      en u: CV=7.12 max=201 | en soluciones: hueco medio=1.54 CV=0.715 max=11 error_curva=92.25
+  tv        en u: CV=6.86 max=184 | en soluciones: hueco medio=1.54 CV=0.869 max=22 error_curva=46.52
+  entropia  en u: CV=6.89 max=187 | en soluciones: hueco medio=1.54 CV=0.766 max=15 error_curva=47.08
+  huecos    en u: CV=7.10 max=201 | en soluciones: hueco medio=1.54 CV=0.429 max=4 error_curva=80.76
+  ritmo     en u: CV=6.86 max=184 | en soluciones: hueco medio=1.54 CV=0.764 max=14 error_curva=31.31
+
+N=13 Q=73712 tramo=11057 orbitas=7238 cobertura=0.784 una_candidata=0.574 varias=0.426
+  primera   en u: CV=20.21 max=1281 | en soluciones: hueco medio=1.53 CV=2.905 max=331 error_curva=372.69
+  azar      en u: CV=13.78 max=862 | en soluciones: hueco medio=1.53 CV=0.725 max=13 error_curva=478.22
+  tv        en u: CV=13.70 max=857 | en soluciones: hueco medio=1.53 CV=0.918 max=27 error_curva=245.47
+  entropia  en u: CV=13.69 max=857 | en soluciones: hueco medio=1.53 CV=0.776 max=18 error_curva=246.56
+  huecos    en u: CV=13.67 max=857 | en soluciones: hueco medio=1.53 CV=0.446 max=4 error_curva=408.91
+  ritmo     en u: CV=14.13 max=902 | en soluciones: hueco medio=1.53 CV=0.932 max=31 error_curva=179.48
+
+N=14 Q=365596 tramo=54840 orbitas=35711 cobertura=0.781 una_candidata=0.561 varias=0.439
+  primera   en u: CV=38.35 max=4712 | en soluciones: hueco medio=1.54 CV=8.977 max=2264 error_curva=2301.03
+  azar      en u: CV=26.25 max=3149 | en soluciones: hueco medio=1.54 CV=0.723 max=28 error_curva=2334.74
+  tv        en u: CV=26.28 max=3149 | en soluciones: hueco medio=1.54 CV=1.056 max=73 error_curva=975.64
+  entropia  en u: CV=26.26 max=3152 | en soluciones: hueco medio=1.54 CV=0.795 max=25 error_curva=1023.36
+  huecos    en u: CV=26.23 max=3149 | en soluciones: hueco medio=1.54 CV=0.445 max=5 error_curva=2021.94
+  ritmo     en u: CV=26.32 max=3149 | en soluciones: hueco medio=1.54 CV=0.958 max=68 error_curva=723.16
+
+N=15 Q=2279184 tramo=341878 orbitas=220364 cobertura=0.773 una_candidata=0.554 varias=0.446
+  primera   en u: CV=85.61 max=26145 | en soluciones: hueco medio=1.55 CV=18.279 max=10375 error_curva=16159.18
+  azar      en u: CV=58.43 max=17492 | en soluciones: hueco medio=1.55 CV=0.721 max=20 error_curva=12424.18
+  tv        en u: CV=58.44 max=17485 | en soluciones: hueco medio=1.55 CV=1.125 max=94 error_curva=6346.58
+  entropia  en u: CV=58.42 max=17485 | en soluciones: hueco medio=1.55 CV=0.835 max=47 error_curva=6754.71
+  huecos    en u: CV=58.41 max=17485 | en soluciones: hueco medio=1.55 CV=0.447 max=5 error_curva=10798.62
+  ritmo     en u: CV=58.52 max=17480 | en soluciones: hueco medio=1.55 CV=1.046 max=98 error_curva=3717.60
+
+N=16 Q=14772512 tramo=2215877 orbitas=1419544 cobertura=0.769 una_candidata=0.548 varias=0.452
+  primera   en u: CV=197.30 max=153202 | en soluciones: hueco medio=1.56 CV=38.194 max=54302 error_curva=110835.23
+  azar      en u: CV=134.54 max=102372 | en soluciones: hueco medio=1.56 CV=0.727 max=26 error_curva=76102.54
+  tv        en u: CV=134.55 max=102387 | en soluciones: hueco medio=1.56 CV=1.254 max=178 error_curva=45406.80
+  entropia  en u: CV=134.54 max=102387 | en soluciones: hueco medio=1.56 CV=0.874 max=59 error_curva=47039.18
+  huecos    en u: CV=134.52 max=102367 | en soluciones: hueco medio=1.56 CV=0.447 max=5 error_curva=65517.82
+  ritmo     en u: CV=134.76 max=102390 | en soluciones: hueco medio=1.56 CV=1.327 max=457 error_curva=21972.34

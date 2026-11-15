@@ -1,0 +1,10 @@
+N = 6   soluciones 4   grupos de simetría 1 (tamaños: 4)
+  distancia entre grupos (mínima entre orientaciones) y dentro de cada grupo:
+        0
+    0   6
+  parejas de grupos 0 (frente a 6 parejas de soluciones); tableros intermedios usados: 0
+  secuencias al azar por los grupos: saltos  mín 0  mediana 0  máx 0
+  exploración en profundidad, parando con todas las soluciones: tableros  mín 284903  mediana 1447808 (74.3 %)  máx 1947523
+  exploración en profundidad, parando con un miembro de cada grupo: tableros  mín 1  mediana 1 (0.0 %)  máx 1
+  exploración en anchura, parando con todas las soluciones: tableros  mín 906304  mediana 974363 (50.0 %)  máx 1220517
+  exploración en anchura, parando con un miembro de cada grupo: tableros  mín 1  mediana 1 (0.0 %)  máx 1

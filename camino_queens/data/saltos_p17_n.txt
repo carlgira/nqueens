@@ -1,0 +1,24 @@
+p = 17  clase n  toroidales (x_0=0) 8276  falso 8704
+  [real (bases de la clase, aciertos en todas las toroidales)]  bases 4, pares para la diagonal 33100 (la permutación usa todos)
+    diagonal (la fijan 3; se cuentan cadenas con ≥4):
+      algún par de la cadena está relacionado por el grupo completo (H y los 8 giros): λ distintos 0 sí / 0 no;  λ·x + c (escalar filas) 0 sí / 0 no
+      λ distintos                ninguna con 4 o más
+      λ·x + c (escalar filas)   ninguna con 4 o más
+    permutación de columnas (la fijan 2; cadenas con ≥3):
+      algún par de la cadena está relacionado por el grupo completo (H y los 8 giros): π no afín 136 sí / 0 no;  π afín no traslación 0 sí / 0 no
+      π no afín                 3 sol:136
+      π afín no traslación     ninguna con 3 o más
+      clases de las cadenas (tipo+clases):  0cnn:136
+      mejor cadena (π no afín): 3 soluciones
+         0  2  4  6 10 14 16 11  5  7 15  1  3  8 13  9 12
+         0  4  8 12 16  3  7 11 15  2  6 10 14  1  5  9 13
+         0  8  1 13  7 14  2 11  6  4 12 16  3 10 15  9  5
+  [falso]  bases 16, pares para la diagonal 139248 (la permutación usa todos)
+    diagonal (la fijan 3; se cuentan cadenas con ≥4):
+      algún par de la cadena está relacionado por el grupo completo (H y los 8 giros): λ distintos 0 sí / 0 no;  λ·x + c (escalar filas) 0 sí / 0 no
+      λ distintos                ninguna con 4 o más
+      λ·x + c (escalar filas)   ninguna con 4 o más
+    permutación de columnas (la fijan 2; cadenas con ≥3):
+      algún par de la cadena está relacionado por el grupo completo (H y los 8 giros): π no afín 0 sí / 0 no;  π afín no traslación 0 sí / 0 no
+      π no afín                 ninguna con 3 o más
+      π afín no traslación     ninguna con 3 o más

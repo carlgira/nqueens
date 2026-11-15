@@ -1,0 +1,39 @@
+N = 11   tableros 285311670611   soluciones 2680
+
+[ALL] 2680 soluciones   dimensión afín 10 (de 11)
+    funcionales constantes (1):  (1,1,1,1,1,1,1,1,1,1,1)=0
+    LEX  perfil prefijos: 11 90 478 1394 2100 2422 2570 2630 2662 2680 2680
+         inicio 5706056255  extensión 273899558101  densidad 9.785e-09  tramos 2680
+    D2   perfil prefijos: 11 115 581 1353 1879 2113 2203 2241 2241 2260 2680
+         inicio 22  extensión 285290414381  densidad 9.394e-09  tramos 2261
+    MOM  perfil prefijos: 1 11 121 931 1947 2179 2223 2239 2241 2260 2680
+         inicio 22  extensión 25914759317  densidad 1.034e-07  tramos 2261
+    rectas: máximo 11 soluciones alineadas;  3 en recta:48  4 en recta:5  5 en recta:2  8 en recta:121  11 en recta:8
+
+[TOR] = LIN (88)
+
+[LIN] 88 soluciones   dimensión afín 2 (de 11)
+    funcionales constantes (9):  (1,9,1,0,0,0,0,0,0,0,0)=0  (2,8,0,1,0,0,0,0,0,0,0)=0  (3,7,0,0,1,0,0,0,0,0,0)=0  (4,6,0,0,0,1,0,0,0,0,0)=0  (5,5,0,0,0,0,1,0,0,0,0)=0  (6,4,0,0,0,0,0,1,0,0,0)=0  (7,3,0,0,0,0,0,0,1,0,0)=0  (8,2,0,0,0,0,0,0,0,1,0)=0  (9,1,0,0,0,0,0,0,0,0,1)=0
+    LEX  perfil prefijos: 11 88 88 88 88 88 88 88 88 88 88
+         inicio 5706056255  extensión 273899558101  densidad 3.213e-10  tramos 88
+    D2   perfil prefijos: 1 1 1 1 1 1 1 1 1 8 88
+         inicio 22  extensión 88  densidad 1  tramos 1
+    MOM  perfil prefijos: 1 1 1 1 1 1 1 1 1 8 88
+         inicio 22  extensión 88  densidad 1  tramos 1
+    rectas: máximo 11 soluciones alineadas;  8 en recta:121  11 en recta:8
+
+[TORNL] vacío
+
+[NOTOR] 2592 soluciones   dimensión afín 10 (de 11)
+    funcionales constantes (1):  (1,1,1,1,1,1,1,1,1,1,1)=0
+    LEX  perfil prefijos: 11 90 472 1364 2048 2348 2486 2542 2574 2592 2592
+         inicio 5946637255  extensión 273418396101  densidad 9.48e-09  tramos 2592
+    D2   perfil prefijos: 11 115 581 1353 1879 2112 2202 2240 2240 2252 2592
+         inicio 761391  extensión 285289653012  densidad 9.086e-09  tramos 2260
+    MOM  perfil prefijos: 1 11 121 931 1946 2178 2222 2238 2240 2252 2592
+         inicio 8276789  extensión 25906482550  densidad 1.001e-07  tramos 2260
+    rectas: máximo 5 soluciones alineadas;  3 en recta:36  4 en recta:5  5 en recta:2
+
+  Caminos dentro del subárbol (88 lineales, 1597200 elecciones de los 2 últimos niveles):
+    en progresión aritmética: 9680   en un bloque contiguo: 9680   (sin traslación: 220)
+    inicio del bloque dentro del subárbol:  0:2420  11:2420  22:2420  33:2420

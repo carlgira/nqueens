@@ -1,0 +1,222 @@
+{
+ "N": 6,
+ "delta": 0.001,
+ "fisico": true,
+ "n_soluciones": 4,
+ "n_clases": 1,
+ "modelo": "f(i,j) = sum A cos(2pi(k0*i + k1*j)/N + fase); reinas = N casillas con f > umbral",
+ "soluciones": [
+  {
+   "id": 0,
+   "solucion": [
+    1,
+    3,
+    5,
+    0,
+    2,
+    4
+   ],
+   "clase": 0,
+   "ondas_min": 3,
+   "exacto": true,
+   "cota_inferior": 3,
+   "umbral": 1.0,
+   "margen": 0.333333,
+   "ondas": [
+    {
+     "k": [
+      2,
+      -1
+     ],
+     "amplitud": 1.154701,
+     "fase_rad": 0.523599,
+     "longitud_onda_casillas": 2.683282,
+     "direccion_grados": 116.565
+    },
+    {
+     "k": [
+      1,
+      2
+     ],
+     "amplitud": 0.57735,
+     "fase_rad": -1.570796,
+     "longitud_onda_casillas": 2.683282,
+     "direccion_grados": 26.565
+    },
+    {
+     "k": [
+      1,
+      -1
+     ],
+     "amplitud": 0.333333,
+     "fase_rad": -3.141593,
+     "longitud_onda_casillas": 4.242641,
+     "direccion_grados": 135.0
+    }
+   ],
+   "una_onda_libre": [
+    0.75,
+    2.5
+   ]
+  },
+  {
+   "id": 1,
+   "solucion": [
+    2,
+    5,
+    1,
+    4,
+    0,
+    3
+   ],
+   "clase": 0,
+   "ondas_min": 3,
+   "exacto": true,
+   "cota_inferior": 3,
+   "umbral": 0.866025,
+   "margen": 0.288675,
+   "ondas": [
+    {
+     "k": [
+      -1,
+      -2
+     ],
+     "amplitud": 1.0,
+     "fase_rad": -1.570796,
+     "longitud_onda_casillas": 2.683282,
+     "direccion_grados": -153.435
+    },
+    {
+     "k": [
+      2,
+      -1
+     ],
+     "amplitud": 0.5,
+     "fase_rad": -2.617994,
+     "longitud_onda_casillas": 2.683282,
+     "direccion_grados": 116.565
+    },
+    {
+     "k": [
+      -1,
+      -1
+     ],
+     "amplitud": 0.288675,
+     "fase_rad": 2.094395,
+     "longitud_onda_casillas": 4.242641,
+     "direccion_grados": -135.0
+    }
+   ],
+   "una_onda_libre": [
+    2.5,
+    -0.75
+   ]
+  },
+  {
+   "id": 2,
+   "solucion": [
+    3,
+    0,
+    4,
+    1,
+    5,
+    2
+   ],
+   "clase": 0,
+   "ondas_min": 3,
+   "exacto": true,
+   "cota_inferior": 3,
+   "umbral": 1.0,
+   "margen": 0.333333,
+   "ondas": [
+    {
+     "k": [
+      -1,
+      2
+     ],
+     "amplitud": 1.154701,
+     "fase_rad": 0.523599,
+     "longitud_onda_casillas": 2.683282,
+     "direccion_grados": -26.565
+    },
+    {
+     "k": [
+      2,
+      1
+     ],
+     "amplitud": 0.57735,
+     "fase_rad": -1.570796,
+     "longitud_onda_casillas": 2.683282,
+     "direccion_grados": 63.435
+    },
+    {
+     "k": [
+      -1,
+      1
+     ],
+     "amplitud": 0.333333,
+     "fase_rad": -3.141593,
+     "longitud_onda_casillas": 4.242641,
+     "direccion_grados": -45.0
+    }
+   ],
+   "una_onda_libre": [
+    2.5,
+    0.75
+   ]
+  },
+  {
+   "id": 3,
+   "solucion": [
+    4,
+    2,
+    0,
+    5,
+    3,
+    1
+   ],
+   "clase": 0,
+   "ondas_min": 3,
+   "exacto": true,
+   "cota_inferior": 3,
+   "umbral": 0.866025,
+   "margen": 0.288675,
+   "ondas": [
+    {
+     "k": [
+      2,
+      1
+     ],
+     "amplitud": 1.0,
+     "fase_rad": 1.570796,
+     "longitud_onda_casillas": 2.683282,
+     "direccion_grados": 63.435
+    },
+    {
+     "k": [
+      1,
+      -2
+     ],
+     "amplitud": 0.5,
+     "fase_rad": 2.617994,
+     "longitud_onda_casillas": 2.683282,
+     "direccion_grados": 153.435
+    },
+    {
+     "k": [
+      1,
+      1
+     ],
+     "amplitud": 0.288675,
+     "fase_rad": -2.094395,
+     "longitud_onda_casillas": 4.242641,
+     "direccion_grados": 45.0
+    }
+   ],
+   "una_onda_libre": [
+    0.75,
+    -2.5
+   ]
+  }
+ ]
+}

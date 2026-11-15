@@ -1,0 +1,11 @@
+N = 5   soluciones 10
+  caminos por pareja (45 parejas):
+    reinas que cambian de sitio (A AND NOT B):  4:25  5:20
+    longitud del camino (saltos):  4:21  6:24
+    caminos más largos que su emparejamiento ideal (por bloqueos): 0 de 45
+    caminos que pasan por otra solución por el camino: 0 de 45
+  grafo de todos los caminos: 172 tableros intermedios distintos
+    nº de caminos de pareja que pasan por cada intermedio:  1:161  2:11
+    pares de reinas atacándose en los intermedios (todos):  1:11  2:56  3:65  4:31  5:4  6:5
+    ídem, solo en los compartidos por ≥2 caminos:  1:2  2:5  3:4
+  secuencias al azar por todas las soluciones (20000): saltos  mín 36  mediana 46  media 45.6  máx 54   (la mejor posible con estos caminos: 36)

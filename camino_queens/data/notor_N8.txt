@@ -1,0 +1,29 @@
+N = 8   soluciones 92 (toroidales 0, no toroidales 92)   falso 92
+  [real: bases no toroidales, aciertos en todas]  bases 24 (pares muestreados por base: 100)
+    recta              (la fijan 2):  ninguna
+    parábola          (la fijan 3):  4 sol:1   | explicadas por D4: 1 sí / 0 no;  tocan alguna toroidal: 0
+    diagonal (λ_i)    (la fijan 3):  ninguna
+    girar filas (r+c mod N) (la fijan 2):  3 sol:4   | explicadas por D4: 0 sí / 4 no;  tocan alguna toroidal: 0
+    girar columnas (i+c) (la fijan 2):  3 sol:4   | explicadas por D4: 0 sí / 4 no;  tocan alguna toroidal: 0
+    afín mod N (a·r+c, a≠1) (la fijan 2):  ninguna
+    otra permutación  (la fijan 2):  3 sol:6   | explicadas por D4: 2 sí / 4 no;  tocan alguna toroidal: 0
+    ejemplo (girar filas (r+c mod N), 3 soluciones):
+       0  4  7  5  2  6  1  3
+       1  5  0  6  3  7  2  4
+       2  6  1  7  4  0  3  5
+    ejemplo (girar columnas (i+c), 3 soluciones):
+       2  5  7  1  3  0  6  4
+       5  7  1  3  0  6  4  2
+       7  1  3  0  6  4  2  5
+    ejemplo (otra permutación, 3 soluciones):
+       2  5  7  0  4  6  1  3
+       3  1  6  2  5  7  0  4
+       4  0  7  3  1  6  2  5
+  [falso]  bases 23 (pares muestreados por base: 100)
+    recta              (la fijan 2):  ninguna
+    parábola          (la fijan 3):  ninguna
+    diagonal (λ_i)    (la fijan 3):  ninguna
+    girar filas (r+c mod N) (la fijan 2):  ninguna
+    girar columnas (i+c) (la fijan 2):  ninguna
+    afín mod N (a·r+c, a≠1) (la fijan 2):  ninguna
+    otra permutación  (la fijan 2):  ninguna

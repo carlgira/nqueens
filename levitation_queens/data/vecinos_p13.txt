@@ -1,0 +1,5 @@
+p=13: orbitas de traslacion con al menos una vecina (cambiando las filas de una recta) | azar (mismo numero de filas, elegidas al azar)
+  clase 2: vecina de clase m-1: 14/14 | 1/14;  de clase menor: 14/14 | 1/14;  alguna: 14/14 | 4/14
+       clases de las vecinas: real {1: 14, 2: 6}  azar {1: 1, 2: 2, 3: 3}
+  clase 3: vecina de clase m-1: 12/12 | 0/12;  de clase menor: 12/12 | 0/12;  alguna: 12/12 | 0/12
+       clases de las vecinas: real {2: 12}  azar {}

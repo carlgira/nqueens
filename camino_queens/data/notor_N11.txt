@@ -1,0 +1,45 @@
+N = 11   soluciones 2680 (toroidales 88, no toroidales 2592)   falso 2680
+  (real: bases no toroidales, aciertos en todas: 0 de 2680 son toroidal de N+1 menos una esquina)
+  [real: bases no toroidales, aciertos en todas]  bases 658 (pares muestreados por base: 100)
+    recta              (la fijan 2):  ninguna
+    parábola          (la fijan 3):  4 sol:2   | explicadas por D4: 0 sí / 2 no;  tocan alguna toroidal: 0;  toroidal(N+1)−esquina: todas 0, alguna 0; de las de ≥5: 0 de 0
+    diagonal (λ_i)    (la fijan 3):  ninguna
+    girar filas (r+c mod N) (la fijan 2):  3 sol:23  4 sol:3  5 sol:1   | explicadas por D4: 5 sí / 22 no;  tocan alguna toroidal: 0;  toroidal(N+1)−esquina: todas 0, alguna 0; de las de ≥5: 0 de 1
+    girar columnas (i+c) (la fijan 2):  3 sol:23  4 sol:3  5 sol:1   | explicadas por D4: 5 sí / 22 no;  tocan alguna toroidal: 0;  toroidal(N+1)−esquina: todas 0, alguna 0; de las de ≥5: 0 de 1
+    afín mod N (a·r+c, a≠1) (la fijan 2):  ninguna
+    otra permutación  (la fijan 2):  3 sol:284  4 sol:44   | explicadas por D4: 86 sí / 242 no;  tocan alguna toroidal: 38;  toroidal(N+1)−esquina: todas 0, alguna 0; de las de ≥5: 0 de 0
+    ejemplo (parábola, 4 soluciones):
+       3  5  8 10  0  4  1  9  6  2  7
+       4  1  7  0 10  6  9  5  2  8  3
+       7  1  4  0 10  6  9  5  2  8  3
+       8  5  3 10  0  4  1  9  6  2  7
+    ejemplo (girar filas (r+c mod N), 5 soluciones):
+       2  6  1  9  7  3 10  8  5  0  4
+       3  7  2 10  8  4  0  9  6  1  5
+       4  8  3  0  9  5  1 10  7  2  6
+       5  9  4  1 10  6  2  0  8  3  7
+       6 10  5  2  0  7  3  1  9  4  8
+    ejemplo (girar columnas (i+c), 5 soluciones):
+       1  8 10  5  0  2  9  6  3  7  4
+       4  1  8 10  5  0  2  9  6  3  7
+       7  4  1  8 10  5  0  2  9  6  3
+       3  7  4  1  8 10  5  0  2  9  6
+       6  3  7  4  1  8 10  5  0  2  9
+    ejemplo (otra permutación, 4 soluciones):
+       1  5  7 10  4  0  9  3  6  8  2
+       2 10  6  3  9  0  4  8  1  5  7
+       7  3  1  8  4  0  9  5  2 10  6
+       6  8  2  5  9  0  4 10  7  3  1
+  (falso: 0 de 2680 son toroidal de N+1 menos una esquina)
+  [falso]  bases 670 (pares muestreados por base: 100)
+    recta              (la fijan 2):  ninguna
+    parábola          (la fijan 3):  ninguna
+    diagonal (λ_i)    (la fijan 3):  ninguna
+    girar filas (r+c mod N) (la fijan 2):  ninguna
+    girar columnas (i+c) (la fijan 2):  ninguna
+    afín mod N (a·r+c, a≠1) (la fijan 2):  ninguna
+    otra permutación  (la fijan 2):  3 sol:100   | explicadas por D4: 0 sí / 100 no;  tocan alguna toroidal: 0;  toroidal(N+1)−esquina: todas 0, alguna 0; de las de ≥5: 0 de 0
+    ejemplo (otra permutación, 3 soluciones):
+       0  7  9  4  3  6  5  1  2  8 10
+       0  6  7  1  2  8  3  4  9  5 10
+       0  8  6  4  9  5  2  1  7  3 10

@@ -1,0 +1,59 @@
+p=17 = 11 + 11 - 5
+ version toroidal: nº de sub-soluciones de 11, de 11, y de parejas (A, B) con solape tambien solucion
+   0:c1x2                        0      0      0
+   1:c1x4                       34     34      0
+   2:c1x8                      442    442  14280
+   3:c2x2                        0      0      0
+   4:c2x4                        0      0      0
+   5:c2x4                        0      0      0
+   6:c2x8                        0      0      0
+   7:c2x8                        0      0      0
+   8:c3x16                       1      1      0
+   9:c3x16                       0      0      0
+   10:c3x32                      0      0      0
+   11:c3x32                      0      0      0
+   12:c4x4                       0      0      0
+   13:c4x8                       0      0      0
+   14:c4x16                      0      0      0
+   15:c4x16                      0      0      0
+   16:c4x16                      0      0      0
+   17:c4x32                      1      1      0
+   18:c4x32                      0      0      0
+   19:c5x32 SIN EXPLICAR         0      0      0
+   20:c5x128 SIN EXPLICAR        0      0      0
+   21:c6x16                      0      0      0
+   22:c6x64 SIN EXPLICAR         0      0      0
+   azar 0                        0      0      0
+   azar 1                        0      0      0
+   azar 2                        0      0      0
+   azar 3                        0      0      0
+   azar 4                        0      0      0
+ version normal: nº de sub-soluciones de 11, de 11, y de parejas (A, B) con solape tambien solucion
+   0:c1x2                        8      8      0
+   1:c1x4                       36     36      0
+   2:c1x8                      442    442  14280
+   3:c2x2                        5      5      0
+   4:c2x4                        3      3      0
+   5:c2x4                        5      5      0
+   6:c2x8                        4      4      0
+   7:c2x8                        5      5      0
+   8:c3x16                      13     13      0
+   9:c3x16                       1      1      0
+   10:c3x32                      2      2      0
+   11:c3x32                      3      3      0
+   12:c4x4                       0      0      0
+   13:c4x8                       3      3      0
+   14:c4x16                      4      4      0
+   15:c4x16                      0      0      0
+   16:c4x16                      6      6      0
+   17:c4x32                      3      3      0
+   18:c4x32                      0      0      0
+   19:c5x32 SIN EXPLICAR         1      1      0
+   20:c5x128 SIN EXPLICAR        9      9      0
+   21:c6x16                      5      5      0
+   22:c6x64 SIN EXPLICAR         5      5      0
+   azar 0                        0      0      0
+   azar 1                        8      8      0
+   azar 2                        0      0      0
+   azar 3                        1      1      0
+   azar 4                        2      2      0

@@ -1,0 +1,41 @@
+N=11 control=0 G=2592 pares_sin_simetria=840646 listas=825285
+saltos_por_lista 1:810471 2:14401 3:379 4:25 5:6 6:1 14:1 86:1
+clase constante aciertos 2:2 14:1 64:1
+  mejor saltos=86 lista=1 1 1 1 1 1 1 1 1 1 1 
+  mejor saltos=14 lista=2 2 2 2 2 2 2 2 2 2 2 
+  mejor saltos=2 lista=3 3 3 3 3 3 3 3 3 3 3 
+  mejor saltos=2 lista=7 7 7 7 7 7 7 7 7 7 7 
+clase rampa aciertos 2:1
+  mejor saltos=2 lista=3 2 1 0 10 9 8 7 6 5 4 
+clase casi aciertos 2:324 3:47 4:18 5:6 6:1
+  mejor saltos=6 lista=1 1 1 1 0 1 1 1 2 1 1 
+  mejor saltos=5 lista=7 0 0 0 0 0 0 0 0 4 0 
+  mejor saltos=5 lista=5 0 0 0 0 0 0 0 0 0 6 
+  mejor saltos=5 lista=1 0 0 0 0 0 0 0 0 0 10 
+  mejor saltos=5 lista=1 4 9 1 1 1 1 1 1 1 1 
+  mejor saltos=5 lista=6 0 5 9 0 0 0 0 0 2 0 
+clase global aciertos 2:14074 3:332 4:7
+  mejor saltos=4 lista=2 4 6 0 6 6 5 5 6 4 0 
+  mejor saltos=4 lista=3 5 7 1 7 7 6 6 7 5 1 
+  mejor saltos=4 lista=4 9 10 10 9 6 2 6 2 10 9 
+  mejor saltos=4 lista=4 5 4 5 4 0 7 6 7 6 7 
+  mejor saltos=4 lista=5 10 0 0 10 7 3 7 3 0 10 
+  mejor saltos=4 lista=4 4 5 5 7 8 5 4 4 5 4 
+cadena constante 3:19 4:2 5:1
+  mas_larga L=5 U=2 6 1 9 7 3 10 8 5 0 4  d=1 1 1 1 1 1 1 1 1 1 1 
+cadena rampa
+cadena casi
+cadena global
+grafo K=2 minfuera=1 nodos=2220 aristas=119689 componentes=17 mayor=2188
+camino_voraz longitud=1597 de 2188 en la mayor componente
+paso 0 lista=1 0 1 2 3 4 0 6 9 8 10 
+paso 1 lista=8 10 8 8 1 6 3 8 4 6 4 
+paso 2 lista=1 0 1 1 1 9 1 7 1 7 4 
+paso 3 lista=1 1 2 1 1 1 0 1 1 1 1 
+paso 4 lista=10 0 10 10 10 2 10 4 10 4 7 
+paso 5 lista=0 0 0 0 8 8 6 0 8 2 1 
+paso 6 lista=10 10 10 10 0 10 10 10 1 7 10 
+paso 7 lista=7 5 0 10 0 8 5 10 0 0 10 
+paso 8 lista=5 4 4 4 5 4 4 10 9 4 2 
+paso 9 lista=7 9 4 4 9 8 8 6 4 4 3 
+paso 10 lista=5 8 8 0 3 5 0 3 0 1 0 

@@ -1,0 +1,18 @@
+data/posa/n12_azar_k2.txt:grafo K=2 minfuera=5 nodos=7316 aristas=14772 componentes=249 mayor=6004
+data/posa/n12_azar_k2.txt:camino_posa longitud=2132 de 6004 en la mayor componente
+data/posa/n12_k2.txt:grafo K=2 minfuera=5 nodos=14154 aristas=7020225 componentes=1 mayor=14154
+data/posa/n12_k2.txt:camino_posa longitud=14154 de 14154 en la mayor componente
+data/posa/n12_k3.txt:grafo K=3 minfuera=5 nodos=10810 aristas=558342 componentes=455 mayor=9628
+data/posa/n12_k3.txt:camino_posa longitud=901 de 9628 en la mayor componente
+data/posa/n12_k6.txt:grafo K=6 minfuera=5 nodos=554 aristas=424 componentes=182 mayor=21
+data/posa/n12_k6.txt:camino_posa longitud=17 de 21 en la mayor componente
+data/posa/n13_azar_k2.txt:grafo K=2 minfuera=5 nodos=63348 aristas=257312 componentes=53 mayor=63232
+data/posa/n13_azar_k2.txt:camino_posa longitud=62829 de 63232 en la mayor componente
+data/posa/n12_k4.txt:grafo K=4 minfuera=5 nodos=4708 aristas=66516 componentes=681 mayor=2980
+data/posa/n12_k4.txt:camino_posa longitud=460 de 2980 en la mayor componente
+data/posa/n13_k6.txt:grafo K=6 minfuera=5 nodos=8102 aristas=7304 componentes=2556 mayor=812
+data/posa/n13_k6.txt:camino_posa longitud=22 de 812 en la mayor componente
+data/posa/n13_k3.txt:grafo K=3 minfuera=5 nodos=64758 aristas=11643769 componentes=319 mayor=64050
+data/posa/n13_k3.txt:camino_posa longitud=6164 de 64050 en la mayor componente
+data/posa/n13_k4.txt:grafo K=4 minfuera=5 nodos=37930 aristas=598372 componentes=3645 mayor=28986
+data/posa/n13_k4.txt:camino_posa longitud=665 de 28986 en la mayor componente

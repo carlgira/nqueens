@@ -1,0 +1,15 @@
+N=8 conjunto=sol Q=92 ternas=753480
+  formas (vectores A) distintas: 187321   la mas repetida: 250 ternas   repeticion media: 9.21
+  por clase:  cero 16  constante 184  afin en fila 816  1-2 defectos 292  dos valores 5844  otros 746328
+  crecimiento con aceleracion constante, cadenas por longitud:  3:751824  4:1640  5:8  6:8
+  longitud maxima 6  (terna 9,82,51)
+  longitud >=5 por clase de A:  cero 0  constante 0  afin en fila 0  1-2 defectos 0  dos valores 16  otros 0
+  formas mas repetidas:
+      250 ternas  A=51517373  (otros)
+      250 ternas  A=37371515  (otros)
+      216 ternas  A=73715153  (otros)
+      216 ternas  A=53737151  (otros)
+      216 ternas  A=35151737  (otros)
+      216 ternas  A=15173735  (otros)
+      208 ternas  A=71173553  (otros)
+      208 ternas  A=35537117  (otros)

@@ -1,0 +1,6 @@
+N = 12   soluciones 14200   toroidales 0   no toroidales 14200   teoría≠medida: 0
+  trayectoria más larga L (soluciones):  1:9488  2:3536  3:820  4:276  5:72  6:8
+  con paso c=1 (L1):                    1:11560  2:2032  3:432  4:136  5:36  6:4
+  pares de costura W:                   3:3016  4:5140  5:4696  6:1316  7:32
+  L media según W:  W=3: 1.91 (3016)  W=4: 1.51 (5140)  W=5: 1.20 (4696)  W=6: 1.01 (1316)  W=7: 1.00 (32)
+  distancia d de los pares de costura, todas:  1:3096 2:5868 3:6072 4:6864 5:8704 7:8704 8:6864 9:6072 10:5868 11:3096

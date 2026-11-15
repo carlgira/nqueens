@@ -1,0 +1,7 @@
+p = 17   toroidales 140692  (enumeradas con x_0 = 0: 8276)
+  D   grado(x)   grado mínimo de las 8   subárbol p^(D+1)   densidad acumulada  (azar: 1.7e-16)
+   1        238         238               289          0.824 / 0.824
+   9       4046        4046               2.02e+12          2.13e-09 / 2.13e-09
+  11       2312        2312               5.83e+14          1.13e-11 / 1.13e-11
+  12      36992       36992               9.9e+15          4.4e-12 / 4.4e-12
+  13      97104       97104               1.68e+17          8.36e-13 / 8.36e-13

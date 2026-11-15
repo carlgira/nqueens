@@ -1,0 +1,21 @@
+normal,una,2,20
+normal,una,3,24
+normal,una,4,140
+normal,una,5,520
+normal,una,6,892
+normal,una,7,996
+normal,dos,11,2592
+normal,cualquiera,2,20
+normal,cualquiera,3,24
+normal,cualquiera,4,140
+normal,cualquiera,5,520
+normal,cualquiera,6,892
+normal,cualquiera,7,996
+toroidal,una,0,88
+toroidal,dos,11,88
+toroidal,cualquiera,0,88
+porobjetivo,una,2,12
+porobjetivo,una,3,24
+porobjetivo,una,4,44
+porobjetivo,una,5,8
+ejemplo,una,2,0 7 4 6 8 10 1 3 5 2 9 -> 0 2 4 6 8 10 1 3 5 7 9

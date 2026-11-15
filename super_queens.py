@@ -223,8 +223,8 @@ class Spiral2D:
 
 
 
-#spiral = Spiral2D()
-#spiral.draw(math.pow(phi, 2/(math.pi)), math.pow(phi, 1/(4*math.pi)), [4,8,0,9,3,5,0,0,0,0,0])
+spiral = Spiral2D()
+spiral.draw(math.pow(phi, 2/(math.pi)), math.pow(phi, 1/(4*math.pi)), [4,8,0,9,3,5,0,0,0,0,0])
 
 
 
@@ -959,3 +959,9 @@ class SuperQueens:
 
         all_permutations = [np.array(list(sol)) for sol in list(itertools.permutations(list(range(self.n))))]
         sums_angles, min_angles, max_angles, permimeters = calc(all_permutations)
+
+
+if __name__ == "__main__":
+    super_queens = SuperQueens(6)
+    print(super_queens.a)
+    print(super_queens.r)

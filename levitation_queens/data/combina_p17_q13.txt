@@ -1,0 +1,27 @@
+p=17: 8449 helices, 9048 piezas de q=13
+  0:c1x2     explicada    {'lX+mY (H)': 135184, 'lX+mY (Q)': 0, 'lX+mY (H+Q)': 135216, 'X+Y-Z (H)': 2358529}
+  1:c1x4     explicada    {'lX+mY (H)': 135184, 'lX+mY (Q)': 0, 'lX+mY (H+Q)': 135216, 'X+Y-Z (H)': 2358529}
+  2:c1x8     explicada    {'lX+mY (H)': 135184, 'lX+mY (Q)': 0, 'lX+mY (H+Q)': 135216, 'X+Y-Z (H)': 2358529}
+  3:c2x2     explicada    {'lX+mY (H)': 0, 'lX+mY (Q)': 0, 'lX+mY (H+Q)': 0, 'X+Y-Z (H)': 0}
+  4:c2x4     explicada    {'lX+mY (H)': 0, 'lX+mY (Q)': 0, 'lX+mY (H+Q)': 0, 'X+Y-Z (H)': 0}
+  5:c2x4     explicada    {'lX+mY (H)': 0, 'lX+mY (Q)': 0, 'lX+mY (H+Q)': 0, 'X+Y-Z (H)': 0}
+  6:c2x8     explicada    {'lX+mY (H)': 0, 'lX+mY (Q)': 0, 'lX+mY (H+Q)': 0, 'X+Y-Z (H)': 0}
+  7:c2x8     explicada    {'lX+mY (H)': 0, 'lX+mY (Q)': 0, 'lX+mY (H+Q)': 0, 'X+Y-Z (H)': 0}
+  8:c3x16    explicada    {'lX+mY (H)': 0, 'lX+mY (Q)': 0, 'lX+mY (H+Q)': 0, 'X+Y-Z (H)': 0}
+  9:c3x16    explicada    {'lX+mY (H)': 0, 'lX+mY (Q)': 0, 'lX+mY (H+Q)': 0, 'X+Y-Z (H)': 0}
+  10:c3x32    explicada    {'lX+mY (H)': 0, 'lX+mY (Q)': 0, 'lX+mY (H+Q)': 0, 'X+Y-Z (H)': 0}
+  11:c3x32    explicada    {'lX+mY (H)': 0, 'lX+mY (Q)': 0, 'lX+mY (H+Q)': 0, 'X+Y-Z (H)': 0}
+  12:c4x4     explicada    {'lX+mY (H)': 0, 'lX+mY (Q)': 0, 'lX+mY (H+Q)': 0, 'X+Y-Z (H)': 0}
+  13:c4x8     explicada    {'lX+mY (H)': 0, 'lX+mY (Q)': 0, 'lX+mY (H+Q)': 0, 'X+Y-Z (H)': 0}
+  14:c4x16    explicada    {'lX+mY (H)': 0, 'lX+mY (Q)': 0, 'lX+mY (H+Q)': 0, 'X+Y-Z (H)': 0}
+  15:c4x16    explicada    {'lX+mY (H)': 0, 'lX+mY (Q)': 0, 'lX+mY (H+Q)': 0, 'X+Y-Z (H)': 0}
+  16:c4x16    explicada    {'lX+mY (H)': 0, 'lX+mY (Q)': 0, 'lX+mY (H+Q)': 0, 'X+Y-Z (H)': 0}
+  17:c4x32    explicada    {'lX+mY (H)': 0, 'lX+mY (Q)': 0, 'lX+mY (H+Q)': 0, 'X+Y-Z (H)': 0}
+  18:c4x32    explicada    {'lX+mY (H)': 0, 'lX+mY (Q)': 0, 'lX+mY (H+Q)': 0, 'X+Y-Z (H)': 0}
+  19:c5x32    SIN EXPLICAR {'lX+mY (H)': 0, 'lX+mY (Q)': 0, 'lX+mY (H+Q)': 0, 'X+Y-Z (H)': 0}
+  20:c5x128   SIN EXPLICAR {'lX+mY (H)': 0, 'lX+mY (Q)': 0, 'lX+mY (H+Q)': 0, 'X+Y-Z (H)': 0}
+  21:c6x16    explicada    {'lX+mY (H)': 0, 'lX+mY (Q)': 0, 'lX+mY (H+Q)': 0, 'X+Y-Z (H)': 0}
+  22:c6x64    SIN EXPLICAR {'lX+mY (H)': 0, 'lX+mY (Q)': 0, 'lX+mY (H+Q)': 0, 'X+Y-Z (H)': 0}
+  explicada    lX+mY (H): mediana 0, con alguna 3/20  lX+mY (Q): mediana 0, con alguna 0/20  lX+mY (H+Q): mediana 0, con alguna 3/20  X+Y-Z (H): mediana 0, con alguna 3/20
+  SIN EXPLICAR lX+mY (H): mediana 0, con alguna 0/3  lX+mY (Q): mediana 0, con alguna 0/3  lX+mY (H+Q): mediana 0, con alguna 0/3  X+Y-Z (H): mediana 0, con alguna 0/3
+  azar         lX+mY (H): mediana 0, con alguna 0/20  lX+mY (Q): mediana 0, con alguna 0/20  lX+mY (H+Q): mediana 0, con alguna 0/20  X+Y-Z (H): mediana 0, con alguna 0/20

@@ -1,0 +1,1 @@
+N=8 azar1 M=1 (P=12, AMAX=1, R=2000): 24 grupos, media 3.83  tamanos: 5 5 5 5 5 5 4 4 4 4 4 4 4 4 4 4 4 3 3 3 3 3 2 1

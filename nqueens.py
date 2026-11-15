@@ -218,6 +218,5 @@ def validate(sol):
 	return True
 
 
-
-
-print(n_queens(7).all_solutions)
+if __name__ == "__main__":
+	print(n_queens(7).all_solutions)

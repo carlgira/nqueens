@@ -1,0 +1,15 @@
+p = 17  clase o  soluciones (x_0=0) 8276  falso 8704 (16 órbitas, |H/filas| = 544)
+  [real (bases de la clase, aciertos en todas las toroidales)]  bases 6
+    otras rectas con ≥3 soluciones, por base:  ninguna
+    parábolas con ≥4 soluciones, por par (base, segunda) [11998 pares]:  4 sol:0.0448
+    clases de las soluciones que tocan (c centro, o giro, n sin simetría, f falso):  ccoo:538
+    con un elemento de H que deja fijos sus aciertos: 2 de 538
+    relación entre sus 2 asimétricas (t columnas, u escala, signo):  ninguna:0
+    reinas compartidas asimétrica–centro (mejor fila):
+    mejor parábola: 4 soluciones, pasos k = 0 1 16 5
+    s       0  2  4  7 14 10  5 15 11 16  6  3  1  8 12  9 13
+    v       0 12  0  1 13  3 11  4 11  8  5 15 14  4 11  0  7
+    w       0  8  9  4  2  0  1  8  6 10 10  9 12  5  4 16 15
+  [falso]  bases 16
+    otras rectas con ≥3 soluciones, por base:  ninguna
+    parábolas con ≥4 soluciones, por par (base, segunda) [9598 pares]:  ninguna

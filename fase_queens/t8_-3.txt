@@ -1,0 +1,15 @@
+N=8 conjunto=sim3 Q=96 ternas=857280
+  formas (vectores A) distintas: 375625   la mas repetida: 98 ternas   repeticion media: 3.49
+  por clase:  cero 0  constante 0  afin en fila 24  1-2 defectos 120  dos valores 752  otros 856384
+  crecimiento con aceleracion constante, cadenas por longitud:  3:857008  4:272
+  longitud maxima 4  (terna 4,24,28)
+  longitud >=5 por clase de A:  cero 0  constante 0  afin en fila 0  1-2 defectos 0  dos valores 0  otros 0
+  formas mas repetidas:
+       98 ternas  A=55373171  (otros)
+       98 ternas  A=17137355  (otros)
+       98 ternas  A=37551317  (otros)
+       98 ternas  A=17573315  (otros)
+       98 ternas  A=71315573  (otros)
+       98 ternas  A=51337571  (otros)
+       98 ternas  A=71751533  (otros)
+       98 ternas  A=33515717  (otros)

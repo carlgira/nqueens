@@ -1,0 +1,9 @@
+N = 14   soluciones 365596   bases 15008 (casi toroidales, W=2)   falso 365600
+  [real]
+    1) molde desplazado (parejas con ≤4 reinas cambiadas: 88720; 24 desplazamientos v):
+       sin dar la vuelta:  ninguna cadena de 3
+       dando la vuelta:  ninguna cadena de 3
+  [falso]
+    1) molde desplazado (parejas con ≤4 reinas cambiadas: 536; 24 desplazamientos v):
+       sin dar la vuelta:  ninguna cadena de 3
+       dando la vuelta:  ninguna cadena de 3

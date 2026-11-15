@@ -1,0 +1,20 @@
+p = 13   toroidales 4524   soportes distintos 12
+  tamaño de soporte → soluciones:  1:182  2:52  3:78  5:156  7:1872  8:936  9:1248
+  con el mejor desplazamiento de columna:
+    soporte mínimo → soluciones:  1:806  2:676  3:1014  5:2028
+    simetría x(ζi)=ζ^r x(i), orden m de ζ → soluciones:  m=2:2028  m=4:1014  m=6:676  m=12:806
+    nº de columnas que sirven de centro → soluciones:  1:4394  13:130
+
+  camino U (exponentes libres)   en el subárbol   tamaño p^(|U|+1)   densidad   (propias)
+  {1}                                   130              169       0.769   (130)
+  {7}                                    52              169       0.308   (52)
+  {1,7}                                234             2197       0.107   (52)
+  {1,5,9}                             208        2.856e+04     0.00728   (78)
+  {1,3,5,7,9}                       468        4.827e+06     9.7e-05   (156)
+  {1,2,3,4,5,6,7}                1482        8.157e+08    1.82e-06   (1248)
+  {2,3,5,6,7,8,9}                 364        8.157e+08    4.46e-07   (312)
+  {1,2,4,5,6,8,9}                 520        8.157e+08    6.37e-07   (312)
+  {2,3,4,5,6,7,8,9}              676         1.06e+10    6.37e-08   (312)
+  {1,2,4,5,6,7,8,9}              936         1.06e+10    8.83e-08   (312)
+  {1,2,3,4,5,7,8,9}              780         1.06e+10    7.36e-08   (312)
+  {1,2,3,4,5,6,7,8,9}          4524        1.379e+11    3.28e-08   (1248)

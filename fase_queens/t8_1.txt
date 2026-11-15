@@ -1,0 +1,15 @@
+N=8 conjunto=azar1 Q=92 ternas=753480
+  formas (vectores A) distintas: 340353   la mas repetida: 12 ternas   repeticion media: 2.42
+  por clase:  cero 0  constante 0  afin en fila 32  1-2 defectos 92  dos valores 694  otros 752662
+  crecimiento con aceleracion constante, cadenas por longitud:  3:753440  4:40
+  longitud maxima 4  (terna 0,63,25)
+  longitud >=5 por clase de A:  cero 0  constante 0  afin en fila 0  1-2 defectos 0  dos valores 0  otros 0
+  formas mas repetidas:
+       12 ternas  A=35373353  (otros)
+       10 ternas  A=76144101  (otros)
+       10 ternas  A=76246537  (otros)
+        8 ternas  A=26764313  (otros)
+        8 ternas  A=57175753  (otros)
+        8 ternas  A=55205735  (otros)
+        8 ternas  A=71471705  (otros)
+        8 ternas  A=55302306  (otros)

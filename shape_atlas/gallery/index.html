@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Atlas de epiciclos</title>
+<style>
+:root{
+  --bg:#fbfaf7; --fg:#1d1d1f; --mute:#6b6b70; --line:#e2e0da; --card:#ffffff;
+  --sol:#1f6feb; --casi:#d97706; --perm:#7c3aed; --azar:#6b7280; --mark:#dc2626; --tick:#059669;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#141416; --fg:#ececef; --mute:#9a9aa2; --line:#2c2c31; --card:#1c1c20;
+  --sol:#58a6ff; --casi:#f59e0b; --perm:#a78bfa; --azar:#9ca3af; --mark:#f87171; --tick:#34d399; } }
+:root[data-theme="dark"]{ --bg:#141416; --fg:#ececef; --mute:#9a9aa2; --line:#2c2c31; --card:#1c1c20;
+  --sol:#58a6ff; --casi:#f59e0b; --perm:#a78bfa; --azar:#9ca3af; --mark:#f87171; --tick:#34d399; }
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:1240px;margin:0 auto;padding:24px 16px 80px}
+h1{font-size:26px;margin:0 0 4px} h2{font-size:19px;margin:36px 0 6px;border-bottom:1px solid var(--line);padding-bottom:4px}
+h3{font-size:15px;margin:18px 0 6px}
+p,li{max-width:80ch} .mute{color:var(--mute)} code{font-size:12.5px}
+.bar{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 0;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.bar label{display:flex;gap:4px;align-items:center;cursor:pointer}
+.bar select,.bar button{font:inherit;background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:3px 8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:6px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:4px;text-align:center;font-size:11px;position:relative}
+.card svg{display:block;width:100%;height:auto}
+.card .lab{font-family:ui-monospace,Menlo,monospace;color:var(--mute)}
+.card.hl{outline:2px solid var(--fg)}
+.row3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-bottom:6px;max-width:520px}
+.twins{display:grid;grid-template-columns:repeat(auto-fill,minmax(520px,1fr));gap:4px 24px}
+@media (max-width:600px){ .twins{grid-template-columns:1fr} }
+.legend span{display:inline-flex;align-items:center;gap:4px;margin-right:12px}
+.sw{width:10px;height:10px;border-radius:2px;display:inline-block}
+table{border-collapse:collapse;font-size:12px;font-variant-numeric:tabular-nums}
+th,td{padding:2px 6px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th{cursor:pointer;position:sticky;top:0;background:var(--bg)} td:first-child,th:first-child{text-align:left}
+.tw{overflow:auto;max-height:520px;border:1px solid var(--line);border-radius:6px}
+pre{font-size:11.5px;overflow:auto;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:10px;max-height:560px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:12px 0}
+.box b{color:var(--fg)}
+.hist{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.hist svg{width:100%;height:auto;background:var(--card);border:1px solid var(--line);border-radius:6px}
+</style>
+</head>
+<body>
+<main>
+<h1>Atlas de epiciclos de las N-reinas</h1>
+<p class="mute">Cada tablero con una reina por fila (columna c<sub>r</sub> en la fila r) se dibuja como una cadena de N vectores giratorios:
+<code>z(t) = Σ<sub>r</sub> exp(i·((r+1)·t + 2π·c<sub>r</sub>/N))</code>, t ∈ [0, 2π). N = 8 salvo donde se indica.</p>
+
+<div class="box">
+<b>Resultado en una línea.</b> En la codificación fila→frecuencia ningún rasgo de la <i>forma</i> distingue las soluciones:
+la forma (salvo giro) es idéntica para los N² tableros <code>c<sub>r</sub> + a(r+1) + b mod N</code>, y en N = 8 las 62 formas que dibujan las 92 soluciones
+las dibujan también 612 permutaciones que no son solución (techo de precisión 0,13 para cualquier clasificador que solo vea la forma). Incluso la curva exacta, con su orientación, la comparte un tablero malo en 38 de los 92 casos.
+Lo único exacto son <i>puntos marcados</i> del parámetro (z(2πk/N)), que solo hablan de diagonales módulo N (toroidal).
+Si las diagonales se meten <i>en la frecuencia</i> (E2), el área encerrada se vuelve un testigo exacto. Ver el README para los detalles.
+</div>
+
+<div class="bar">
+  <label>Codificación
+    <select id="enc">
+      <option value="e0">E0 · fila → frecuencia, columna → fase</option>
+      <option value="e1">E1 · columna → frecuencia, fila → fase</option>
+      <option value="e2">E2 · diagonales → frecuencia (fase 0)</option>
+    </select></label>
+  <label><input type="checkbox" id="marks" checked> puntos marcados</label>
+  <label><input type="checkbox" id="boards" checked> tablero</label>
+  <span class="legend"><span><i class="sw" style="background:var(--mark)"></i>t = 0</span><span><i class="sw" style="background:var(--tick)"></i>t = 2πk/N</span></span>
+</div>
+
+<h2>1 · Las 92 soluciones de N = 8 y los controles</h2>
+<p class="mute">Soluciones ordenadas por clase fundamental (1–12, por simetrías del tablero). Controles: 92 permutaciones con un solo par en conflicto («casi»),
+92 permutaciones con ≥ 2 conflictos, y 92 tableros con una reina por fila al azar. Pasa el ratón para ver los rasgos.</p>
+<h3 style="color:var(--sol)">Soluciones (92)</h3><div class="grid" id="g-sol"></div>
+<h3 style="color:var(--casi)">Casi solución: 1 conflicto (92 de 888)</h3><div class="grid" id="g-casi"></div>
+<h3 style="color:var(--perm)">Permutaciones con ≥ 2 conflictos (92 de 39 340)</h3><div class="grid" id="g-perm"></div>
+<h3 style="color:var(--azar)">Una reina por fila, al azar (92)</h3><div class="grid" id="g-azar"></div>
+
+<h2>2 · Gemelos: misma forma, distinto estatus</h2>
+<p class="mute">Para un representante de cada clase fundamental: la solución, el mismo tablero con las columnas giradas <code>c+1 mod 8</code>
+(la curva gira 45°, forma idéntica) y la primera cizalla <code>c + a(r+1)</code> que sigue siendo permutación (curva <i>idéntica</i>, solo cambia dónde está t = 0).
+Ninguno de los gemelos es solución. Esto es lo que hace imposible un criterio exacto basado solo en la forma (E0).</p>
+<div class="twins" id="g-twins"></div>
+
+<h2>3 · Flores lineales y toroidales</h2>
+<p class="mute"><code>c = a·r mod N</code> para todas las a. Todas son la misma curva (núcleo de Dirichlet girado):
+N−1 pasos por el origen y N−1 lóbulos, uno grande y N−2 pequeños. Solo las a ∉ {0, ±1} son solución; la forma no lo sabe.
+Para N = 7 y 11 todas las soluciones toroidales son lineales; en N = 13 aparecen toroidales no lineales (última fila).</p>
+<h3>N = 7</h3><div class="grid" id="g-f7"></div>
+<h3>N = 11</h3><div class="grid" id="g-f11"></div>
+<h3>N = 13 · toroidales (las 2 primeras lineales, el resto no)</h3><div class="grid" id="g-t13"></div>
+
+<h2>4 · Distribuciones de rasgos</h2>
+<p class="mute">Sobre las muestras de esta página (92 por grupo), en la codificación elegida arriba. Las estadísticas completas (las 40 320 permutaciones, AUC, N = 9 y 10) están en la sección 6.</p>
+<div class="hist" id="hists"></div>
+
+<h2>5 · Rasgos de las 92 soluciones</h2>
+<p class="mute">Codificación elegida arriba. Haz clic en una cabecera para ordenar.</p>
+<div class="tw"><table id="tab"></table></div>
+
+<h2>6 · Estadísticas completas y verificaciones</h2>
+<p class="mute">Salidas de <code>atlas facts</code> y <code>atlas stats N</code> (programa en C, <code>shape_atlas/atlas.c</code>).</p>
+<div id="texts"></div>
+</main>
+
+<script src="data.js"></script>
+<script src="texts.js"></script>
+<script>
+const A = window.ATLAS, TAU = 2*Math.PI;
+const COL = {sol:'var(--sol)',casi:'var(--casi)',perm:'var(--perm)',azar:'var(--azar)'};
+const $ = s => document.querySelector(s);
+let ENC = 'e0', MARKS = true, BOARDS = true;
+
+function evalCurve(b, N, enc, t){ // z(t) para puntos marcados
+  let x=0,y=0;
+  for(let r=0;r<N;r++){ const c=parseInt(b[r],16); let f,ph=0;
+    if(enc==='e0'){ f=r+1; ph=TAU*c/N; } else if(enc==='e1'){ f=c+1; ph=TAU*r/N; }
+    else { for(const g of [r+c+1, c-r+3*N-1, c+4*N-1]){ x+=Math.cos(g*t); y+=Math.sin(g*t); } continue; }
+    x+=Math.cos(f*t+ph); y+=Math.sin(f*t+ph); }
+  return [x,y];
+}
+function curveSVG(it, N, enc, color){
+  const pts = it[enc] || it.e0, sc = (enc==='e2')?30:100, R = (enc==='e2')?1.5*N:N;  // en E2 el pico z(0)=3N queda recortado
+  const S = 50/R/1.04;
+  let d = '';
+  for(let j=0;j<pts.length;j+=2) d += (j?'L':'M') + (50+pts[j]/sc*S).toFixed(1) + ' ' + (50-pts[j+1]/sc*S).toFixed(1);
+  d += 'Z';
+  let m = '';
+  if(MARKS){
+    if(enc!=='e2') for(let k=1;k<N;k++){ const [x,y]=evalCurve(it.b,N,enc,TAU*k/N); m += `<circle cx="${(50+x*S).toFixed(1)}" cy="${(50-y*S).toFixed(1)}" r="1.6" fill="var(--tick)"/>`; }
+    const [x0,y0]=evalCurve(it.b,N,enc,0); m += `<circle cx="${(50+x0*S).toFixed(1)}" cy="${(50-y0*S).toFixed(1)}" r="2.4" fill="var(--mark)"/>`;
+  }
+  return `<svg viewBox="0 0 100 100" style="overflow:hidden"><circle cx="50" cy="50" r="0.9" fill="var(--mute)"/><path d="${d}" fill="none" stroke="${color}" stroke-width="0.7" stroke-linejoin="round"/>${m}</svg>`;
+}
+function boardSVG(b, N){
+  if(!BOARDS) return '';
+  const s = 100/N; let q = '', cols = [...b].map(ch=>parseInt(ch,16));
+  for(let r=0;r<N;r++) for(let c=0;c<N;c++) if((r+c)%2) q += `<rect x="${c*s}" y="${r*s}" width="${s}" height="${s}" fill="var(--line)"/>`;
+  for(let r=0;r<N;r++){ let bad=false; for(let k=0;k<N;k++) if(k!==r && (cols[k]===cols[r] || Math.abs(cols[k]-cols[r])===Math.abs(k-r))) bad=true;
+    q += `<circle cx="${cols[r]*s+s/2}" cy="${r*s+s/2}" r="${s*0.36}" fill="${bad?'var(--mark)':'var(--fg)'}"/>`; }
+  return `<svg viewBox="0 0 100 100" style="width:44%;margin:2px auto 0">${q}</svg>`;
+}
+function fv(it, enc){ return enc==='e2' ? it.f2 : enc==='e1' ? it.f1 : it.f0; }
+function tip(it, enc){ const f = fv(it,enc); if(!f) return '';
+  return A.fn.map((n,i)=>`${n}=${(+f[i]).toPrecision(4)}`).join('  '); }
+function card(it, N, enc, color, label){
+  const e = it[enc] ? enc : 'e0';
+  return `<div class="card" title="${it.b}  conflictos=${it.conf}\n${tip(it,e)}">${curveSVG(it,N,e,color)}${boardSVG(it.b,N)}<div class="lab">${label}</div></div>`;
+}
+function fill(id, items, N, color, labf){ $(id).innerHTML = items.map((it,i)=>card(it,N,ENC,color,labf(it,i))).join(''); }
+
+function render(){
+  const sols = [...A.sol].map((s,i)=>({...s,i})).sort((a,b)=>a.cls-b.cls||a.i-b.i);
+  fill('#g-sol', sols, 8, COL.sol, it=>`${it.b} · c${it.cls+1}`);
+  fill('#g-casi', A.casi, 8, COL.casi, it=>it.b);
+  fill('#g-perm', A.perm, 8, COL.perm, it=>`${it.b} · ${it.conf}`);
+  fill('#g-azar', A.azar, 8, COL.azar, it=>it.b);
+  // gemelos siempre en E0 (es el fenómeno de E0)
+  $('#g-twins').innerHTML = A.twins.map(t=>`<div class="row3">${card(t[0],8,'e0',COL.sol,'clase '+(t[0].cls+1)+' · sol')}${card(t[1],8,'e0',COL.perm,'c+1 · '+t[1].conf+' confl.')}${card(t[2],8,'e0',COL.casi,'cizalla · '+(t[2].perm?t[2].conf+' confl.':'no perm'))}</div>`).join('');
+  for(const n of [7,11]) $('#g-f'+n).innerHTML = A.flores[n].map(it=>{ const a=it.cls, ok=(it.conf===0&&it.perm);
+      return card(it,n,'e0', ok?COL.sol:COL.azar, `a=${a} · ${ok?'sol':'no'}`); }).join('');
+  $('#g-t13').innerHTML = A.tor13.map(it=>card(it,13,'e0',COL.sol,it.cls?'lineal':'no lineal')).join('');
+  hists(); table();
+}
+function hists(){
+  const groups = [['sol',A.sol],['casi',A.casi],['perm',A.perm],['azar',A.azar]];
+  const show = ['L','m4','rmax','tabs','minspeed','zt1','nzero','ncross','nlobes','turn','cen','ani'];
+  let html = '';
+  for(const name of show){
+    const k = A.fn.indexOf(name);
+    const vals = groups.map(([g,its])=>its.map(it=>+fv(it,ENC)[k]).filter(v=>v>-90));
+    const all = vals.flat(); if(!all.length) continue;
+    let lo=Math.min(...all), hi=Math.max(...all); if(hi-lo<1e-9){ lo-=0.5; hi+=0.5; }
+    const nb=20, w=280, h=120, pad=18;
+    let paths='';
+    groups.forEach(([g],gi)=>{ const cnt=new Array(nb).fill(0); vals[gi].forEach(v=>cnt[Math.min(nb-1,Math.floor((v-lo)/(hi-lo)*nb))]++);
+      const mx = Math.max(1,...cnt); const n = vals[gi].length||1;
+      let d=''; cnt.forEach((c,i)=>{ const x0=pad+i*(w-2*pad)/nb, x1=pad+(i+1)*(w-2*pad)/nb, y=h-pad-(c/n)*(h-2*pad)*2.2; d+=(i?'L':'M')+x0.toFixed(1)+' '+Math.max(4,y).toFixed(1)+'L'+x1.toFixed(1)+' '+Math.max(4,y).toFixed(1); });
+      paths += `<path d="${d}" fill="none" stroke="${COL[g]}" stroke-width="1.6" opacity="0.9"/>`; });
+    html += `<svg viewBox="0 0 ${w} ${h}"><text x="${pad}" y="13" font-size="11" fill="var(--fg)">${name} — ${A.fd[k]}</text>
+      <line x1="${pad}" y1="${h-pad}" x2="${w-pad}" y2="${h-pad}" stroke="var(--line)"/>
+      <text x="${pad}" y="${h-4}" font-size="9" fill="var(--mute)">${(+lo).toPrecision(3)}</text>
+      <text x="${w-pad}" y="${h-4}" font-size="9" fill="var(--mute)" text-anchor="end">${(+hi).toPrecision(3)}</text>${paths}</svg>`;
+  }
+  $('#hists').innerHTML = html + `<div class="legend mute">${Object.keys(COL).map(g=>`<span><i class="sw" style="background:${COL[g]}"></i>${g}</span>`).join('')}</div>`;
+}
+let SORTK = -1, SORTD = 1;
+function table(){
+  const rows = A.sol.map(s=>({b:s.b,cls:s.cls+1,f:fv(s,ENC)}));
+  if(SORTK>=0) rows.sort((a,b)=>SORTD*((SORTK===99?a.cls-b.cls:a.f[SORTK]-b.f[SORTK])));
+  const head = `<tr><th>tablero</th><th data-k="99">clase</th>${A.fn.map((n,i)=>`<th data-k="${i}" title="${A.fd[i]}">${n}</th>`).join('')}</tr>`;
+  const body = rows.map(r=>`<tr><td><code>${r.b}</code></td><td>${r.cls}</td>${r.f.map(v=>`<td>${Math.abs(v)<1e-9?0:(+v).toPrecision(4)}</td>`).join('')}</tr>`).join('');
+  $('#tab').innerHTML = head + body;
+  document.querySelectorAll('#tab th[data-k]').forEach(th=>th.onclick=()=>{ const k=+th.dataset.k; SORTD = (SORTK===k)?-SORTD:1; SORTK=k; table(); });
+}
+$('#enc').onchange = e=>{ ENC=e.target.value; render(); };
+$('#marks').onchange = e=>{ MARKS=e.target.checked; render(); };
+$('#boards').onchange = e=>{ BOARDS=e.target.checked; render(); };
+if(window.TEXTS) $('#texts').innerHTML = window.TEXTS.map(([t,s])=>`<h3>${t}</h3><pre>${s.replace(/&/g,'&amp;').replace(/</g,'&lt;')}</pre>`).join('');
+render();
+</script>
+</body>
+</html>

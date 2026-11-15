@@ -1,0 +1,5 @@
+p=19 haz 2+1: 0 orbitas de traslacion (0 s) | 
+p=19 haz 3+1: 0 orbitas de traslacion (1 s) | 
+p=19 haz 2+2: 144 orbitas de traslacion (5 s) | clase 4 [.,.]: 144
+p=19 haz 3+2: 144 orbitas de traslacion (108 s) | clase 5 [.,.]: 72 · clase 5 [.,w]: 72
+p=19 haz 4+1: 216 orbitas de traslacion (58 s) | clase 4 [.,.]: 144 · clase 5 [.,w]: 72

@@ -1,0 +1,2 @@
+# n_sol | clase_huecos | huecos | n_vel | medio_tablero | periodo | grupo | th | v
+4 | bloques | 5 15 5 15 | 9 | 0 | 40 | 8 9 10 11 | 8,2,4,24,23,38,14,34,17,28 | 4,35,38,38,11,37,18,10,13,20

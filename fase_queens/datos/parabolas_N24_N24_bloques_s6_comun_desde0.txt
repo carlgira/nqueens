@@ -1,0 +1,1 @@
+# cadenas (indices en datos/tableros_N24_N24_bloques_s6.txt) de longitud >= 15, aceleracion comun

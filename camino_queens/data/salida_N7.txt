@@ -1,0 +1,63 @@
+N = 7   tableros 823543   soluciones 40
+
+[ALL] 40 soluciones   dimensión afín 6 (de 7)
+    funcionales constantes (1):  (1,1,1,1,1,1,1)=0
+    LEX  perfil prefijos: 7 28 38 40 40 40 40
+         inicio 45351  extensión 732841  densidad 5.458e-05  tramos 40
+         posiciones: 45351 65769 71487 91905 170343 180207 186219 189999 200331 208695 228819 247887 248427 317457 323133 339819 343551 359559 363159 385635 437907 460383 463983 479991 483723 500409 506085 575115 575655 594723 614847 623211 633543 637323 643335 653199 731637 752055 757773 778191
+         saltos:     20418 5718 20418 78438 9864 6012 3780 10332 8364 20124 19068 540 69030 5676 16686 3732 16008 3600 22476 52272 22476 3600 16008 3732 16686 5676 69030 540 19068 20124 8364 10332 3780 6012 9864 78438 20418 5718 20418
+    D2   perfil prefijos: 5 11 13 13 13 16 40
+         inicio 14  extensión 741281  densidad 5.396e-05  tramos 13
+         posiciones: 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 34220 86228 202697 235568 239681 283578 337879 588373 603468 605769 674819 741294
+         saltos:     1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 34179 52008 116469 32871 4113 43897 54301 250494 15095 2301 69050 66475
+    MOM  perfil prefijos: 1 3 5 11 13 16 40
+         inicio 14  extensión 90569  densidad 0.0004417  tramos 13
+         posiciones: 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 2683 3200 3405 4149 14522 15114 16201 16406 46330 47797 89458 90582
+         saltos:     1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2642 517 205 744 10373 592 1087 205 29924 1467 41661 1124
+    funcionales del 1er nivel (823542): nº de subárboles ocupados →  1:6  3:630  4:3360  5:16338  6:36540  7:766668
+         si no caben en uno, mayor grupo en un subárbol: 36 de 40 (126 funcionales)
+    rectas: máximo 7 soluciones alineadas;  4 en recta:49  7 en recta:4
+
+[TOR] = LIN (28)
+
+[LIN] 28 soluciones   dimensión afín 2 (de 7)
+    funcionales constantes (5):  (1,5,1,0,0,0,0)=0  (2,4,0,1,0,0,0)=0  (3,3,0,0,1,0,0)=0  (4,2,0,0,0,1,0)=0  (5,1,0,0,0,0,1)=0
+    LEX  perfil prefijos: 7 28 28 28 28 28 28
+         inicio 45351  extensión 732841  densidad 3.821e-05  tramos 28
+         posiciones: 45351 65769 71487 91905 180207 186219 208695 228819 248427 317457 323133 343551 363159 385635 437907 460383 479991 500409 506085 575115 594723 614847 637323 643335 731637 752055 757773 778191
+         saltos:     20418 5718 20418 88302 6012 22476 20124 19608 69030 5676 20418 19608 22476 52272 22476 19608 20418 5676 69030 19608 20124 22476 6012 88302 20418 5718 20418
+    D2   perfil prefijos: 1 1 1 1 1 4 28
+         inicio 14  extensión 28  densidad 1  tramos 1
+         posiciones: 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41
+         saltos:     1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+    MOM  perfil prefijos: 1 1 1 1 1 4 28
+         inicio 14  extensión 28  densidad 1  tramos 1
+         posiciones: 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41
+         saltos:     1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+    funcionales del 1er nivel (823542): nº de subárboles ocupados →  1:16806  4:100842  7:705894
+         si no caben en uno, mayor grupo en un subárbol: 7 de 28 (100842 funcionales)
+    rectas: máximo 7 soluciones alineadas;  4 en recta:49  7 en recta:4
+
+[TORNL] vacío
+
+[NOTOR] 12 soluciones   dimensión afín 5 (de 7)
+    funcionales constantes (2):  (0,1,6,2,6,1,0)=6  (1,0,2,6,2,0,1)=1
+    LEX  perfil prefijos: 5 10 12 12 12 12 12
+         inicio 170343  extensión 482857  densidad 2.485e-05  tramos 12
+         posiciones: 170343 189999 200331 247887 339819 359559 463983 483723 575655 623211 633543 653199
+         saltos:     19656 10332 47556 91932 19740 104424 19740 91932 47556 10332 19656
+    D2   perfil prefijos: 5 10 12 12 12 12 12
+         inicio 34220  extensión 707075  densidad 1.697e-05  tramos 12
+         posiciones: 34220 86228 202697 235568 239681 283578 337879 588373 603468 605769 674819 741294
+         saltos:     52008 116469 32871 4113 43897 54301 250494 15095 2301 69050 66475
+    MOM  perfil prefijos: 1 3 4 10 12 12 12
+         inicio 2683  extensión 87900  densidad 0.0001365  tramos 12
+         posiciones: 2683 3200 3405 4149 14522 15114 16201 16406 46330 47797 89458 90582
+         saltos:     517 205 744 10373 592 1087 205 29924 1467 41661 1124
+    funcionales del 1er nivel (823542): nº de subárboles ocupados →  1:48  2:1764  3:14112  4:83202  5:213444  6:241668  7:269304
+         si no caben en uno, mayor grupo en un subárbol: 8 de 12 (4410 funcionales)
+    rectas: máximo 2 soluciones alineadas;
+
+  Caminos dentro del subárbol (28 lineales, 98784 elecciones de los 2 últimos niveles):
+    en progresión aritmética: 2352   en un bloque contiguo: 2352   (sin traslación: 84)
+    inicio del bloque dentro del subárbol:  0:588  7:588  14:588  21:588

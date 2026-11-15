@@ -1,0 +1,27 @@
+p=17: 8449 helices distintas (salvo giro del cilindro)
+  0:c1x2     explicada    minimo 1  mejor helice 17 reinas
+  1:c1x4     explicada    minimo 1  mejor helice 17 reinas
+  2:c1x8     explicada    minimo 1  mejor helice 17 reinas
+  3:c2x2     explicada    minimo 2  mejor helice 9 reinas
+  4:c2x4     explicada    minimo 2  mejor helice 9 reinas
+  5:c2x4     explicada    minimo 2  mejor helice 9 reinas
+  6:c2x8     explicada    minimo 2  mejor helice 9 reinas
+  7:c2x8     explicada    minimo 2  mejor helice 13 reinas
+  8:c3x16    explicada    minimo 3  mejor helice 9 reinas
+  9:c3x16    explicada    minimo 3  mejor helice 9 reinas
+  10:c3x32    explicada    minimo 3  mejor helice 9 reinas
+  11:c3x32    explicada    minimo 3  mejor helice 9 reinas
+  12:c4x4     explicada    minimo 4  mejor helice 6 reinas
+  13:c4x8     explicada    minimo 4  mejor helice 6 reinas
+  14:c4x16    explicada    minimo 3  mejor helice 9 reinas
+  15:c4x16    explicada    minimo 3  mejor helice 7 reinas
+  16:c4x16    explicada    minimo 4  mejor helice 8 reinas
+  17:c4x32    explicada    minimo 3  mejor helice 8 reinas
+  18:c4x32    explicada    minimo 4  mejor helice 6 reinas
+  19:c5x32    SIN EXPLICAR minimo 4  mejor helice 7 reinas
+  20:c5x128   SIN EXPLICAR minimo 4  mejor helice 7 reinas
+  21:c6x16    explicada    minimo 4  mejor helice 7 reinas
+  22:c6x64    SIN EXPLICAR minimo 4  mejor helice 7 reinas
+  explicada    minimo: {1: 3, 2: 5, 3: 7, 4: 5}   mejor helice: {6: 3, 7: 2, 8: 2, 9: 9, 13: 1, 17: 3}
+  SIN EXPLICAR minimo: {4: 3}   mejor helice: {7: 3}
+  azar         minimo: {4: 30}   mejor helice: {6: 17, 7: 11, 8: 1, 9: 1}

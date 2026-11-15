@@ -944,6 +944,13 @@ Con la asimetría que eso implica, y que conviene no olvidar:
   0.18% de Q(13) y el **0%** de Q(16). Y la única aplicación afín que preserva el
   conjunto de soluciones es el espejo, que ya estaba en D4.
 
+
+> **Continuado en `poly_queens/`.** Respuesta corta a la pregunta que queda abierta
+> arriba: el desarrollo completo de cúmulos **no converge**. Su radio alrededor de
+> `z=1` es `~4.9/N`, así que `z=0` —donde vive `Q(N)`— queda fuera para todo `N≥6`.
+> El nivel 3 (triples) existe y sube la captura de 70.6% a ~91%; el nivel 2 aporta
+> exactamente nada; del 4 en adelante la serie diverge.
+
 **Dónde seguiría**: geometría de polinomios y polinomios reales-estables — el área que
 resolvió van der Waerden sobre permanentes, las conjeturas de Mason y Kadison–Singer.
 `Q(N)` es un permanente restringido, y los permanentes son su objeto central. Lo que

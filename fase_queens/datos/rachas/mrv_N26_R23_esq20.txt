@@ -1,0 +1,1 @@
+N=26 R=23: 0 encontrados (para en el primero) [no existe: busqueda completa]  (231.7s, nodos 1221223712)

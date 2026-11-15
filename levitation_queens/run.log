@@ -1,0 +1,14 @@
+N=4: 2 sol, 1 clases | ondas_min {2: 2} | no exactas 0 | 1 onda libre 2 | 0.4s
+N=5: 10 sol, 2 clases | ondas_min {1: 10} | no exactas 0 | 1 onda libre 10 | 0.4s
+N=6: 4 sol, 1 clases | ondas_min {2: 4} | no exactas 0 | 1 onda libre 4 | 0.5s
+N=7: 40 sol, 6 clases | ondas_min {1: 28, 2: 4, 5: 8} | no exactas 0 | 1 onda libre 32 | 5.9s
+N=8: 92 sol, 12 clases | ondas_min {2: 4, 4: 88} | no exactas 0 | 1 onda libre 4 | 5.1s
+N=9: 352 sol, 46 clases | ondas_min {2: 16, 3: 240, 4: 48, 5: 48} | no exactas 0 | 1 onda libre 4 | 199.9s
+N=10: 724 sol, 92 clases | ondas_min {2: 16, 3: 12, 4: 448, 5: 248} | no exactas 16 | 1 onda libre 28 | 2007.9s
+[fisico] N=4: 2 sol, 1 clases | ondas_min {0: 2} | no exactas 0 | 1 onda libre 2 | 0.4s
+[fisico] N=5: 10 sol, 2 clases | ondas_min {1: 10} | no exactas 0 | 1 onda libre 10 | 0.4s
+[fisico] N=6: 4 sol, 1 clases | ondas_min {3: 4} | no exactas 0 | 1 onda libre 4 | 0.4s
+[fisico] N=7: 40 sol, 6 clases | ondas_min {1: 28, 3: 4, 5: 8} | no exactas 0 | 1 onda libre 32 | 1.6s
+[fisico] N=8: 92 sol, 12 clases | ondas_min {3: 4, 4: 24, 5: 64} | no exactas 0 | 1 onda libre 4 | 3.4s
+[fisico] N=9: 352 sol, 46 clases | ondas_min {2: 16, 3: 232, 4: 56, 5: 40, 6: 8} | no exactas 0 | 1 onda libre 4 | 163.8s
+[fisico] N=10: 724 sol, 92 clases | ondas_min {3: 28, 4: 360, 5: 240, 6: 96} | no exactas 0 | 1 onda libre 16 | 831.8s

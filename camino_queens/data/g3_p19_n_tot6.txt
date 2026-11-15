@@ -1,0 +1,11 @@
+p = 19  clase n  lectura tot 6 (D = 21)  soluciones 623808  |H| = 12996  órbitas 48 (resto 0)  comprobación acción: ok
+  falso de tableros: NO SE ENCONTRARON (2000000001 intentos)
+  dimensión de la envoltura 6
+  k    real: máx   media | env. uniforme: máx  media | env. simetrías: máx  media | tableros simetrías: máx  media | real/unif real/sim real/tabl
+    0         2      1.9 |        1      1.0 |        2      2.0 |        1      0.0 |   2.00   1.00   2.00
+    1        19     11.1 |        8      6.4 |       12     10.8 |        1      0.0 |   2.38   1.58  19.00
+    2       361     61.0 |       26     23.1 |      114     46.3 |        1      0.0 |  13.88   3.17 361.00
+    3      2166    407.5 |      154    146.6 |      456    269.1 |        1      0.0 |  14.06   4.75 2166.00
+    4      6498   2998.9 |     1940   1904.2 |     4104   2613.2 |        1      0.0 |   3.35   1.58 6498.00
+    5     51984  36625.4 |    33543  33327.6 |    40356  35695.5 |        1      0.0 |   1.55   1.29 51984.00
+    6    623808 623808.0 |   623808 623808.0 |   623808 623808.0 |        1      0.0 |   1.00   1.00 623808.00

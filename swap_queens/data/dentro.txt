@@ -1,0 +1,47 @@
+N=13 grupos=8661 toroidales=4524 aristas=4567 media_W=4.78 media_X=5.29
+isla n=22 bucles=3 nucleo=0 W=4.1 X=3.9 eje=27% rectas=2
+isla n=20 bucles=3 nucleo=1 W=4.2 X=5.0 eje=0% rectas=-
+isla n=23 bucles=5 nucleo=1 W=3.9 X=4.8 eje=17% rectas=3+
+isla n=24 bucles=2 nucleo=0 W=4.8 X=4.2 eje=21% rectas=3+
+isla n=28 bucles=11 nucleo=0 W=4.5 X=5.1 eje=18% rectas=2
+isla n=24 bucles=7 nucleo=0 W=3.9 X=4.0 eje=21% rectas=2
+isla n=51 bucles=8 nucleo=0 W=4.1 X=4.8 eje=0% rectas=-
+isla n=31 bucles=5 nucleo=1 W=4.6 X=4.7 eje=0% rectas=-
+isla n=39 bucles=6 nucleo=1 W=3.9 X=5.5 eje=0% rectas=-
+isla n=39 bucles=4 nucleo=0 W=4.6 X=5.2 eje=10% rectas=2
+isla n=21 bucles=6 nucleo=0 W=4.6 X=4.1 eje=38% rectas=2
+isla n=21 bucles=5 nucleo=1 W=4.1 X=4.9 eje=14% rectas=3+
+isla n=37 bucles=7 nucleo=0 W=4.5 X=4.5 eje=11% rectas=3+
+isla n=32 bucles=17 nucleo=0 W=4.0 X=3.2 eje=31% rectas=2
+isla n=55 bucles=7 nucleo=0 W=4.5 X=5.3 eje=0% rectas=-
+isla n=50 bucles=6 nucleo=0 W=4.5 X=5.6 eje=2% rectas=3+
+isla n=55 bucles=8 nucleo=0 W=4.8 X=4.1 eje=9% rectas=2
+isla n=44 bucles=22 nucleo=0 W=4.1 X=3.7 eje=20% rectas=3+
+isla n=28 bucles=8 nucleo=0 W=4.4 X=6.1 eje=0% rectas=-
+isla n=31 bucles=3 nucleo=1 W=5.0 X=5.7 eje=0% rectas=-
+isla n=21 bucles=3 nucleo=0 W=4.5 X=6.0 eje=0% rectas=-
+isla n=23 bucles=2 nucleo=0 W=4.6 X=5.7 eje=0% rectas=-
+isla n=20 bucles=1 nucleo=0 W=4.7 X=5.0 eje=0% rectas=-
+isla n=27 bucles=2 nucleo=1 W=4.6 X=5.9 eje=0% rectas=-
+tamano islas nucleo_medio bucles_medios W X eje
+1-1 3114 13.0 0.0 4.99 5.42 0%
+2-2 762 11.8 0.0 4.85 5.34 0%
+3-4 403 7.5 0.2 4.67 5.27 21%
+5-9 199 2.5 0.7 4.63 5.25 18%
+10-29 65 0.5 2.4 4.49 5.08 13%
+30-1073741823 11 0.3 8.5 4.41 4.76 8%
+N=11 grupos=329 toroidales=88 aristas=105 media_W=4.32 media_X=6.01
+isla n=22 bucles=3 nucleo=0 W=3.5 X=5.1 eje=0% rectas=-
+tamano islas nucleo_medio bucles_medios W X eje
+1-1 179 11.0 0.0 4.46 6.06 0%
+2-2 33 9.7 0.0 4.32 6.02 0%
+3-4 14 8.2 0.2 4.09 6.40 2%
+5-9 3 1.7 0.0 4.32 5.68 4%
+10-29 1 0.0 3.0 3.55 5.09 0%
+N=12 grupos=1787 toroidales=0 aristas=786 media_W=4.31 media_X=12.00
+tamano islas nucleo_medio bucles_medios W X eje
+1-1 726 12.0 0.0 4.45 12.00 0%
+2-2 204 10.9 0.0 4.41 12.00 0%
+3-4 82 7.7 0.3 4.10 12.00 0%
+5-9 50 2.0 0.6 4.11 12.00 0%
+10-29 6 0.0 2.7 4.07 12.00 0%

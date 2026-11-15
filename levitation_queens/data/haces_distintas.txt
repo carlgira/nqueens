@@ -1,0 +1,15 @@
+p=17 haz 3+1: 30 base = 80 orbitas con multiplicidad -> 64 orbitas de traslacion distintas;  nº de haces por solucion: {1: 18, 2: 12}
+p=23 haz 3+1: 36 base = 132 orbitas con multiplicidad -> 88 orbitas de traslacion distintas;  nº de haces por solucion: {1: 12, 2: 24}
+p=19 haz 2+2: 32 base = 144 orbitas con multiplicidad -> 144 orbitas de traslacion distintas;  nº de haces por solucion: {1: 32}
+p=29 haz 3+1: 6702 base = 31276 orbitas con multiplicidad -> 31276 orbitas de traslacion distintas;  nº de haces por solucion: {1: 6702}
+p=29 haz 2+2: 1200 base = 8400 orbitas con multiplicidad -> 8400 orbitas de traslacion distintas;  nº de haces por solucion: {1: 1200}
+p=31 haz 2+2: 160 base = 1200 orbitas con multiplicidad -> 1200 orbitas de traslacion distintas;  nº de haces por solucion: {1: 160}
+p=37 haz 2+1: 2588 base = 46584 orbitas con multiplicidad -> 46584 orbitas de traslacion distintas;  nº de haces por solucion: {1: 2588}
+p=37 haz 2+2: 18240 base = 164160 orbitas con multiplicidad -> 164160 orbitas de traslacion distintas;  nº de haces por solucion: {1: 18240}
+p=37 haz 3+1: 109314 base = 655884 orbitas con multiplicidad -> 655884 orbitas de traslacion distintas;  nº de haces por solucion: {1: 109314}
+p=41 haz 2+1: 5994 base = 119880 orbitas con multiplicidad -> 119880 orbitas de traslacion distintas;  nº de haces por solucion: {1: 5994}
+p=41 haz 2+2: 58432 base = 584320 orbitas con multiplicidad -> 584320 orbitas de traslacion distintas;  nº de haces por solucion: {1: 58432}
+p=43 haz 2+1: 528 base = 11088 orbitas con multiplicidad -> 11088 orbitas de traslacion distintas;  nº de haces por solucion: {1: 528}
+p=43 haz 2+2: 1856 base = 19488 orbitas con multiplicidad -> 19488 orbitas de traslacion distintas;  nº de haces por solucion: {1: 1856}
+p=43 haz 3+1: 7552 base = 52864 orbitas con multiplicidad -> 52864 orbitas de traslacion distintas;  nº de haces por solucion: {1: 7552}
+p=41 haz 3+1: 380502 base = 2536680 orbitas con multiplicidad -> 2536680 orbitas de traslacion distintas;  nº de haces por solucion: {1: 380502}

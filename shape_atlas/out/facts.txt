@@ -1,0 +1,65 @@
+== (a) z(0)=0  <=>  una reina por columna ? ==
+z(0)=Σ_r ω^{c_r} solo depende de las multiplicidades m_j de cada columna.
+Se enumeran TODOS los vectores (m_0..m_{N-1}) con Σm=N y se mira cuáles anulan Σ m_j ω^j.
+
+ N  primo  vectores_anulan  tableros_con_z(0)=0     N!(perms)   ratio   iff?
+ 3   sí            1                    6             6    1.000   SÍ
+ 4   no            3                   36            24    1.500   NO
+ 5   sí            1                  120           120    1.000   SÍ
+ 6   no           12                 2040           720    2.833   NO
+ 7   sí            1                 5040          5040    1.000   SÍ
+ 8   no           35               190120         40320    4.715   NO
+ 9   no           10               640080        362880    1.764   NO
+10   no          128             32458860       3628800    8.945   NO
+11   sí            1             39916800      39916800    1.000   SÍ
+12   no          926          17365421304     479001600   36.253   NO
+
+Comprobación directa (fuerza bruta sobre los N^N tableros) del punto (a) y del (b):
+(b) toroidal  <=>  z(0)=z(2π/N)=z(-2π/N)=0
+
+ N     N^N       z(0)=0     perms   discrep(a)   z(0,±2π/N)=0  toroidales  discrep(b)
+ 4        256         36        24         12              4          0          4
+ 5       3125        120       120          0             10         10          0
+ 6      46656       2040       720       1320             18          0         18
+ 7     823543       5040      5040          0             28         28          0
+ 8   16777216     190120     40320     149800            312          0        312
+ 9  387420489     640080    362880     277200             54          0         54
+10  (sobre las 3628800 permutaciones)  z(±2π/N)=0: 300   toroidales: 0   discrep: 300
+11  (sobre las 39916800 permutaciones)  z(±2π/N)=0: 88   toroidales: 88   discrep: 0
+
+== (c) solución lineal c_r = a·r mod N  →  ¿flor de N−1 pétalos? ==
+Fórmula: z_a(t) = e^{it}·(1−e^{iNt})/(1−e^{i(t+2πa/N)}),  |z_a| = |sin(Nt/2)/sin((t+2πa/N)/2)|
+y z_a(t) = e^{−2πia/N}·z_0(t+2πa/N): TODAS las a dan la misma curva girada (también a=0,1,N−1, que no son solución).
+
+ N  a  solución?  toroidal?  pasos_origen  lóbulos  autoint  |z|max  dif_vs_a=0
+ 7  0   no        no         6          6      36    7.000   0.0e+00
+ 7  1   no        no         6          6      36    7.000   8.8e-15
+ 7  2   sí        sí         6          6      36    7.000   1.2e-14
+ 7  3   sí        sí         6          6      36    7.000   1.9e-14
+ 7  4   sí        sí         6          6      36    7.000   2.0e-14
+ 7  5   sí        sí         6          6      36    7.000   2.2e-14
+ 7  6   no        no         6          6      36    7.000   2.2e-14
+
+ 8  0   no        no         7          7      49    8.000   0.0e+00
+ 8  1   no        no         7          7      49    8.000   1.1e-14
+ 8  2   no        no         7          7      49    8.000   1.3e-14
+ 8  3   no        no         7          7      49    8.000   2.3e-14
+ 8  4   no        no         7          7      49    8.000   2.4e-14
+ 8  5   no        no         7          7      49    8.000   2.4e-14
+ 8  6   no        no         7          7      49    8.000   2.7e-14
+ 8  7   no        no         7          7      49    8.000   2.7e-14
+
+11  0   no        no        10         10     100   11.000   0.0e+00
+11  1   no        no        10         10     100   11.000   3.3e-14
+11  2   sí        sí        10         10     100   11.000   2.6e-14
+11  3   sí        sí        10         10     100   11.000   2.5e-14
+11  4   sí        sí        10         10     100   11.000   4.1e-14
+11  5   sí        sí        10         10     100   11.000   4.2e-14
+11  6   sí        sí        10         10     100   11.000   5.3e-14
+11  7   sí        sí        10         10     100   11.000   4.3e-14
+11  8   sí        sí        10         10     100   11.000   4.1e-14
+11  9   sí        sí        10         10     100   11.000   5.7e-14
+11 10   no        no        10         10     100   11.000   4.0e-14
+
+== Área (Parseval) en E0 ==
+N=8, 2000 tableros al azar: max|área − π·N(N+1)/2| = 1.75e-12   (π·36 = 113.0973)

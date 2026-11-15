@@ -1,0 +1,24 @@
+  0:c1x8    dos piezas: clase<=2   tres piezas: clase<=2 
+  1:c1x8    dos piezas: clase<=2   tres piezas: clase<=2 
+  2:c2x16   dos piezas: clase<=1   tres piezas: clase<=1 
+  3:c2x24   dos piezas: clase<=1   tres piezas: clase<=1 
+  4:c4x144  dos piezas: clase<=2   tres piezas: clase<=2 
+  5:c5x72   dos piezas: clase<=None   tres piezas: clase<=4 [5, 8, 7]
+  6:c5x72   dos piezas: clase<=5   tres piezas: clase<=5 
+  7:c5x72   dos piezas: clase<=5   tres piezas: clase<=4 [5, 7, 7]
+  8:c5x72   dos piezas: clase<=5   tres piezas: clase<=4 [4, 8, 7]
+  9:c5x72   dos piezas: clase<=5   tres piezas: clase<=4 [4, 12, 3]
+  10:c5x72   dos piezas: clase<=6   tres piezas: clase<=4 [5, 7, 7]
+  11:c5x144  dos piezas: clase<=5   tres piezas: clase<=2 [7, 9, 3]
+  12:c6x72   dos piezas: clase<=5   tres piezas: clase<=4 [5, 8, 6]
+  13:c6x144  dos piezas: clase<=None   tres piezas: clase<=4 [7, 5, 7]
+  14:c6x144  dos piezas: clase<=None   tres piezas: clase<=5 [5, 7, 7]
+  15:c6x144  dos piezas: clase<=None   tres piezas: clase<=4 [5, 7, 7]
+  16:c6x144  dos piezas: clase<=None   tres piezas: clase<=4 [4, 6, 9]
+  17:c6x144  dos piezas: clase<=None   tres piezas: clase<=4 [5, 6, 8]
+  18:c6x144  dos piezas: clase<=None   tres piezas: clase<=4 [8, 7, 6]
+  19:c6x144  dos piezas: clase<=5   tres piezas: clase<=4 [6, 5, 8]
+  20:c6x144  dos piezas: clase<=4   tres piezas: clase<=4 
+  21:c6x144  dos piezas: clase<=None   tres piezas: clase<=4 [6, 9, 5]
+  22:c6x144  dos piezas: clase<=None   tres piezas: clase<=4 [6, 8, 5]
+  azar (40 permutaciones), por tope de clase 1..6: dos piezas [0, 0, 0, 0, 0, 0], tres piezas [0, 0, 0, 2, 16, 23]

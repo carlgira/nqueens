@@ -1,0 +1,11 @@
+N = 7   soluciones 40
+  caminos por pareja (780 parejas):
+    reinas que cambian de sitio (A AND NOT B):  2:4  3:16  4:12  5:68  6:432  7:248
+    longitud del camino (saltos):  3:8  4:8  5:24  6:140  7:40  8:236  9:96  10:182  11:24  12:22
+    caminos más largos que su emparejamiento ideal (por bloqueos): 0 de 780
+    caminos que pasan por otra solución por el camino: 1 de 780
+  grafo de todos los caminos: 4883 tableros intermedios distintos
+    nº de caminos de pareja que pasan por cada intermedio:  1:4406  2:320  3:94  4:38  5:19  6:4  8:2
+    pares de reinas atacándose en los intermedios (todos):  1:107  2:754  3:1074  4:994  5:931  6:515  7:286  8:124  9:59  10:26  11:9  12:3  14:1
+    ídem, solo en los compartidos por ≥2 caminos:  1:38  2:257  3:143  4:22  5:13  6:1  7:3
+  secuencias al azar por todas las soluciones (20000): saltos  mín 273  mediana 320  media 319.8  máx 362

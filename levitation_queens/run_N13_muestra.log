@@ -1,0 +1,23 @@
+N=13: 200 clases, 0 ya hechas (checkpoint), 200 pendientes -> /Users/carlgira/files/nqueens/nqueens/levitation_queens/data/checkpoints/waves_N13_nodeg_muestra200s0.jsonl
+  [1/200] clase 0: 6 ondas (cota)  301s  | total 306s
+  [2/200] clase 2: 5 ondas (cota)  301s  | total 306s
+  [3/200] clase 8: 6 ondas (cota)  301s  | total 306s
+  [4/200] clase 1: 6 ondas (cota)  301s  | total 306s
+  [5/200] clase 9: 5 ondas (cota)  301s  | total 306s
+  [6/200] clase 3: 7 ondas (cota)  301s  | total 306s
+  [7/200] clase 7: 7 ondas (cota)  301s  | total 306s
+  [8/200] clase 4: 7 ondas (cota)  301s  | total 306s
+  [9/200] clase 5: 6 ondas (cota)  301s  | total 306s
+  [10/200] clase 6: 7 ondas (cota)  301s  | total 306s
+  [11/200] clase 10: 6 ondas (cota)  301s  | total 607s
+  [12/200] clase 16: 5 ondas (cota)  301s  | total 607s
+  [13/200] clase 18: 7 ondas (cota)  301s  | total 607s
+  [14/200] clase 12: 5 ondas (cota)  301s  | total 607s
+  [15/200] clase 11: 6 ondas (cota)  301s  | total 607s
+  [16/200] clase 15: 7 ondas (cota)  301s  | total 607s
+  [17/200] clase 19: 6 ondas (cota)  301s  | total 607s
+  [18/200] clase 17: 4 ondas (cota)  301s  | total 607s
+  [19/200] clase 13: 6 ondas (cota)  301s  | total 607s
+  [20/200] clase 14: 6 ondas (cota)  301s  | total 607s
+/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/multiprocessing/resource_tracker.py:276: UserWarning: resource_tracker: There appear to be 6 leaked semaphore objects to clean up at shutdown: {'/mp-yw1mm307', '/mp-voilq00e', '/mp-vsj2hhaw', '/mp-910zt158', '/mp-sokwfrc_', '/mp-5w6mtbx0'}
+  warnings.warn(

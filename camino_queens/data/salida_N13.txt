@@ -1,0 +1,53 @@
+N = 13   tableros 302875106592253   soluciones 73712
+
+[ALL] 73712 soluciones   dimensión afín 12 (de 13)
+    funcionales constantes (1):  (1,1,1,1,1,1,1,1,1,1,1,1,1)=0
+    LEX  perfil prefijos: 13 132 1028 6054 21518 42198 56566 64752 69260 71898 73024 73712 73712
+         inicio 4153623329082  extensión 294567859934089  densidad 2.502e-10  tramos 73712
+    D2   perfil prefijos: 13 169 1869 10375 26097 40403 48933 53353 55185 56143 56143 56298 73712
+         inicio 26  extensión 302866751874071  densidad 2.434e-10  tramos 56763
+    MOM  perfil prefijos: 1 13 169 2197 21337 46737 53919 55467 55965 56103 56143 56298 73712
+         inicio 26  extensión 23297816231525  densidad 3.164e-09  tramos 56763
+
+[TOR] 4524 soluciones   dimensión afín 10 (de 13)
+    funcionales constantes (3):  (1,3,6,10,2,8,2,10,6,3,1,0,0)=0  (10,5,11,2,4,4,2,11,5,10,0,1,0)=0  (3,6,10,2,8,2,10,6,3,1,0,0,1)=0
+    LEX  perfil prefijos: 13 130 910 2782 3588 4056 4368 4524 4524 4524 4524 4524 4524
+         inicio 4206593473626  extensión 294461919645001  densidad 1.536e-11  tramos 4524
+    D2   perfil prefijos: 13 109 209 267 299 313 313 313 313 313 313 348 4524
+         inicio 26  extensión 299834922297885  densidad 1.509e-11  tramos 313
+    MOM  perfil prefijos: 1 1 1 13 109 209 267 299 313 313 313 348 4524
+         inicio 26  extensión 136474702832  densidad 3.315e-08  tramos 313
+    rectas: máximo 13 soluciones alineadas;  3 en recta:21970  4 en recta:2197  10 en recta:169  13 en recta:348
+
+[LIN] 130 soluciones   dimensión afín 2 (de 13)
+    funcionales constantes (11):  (1,11,1,0,0,0,0,0,0,0,0,0,0)=0  (2,10,0,1,0,0,0,0,0,0,0,0,0)=0  (3,9,0,0,1,0,0,0,0,0,0,0,0)=0  (4,8,0,0,0,1,0,0,0,0,0,0,0)=0  (5,7,0,0,0,0,1,0,0,0,0,0,0)=0  (6,6,0,0,0,0,0,1,0,0,0,0,0)=0  (7,5,0,0,0,0,0,0,1,0,0,0,0)=0  (8,4,0,0,0,0,0,0,0,1,0,0,0)=0  (9,3,0,0,0,0,0,0,0,0,1,0,0)=0  (10,2,0,0,0,0,0,0,0,0,0,1,0)=0  (11,1,0,0,0,0,0,0,0,0,0,0,1)=0
+    LEX  perfil prefijos: 13 130 130 130 130 130 130 130 130 130 130 130 130
+         inicio 4206593473626  extensión 294461919645001  densidad 4.415e-13  tramos 130
+    D2   perfil prefijos: 1 1 1 1 1 1 1 1 1 1 1 10 130
+         inicio 26  extensión 130  densidad 1  tramos 1
+    MOM  perfil prefijos: 1 1 1 1 1 1 1 1 1 1 1 10 130
+         inicio 26  extensión 130  densidad 1  tramos 1
+    rectas: máximo 13 soluciones alineadas;  10 en recta:169  13 en recta:10
+
+[TORNL] 4394 soluciones   dimensión afín 10 (de 13)
+    funcionales constantes (3):  (1,3,6,10,2,8,2,10,6,3,1,0,0)=0  (10,5,11,2,4,4,2,11,5,10,0,1,0)=0  (3,6,10,2,8,2,10,6,3,1,0,0,1)=0
+    LEX  perfil prefijos: 13 130 910 2782 3484 3952 4264 4394 4394 4394 4394 4394 4394
+         inicio 4208979393666  extensión 294457147804921  densidad 1.492e-11  tramos 4394
+    D2   perfil prefijos: 13 109 209 267 299 312 312 312 312 312 312 338 4394
+         inicio 119267122  extensión 299834803030789  densidad 1.465e-11  tramos 312
+    MOM  perfil prefijos: 1 1 1 13 109 209 267 299 312 312 312 338 4394
+         inicio 54353  extensión 136474648505  densidad 3.22e-08  tramos 312
+    rectas: máximo 13 soluciones alineadas;  4 en recta:2197  13 en recta:338
+
+[NOTOR] 69188 soluciones   dimensión afín 12 (de 13)
+    funcionales constantes (1):  (1,1,1,1,1,1,1,1,1,1,1,1,1)=0
+    LEX  perfil prefijos: 13 132 1026 6020 21080 40768 53836 61074 65092 67482 68556 69188 69188
+         inicio 4153623329082  extensión 294567859934089  densidad 2.349e-10  tramos 69188
+    D2   perfil prefijos: 13 169 1869 10375 26097 40375 48805 53108 54904 55834 55834 55950 69188
+         inicio 1057639  extensión 302866750816458  densidad 2.284e-10  tramos 56450
+    MOM  perfil prefijos: 1 13 169 2197 21329 46601 53668 55174 55656 55794 55834 55950 69188
+         inicio 14819200  extensión 23297801412351  densidad 2.97e-09  tramos 56450
+
+  Caminos dentro del subárbol (130 lineales, 4429152 elecciones de los 2 últimos niveles):
+    en progresión aritmética: 16224   en un bloque contiguo: 16224   (sin traslación: 312)
+    inicio del bloque dentro del subárbol:  0:4056  13:4056  26:4056  39:4056

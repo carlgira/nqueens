@@ -1,0 +1,35 @@
+N=8
+  [real (no toroidales)] giros de filas que siguen siendo solución (nº de c) →  0:40  1:28  2:24
+        trayectoria s, s+c, s+2c… más larga (soluciones) →  1:40  2:36  3:16
+  [falso] giros de filas que siguen siendo solución (nº de c) →  0:88  1:4
+        trayectoria s, s+c, s+2c… más larga (soluciones) →  1:88  2:4
+N=9
+  [real (no toroidales)] giros de filas que siguen siendo solución (nº de c) →  0:170  1:88  2:60  3:24  4:10
+        trayectoria s, s+c, s+2c… más larga (soluciones) →  1:170  2:108  3:54  4:16  5:4
+  [falso] giros de filas que siguen siendo solución (nº de c) →  0:348  1:8
+        trayectoria s, s+c, s+2c… más larga (soluciones) →  1:348  2:8
+N=10
+  [real (no toroidales)] giros de filas que siguen siendo solución (nº de c) →  0:424  1:188  2:36  3:64  5:12
+        trayectoria s, s+c, s+2c… más larga (soluciones) →  1:424  2:212  3:56  4:32
+  [falso] giros de filas que siguen siendo solución (nº de c) →  0:704  1:20
+        trayectoria s, s+c, s+2c… más larga (soluciones) →  1:704  2:20
+N=11
+  [real (no toroidales)] giros de filas que siguen siendo solución (nº de c) →  0:1962  1:496  2:108  3:16  4:10
+        trayectoria s, s+c, s+2c… más larga (soluciones) →  1:1962  2:532  3:82  4:12  5:4
+  [falso] giros de filas que siguen siendo solución (nº de c) →  0:2680
+        trayectoria s, s+c, s+2c… más larga (soluciones) →  1:2680
+N=12
+  [real (no toroidales)] giros de filas que siguen siendo solución (nº de c) →  0:9488  1:3196  2:900  3:400  4:180  5:36
+        trayectoria s, s+c, s+2c… más larga (soluciones) →  1:9488  2:3536  3:820  4:276  5:72  6:8
+  [falso] giros de filas que siguen siendo solución (nº de c) →  0:14184  1:16
+        trayectoria s, s+c, s+2c… más larga (soluciones) →  1:14184  2:16
+N=13
+  [real (no toroidales)] giros de filas que siguen siendo solución (nº de c) →  0:45502  1:16328  2:5520  3:1544  4:270  5:24
+        trayectoria s, s+c, s+2c… más larga (soluciones) →  1:45502  2:18264  3:4458  4:856  5:100  6:8
+  [falso] giros de filas que siguen siendo solución (nº de c) →  0:73704  1:8
+        trayectoria s, s+c, s+2c… más larga (soluciones) →  1:73704  2:8
+N=14
+  [real (no toroidales)] giros de filas que siguen siendo solución (nº de c) →  0:237118  1:85200  2:27348  3:8728  4:3570  5:1320  6:952  7:608  8:504  9:160  10:88
+        trayectoria s, s+c, s+2c… más larga (soluciones) →  1:237118  2:94796  3:23242  4:6340  5:2212  6:928  7:520  8:248  9:152  10:24  11:16
+  [falso] giros de filas que siguen siendo solución (nº de c) →  0:365548  1:52
+        trayectoria s, s+c, s+2c… más larga (soluciones) →  1:365548  2:52

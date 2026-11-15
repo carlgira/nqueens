@@ -1,0 +1,28 @@
+N = 8   soluciones 92   bases 92   falso 92
+  [real]
+    1) molde desplazado (parejas con ≤4 reinas cambiadas: 336; 24 desplazamientos v):
+       sin dar la vuelta:  ninguna cadena de 3
+       dando la vuelta:  ninguna cadena de 3
+    2) saltos iguales (aristas con ≤6 reinas cambiadas: 1288)
+       d= 2:      8 aristas   cadena más larga real   2   al azar (mismos grados)   2   tramos con el mismo molde desplazado: 0 de 0
+       d= 3:     16 aristas   cadena más larga real   3   al azar (mismos grados)   5   tramos con el mismo molde desplazado: 0 de 1
+       d= 4:     36 aristas   cadena más larga real   4   al azar (mismos grados)   6   tramos con el mismo molde desplazado: 0 de 2
+       d= 5:    112 aristas   cadena más larga real  30+   al azar (mismos grados)  49+   tramos con el mismo molde desplazado: 0 de 28
+       d= 6:    184 aristas   cadena más larga real  75+   al azar (mismos grados)  75+   tramos con el mismo molde desplazado: 0 de 73
+       d= 7:    216 aristas   cadena más larga real  72+   al azar (mismos grados)  67+   tramos con el mismo molde desplazado: 0 de 70
+       d= 8:    320 aristas   cadena más larga real  88+   al azar (mismos grados)  89+   tramos con el mismo molde desplazado: 0 de 86
+       d= 9:    216 aristas   cadena más larga real  71+   al azar (mismos grados)  74+   tramos con el mismo molde desplazado: 0 de 69
+       d=10:    148 aristas   cadena más larga real  64+   al azar (mismos grados)  63+   tramos con el mismo molde desplazado: 0 de 62
+  [falso]
+    1) molde desplazado (parejas con ≤4 reinas cambiadas: 224; 24 desplazamientos v):
+       sin dar la vuelta:  ninguna cadena de 3
+       dando la vuelta:  ninguna cadena de 3
+    2) saltos iguales (aristas con ≤6 reinas cambiadas: 1086)
+       d= 3:     12 aristas   cadena más larga real   2   al azar (mismos grados)   2   tramos con el mismo molde desplazado: 0 de 0
+       d= 4:     20 aristas   cadena más larga real   3   al azar (mismos grados)   5   tramos con el mismo molde desplazado: 0 de 1
+       d= 5:      8 aristas   cadena más larga real   2   al azar (mismos grados)   2   tramos con el mismo molde desplazado: 0 de 0
+       d= 6:     64 aristas   cadena más larga real  12   al azar (mismos grados)  36   tramos con el mismo molde desplazado: 0 de 10
+       d= 7:     96 aristas   cadena más larga real  53+   al azar (mismos grados)  57   tramos con el mismo molde desplazado: 0 de 51
+       d= 8:    108 aristas   cadena más larga real  40+   al azar (mismos grados)  60+   tramos con el mismo molde desplazado: 0 de 38
+       d= 9:    132 aristas   cadena más larga real  48+   al azar (mismos grados)  55+   tramos con el mismo molde desplazado: 0 de 46
+       d=10:    234 aristas   cadena más larga real  72+   al azar (mismos grados)  81+   tramos con el mismo molde desplazado: 0 de 70

@@ -1,0 +1,7712 @@
+{
+ "N": 11,
+ "maxb": 3,
+ "clases": [
+  {
+   "clase": 0,
+   "representante": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    1,
+    3,
+    5,
+    7,
+    9
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 2,
+   "origenes": {
+    "7": [
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      5
+     ]
+    ],
+    "5": [
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      5
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 1
+  },
+  {
+   "clase": 1,
+   "representante": [
+    0,
+    2,
+    5,
+    8,
+    1,
+    7,
+    10,
+    3,
+    6,
+    4,
+    9
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 2,
+   "representante": [
+    0,
+    2,
+    6,
+    8,
+    3,
+    1,
+    9,
+    5,
+    10,
+    4,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 3,
+   "representante": [
+    0,
+    2,
+    6,
+    9,
+    1,
+    8,
+    5,
+    3,
+    10,
+    7,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 4,
+   "representante": [
+    0,
+    2,
+    6,
+    9,
+    7,
+    10,
+    1,
+    3,
+    5,
+    8,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 5,
+   "representante": [
+    0,
+    2,
+    6,
+    10,
+    3,
+    7,
+    9,
+    4,
+    1,
+    5,
+    8
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 6,
+   "representante": [
+    0,
+    2,
+    7,
+    5,
+    8,
+    1,
+    4,
+    10,
+    3,
+    6,
+    9
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 7,
+   "representante": [
+    0,
+    2,
+    7,
+    9,
+    3,
+    8,
+    10,
+    4,
+    6,
+    1,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 3,
+   "origenes": {
+    "8": [
+     [
+      3,
+      9
+     ],
+     [
+      4,
+      10
+     ],
+     [
+      5,
+      8
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 4
+  },
+  {
+   "clase": 8,
+   "representante": [
+    0,
+    2,
+    7,
+    10,
+    6,
+    1,
+    9,
+    5,
+    3,
+    8,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 9,
+   "representante": [
+    0,
+    2,
+    9,
+    6,
+    8,
+    10,
+    1,
+    3,
+    5,
+    7,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 2,
+   "origenes": {
+    "7": [
+     [
+      2,
+      1
+     ],
+     [
+      4,
+      9
+     ]
+    ],
+    "5": [
+     [
+      2,
+      1
+     ],
+     [
+      4,
+      9
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 2
+  },
+  {
+   "clase": 10,
+   "representante": [
+    0,
+    2,
+    9,
+    7,
+    3,
+    10,
+    8,
+    5,
+    1,
+    4,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 11,
+   "representante": [
+    0,
+    3,
+    5,
+    8,
+    1,
+    9,
+    4,
+    2,
+    7,
+    10,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 12,
+   "representante": [
+    0,
+    3,
+    5,
+    9,
+    2,
+    10,
+    7,
+    4,
+    1,
+    8,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 13,
+   "representante": [
+    0,
+    3,
+    6,
+    8,
+    10,
+    1,
+    9,
+    5,
+    2,
+    4,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 14,
+   "representante": [
+    0,
+    3,
+    6,
+    9,
+    1,
+    4,
+    7,
+    10,
+    2,
+    5,
+    8
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 2,
+   "origenes": {
+    "7": [
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      7
+     ]
+    ],
+    "5": [
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      7
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 1
+  },
+  {
+   "clase": 15,
+   "representante": [
+    0,
+    3,
+    6,
+    10,
+    7,
+    2,
+    4,
+    8,
+    1,
+    5,
+    9
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 16,
+   "representante": [
+    0,
+    3,
+    8,
+    2,
+    7,
+    1,
+    10,
+    5,
+    9,
+    6,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 17,
+   "representante": [
+    0,
+    3,
+    8,
+    6,
+    2,
+    9,
+    5,
+    1,
+    4,
+    10,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 18,
+   "representante": [
+    0,
+    3,
+    8,
+    6,
+    9,
+    1,
+    10,
+    5,
+    7,
+    2,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 19,
+   "representante": [
+    0,
+    3,
+    9,
+    6,
+    10,
+    2,
+    7,
+    1,
+    4,
+    8,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": 5
+  },
+  {
+   "clase": 20,
+   "representante": [
+    0,
+    4,
+    6,
+    8,
+    10,
+    2,
+    7,
+    9,
+    1,
+    3,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 4,
+   "origenes": {
+    "9": [
+     [
+      3,
+      10
+     ],
+     [
+      4,
+      8
+     ],
+     [
+      4,
+      9
+     ],
+     [
+      2,
+      5
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 5
+  },
+  {
+   "clase": 21,
+   "representante": [
+    0,
+    4,
+    6,
+    9,
+    3,
+    10,
+    8,
+    2,
+    5,
+    7,
+    1
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 22,
+   "representante": [
+    0,
+    4,
+    7,
+    9,
+    6,
+    2,
+    10,
+    1,
+    3,
+    5,
+    8
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 23,
+   "representante": [
+    0,
+    4,
+    8,
+    5,
+    9,
+    1,
+    10,
+    2,
+    6,
+    3,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 4,
+   "origenes": {
+    "9": [
+     [
+      1,
+      4
+     ],
+     [
+      2,
+      8
+     ],
+     [
+      4,
+      2
+     ],
+     [
+      1,
+      8
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 3
+  },
+  {
+   "clase": 24,
+   "representante": [
+    0,
+    5,
+    3,
+    9,
+    7,
+    2,
+    4,
+    1,
+    10,
+    8,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 25,
+   "representante": [
+    0,
+    5,
+    3,
+    10,
+    7,
+    4,
+    1,
+    9,
+    2,
+    6,
+    8
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 26,
+   "representante": [
+    0,
+    5,
+    7,
+    2,
+    10,
+    8,
+    1,
+    4,
+    9,
+    3,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 27,
+   "representante": [
+    0,
+    5,
+    7,
+    9,
+    3,
+    8,
+    4,
+    1,
+    10,
+    2,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 28,
+   "representante": [
+    0,
+    5,
+    7,
+    10,
+    6,
+    3,
+    1,
+    8,
+    4,
+    2,
+    9
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 29,
+   "representante": [
+    0,
+    5,
+    8,
+    2,
+    7,
+    10,
+    3,
+    1,
+    9,
+    4,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 30,
+   "representante": [
+    0,
+    5,
+    8,
+    6,
+    9,
+    3,
+    1,
+    4,
+    7,
+    10,
+    2
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 3,
+   "origenes": {
+    "8": [
+     [
+      1,
+      7
+     ],
+     [
+      2,
+      8
+     ],
+     [
+      3,
+      6
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 4
+  },
+  {
+   "clase": 31,
+   "representante": [
+    0,
+    5,
+    10,
+    4,
+    9,
+    3,
+    8,
+    2,
+    7,
+    1,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 2,
+   "origenes": {
+    "7": [
+     [
+      1,
+      2
+     ],
+     [
+      0,
+      1
+     ]
+    ],
+    "5": [
+     [
+      1,
+      2
+     ],
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 1
+  },
+  {
+   "clase": 32,
+   "representante": [
+    0,
+    6,
+    3,
+    7,
+    10,
+    4,
+    9,
+    1,
+    5,
+    2,
+    8
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": 5
+  },
+  {
+   "clase": 33,
+   "representante": [
+    0,
+    6,
+    4,
+    2,
+    10,
+    8,
+    3,
+    1,
+    9,
+    7,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 4,
+   "origenes": {
+    "9": [
+     [
+      1,
+      2
+     ],
+     [
+      2,
+      7
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 3
+  },
+  {
+   "clase": 34,
+   "representante": [
+    0,
+    6,
+    4,
+    7,
+    10,
+    3,
+    9,
+    2,
+    5,
+    8,
+    1
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 35,
+   "representante": [
+    0,
+    6,
+    4,
+    7,
+    10,
+    8,
+    3,
+    1,
+    9,
+    2,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 36,
+   "representante": [
+    0,
+    6,
+    8,
+    2,
+    7,
+    9,
+    3,
+    1,
+    4,
+    10,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 37,
+   "representante": [
+    0,
+    6,
+    8,
+    5,
+    2,
+    9,
+    3,
+    10,
+    7,
+    4,
+    1
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 38,
+   "representante": [
+    0,
+    6,
+    8,
+    10,
+    2,
+    4,
+    9,
+    1,
+    3,
+    5,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 4,
+   "origenes": {
+    "9": [
+     [
+      3,
+      10
+     ],
+     [
+      4,
+      8
+     ],
+     [
+      4,
+      9
+     ],
+     [
+      2,
+      5
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 5
+  },
+  {
+   "clase": 39,
+   "representante": [
+    0,
+    6,
+    9,
+    2,
+    10,
+    8,
+    3,
+    1,
+    4,
+    7,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 40,
+   "representante": [
+    0,
+    6,
+    9,
+    7,
+    2,
+    8,
+    3,
+    1,
+    4,
+    10,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 2,
+   "origenes": {
+    "7": [
+     [
+      1,
+      2
+     ],
+     [
+      2,
+      7
+     ]
+    ],
+    "5": [
+     [
+      1,
+      2
+     ],
+     [
+      2,
+      7
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 2
+  },
+  {
+   "clase": 41,
+   "representante": [
+    0,
+    7,
+    3,
+    8,
+    6,
+    2,
+    10,
+    5,
+    1,
+    4,
+    9
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 42,
+   "representante": [
+    0,
+    7,
+    3,
+    10,
+    6,
+    2,
+    9,
+    5,
+    1,
+    8,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 2,
+   "origenes": {
+    "7": [
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      3
+     ]
+    ],
+    "5": [
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      3
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 1
+  },
+  {
+   "clase": 43,
+   "representante": [
+    0,
+    7,
+    4,
+    10,
+    5,
+    2,
+    9,
+    3,
+    6,
+    8,
+    1
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 44,
+   "representante": [
+    0,
+    7,
+    5,
+    2,
+    8,
+    10,
+    3,
+    9,
+    6,
+    4,
+    1
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 45,
+   "representante": [
+    0,
+    7,
+    5,
+    10,
+    2,
+    4,
+    8,
+    3,
+    9,
+    6,
+    1
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 46,
+   "representante": [
+    0,
+    8,
+    3,
+    5,
+    10,
+    2,
+    9,
+    6,
+    4,
+    7,
+    1
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 47,
+   "representante": [
+    0,
+    8,
+    5,
+    2,
+    10,
+    3,
+    7,
+    9,
+    4,
+    6,
+    1
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 48,
+   "representante": [
+    1,
+    3,
+    0,
+    6,
+    9,
+    2,
+    10,
+    7,
+    4,
+    8,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 49,
+   "representante": [
+    1,
+    3,
+    5,
+    8,
+    2,
+    0,
+    10,
+    6,
+    4,
+    9,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 50,
+   "representante": [
+    1,
+    3,
+    5,
+    8,
+    2,
+    0,
+    10,
+    7,
+    4,
+    6,
+    9
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 51,
+   "representante": [
+    1,
+    3,
+    6,
+    0,
+    7,
+    10,
+    4,
+    2,
+    8,
+    5,
+    9
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 52,
+   "representante": [
+    1,
+    3,
+    6,
+    8,
+    10,
+    4,
+    9,
+    0,
+    5,
+    7,
+    2
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 53,
+   "representante": [
+    1,
+    3,
+    6,
+    8,
+    10,
+    5,
+    0,
+    2,
+    4,
+    7,
+    9
+   ],
+   "miembros": 4,
+   "ondas_base_mas_1": 4,
+   "origenes": {
+    "9": [
+     [
+      1,
+      4
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      4,
+      3
+     ],
+     [
+      2,
+      10
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 5
+  },
+  {
+   "clase": 54,
+   "representante": [
+    1,
+    3,
+    6,
+    9,
+    2,
+    10,
+    5,
+    0,
+    8,
+    4,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 55,
+   "representante": [
+    1,
+    3,
+    6,
+    10,
+    2,
+    4,
+    9,
+    0,
+    8,
+    5,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 4,
+   "origenes": {
+    "9": [
+     [
+      1,
+      9
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      3,
+      10
+     ],
+     [
+      4,
+      5
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 4
+  },
+  {
+   "clase": 56,
+   "representante": [
+    1,
+    3,
+    7,
+    0,
+    8,
+    5,
+    2,
+    10,
+    6,
+    4,
+    9
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 57,
+   "representante": [
+    1,
+    3,
+    7,
+    0,
+    10,
+    5,
+    9,
+    6,
+    4,
+    2,
+    8
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 58,
+   "representante": [
+    1,
+    3,
+    7,
+    9,
+    2,
+    0,
+    5,
+    10,
+    8,
+    6,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 59,
+   "representante": [
+    1,
+    3,
+    7,
+    9,
+    4,
+    0,
+    5,
+    10,
+    2,
+    6,
+    8
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 60,
+   "representante": [
+    1,
+    3,
+    7,
+    9,
+    4,
+    0,
+    10,
+    6,
+    2,
+    5,
+    8
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 61,
+   "representante": [
+    1,
+    3,
+    7,
+    10,
+    2,
+    5,
+    9,
+    4,
+    0,
+    8,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 62,
+   "representante": [
+    1,
+    3,
+    7,
+    10,
+    2,
+    9,
+    6,
+    4,
+    0,
+    8,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 63,
+   "representante": [
+    1,
+    3,
+    7,
+    10,
+    4,
+    0,
+    9,
+    5,
+    2,
+    8,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 64,
+   "representante": [
+    1,
+    3,
+    7,
+    10,
+    4,
+    9,
+    5,
+    0,
+    2,
+    6,
+    8
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 65,
+   "representante": [
+    1,
+    3,
+    8,
+    6,
+    2,
+    10,
+    5,
+    0,
+    4,
+    9,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 66,
+   "representante": [
+    1,
+    3,
+    8,
+    6,
+    9,
+    0,
+    10,
+    4,
+    7,
+    5,
+    2
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 67,
+   "representante": [
+    1,
+    3,
+    8,
+    6,
+    9,
+    0,
+    10,
+    5,
+    7,
+    2,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 68,
+   "representante": [
+    1,
+    3,
+    8,
+    10,
+    4,
+    9,
+    0,
+    5,
+    7,
+    2,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 3,
+   "origenes": {
+    "8": [
+     [
+      3,
+      9
+     ],
+     [
+      4,
+      10
+     ],
+     [
+      5,
+      8
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 4
+  },
+  {
+   "clase": 69,
+   "representante": [
+    1,
+    3,
+    8,
+    10,
+    7,
+    4,
+    2,
+    0,
+    6,
+    9,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 70,
+   "representante": [
+    1,
+    3,
+    9,
+    2,
+    8,
+    10,
+    4,
+    7,
+    5,
+    0,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 71,
+   "representante": [
+    1,
+    3,
+    9,
+    6,
+    8,
+    10,
+    2,
+    0,
+    5,
+    7,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 72,
+   "representante": [
+    1,
+    3,
+    9,
+    6,
+    10,
+    5,
+    2,
+    0,
+    7,
+    4,
+    8
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 73,
+   "representante": [
+    1,
+    3,
+    9,
+    7,
+    2,
+    10,
+    6,
+    0,
+    5,
+    8,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 74,
+   "representante": [
+    1,
+    3,
+    9,
+    7,
+    4,
+    10,
+    0,
+    2,
+    5,
+    8,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 75,
+   "representante": [
+    1,
+    3,
+    10,
+    6,
+    2,
+    9,
+    5,
+    0,
+    8,
+    4,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 76,
+   "representante": [
+    1,
+    3,
+    10,
+    6,
+    9,
+    2,
+    4,
+    7,
+    0,
+    8,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 77,
+   "representante": [
+    1,
+    3,
+    10,
+    8,
+    4,
+    0,
+    9,
+    6,
+    2,
+    5,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 78,
+   "representante": [
+    1,
+    4,
+    0,
+    7,
+    3,
+    10,
+    8,
+    2,
+    5,
+    9,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 79,
+   "representante": [
+    1,
+    4,
+    0,
+    8,
+    10,
+    7,
+    3,
+    6,
+    2,
+    9,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 4,
+   "origenes": {
+    "9": [
+     [
+      1,
+      3
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      4,
+      9
+     ],
+     [
+      1,
+      1
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 3
+  },
+  {
+   "clase": 80,
+   "representante": [
+    1,
+    4,
+    0,
+    10,
+    6,
+    9,
+    5,
+    2,
+    8,
+    3,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 81,
+   "representante": [
+    1,
+    4,
+    2,
+    0,
+    9,
+    7,
+    10,
+    3,
+    6,
+    8,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 82,
+   "representante": [
+    1,
+    4,
+    6,
+    8,
+    10,
+    2,
+    0,
+    5,
+    7,
+    9,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 3,
+   "origenes": {
+    "10": [
+     [
+      1,
+      6
+     ],
+     [
+      2,
+      10
+     ],
+     [
+      3,
+      4
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 5
+  },
+  {
+   "clase": 83,
+   "representante": [
+    1,
+    4,
+    6,
+    8,
+    10,
+    7,
+    3,
+    0,
+    2,
+    9,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 84,
+   "representante": [
+    1,
+    4,
+    6,
+    9,
+    2,
+    10,
+    5,
+    3,
+    8,
+    0,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 85,
+   "representante": [
+    1,
+    4,
+    6,
+    9,
+    3,
+    10,
+    0,
+    2,
+    8,
+    5,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 86,
+   "representante": [
+    1,
+    4,
+    6,
+    9,
+    3,
+    10,
+    0,
+    7,
+    5,
+    2,
+    8
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 87,
+   "representante": [
+    1,
+    4,
+    6,
+    10,
+    0,
+    5,
+    3,
+    9,
+    7,
+    2,
+    8
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 88,
+   "representante": [
+    1,
+    4,
+    6,
+    10,
+    2,
+    7,
+    3,
+    0,
+    8,
+    5,
+    9
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 89,
+   "representante": [
+    1,
+    4,
+    7,
+    0,
+    2,
+    9,
+    6,
+    3,
+    10,
+    8,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 90,
+   "representante": [
+    1,
+    4,
+    7,
+    0,
+    10,
+    3,
+    6,
+    9,
+    2,
+    8,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 91,
+   "representante": [
+    1,
+    4,
+    7,
+    10,
+    0,
+    3,
+    6,
+    9,
+    2,
+    8,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": 4
+  },
+  {
+   "clase": 92,
+   "representante": [
+    1,
+    4,
+    7,
+    10,
+    2,
+    5,
+    8,
+    0,
+    3,
+    6,
+    9
+   ],
+   "miembros": 4,
+   "ondas_base_mas_1": 2,
+   "origenes": {
+    "7": [
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      7
+     ]
+    ],
+    "5": [
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      7
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 1
+  },
+  {
+   "clase": 93,
+   "representante": [
+    1,
+    4,
+    7,
+    10,
+    2,
+    9,
+    6,
+    3,
+    0,
+    8,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 4,
+   "origenes": {
+    "10": [
+     [
+      1,
+      7
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      5,
+      9
+     ],
+     [
+      4,
+      6
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 5
+  },
+  {
+   "clase": 94,
+   "representante": [
+    1,
+    4,
+    7,
+    10,
+    6,
+    9,
+    2,
+    0,
+    8,
+    3,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 95,
+   "representante": [
+    1,
+    4,
+    7,
+    10,
+    8,
+    2,
+    0,
+    3,
+    6,
+    9,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 4,
+   "origenes": {
+    "10": [
+     [
+      1,
+      7
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      5,
+      9
+     ],
+     [
+      3,
+      6
+     ]
+    ],
+    "9": [
+     [
+      1,
+      7
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      3,
+      6
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 4
+  },
+  {
+   "clase": 96,
+   "representante": [
+    1,
+    4,
+    7,
+    10,
+    8,
+    3,
+    5,
+    0,
+    2,
+    9,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 97,
+   "representante": [
+    1,
+    4,
+    7,
+    10,
+    8,
+    5,
+    2,
+    0,
+    3,
+    6,
+    9
+   ],
+   "miembros": 4,
+   "ondas_base_mas_1": 2,
+   "origenes": {
+    "7": [
+     [
+      3,
+      1
+     ],
+     [
+      5,
+      2
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 4
+  },
+  {
+   "clase": 98,
+   "representante": [
+    1,
+    4,
+    8,
+    5,
+    3,
+    10,
+    0,
+    2,
+    6,
+    9,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 99,
+   "representante": [
+    1,
+    4,
+    9,
+    5,
+    10,
+    2,
+    6,
+    3,
+    7,
+    0,
+    8
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 3,
+   "origenes": {
+    "10": [
+     [
+      3,
+      4
+     ],
+     [
+      5,
+      10
+     ],
+     [
+      4,
+      2
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 3
+  },
+  {
+   "clase": 100,
+   "representante": [
+    1,
+    4,
+    9,
+    7,
+    2,
+    10,
+    8,
+    0,
+    5,
+    3,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": 5
+  },
+  {
+   "clase": 101,
+   "representante": [
+    1,
+    4,
+    9,
+    7,
+    3,
+    10,
+    6,
+    2,
+    0,
+    5,
+    8
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 4,
+   "origenes": {
+    "10": [
+     [
+      2,
+      6
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      4,
+      10
+     ],
+     [
+      5,
+      7
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 5
+  },
+  {
+   "clase": 102,
+   "representante": [
+    1,
+    4,
+    9,
+    7,
+    10,
+    3,
+    0,
+    2,
+    5,
+    8,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 103,
+   "representante": [
+    1,
+    4,
+    10,
+    5,
+    9,
+    2,
+    0,
+    7,
+    3,
+    8,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 104,
+   "representante": [
+    1,
+    4,
+    10,
+    8,
+    0,
+    9,
+    3,
+    6,
+    2,
+    7,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 105,
+   "representante": [
+    1,
+    4,
+    10,
+    8,
+    3,
+    5,
+    2,
+    9,
+    6,
+    0,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 106,
+   "representante": [
+    1,
+    5,
+    2,
+    8,
+    10,
+    3,
+    9,
+    6,
+    4,
+    0,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 107,
+   "representante": [
+    1,
+    5,
+    7,
+    2,
+    10,
+    8,
+    4,
+    0,
+    3,
+    9,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 108,
+   "representante": [
+    1,
+    5,
+    7,
+    9,
+    3,
+    0,
+    2,
+    10,
+    8,
+    6,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 109,
+   "representante": [
+    1,
+    5,
+    7,
+    9,
+    4,
+    0,
+    8,
+    10,
+    2,
+    6,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 110,
+   "representante": [
+    1,
+    5,
+    7,
+    10,
+    0,
+    2,
+    6,
+    9,
+    3,
+    8,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 111,
+   "representante": [
+    1,
+    5,
+    7,
+    10,
+    3,
+    0,
+    8,
+    4,
+    2,
+    9,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 112,
+   "representante": [
+    1,
+    5,
+    7,
+    10,
+    4,
+    0,
+    9,
+    3,
+    6,
+    8,
+    2
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 113,
+   "representante": [
+    1,
+    5,
+    7,
+    10,
+    6,
+    0,
+    2,
+    4,
+    8,
+    3,
+    9
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 114,
+   "representante": [
+    1,
+    5,
+    8,
+    0,
+    9,
+    3,
+    6,
+    10,
+    7,
+    2,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 115,
+   "representante": [
+    1,
+    5,
+    8,
+    10,
+    0,
+    3,
+    6,
+    9,
+    7,
+    2,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 116,
+   "representante": [
+    1,
+    5,
+    9,
+    0,
+    3,
+    8,
+    6,
+    2,
+    10,
+    7,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 117,
+   "representante": [
+    1,
+    5,
+    9,
+    0,
+    10,
+    8,
+    4,
+    2,
+    7,
+    3,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 118,
+   "representante": [
+    1,
+    5,
+    9,
+    2,
+    0,
+    7,
+    4,
+    10,
+    8,
+    6,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 119,
+   "representante": [
+    1,
+    5,
+    9,
+    2,
+    6,
+    10,
+    3,
+    7,
+    0,
+    4,
+    8
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 2,
+   "origenes": {
+    "7": [
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      8
+     ]
+    ],
+    "5": [
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      8
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 1
+  },
+  {
+   "clase": 120,
+   "representante": [
+    1,
+    5,
+    9,
+    6,
+    0,
+    2,
+    4,
+    7,
+    10,
+    8,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 121,
+   "representante": [
+    1,
+    5,
+    10,
+    2,
+    6,
+    3,
+    9,
+    0,
+    8,
+    4,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 122,
+   "representante": [
+    1,
+    6,
+    0,
+    5,
+    10,
+    4,
+    9,
+    3,
+    8,
+    2,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 2,
+   "origenes": {
+    "7": [
+     [
+      1,
+      2
+     ],
+     [
+      0,
+      1
+     ]
+    ],
+    "5": [
+     [
+      1,
+      2
+     ],
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 1
+  },
+  {
+   "clase": 123,
+   "representante": [
+    1,
+    6,
+    0,
+    7,
+    10,
+    8,
+    3,
+    9,
+    4,
+    2,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 124,
+   "representante": [
+    1,
+    6,
+    0,
+    10,
+    8,
+    5,
+    3,
+    9,
+    7,
+    2,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 125,
+   "representante": [
+    1,
+    6,
+    2,
+    7,
+    10,
+    3,
+    0,
+    9,
+    4,
+    8,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 126,
+   "representante": [
+    1,
+    6,
+    2,
+    9,
+    7,
+    0,
+    10,
+    3,
+    5,
+    8,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 127,
+   "representante": [
+    1,
+    6,
+    2,
+    10,
+    7,
+    3,
+    0,
+    9,
+    4,
+    8,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 128,
+   "representante": [
+    1,
+    6,
+    2,
+    10,
+    8,
+    4,
+    0,
+    9,
+    3,
+    5,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 129,
+   "representante": [
+    1,
+    6,
+    4,
+    2,
+    0,
+    8,
+    10,
+    5,
+    3,
+    9,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 130,
+   "representante": [
+    1,
+    6,
+    4,
+    7,
+    10,
+    0,
+    3,
+    5,
+    8,
+    2,
+    9
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 131,
+   "representante": [
+    1,
+    6,
+    4,
+    7,
+    10,
+    8,
+    2,
+    5,
+    3,
+    0,
+    9
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 3,
+   "origenes": {
+    "8": [
+     [
+      1,
+      7
+     ],
+     [
+      2,
+      8
+     ],
+     [
+      3,
+      6
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 4
+  },
+  {
+   "clase": 132,
+   "representante": [
+    1,
+    6,
+    4,
+    7,
+    10,
+    8,
+    3,
+    5,
+    0,
+    2,
+    9
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 133,
+   "representante": [
+    1,
+    6,
+    4,
+    9,
+    0,
+    3,
+    10,
+    7,
+    2,
+    8,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 134,
+   "representante": [
+    1,
+    6,
+    4,
+    9,
+    0,
+    5,
+    3,
+    10,
+    7,
+    2,
+    8
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 135,
+   "representante": [
+    1,
+    6,
+    4,
+    9,
+    7,
+    5,
+    10,
+    2,
+    0,
+    8,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 4,
+   "origenes": {
+    "9": [
+     [
+      1,
+      7
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      4,
+      1
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 4
+  },
+  {
+   "clase": 136,
+   "representante": [
+    1,
+    6,
+    4,
+    10,
+    0,
+    9,
+    5,
+    2,
+    8,
+    3,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 137,
+   "representante": [
+    1,
+    6,
+    8,
+    0,
+    4,
+    9,
+    5,
+    2,
+    10,
+    7,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 138,
+   "representante": [
+    1,
+    6,
+    8,
+    3,
+    0,
+    4,
+    9,
+    5,
+    10,
+    2,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 139,
+   "representante": [
+    1,
+    6,
+    8,
+    5,
+    0,
+    9,
+    3,
+    10,
+    7,
+    4,
+    2
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 140,
+   "representante": [
+    1,
+    6,
+    8,
+    5,
+    2,
+    0,
+    3,
+    10,
+    7,
+    9,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 141,
+   "representante": [
+    1,
+    6,
+    8,
+    5,
+    2,
+    0,
+    10,
+    4,
+    7,
+    9,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 142,
+   "representante": [
+    1,
+    6,
+    8,
+    10,
+    4,
+    0,
+    3,
+    9,
+    7,
+    5,
+    2
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 143,
+   "representante": [
+    1,
+    6,
+    9,
+    2,
+    0,
+    8,
+    4,
+    7,
+    10,
+    3,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 144,
+   "representante": [
+    1,
+    6,
+    9,
+    2,
+    4,
+    7,
+    10,
+    3,
+    5,
+    0,
+    8
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 145,
+   "representante": [
+    1,
+    6,
+    9,
+    2,
+    4,
+    8,
+    0,
+    3,
+    10,
+    7,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 146,
+   "representante": [
+    1,
+    6,
+    9,
+    2,
+    8,
+    5,
+    3,
+    10,
+    0,
+    7,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 147,
+   "representante": [
+    1,
+    6,
+    9,
+    3,
+    0,
+    4,
+    8,
+    10,
+    2,
+    7,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 148,
+   "representante": [
+    1,
+    6,
+    9,
+    3,
+    0,
+    4,
+    8,
+    10,
+    5,
+    7,
+    2
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 149,
+   "representante": [
+    1,
+    6,
+    9,
+    3,
+    0,
+    7,
+    10,
+    2,
+    5,
+    8,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": 5
+  },
+  {
+   "clase": 150,
+   "representante": [
+    1,
+    6,
+    9,
+    3,
+    8,
+    0,
+    2,
+    10,
+    5,
+    7,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": 5
+  },
+  {
+   "clase": 151,
+   "representante": [
+    1,
+    6,
+    9,
+    5,
+    2,
+    0,
+    10,
+    7,
+    4,
+    8,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 152,
+   "representante": [
+    1,
+    6,
+    9,
+    5,
+    2,
+    8,
+    10,
+    3,
+    7,
+    0,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 153,
+   "representante": [
+    1,
+    6,
+    9,
+    7,
+    2,
+    4,
+    8,
+    10,
+    0,
+    3,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 154,
+   "representante": [
+    1,
+    6,
+    10,
+    2,
+    4,
+    8,
+    0,
+    9,
+    3,
+    5,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 155,
+   "representante": [
+    1,
+    6,
+    10,
+    2,
+    7,
+    5,
+    3,
+    9,
+    0,
+    4,
+    8
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": 5
+  },
+  {
+   "clase": 156,
+   "representante": [
+    1,
+    6,
+    10,
+    3,
+    7,
+    0,
+    2,
+    9,
+    5,
+    8,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 157,
+   "representante": [
+    1,
+    6,
+    10,
+    7,
+    0,
+    3,
+    9,
+    2,
+    5,
+    8,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 158,
+   "representante": [
+    1,
+    6,
+    10,
+    7,
+    2,
+    0,
+    9,
+    4,
+    8,
+    5,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 159,
+   "representante": [
+    1,
+    7,
+    2,
+    8,
+    3,
+    9,
+    0,
+    5,
+    10,
+    4,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 3,
+   "origenes": {
+    "10": [
+     [
+      1,
+      9
+     ],
+     [
+      5,
+      10
+     ],
+     [
+      4,
+      3
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 5
+  },
+  {
+   "clase": 160,
+   "representante": [
+    1,
+    7,
+    2,
+    8,
+    3,
+    9,
+    4,
+    10,
+    5,
+    0,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 2,
+   "origenes": {
+    "7": [
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      9
+     ]
+    ],
+    "5": [
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      9
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 1
+  },
+  {
+   "clase": 161,
+   "representante": [
+    1,
+    7,
+    2,
+    10,
+    6,
+    4,
+    9,
+    0,
+    3,
+    5,
+    8
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 162,
+   "representante": [
+    1,
+    7,
+    2,
+    10,
+    6,
+    9,
+    3,
+    0,
+    4,
+    8,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 163,
+   "representante": [
+    1,
+    7,
+    4,
+    0,
+    8,
+    10,
+    5,
+    2,
+    6,
+    9,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 164,
+   "representante": [
+    1,
+    7,
+    4,
+    2,
+    9,
+    5,
+    10,
+    0,
+    3,
+    6,
+    8
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 165,
+   "representante": [
+    1,
+    7,
+    4,
+    6,
+    9,
+    5,
+    10,
+    0,
+    3,
+    8,
+    2
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 166,
+   "representante": [
+    1,
+    7,
+    4,
+    8,
+    0,
+    5,
+    10,
+    2,
+    6,
+    3,
+    9
+   ],
+   "miembros": 4,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": 5
+  },
+  {
+   "clase": 167,
+   "representante": [
+    1,
+    7,
+    4,
+    8,
+    3,
+    9,
+    6,
+    10,
+    2,
+    0,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 168,
+   "representante": [
+    1,
+    7,
+    5,
+    0,
+    2,
+    10,
+    6,
+    9,
+    3,
+    8,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 169,
+   "representante": [
+    1,
+    7,
+    5,
+    2,
+    8,
+    10,
+    0,
+    4,
+    6,
+    9,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 170,
+   "representante": [
+    1,
+    7,
+    5,
+    3,
+    9,
+    0,
+    10,
+    4,
+    6,
+    8,
+    2
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 171,
+   "representante": [
+    1,
+    7,
+    5,
+    8,
+    0,
+    9,
+    4,
+    2,
+    10,
+    6,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 4,
+   "origenes": {
+    "9": [
+     [
+      1,
+      2
+     ],
+     [
+      2,
+      7
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      4,
+      6
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 4
+  },
+  {
+   "clase": 172,
+   "representante": [
+    1,
+    7,
+    9,
+    0,
+    3,
+    10,
+    8,
+    5,
+    2,
+    4,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 173,
+   "representante": [
+    1,
+    7,
+    9,
+    2,
+    8,
+    5,
+    3,
+    0,
+    10,
+    4,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 174,
+   "representante": [
+    1,
+    7,
+    9,
+    3,
+    8,
+    2,
+    4,
+    6,
+    10,
+    0,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 175,
+   "representante": [
+    1,
+    7,
+    9,
+    6,
+    2,
+    0,
+    10,
+    3,
+    5,
+    8,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 176,
+   "representante": [
+    1,
+    8,
+    0,
+    7,
+    3,
+    10,
+    6,
+    9,
+    5,
+    2,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 4,
+   "origenes": {
+    "9": [
+     [
+      1,
+      3
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      4,
+      9
+     ],
+     [
+      1,
+      1
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 3
+  },
+  {
+   "clase": 177,
+   "representante": [
+    1,
+    8,
+    2,
+    0,
+    6,
+    9,
+    5,
+    10,
+    4,
+    7,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 178,
+   "representante": [
+    1,
+    8,
+    2,
+    0,
+    7,
+    9,
+    4,
+    6,
+    10,
+    3,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 179,
+   "representante": [
+    1,
+    8,
+    2,
+    5,
+    9,
+    0,
+    4,
+    10,
+    7,
+    3,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 180,
+   "representante": [
+    1,
+    8,
+    2,
+    7,
+    9,
+    3,
+    5,
+    0,
+    10,
+    6,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 181,
+   "representante": [
+    1,
+    8,
+    2,
+    7,
+    10,
+    0,
+    5,
+    9,
+    4,
+    6,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 182,
+   "representante": [
+    1,
+    8,
+    2,
+    9,
+    6,
+    0,
+    10,
+    4,
+    7,
+    5,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 183,
+   "representante": [
+    1,
+    8,
+    4,
+    0,
+    3,
+    9,
+    6,
+    10,
+    2,
+    7,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 184,
+   "representante": [
+    1,
+    8,
+    4,
+    0,
+    7,
+    3,
+    10,
+    6,
+    2,
+    9,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 2,
+   "origenes": {
+    "7": [
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      3
+     ]
+    ],
+    "5": [
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      3
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 1
+  },
+  {
+   "clase": 185,
+   "representante": [
+    1,
+    8,
+    4,
+    0,
+    10,
+    5,
+    9,
+    6,
+    3,
+    7,
+    2
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 186,
+   "representante": [
+    1,
+    8,
+    4,
+    2,
+    9,
+    5,
+    10,
+    0,
+    6,
+    3,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": 5
+  },
+  {
+   "clase": 187,
+   "representante": [
+    1,
+    8,
+    4,
+    7,
+    0,
+    2,
+    5,
+    10,
+    6,
+    9,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 188,
+   "representante": [
+    1,
+    8,
+    4,
+    7,
+    0,
+    3,
+    6,
+    10,
+    5,
+    2,
+    9
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 189,
+   "representante": [
+    1,
+    8,
+    4,
+    7,
+    9,
+    2,
+    5,
+    10,
+    0,
+    3,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 190,
+   "representante": [
+    1,
+    8,
+    5,
+    0,
+    2,
+    7,
+    10,
+    6,
+    3,
+    9,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 191,
+   "representante": [
+    1,
+    8,
+    5,
+    0,
+    6,
+    3,
+    10,
+    7,
+    4,
+    2,
+    9
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 192,
+   "representante": [
+    1,
+    8,
+    5,
+    2,
+    0,
+    7,
+    10,
+    4,
+    6,
+    9,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 193,
+   "representante": [
+    1,
+    8,
+    5,
+    2,
+    0,
+    9,
+    6,
+    4,
+    10,
+    7,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 194,
+   "representante": [
+    1,
+    8,
+    5,
+    2,
+    9,
+    7,
+    10,
+    3,
+    0,
+    6,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 195,
+   "representante": [
+    1,
+    8,
+    5,
+    3,
+    0,
+    9,
+    4,
+    6,
+    10,
+    2,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 196,
+   "representante": [
+    1,
+    8,
+    5,
+    9,
+    4,
+    0,
+    10,
+    3,
+    6,
+    2,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 197,
+   "representante": [
+    1,
+    8,
+    5,
+    9,
+    4,
+    10,
+    0,
+    3,
+    6,
+    2,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 198,
+   "representante": [
+    1,
+    8,
+    6,
+    2,
+    0,
+    5,
+    9,
+    4,
+    10,
+    7,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 199,
+   "representante": [
+    1,
+    8,
+    6,
+    3,
+    0,
+    10,
+    5,
+    9,
+    2,
+    4,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 200,
+   "representante": [
+    1,
+    8,
+    6,
+    3,
+    9,
+    0,
+    4,
+    10,
+    7,
+    5,
+    2
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 201,
+   "representante": [
+    1,
+    8,
+    10,
+    5,
+    0,
+    2,
+    9,
+    6,
+    3,
+    7,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 202,
+   "representante": [
+    1,
+    9,
+    2,
+    6,
+    3,
+    7,
+    10,
+    4,
+    0,
+    5,
+    8
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 3,
+   "origenes": {
+    "10": [
+     [
+      3,
+      4
+     ],
+     [
+      5,
+      10
+     ],
+     [
+      4,
+      2
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 3
+  },
+  {
+   "clase": 203,
+   "representante": [
+    1,
+    9,
+    2,
+    6,
+    3,
+    10,
+    8,
+    5,
+    0,
+    4,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 204,
+   "representante": [
+    1,
+    9,
+    2,
+    6,
+    8,
+    3,
+    5,
+    0,
+    10,
+    4,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 205,
+   "representante": [
+    1,
+    9,
+    4,
+    6,
+    0,
+    3,
+    10,
+    7,
+    5,
+    8,
+    2
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 206,
+   "representante": [
+    1,
+    9,
+    4,
+    6,
+    3,
+    0,
+    10,
+    7,
+    5,
+    2,
+    8
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 207,
+   "representante": [
+    1,
+    9,
+    5,
+    0,
+    4,
+    7,
+    10,
+    2,
+    6,
+    8,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 208,
+   "representante": [
+    1,
+    9,
+    5,
+    0,
+    4,
+    10,
+    8,
+    6,
+    3,
+    7,
+    2
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 209,
+   "representante": [
+    1,
+    9,
+    5,
+    0,
+    8,
+    10,
+    2,
+    6,
+    3,
+    7,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 210,
+   "representante": [
+    1,
+    9,
+    5,
+    2,
+    8,
+    3,
+    0,
+    7,
+    10,
+    4,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 211,
+   "representante": [
+    1,
+    9,
+    5,
+    2,
+    8,
+    10,
+    3,
+    7,
+    0,
+    4,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 4,
+   "origenes": {
+    "10": [
+     [
+      2,
+      5
+     ],
+     [
+      3,
+      9
+     ],
+     [
+      4,
+      1
+     ],
+     [
+      5,
+      4
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 5
+  },
+  {
+   "clase": 212,
+   "representante": [
+    1,
+    9,
+    5,
+    3,
+    8,
+    0,
+    2,
+    6,
+    10,
+    7,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 213,
+   "representante": [
+    1,
+    9,
+    5,
+    8,
+    2,
+    0,
+    10,
+    7,
+    4,
+    6,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 214,
+   "representante": [
+    1,
+    9,
+    5,
+    8,
+    2,
+    4,
+    10,
+    7,
+    0,
+    6,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 215,
+   "representante": [
+    1,
+    9,
+    5,
+    8,
+    4,
+    0,
+    3,
+    6,
+    10,
+    7,
+    2
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 216,
+   "representante": [
+    1,
+    9,
+    5,
+    10,
+    2,
+    0,
+    8,
+    4,
+    7,
+    3,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 217,
+   "representante": [
+    1,
+    9,
+    6,
+    2,
+    10,
+    8,
+    3,
+    0,
+    4,
+    7,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 218,
+   "representante": [
+    1,
+    9,
+    6,
+    3,
+    0,
+    4,
+    8,
+    10,
+    5,
+    7,
+    2
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 219,
+   "representante": [
+    1,
+    9,
+    6,
+    3,
+    0,
+    8,
+    5,
+    2,
+    10,
+    7,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 2,
+   "origenes": {
+    "7": [
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      4
+     ]
+    ],
+    "5": [
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      4
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 1
+  },
+  {
+   "clase": 220,
+   "representante": [
+    1,
+    9,
+    7,
+    2,
+    0,
+    8,
+    10,
+    4,
+    6,
+    3,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 221,
+   "representante": [
+    1,
+    9,
+    7,
+    2,
+    0,
+    8,
+    10,
+    5,
+    3,
+    6,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 222,
+   "representante": [
+    1,
+    9,
+    7,
+    2,
+    4,
+    8,
+    10,
+    0,
+    6,
+    3,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 223,
+   "representante": [
+    1,
+    9,
+    7,
+    3,
+    8,
+    2,
+    5,
+    10,
+    0,
+    4,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 224,
+   "representante": [
+    1,
+    9,
+    7,
+    5,
+    2,
+    8,
+    10,
+    0,
+    3,
+    6,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 225,
+   "representante": [
+    1,
+    9,
+    7,
+    10,
+    3,
+    0,
+    2,
+    5,
+    8,
+    6,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 226,
+   "representante": [
+    1,
+    9,
+    7,
+    10,
+    4,
+    2,
+    0,
+    5,
+    3,
+    8,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 4,
+   "origenes": {
+    "9": [
+     [
+      1,
+      7
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      4,
+      1
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 4
+  },
+  {
+   "clase": 227,
+   "representante": [
+    2,
+    4,
+    1,
+    7,
+    10,
+    3,
+    0,
+    8,
+    5,
+    9,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 228,
+   "representante": [
+    2,
+    4,
+    6,
+    8,
+    10,
+    1,
+    3,
+    0,
+    9,
+    7,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 229,
+   "representante": [
+    2,
+    4,
+    6,
+    9,
+    3,
+    10,
+    0,
+    7,
+    5,
+    1,
+    8
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 230,
+   "representante": [
+    2,
+    4,
+    6,
+    9,
+    5,
+    10,
+    0,
+    7,
+    3,
+    1,
+    8
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 231,
+   "representante": [
+    2,
+    4,
+    7,
+    0,
+    10,
+    5,
+    1,
+    6,
+    9,
+    3,
+    8
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 232,
+   "representante": [
+    2,
+    4,
+    7,
+    9,
+    0,
+    5,
+    10,
+    1,
+    3,
+    6,
+    8
+   ],
+   "miembros": 4,
+   "ondas_base_mas_1": 4,
+   "origenes": {
+    "9": [
+     [
+      1,
+      3
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      4,
+      9
+     ],
+     [
+      3,
+      10
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 3
+  },
+  {
+   "clase": 233,
+   "representante": [
+    2,
+    4,
+    7,
+    9,
+    0,
+    5,
+    10,
+    1,
+    6,
+    8,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 234,
+   "representante": [
+    2,
+    4,
+    7,
+    10,
+    8,
+    3,
+    5,
+    0,
+    9,
+    1,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 235,
+   "representante": [
+    2,
+    4,
+    8,
+    0,
+    3,
+    10,
+    7,
+    5,
+    1,
+    9,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 236,
+   "representante": [
+    2,
+    4,
+    8,
+    0,
+    9,
+    6,
+    10,
+    7,
+    1,
+    3,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 237,
+   "representante": [
+    2,
+    4,
+    8,
+    1,
+    5,
+    10,
+    0,
+    6,
+    3,
+    9,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 238,
+   "representante": [
+    2,
+    4,
+    8,
+    1,
+    9,
+    6,
+    10,
+    7,
+    0,
+    3,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 239,
+   "representante": [
+    2,
+    4,
+    8,
+    10,
+    3,
+    6,
+    0,
+    5,
+    1,
+    9,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 240,
+   "representante": [
+    2,
+    4,
+    9,
+    3,
+    8,
+    10,
+    1,
+    6,
+    0,
+    5,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 3,
+   "origenes": {
+    "8": [
+     [
+      3,
+      9
+     ],
+     [
+      4,
+      10
+     ],
+     [
+      2,
+      4
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 4
+  },
+  {
+   "clase": 241,
+   "representante": [
+    2,
+    4,
+    9,
+    7,
+    5,
+    10,
+    1,
+    6,
+    0,
+    3,
+    8
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 4,
+   "origenes": {
+    "10": [
+     [
+      2,
+      6
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      4,
+      10
+     ],
+     [
+      5,
+      8
+     ]
+    ],
+    "9": [
+     [
+      1,
+      4
+     ],
+     [
+      2,
+      8
+     ],
+     [
+      4,
+      10
+     ],
+     [
+      5,
+      8
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 4
+  },
+  {
+   "clase": 242,
+   "representante": [
+    2,
+    5,
+    1,
+    9,
+    0,
+    3,
+    7,
+    10,
+    8,
+    6,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 243,
+   "representante": [
+    2,
+    5,
+    3,
+    0,
+    10,
+    8,
+    4,
+    1,
+    7,
+    9,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 244,
+   "representante": [
+    2,
+    5,
+    7,
+    0,
+    10,
+    6,
+    9,
+    1,
+    4,
+    8,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 245,
+   "representante": [
+    2,
+    5,
+    7,
+    0,
+    10,
+    8,
+    4,
+    1,
+    3,
+    9,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 246,
+   "representante": [
+    2,
+    5,
+    7,
+    9,
+    0,
+    3,
+    1,
+    10,
+    8,
+    6,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 247,
+   "representante": [
+    2,
+    5,
+    7,
+    10,
+    1,
+    6,
+    9,
+    3,
+    0,
+    8,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 248,
+   "representante": [
+    2,
+    5,
+    7,
+    10,
+    3,
+    0,
+    6,
+    4,
+    9,
+    1,
+    8
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 249,
+   "representante": [
+    2,
+    5,
+    8,
+    1,
+    3,
+    10,
+    7,
+    4,
+    0,
+    9,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 250,
+   "representante": [
+    2,
+    5,
+    8,
+    1,
+    7,
+    10,
+    3,
+    0,
+    9,
+    4,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 251,
+   "representante": [
+    2,
+    5,
+    8,
+    1,
+    7,
+    10,
+    3,
+    6,
+    0,
+    9,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 252,
+   "representante": [
+    2,
+    5,
+    8,
+    6,
+    0,
+    10,
+    1,
+    4,
+    9,
+    7,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 253,
+   "representante": [
+    2,
+    5,
+    8,
+    6,
+    1,
+    10,
+    7,
+    0,
+    3,
+    9,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 254,
+   "representante": [
+    2,
+    5,
+    8,
+    10,
+    1,
+    4,
+    9,
+    7,
+    0,
+    3,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 255,
+   "representante": [
+    2,
+    5,
+    9,
+    1,
+    3,
+    0,
+    7,
+    10,
+    8,
+    6,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 256,
+   "representante": [
+    2,
+    5,
+    9,
+    6,
+    1,
+    10,
+    4,
+    7,
+    0,
+    8,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 257,
+   "representante": [
+    2,
+    5,
+    9,
+    6,
+    1,
+    10,
+    7,
+    3,
+    0,
+    8,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 258,
+   "representante": [
+    2,
+    5,
+    10,
+    0,
+    3,
+    6,
+    9,
+    7,
+    1,
+    4,
+    8
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 259,
+   "representante": [
+    2,
+    5,
+    10,
+    0,
+    7,
+    4,
+    1,
+    8,
+    6,
+    9,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 260,
+   "representante": [
+    2,
+    5,
+    10,
+    4,
+    0,
+    3,
+    9,
+    6,
+    8,
+    1,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 261,
+   "representante": [
+    2,
+    5,
+    10,
+    8,
+    0,
+    4,
+    1,
+    7,
+    9,
+    6,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 262,
+   "representante": [
+    2,
+    6,
+    3,
+    7,
+    10,
+    8,
+    0,
+    4,
+    1,
+    9,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 4,
+   "origenes": {
+    "9": [
+     [
+      1,
+      8
+     ],
+     [
+      2,
+      7
+     ],
+     [
+      3,
+      7
+     ],
+     [
+      5,
+      2
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 5
+  },
+  {
+   "clase": 263,
+   "representante": [
+    2,
+    6,
+    3,
+    9,
+    0,
+    4,
+    10,
+    7,
+    5,
+    1,
+    8
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 264,
+   "representante": [
+    2,
+    6,
+    3,
+    9,
+    0,
+    5,
+    10,
+    1,
+    7,
+    4,
+    8
+   ],
+   "miembros": 4,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": 5
+  },
+  {
+   "clase": 265,
+   "representante": [
+    2,
+    6,
+    3,
+    10,
+    0,
+    4,
+    9,
+    5,
+    8,
+    1,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 266,
+   "representante": [
+    2,
+    6,
+    8,
+    0,
+    4,
+    9,
+    7,
+    10,
+    1,
+    3,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 267,
+   "representante": [
+    2,
+    6,
+    8,
+    0,
+    7,
+    4,
+    10,
+    1,
+    9,
+    5,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 268,
+   "representante": [
+    2,
+    6,
+    8,
+    1,
+    5,
+    0,
+    10,
+    4,
+    7,
+    9,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": 5
+  },
+  {
+   "clase": 269,
+   "representante": [
+    2,
+    6,
+    9,
+    1,
+    5,
+    0,
+    10,
+    7,
+    4,
+    8,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 270,
+   "representante": [
+    2,
+    6,
+    9,
+    3,
+    0,
+    8,
+    10,
+    5,
+    7,
+    1,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 271,
+   "representante": [
+    2,
+    6,
+    9,
+    7,
+    1,
+    4,
+    0,
+    10,
+    8,
+    5,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 272,
+   "representante": [
+    2,
+    6,
+    10,
+    7,
+    0,
+    3,
+    5,
+    8,
+    1,
+    9,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 273,
+   "representante": [
+    2,
+    7,
+    1,
+    3,
+    0,
+    8,
+    10,
+    5,
+    9,
+    6,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 274,
+   "representante": [
+    2,
+    7,
+    1,
+    6,
+    0,
+    5,
+    10,
+    4,
+    9,
+    3,
+    8
+   ],
+   "miembros": 4,
+   "ondas_base_mas_1": 2,
+   "origenes": {
+    "7": [
+     [
+      1,
+      2
+     ],
+     [
+      0,
+      1
+     ]
+    ],
+    "5": [
+     [
+      1,
+      2
+     ],
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 1
+  },
+  {
+   "clase": 275,
+   "representante": [
+    2,
+    7,
+    1,
+    6,
+    8,
+    10,
+    0,
+    4,
+    9,
+    5,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 276,
+   "representante": [
+    2,
+    7,
+    1,
+    8,
+    5,
+    9,
+    0,
+    10,
+    4,
+    6,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 277,
+   "representante": [
+    2,
+    7,
+    3,
+    1,
+    8,
+    4,
+    0,
+    10,
+    5,
+    9,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 278,
+   "representante": [
+    2,
+    7,
+    3,
+    10,
+    0,
+    9,
+    6,
+    4,
+    1,
+    8,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 279,
+   "representante": [
+    2,
+    7,
+    5,
+    0,
+    9,
+    6,
+    10,
+    3,
+    1,
+    8,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 280,
+   "representante": [
+    2,
+    7,
+    5,
+    10,
+    1,
+    4,
+    0,
+    8,
+    3,
+    9,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 281,
+   "representante": [
+    2,
+    7,
+    9,
+    3,
+    0,
+    8,
+    10,
+    5,
+    1,
+    6,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 282,
+   "representante": [
+    2,
+    7,
+    9,
+    3,
+    5,
+    0,
+    10,
+    6,
+    4,
+    1,
+    8
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 283,
+   "representante": [
+    2,
+    7,
+    9,
+    4,
+    0,
+    5,
+    10,
+    6,
+    1,
+    3,
+    8
+   ],
+   "miembros": 4,
+   "ondas_base_mas_1": 4,
+   "origenes": {
+    "9": [
+     [
+      1,
+      9
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      3,
+      10
+     ],
+     [
+      3,
+      6
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 4
+  },
+  {
+   "clase": 284,
+   "representante": [
+    2,
+    7,
+    9,
+    6,
+    3,
+    0,
+    10,
+    8,
+    5,
+    1,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 285,
+   "representante": [
+    2,
+    7,
+    10,
+    4,
+    1,
+    8,
+    0,
+    3,
+    6,
+    9,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": 5
+  },
+  {
+   "clase": 286,
+   "representante": [
+    2,
+    7,
+    10,
+    8,
+    1,
+    4,
+    0,
+    3,
+    6,
+    9,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 287,
+   "representante": [
+    2,
+    8,
+    1,
+    3,
+    7,
+    0,
+    10,
+    5,
+    9,
+    6,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 288,
+   "representante": [
+    2,
+    8,
+    1,
+    3,
+    10,
+    6,
+    9,
+    5,
+    0,
+    4,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 289,
+   "representante": [
+    2,
+    8,
+    1,
+    9,
+    0,
+    5,
+    7,
+    10,
+    3,
+    6,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 290,
+   "representante": [
+    2,
+    8,
+    3,
+    9,
+    0,
+    5,
+    10,
+    1,
+    6,
+    4,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 291,
+   "representante": [
+    2,
+    8,
+    3,
+    9,
+    0,
+    10,
+    5,
+    1,
+    6,
+    4,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 292,
+   "representante": [
+    2,
+    8,
+    3,
+    9,
+    4,
+    10,
+    5,
+    0,
+    6,
+    1,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 2,
+   "origenes": {
+    "7": [
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      9
+     ]
+    ],
+    "5": [
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      9
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 1
+  },
+  {
+   "clase": 293,
+   "representante": [
+    2,
+    8,
+    5,
+    0,
+    10,
+    6,
+    4,
+    1,
+    7,
+    9,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 294,
+   "representante": [
+    2,
+    8,
+    5,
+    9,
+    4,
+    10,
+    0,
+    6,
+    3,
+    1,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 295,
+   "representante": [
+    2,
+    8,
+    6,
+    3,
+    1,
+    10,
+    5,
+    0,
+    9,
+    7,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": 4,
+   "origenes": {
+    "9": [
+     [
+      1,
+      2
+     ],
+     [
+      2,
+      7
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 3
+  },
+  {
+   "clase": 296,
+   "representante": [
+    2,
+    9,
+    1,
+    8,
+    5,
+    0,
+    10,
+    7,
+    4,
+    6,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 297,
+   "representante": [
+    2,
+    9,
+    3,
+    0,
+    8,
+    10,
+    5,
+    7,
+    1,
+    4,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 298,
+   "representante": [
+    2,
+    9,
+    3,
+    1,
+    7,
+    10,
+    6,
+    0,
+    5,
+    8,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 299,
+   "representante": [
+    2,
+    9,
+    3,
+    6,
+    0,
+    10,
+    5,
+    1,
+    8,
+    4,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 300,
+   "representante": [
+    2,
+    9,
+    3,
+    6,
+    10,
+    1,
+    5,
+    0,
+    8,
+    4,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 301,
+   "representante": [
+    2,
+    9,
+    5,
+    3,
+    10,
+    0,
+    7,
+    4,
+    1,
+    8,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": 4
+  },
+  {
+   "clase": 302,
+   "representante": [
+    2,
+    9,
+    5,
+    8,
+    4,
+    0,
+    10,
+    6,
+    1,
+    3,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 303,
+   "representante": [
+    2,
+    9,
+    6,
+    0,
+    5,
+    10,
+    1,
+    7,
+    4,
+    8,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 304,
+   "representante": [
+    2,
+    9,
+    6,
+    1,
+    5,
+    10,
+    0,
+    7,
+    4,
+    8,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 305,
+   "representante": [
+    2,
+    9,
+    6,
+    1,
+    10,
+    4,
+    7,
+    0,
+    8,
+    3,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 306,
+   "representante": [
+    2,
+    9,
+    6,
+    3,
+    0,
+    10,
+    7,
+    5,
+    1,
+    8,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 307,
+   "representante": [
+    2,
+    9,
+    7,
+    3,
+    1,
+    6,
+    10,
+    0,
+    4,
+    8,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 308,
+   "representante": [
+    2,
+    9,
+    7,
+    4,
+    10,
+    0,
+    5,
+    1,
+    8,
+    6,
+    3
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": 5
+  },
+  {
+   "clase": 309,
+   "representante": [
+    3,
+    1,
+    6,
+    9,
+    5,
+    10,
+    8,
+    0,
+    2,
+    4,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 310,
+   "representante": [
+    3,
+    1,
+    7,
+    9,
+    2,
+    6,
+    10,
+    0,
+    5,
+    8,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 311,
+   "representante": [
+    3,
+    1,
+    7,
+    9,
+    6,
+    0,
+    10,
+    8,
+    5,
+    2,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 312,
+   "representante": [
+    3,
+    1,
+    8,
+    2,
+    5,
+    10,
+    0,
+    9,
+    6,
+    4,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 313,
+   "representante": [
+    3,
+    1,
+    8,
+    10,
+    0,
+    7,
+    5,
+    2,
+    9,
+    6,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 314,
+   "representante": [
+    3,
+    1,
+    8,
+    10,
+    2,
+    7,
+    5,
+    0,
+    9,
+    6,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 315,
+   "representante": [
+    3,
+    1,
+    9,
+    4,
+    10,
+    7,
+    0,
+    2,
+    5,
+    8,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 316,
+   "representante": [
+    3,
+    5,
+    8,
+    2,
+    0,
+    10,
+    6,
+    9,
+    1,
+    4,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 317,
+   "representante": [
+    3,
+    5,
+    8,
+    10,
+    0,
+    4,
+    1,
+    9,
+    6,
+    2,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 318,
+   "representante": [
+    3,
+    5,
+    8,
+    10,
+    1,
+    6,
+    2,
+    0,
+    7,
+    9,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 319,
+   "representante": [
+    3,
+    5,
+    9,
+    1,
+    4,
+    10,
+    7,
+    0,
+    2,
+    8,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 320,
+   "representante": [
+    3,
+    5,
+    9,
+    1,
+    6,
+    10,
+    2,
+    0,
+    8,
+    4,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 321,
+   "representante": [
+    3,
+    5,
+    9,
+    4,
+    10,
+    0,
+    2,
+    6,
+    8,
+    1,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 322,
+   "representante": [
+    3,
+    6,
+    8,
+    2,
+    0,
+    7,
+    10,
+    4,
+    1,
+    9,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 323,
+   "representante": [
+    3,
+    6,
+    8,
+    10,
+    1,
+    4,
+    0,
+    7,
+    9,
+    2,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 324,
+   "representante": [
+    3,
+    6,
+    9,
+    2,
+    0,
+    5,
+    10,
+    8,
+    1,
+    4,
+    7
+   ],
+   "miembros": 4,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 325,
+   "representante": [
+    3,
+    6,
+    9,
+    2,
+    0,
+    7,
+    10,
+    8,
+    5,
+    1,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 326,
+   "representante": [
+    3,
+    6,
+    9,
+    2,
+    10,
+    5,
+    0,
+    8,
+    1,
+    4,
+    7
+   ],
+   "miembros": 4,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 327,
+   "representante": [
+    3,
+    6,
+    9,
+    5,
+    2,
+    0,
+    10,
+    8,
+    4,
+    1,
+    7
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 328,
+   "representante": [
+    3,
+    7,
+    2,
+    10,
+    1,
+    6,
+    0,
+    9,
+    4,
+    8,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 329,
+   "representante": [
+    3,
+    7,
+    2,
+    10,
+    8,
+    0,
+    5,
+    9,
+    1,
+    6,
+    4
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 330,
+   "representante": [
+    3,
+    7,
+    2,
+    10,
+    8,
+    4,
+    0,
+    9,
+    6,
+    1,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 331,
+   "representante": [
+    3,
+    7,
+    4,
+    8,
+    0,
+    2,
+    10,
+    6,
+    1,
+    9,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 332,
+   "representante": [
+    3,
+    7,
+    4,
+    8,
+    0,
+    2,
+    10,
+    6,
+    9,
+    1,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 333,
+   "representante": [
+    3,
+    7,
+    9,
+    4,
+    8,
+    10,
+    0,
+    2,
+    5,
+    1,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 334,
+   "representante": [
+    3,
+    8,
+    2,
+    7,
+    1,
+    10,
+    0,
+    5,
+    9,
+    4,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 335,
+   "representante": [
+    3,
+    8,
+    4,
+    9,
+    0,
+    5,
+    10,
+    1,
+    6,
+    2,
+    7
+   ],
+   "miembros": 4,
+   "ondas_base_mas_1": 3,
+   "origenes": {
+    "10": [
+     [
+      3,
+      4
+     ],
+     [
+      5,
+      1
+     ],
+     [
+      2,
+      6
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 4
+  },
+  {
+   "clase": 336,
+   "representante": [
+    3,
+    8,
+    6,
+    1,
+    10,
+    5,
+    0,
+    9,
+    4,
+    2,
+    7
+   ],
+   "miembros": 4,
+   "ondas_base_mas_1": 3,
+   "origenes": {
+    "8": [
+     [
+      3,
+      2
+     ],
+     [
+      4,
+      1
+     ],
+     [
+      5,
+      3
+     ]
+    ]
+   },
+   "ondas_transfer_directo": 4
+  },
+  {
+   "clase": 337,
+   "representante": [
+    3,
+    8,
+    6,
+    2,
+    10,
+    7,
+    0,
+    4,
+    9,
+    1,
+    5
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 338,
+   "representante": [
+    3,
+    9,
+    2,
+    5,
+    10,
+    0,
+    7,
+    4,
+    1,
+    8,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 339,
+   "representante": [
+    4,
+    1,
+    3,
+    9,
+    7,
+    10,
+    0,
+    2,
+    5,
+    8,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  },
+  {
+   "clase": 340,
+   "representante": [
+    4,
+    2,
+    5,
+    9,
+    1,
+    10,
+    0,
+    7,
+    3,
+    8,
+    6
+   ],
+   "miembros": 8,
+   "ondas_base_mas_1": null,
+   "origenes": {},
+   "ondas_transfer_directo": null
+  }
+ ]
+}

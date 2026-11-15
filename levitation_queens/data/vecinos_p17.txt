@@ -1,0 +1,11 @@
+p=17: orbitas de traslacion con al menos una vecina (cambiando las filas de una recta) | azar (mismo numero de filas, elegidas al azar)
+  clase 2: vecina de clase m-1: 26/26 | 1/26;  de clase menor: 26/26 | 1/26;  alguna: 26/26 | 11/26
+       clases de las vecinas: real {1: 26, 2: 14, 3: 8, 4: 8}  azar {1: 1, 2: 5, 3: 10, 4: 5}
+  clase 3: vecina de clase m-1: 96/96 | 4/96;  de clase menor: 96/96 | 4/96;  alguna: 96/96 | 11/96
+       clases de las vecinas: real {2: 96, 3: 48, 4: 48}  azar {2: 4, 3: 6, 4: 4}
+  clase 4: vecina de clase m-1: 48/124 | 0/124;  de clase menor: 48/124 | 1/124;  alguna: 48/124 | 1/124
+       clases de las vecinas: real {3: 48}  azar {2: 1}
+  clase 5: vecina de clase m-1: 0/160 | 0/160;  de clase menor: 0/160 | 0/160;  alguna: 0/160 | 0/160
+       clases de las vecinas: real {}  azar {}
+  clase 6: vecina de clase m-1: 0/80 | 0/80;  de clase menor: 0/80 | 0/80;  alguna: 0/80 | 0/80
+       clases de las vecinas: real {}  azar {}

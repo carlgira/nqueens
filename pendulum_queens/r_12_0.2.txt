@@ -1,0 +1,1 @@
+  runs que tocaron solucion: 2/6   terminan en solucion: 0/6   fraccion de tiempo en solucion: 0.0996   soluciones distintas: 2  TRI N=12 T=0.2

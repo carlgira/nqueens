@@ -1,0 +1,39 @@
+p=19: 5282 bloques distintos; por tamaño {4: 684, 6: 1824, 8: 2394, 9: 380}
+  0:c1x8      -> 2:c2x16 {9: 38}
+  1:c1x8      -> 2:c2x16 {9: 38}, 3:c2x24 {6: 57}
+  2:c2x16     -> 0:c1x8 {9: 1}, 1:c1x8 {9: 1}
+  3:c2x24     -> 1:c1x8 {6: 1}, 3:c2x24 {6: 2}, 4:c4x144 {6: 6}
+  4:c4x144    -> 20:c6x144 {2: 1}
+  5:c5x72     -> nada
+  6:c5x72     -> 9:c5x72 {2: 1}
+  7:c5x72     -> 8:c5x72 {2: 1}, 11:c5x144 {2: 2}
+  8:c5x72     -> 7:c5x72 {2: 1}
+  9:c5x72     -> 6:c5x72 {2: 1}
+  10:c5x72    -> 12:c6x72 {2: 1}
+  11:c5x144   -> 7:c5x72 {2: 1}
+  12:c6x72    -> 10:c5x72 {2: 1}
+  13:c6x144   -> nada
+  14:c6x144   -> nada
+  15:c6x144   -> nada
+  16:c6x144   -> nada
+  17:c6x144   -> nada
+  18:c6x144   -> nada
+  19:c6x144   -> nada
+  20:c6x144   -> 4:c4x144 {2: 1}, 11:c5x144 {2: 1}
+  21:c6x144   -> nada
+  22:c6x144   -> nada
+  bloques que dan otra toroidal, por tamaño (real | azar):
+     4 filas: 2/15732 = 0.01 %  |  0/7340 = 0.00 %
+     6 filas: 73/41952 = 0.17 %  |  0/22182 = 0.00 %
+     8 filas: 3/55062 = 0.01 %  |  0/30387 = 0.00 %
+     9 filas: 78/8740 = 0.89 %  |  0/4910 = 0.00 %
+  por subgrupo mas grande del bloque (|G|: aciertos/probados): {2: '12/106191', 3: '0/13110', 6: '66/1311', 9: '78/874'}
+  ronda 0 (una espiral): ['0:c1x8', '1:c1x8']
+  ronda 1: + ['2:c2x16', '3:c2x24']
+  ronda 2: + ['4:c4x144']
+  ronda 3: + ['20:c6x144']
+  ronda 4: + ['11:c5x144']
+  ronda 5: + ['7:c5x72']
+  ronda 6: + ['8:c5x72']
+  alcanzadas 9 de 23 soluciones distintas = 632 de 2288 orbitas de traslacion
+  no alcanzadas: ['5:c5x72', '6:c5x72', '9:c5x72', '10:c5x72', '12:c6x72', '13:c6x144', '14:c6x144', '15:c6x144', '16:c6x144', '17:c6x144', '18:c6x144', '19:c6x144', '21:c6x144', '22:c6x144']

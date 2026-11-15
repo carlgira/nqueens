@@ -1,0 +1,6 @@
+p = 19   toroidales 820496
+  con centro (caminos de soporte):       196688  (24.0 %)
+  sin centro pero con otra simetría:          0  (0.0 %)
+  sin ninguna simetría:                  623808  (76.0 %)
+  (con centro y además otra: 0)
+  giro g de las simetrías del grupo 'otra':

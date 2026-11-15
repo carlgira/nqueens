@@ -1,0 +1,22 @@
+p=13
+  F0 una espiral              :     10 construidas,    2 soluciones distintas nuevas  (0 s)
+  F1 dos espirales            :     14 construidas,    2 soluciones distintas nuevas  (0 s)
+  parejas de pendientes con H pequeño: {4: 1, 6: 4} (|H|: nº de parejas)
+  F2 haz 2+1 (doble reclamo)  :     16 construidas,    1 soluciones distintas nuevas  (0 s)
+  F2 haz 3+1 (doble reclamo)  :    154 construidas,    0 soluciones distintas nuevas  (0 s)
+  F2 haz 2+2 (doble reclamo)  :     80 construidas,    0 soluciones distintas nuevas  (0 s)
+  F2 haz 4+1 (doble reclamo)  :    590 construidas,    0 soluciones distintas nuevas  (0 s)
+  F2 haz 3+2 (doble reclamo)  :   1272 construidas,    0 soluciones distintas nuevas  (1 s)
+  F3 centro de simetria       :     36 construidas,    0 soluciones distintas nuevas  (1 s)
+  F4 mover bloques            : 5 soluciones exploradas,    0 distintas nuevas  (1 s)
+  resumen (soluciones distintas / orbitas de traslacion, sin repetir):
+     F0 una espiral              :     2 / 10
+     F1 dos espirales            :     2 / 14
+     F2 haz 2+1 (doble reclamo)  :     1 / 12
+  VALIDACION exhaustiva: generadas 5 de 5 soluciones distintas = 36 de 36 orbitas de traslacion (100.0 %); todas las generadas estan en la lista
+  no generadas: []
+     0:c1x2    <- F0 una espiral
+     1:c1x8    <- F0 una espiral
+     2:c2x6    <- F1 dos espirales
+     3:c2x8    <- F1 dos espirales
+     4:c3x12   <- F2 haz 2+1 (doble reclamo)

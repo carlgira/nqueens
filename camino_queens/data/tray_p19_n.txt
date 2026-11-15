@@ -1,0 +1,15 @@
+p = 19  clase n  soluciones (x_0=0) 43184  falso 43776 (64 órbitas, |H/filas| = 684)
+  [real (bases de la clase, aciertos en todas las toroidales)]  bases 48
+    otras rectas con ≥3 soluciones, por base:  ninguna
+    parábolas con ≥4 soluciones, por par (base, segunda) [4800 pares]:  4 sol:0.1675
+    clases de las soluciones que tocan (c centro, o giro, n sin simetría, f falso):  ccnn:804
+    con un elemento de H que deja fijos sus aciertos: 0 de 804
+    relación entre sus 2 asimétricas (t columnas, u escala, signo):  (t=0,u=1,−):804  ninguna:0
+    reinas compartidas asimétrica–centro (mejor fila):  2:152  3:1438  4:1158  5:358  6:88  7:16  8:6
+    mejor parábola: 4 soluciones, pasos k = 0 1 16 10
+    s       0  2  4  6  9 11 15  1 12 17  7 18  3  5 10  8 14 16 13
+    v       0  1  2  3  3  4  3  1 12 10  4 15 14 15 13 18 15 16  3
+    w       0 17 15 13  4  2  5  1 12  8 14  6  9  7  3 10 18 16 11
+  [falso]  bases 64
+    otras rectas con ≥3 soluciones, por base:  ninguna
+    parábolas con ≥4 soluciones, por par (base, segunda) [1920 pares]:  ninguna

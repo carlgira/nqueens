@@ -1,0 +1,4 @@
+N=7 sim2 MM=4: 26694938 bucles probados, firmas distintas con >=4 soluciones: 220
+  bucles por numero de soluciones distintas: 2:26683007 3:10236 4:1695
+  con >=4 soluciones, por clase de huecos (igual / bloques / otra):
+     4 soluciones: 0 / 0 / 1695

@@ -1,0 +1,25 @@
+p=19: 820496 toroidales
+  0:c1x8      : mezcla de piezas de clase <= 2:  10 filas de 2:c2x16 + 9 de 2:c2x16   (38 formas de elegir la pieza grande)
+  1:c1x8      : mezcla de piezas de clase <= 2:  13 filas de 3:c2x24 + 6 de 3:c2x24   (152 formas de elegir la pieza grande)
+  2:c2x16     : mezcla de piezas de clase <= 1:  10 filas de 0:c1x8 + 9 de 1:c1x8   (2 formas de elegir la pieza grande)
+  3:c2x24     : mezcla de piezas de clase <= 1:  13 filas de 1:c1x8 + 6 de 1:c1x8   (2 formas de elegir la pieza grande)
+  4:c4x144    : mezcla de piezas de clase <= 2:  13 filas de 3:c2x24 + 6 de 3:c2x24   (4 formas de elegir la pieza grande)
+  5:c5x72     : NO es mezcla de dos toroidales
+  6:c5x72     : mezcla de piezas de clase <= 5:  13 filas de 9:c5x72 + 6 de 9:c5x72   (2 formas de elegir la pieza grande)
+  7:c5x72     : mezcla de piezas de clase <= 5:  15 filas de 8:c5x72 + 4 de 8:c5x72   (14 formas de elegir la pieza grande)
+  8:c5x72     : mezcla de piezas de clase <= 5:  15 filas de 7:c5x72 + 4 de 7:c5x72   (2 formas de elegir la pieza grande)
+  9:c5x72     : mezcla de piezas de clase <= 5:  13 filas de 6:c5x72 + 6 de 6:c5x72   (2 formas de elegir la pieza grande)
+  10:c5x72    : mezcla de piezas de clase <= 6:  11 filas de 12:c6x72 + 8 de 12:c6x72   (2 formas de elegir la pieza grande)
+  11:c5x144   : mezcla de piezas de clase <= 5:  13 filas de 7:c5x72 + 6 de 7:c5x72   (6 formas de elegir la pieza grande)
+  12:c6x72    : mezcla de piezas de clase <= 5:  11 filas de 10:c5x72 + 8 de 10:c5x72   (2 formas de elegir la pieza grande)
+  13:c6x144   : NO es mezcla de dos toroidales
+  14:c6x144   : NO es mezcla de dos toroidales
+  15:c6x144   : NO es mezcla de dos toroidales
+  16:c6x144   : NO es mezcla de dos toroidales
+  17:c6x144   : NO es mezcla de dos toroidales
+  18:c6x144   : NO es mezcla de dos toroidales
+  19:c6x144   : mezcla de piezas de clase <= 5:  13 filas de 11:c5x144 + 6 de 3:c2x24   (4 formas de elegir la pieza grande)
+  20:c6x144   : mezcla de piezas de clase <= 4:  13 filas de 4:c4x144 + 6 de 4:c4x144   (3 formas de elegir la pieza grande)
+  21:c6x144   : NO es mezcla de dos toroidales
+  22:c6x144   : NO es mezcla de dos toroidales
+  azar: 0 de 30 permutaciones son mezcla de dos toroidales

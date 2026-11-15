@@ -1,0 +1,61 @@
+N = 5   soluciones 10   tableros posibles 53130   modo profundidad   repeticiones 5000
+  distancias exactas entre soluciones (saltos):  4:21 6:24   (pares)
+  matriz de distancias:
+        0  1  2  3  4  5  6  7  8  9
+    0   0  4  6  4  4  6  6  4  6  6
+    1   4  0  4  6  6  6  4  6  4  6
+    2   6  4  0  4  4  6  6  6  6  4
+    3   4  6  4  0  6  4  4  6  4  6
+    4   4  6  4  6  0  4  4  6  6  6
+    5   6  6  6  4  4  0  6  4  6  4
+    6   6  4  6  4  4  6  0  4  6  4
+    7   4  6  6  6  6  4  4  0  4  6
+    8   6  4  6  4  6  6  6  4  0  4
+    9   6  6  4  6  6  4  4  6  4  0
+  capas desde la solución 0 (distancia: tableros [soluciones]): 0:1[1] 1:29 2:340 3:2070 4:7036[4] 5:13686 6:15228[5] 7:9900 8:3899 9:861 10:80
+  tablero más lejano de una solución: 10 saltos
+
+  --- 5000 experimentos al azar ---
+  tableros explorados hasta tener todas          mín    13401   10%    37317   mediana    47746   90%    52367   máx    53129
+  profundidad máxima del árbol al terminar     mín      765   10%     2884   mediana     4846   90%     6086   máx     6202
+  explorados al aparecer la solución n.º 1     mín       75   10%      468   mediana     2935   90%     8757   máx    25254
+  explorados al aparecer la solución n.º 2     mín      271   10%     2350   mediana     7082   90%    15191   máx    34699
+  explorados al aparecer la solución n.º 3     mín      445   10%     5027   mediana    11597   90%    21005   máx    38225
+  explorados al aparecer la solución n.º 4     mín     1172   10%     8508   mediana    16541   90%    27060   máx    43220
+  explorados al aparecer la solución n.º 5     mín     3077   10%    12384   mediana    21784   90%    32822   máx    49540
+  explorados al aparecer la solución n.º 6     mín     4373   10%    16773   mediana    27406   90%    38338   máx    51218
+  explorados al aparecer la solución n.º 7     mín     8850   10%    22264   mediana    33307   90%    43787   máx    52377
+  explorados al aparecer la solución n.º 8     mín     9838   10%    28586   mediana    40346   90%    48740   máx    52883
+  explorados al aparecer la solución n.º 9     mín    13401   10%    37317   mediana    47746   90%    52367   máx    53129
+  profundidad (camino) de la solución n.º 1    mín        4   10%       23   mediana      153   90%      481   máx     1629
+  profundidad (camino) de la solución n.º 2    mín       13   10%      121   mediana      383   90%      883   máx     2565
+  profundidad (camino) de la solución n.º 3    mín       21   10%      267   mediana      650   90%     1290   máx     3013
+  profundidad (camino) de la solución n.º 4    mín       58   10%      461   mediana      972   90%     1791   máx     3782
+  profundidad (camino) de la solución n.º 5    mín      161   10%      701   mediana     1351   90%     2355   máx     5421
+  profundidad (camino) de la solución n.º 6    mín      241   10%      984   mediana     1815   90%     3015   máx     6024
+  profundidad (camino) de la solución n.º 7    mín      482   10%     1388   mediana     2405   90%     3902   máx     6131
+  profundidad (camino) de la solución n.º 8    mín      553   10%     1921   mediana     3303   90%     5134   máx     6135
+  profundidad (camino) de la solución n.º 9    mín      765   10%     2880   mediana     4746   90%     5961   máx     6165
+  tableros entre la 1.ª y la 2.ª               mín       22   10%      450   mediana     2980   90%     9474   máx    32437
+  tableros entre la 2.ª y la 3.ª               mín       26   10%      449   mediana     3256   90%    10109   máx    32491
+  tableros entre la 3.ª y la 4.ª               mín       22   10%      513   mediana     3484   90%    10949   máx    31944
+  tableros entre la 4.ª y la 5.ª               mín       13   10%      537   mediana     3566   90%    11478   máx    35450
+  tableros entre la 5.ª y la 6.ª               mín       15   10%      586   mediana     3917   90%    11752   máx    34888
+  tableros entre la 6.ª y la 7.ª               mín        8   10%      587   mediana     4086   90%    12590   máx    37627
+  tableros entre la 7.ª y la 8.ª               mín        7   10%      751   mediana     4745   90%    14171   máx    36669
+  tableros entre la 8.ª y la 9.ª               mín        4   10%      804   mediana     5095   90%    15002   máx    39569
+  primera solución encontrada según su distancia al inicio:  d=4: 48.1 %  d=6: 51.9 %
+  órdenes exactos (inicio: soluciones en orden): 4998 distintos en 5000 experimentos; los más frecuentes:
+        2×  1: 4 3 9 0 2 7 6 5 8
+        2×  7: 9 3 1 5 0 2 6 8 4
+        1×  0: 1 2 3 4 7 9 5 6 8
+        1×  0: 1 2 3 6 7 8 4 5 9
+        1×  0: 1 2 3 7 5 4 9 6 8
+        1×  0: 1 2 3 9 4 5 8 6 7
+  secuencias de distancias al inicio: 252 distintos en 5000 experimentos; los más frecuentes:
+       48×  4,4,6,4,6,4,6,6,6
+       45×  4,6,4,6,6,6,6,4,4
+       44×  4,6,4,6,6,4,6,6,4
+       44×  6,4,6,4,4,6,6,6,4
+       43×  4,6,4,4,6,4,6,6,6
+       43×  6,6,4,6,6,4,4,4,6

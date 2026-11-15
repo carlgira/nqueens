@@ -1,0 +1,6 @@
+p = 17   toroidales 140692
+  con centro (caminos de soporte):        48212  (34.3 %)
+  sin centro pero con otra simetría:      55488  (39.4 %)
+  sin ninguna simetría:                   36992  (26.3 %)
+  (con centro y además otra: 46920)
+  giro g de las simetrías del grupo 'otra':  (1,1;16,1):36992  (0,1;16,0):36992  (1,1;1,16):9248  (1,16;16,16):9248  (1,16;1,1):36992

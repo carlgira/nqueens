@@ -1,0 +1,4 @@
+k=3: no existe ningun rectangulo latino 4 x 3  ->  imposible para todo p
+k=4: 24 rectangulos; 18 imposibles con certificado (valores de D: {2: 6, 3: 12}), 6 sin obstaculo lineal
+k=5: 1344 rectangulos; 1344 imposibles con certificado (valores de D: {1: 600, 2: 240, 3: 408, 4: 48, 5: 48}), 0 sin obstaculo lineal
+      -> mover exactamente 5 reinas es imposible para todo primo p que no divida a ningun D (primos que dividen a algun D: [2, 3, 5]), es decir para todo p >= 6

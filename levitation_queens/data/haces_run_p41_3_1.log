@@ -1,0 +1,5 @@
+./haces_run.sh: line 5: 10954 Terminated: 15          ./haces $p $n $m $k $K > data/.haces_${p}_${n}_${m}_$k.part 2> /dev/null
+./haces_run.sh: line 5: 10955 Terminated: 15          ./haces $p $n $m $k $K > data/.haces_${p}_${n}_${m}_$k.part 2> /dev/null
+./haces_run.sh: line 5: 10956 Terminated: 15          ./haces $p $n $m $k $K > data/.haces_${p}_${n}_${m}_$k.part 2> /dev/null
+./haces_run.sh: line 5: 10958 Terminated: 15          ./haces $p $n $m $k $K > data/.haces_${p}_${n}_${m}_$k.part 2> /dev/null
+./haces_run.sh: line 5: 10957 Terminated: 15          ./haces $p $n $m $k $K > data/.haces_${p}_${n}_${m}_$k.part 2> /dev/null

@@ -1,0 +1,1 @@
+# cadenas (indices en datos/tableros_N8_sim2.txt) de longitud >= 6, aceleracion comun

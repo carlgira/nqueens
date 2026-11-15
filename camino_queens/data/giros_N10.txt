@@ -1,0 +1,6 @@
+N = 10   soluciones 724   toroidales 0   no toroidales 724   teoría≠medida: 0
+  trayectoria más larga L (soluciones):  1:424  2:212  3:56  4:32
+  con paso c=1 (L1):                    1:556  2:124  3:32  4:12
+  pares de costura W:                   2:240  4:372  5:112
+  L media según W:  W=2: 2.27 (240)  W=4: 1.31 (372)  W=5: 1.00 (112)
+  distancia d de los pares de costura, todas:  1:136 2:308 3:288 4:532 6:532 7:288 8:308 9:136

@@ -1,0 +1,1 @@
+# n_sol | clase_huecos | huecos | n_vel | medio_tablero | periodo | grupo | th | v

@@ -1,0 +1,30 @@
+N = 7   soluciones 40   grupos de simetría 6 (tamaños: 8 8 8 4 4 8)
+  distancia entre grupos (mínima entre orientaciones) y dentro de cada grupo:
+        0  1  2  3  4  5
+    0   6  6  5  6  7  6
+    1   6  6  6  6  6  6
+    2   5  6  6  3  5  6
+    3   6  6  3  6  4  8
+    4   7  6  5  4  6  5
+    5   6  6  6  8  5  6
+  parejas de grupos 15 (frente a 780 parejas de soluciones); tableros intermedios usados: 70
+  recorrido más corto por un miembro de cada grupo: 23 saltos (5 tramos)
+     orden: 1 5 4 3 2 0   saltos: 6 5 4 3 5
+     órdenes de grupos que alcanzan el óptimo: 4 de 720 (cada uno cuenta también al revés)
+  secuencias al azar por los grupos: saltos  mín 23  mediana 28  máx 33
+  representantes canónicos (filas por columna):
+     grupo  0 (8): 6 2 5 1 4 0 3
+     grupo  1 (8): 6 1 3 5 0 2 4
+     grupo  2 (8): 4 6 1 5 2 0 3
+     grupo  3 (4): 4 6 1 3 5 0 2
+     grupo  4 (4): 2 6 1 3 5 0 4
+     grupo  5 (8): 1 6 4 2 0 5 3
+  salto entre grupos según cuántas reinas cambian de sitio (reinas: saltos×parejas):
+     2 reinas:  4×1
+     3 reinas:  3×1
+     4 reinas:  5×1
+     5 reinas:  5×2  6×2
+     6 reinas:  6×6  7×1  8×1
+  árbol mínimo entre grupos: 23 saltos en total; aristas 0-1(6) 0-2(5) 2-3(3) 3-4(4) 4-5(5)
+     tamaños de salto en el árbol: 3×1 4×1 5×2 6×1   grados: 2 1 2 2 2 1   diámetro: 5 aristas
+  regla 'al grupo más cercano': 0 -(5)- 2 -(3)- 3 -(4)- 4 -(5)- 5 -(6)- 1   total 23

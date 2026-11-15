@@ -1,0 +1,1 @@
+p=13 haz 2+1: 12 orbitas de traslacion (0 s) | clase 3 [i,i]: 12

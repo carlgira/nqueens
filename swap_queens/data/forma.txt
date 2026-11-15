@@ -1,0 +1,11 @@
+N=7 origen=2 destino=1 piezas=28 objetivos=28 mejor=28 media=13.01
+N=7 origen=0 destino=1 piezas=12 objetivos=28 mejor=4 media=3.63
+N=7 origen=1 destino=1 piezas=12 objetivos=28 mejor=5 media=3.84
+N=11 origen=2 destino=1 piezas=88 objetivos=88 mejor=25 media=13.10
+N=11 origen=0 destino=1 piezas=2592 objetivos=88 mejor=11 media=8.71
+N=11 origen=1 destino=1 piezas=2592 objetivos=88 mejor=11 media=8.96
+N=13 origen=2 destino=1 piezas=130 objetivos=130 mejor=20 media=13.31
+N=13 origen=0 destino=1 piezas=69188 objetivos=130 mejor=12 media=9.40
+N=13 origen=1 destino=1 piezas=69188 objetivos=130 mejor=12 media=9.64
+N=13 origen=0 destino=2 piezas=69188 objetivos=2496 mejor=13 media=11.90
+N=13 origen=1 destino=2 piezas=69188 objetivos=2496 mejor=14 media=12.07

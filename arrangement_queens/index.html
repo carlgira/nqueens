@@ -1,0 +1,474 @@
+<title>Cámaras de reinas</title>
+<meta name="description" content="La disposición de hiperplanos de las N reinas: cada solución vive dentro de una cámara.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Spectral:ital,wght@0,500;0,600;1,500&display=swap">
+<style>
+:root{
+  --ground:#EDEFF3; --panel:#F8F9FB; --ink:#151A24; --muted:#586173; --line:#D3D8E0;
+  --col:#3E63DD; --diag:#0E8F7E; --anti:#C2417A; --queen:#C8920F; --queen-ink:#8A6206;
+  --cell:#E0A92A; --lattice:#9AA3B2; --focus:#3E63DD;
+  --serif:"Spectral",Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --ground:#0E1218; --panel:#161B24; --ink:#E5E8EE; --muted:#98A1B2; --line:#2A313D;
+    --col:#7D9BFF; --diag:#3CCDB6; --anti:#F06FA5; --queen:#F2C14E; --queen-ink:#F2C14E;
+    --cell:#F2C14E; --lattice:#5C6576; --focus:#7D9BFF;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --ground:#0E1218; --panel:#161B24; --ink:#E5E8EE; --muted:#98A1B2; --line:#2A313D;
+  --col:#7D9BFF; --diag:#3CCDB6; --anti:#F06FA5; --queen:#F2C14E; --queen-ink:#F2C14E;
+  --cell:#F2C14E; --lattice:#5C6576; --focus:#7D9BFF;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--ground);color:var(--ink);font:15px/1.55 var(--sans);margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:20px;padding-block:28px 56px;display:flex;flex-direction:column;gap:28px}
+h1,h2{font-family:var(--serif);font-weight:600;text-wrap:balance;margin:0;letter-spacing:-.01em}
+h1{font-size:clamp(28px,4vw,40px);line-height:1.1}
+h2{font-size:22px}
+p{margin:0}
+.lede{max-width:68ch;color:var(--muted);font-size:16px}
+.lede em,.note em{font-family:var(--serif);font-style:italic;color:var(--ink);font-size:1.06em}
+code,.mono{font-family:var(--mono);font-size:.92em}
+header{display:flex;flex-direction:column;gap:12px}
+.eq{font-family:var(--mono);font-size:14px;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:8px 12px;display:inline-block;width:fit-content;max-width:100%;overflow-x:auto}
+
+/* explorador */
+.explorer{display:grid;grid-template-columns:300px 1fr;gap:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--panel)}
+@media (max-width:860px){.explorer{grid-template-columns:1fr}}
+.side{padding:18px;display:flex;flex-direction:column;gap:18px;border-right:1px solid var(--line);min-width:0}
+@media (max-width:860px){.side{border-right:0;border-bottom:1px solid var(--line)}}
+.stage{position:relative;min-height:560px;background:var(--ground)}
+@media (max-width:860px){.stage{min-height:420px}}
+#gl{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:grab}
+#gl:active{cursor:grabbing}
+.tip{position:absolute;pointer-events:none;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:6px 9px;font:12px/1.4 var(--mono);color:var(--ink);white-space:nowrap;transform:translate(12px,-50%)}
+.caption{position:absolute;left:14px;bottom:12px;right:14px;font-size:12.5px;color:var(--muted);pointer-events:none;text-wrap:pretty}
+.caption b{color:var(--ink);font-weight:600}
+.group{display:flex;flex-direction:column;gap:8px}
+.label{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.seg{display:flex;border:1px solid var(--line);border-radius:7px;overflow:hidden}
+.seg button{flex:1;border:0;background:transparent;color:var(--muted);font:500 13px var(--sans);padding:7px 6px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--panel)}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+select,.btn{font:13px var(--sans);color:var(--ink);background:var(--ground);border:1px solid var(--line);border-radius:6px;padding:6px 8px}
+select{min-width:0;flex:1}
+.btn{cursor:pointer}
+.btn:hover{border-color:var(--muted)}
+button:focus-visible,select:focus-visible,input:focus-visible,rect:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.toggles{display:flex;flex-direction:column;gap:6px;font-size:13.5px}
+.toggles label{display:flex;gap:8px;align-items:center;cursor:pointer}
+.sw{width:18px;height:3px;border-radius:2px;display:inline-block}
+.board{width:100%;max-width:240px}
+.board rect.cellsq{cursor:pointer}
+.stats{display:grid;grid-template-columns:auto 1fr;gap:3px 12px;font-size:13px}
+.stats dt{color:var(--muted)}
+.stats dd{margin:0;font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right}
+.hint{font-size:12.5px;color:var(--muted)}
+
+/* tabla */
+.section{display:flex;flex-direction:column;gap:14px}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{padding:9px 12px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-weight:600;color:var(--muted);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase}
+td{font-family:var(--mono);font-variant-numeric:tabular-nums}
+td.poly{text-align:left;font-size:12.5px}
+th.poly{text-align:left}
+tr:last-child td{border-bottom:0}
+td.q{color:var(--queen-ink);font-weight:500}
+.findings{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.finding{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:6px}
+.finding h3{margin:0;font:600 15px var(--sans)}
+.finding p{font-size:14px;color:var(--muted)}
+.finding .big{font-family:var(--serif);font-size:26px;color:var(--ink);line-height:1.1}
+.note{font-size:13.5px;color:var(--muted);max-width:80ch}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Cámaras de reinas</h1>
+    <p class="lede">Si la columna de cada reina es un número real <em>x<sub>i</sub></em>, cada amenaza posible es un hiperplano de ℝ<sup>N</sup>. Esos hiperplanos parten el espacio en <em>cámaras</em>. Toda solución de las N reinas es un punto entero dentro de una cámara, sin tocar ninguna pared.</p>
+    <span class="eq">x<sub>i</sub> − x<sub>j</sub> = 0 &nbsp;(columna) &nbsp;·&nbsp; x<sub>i</sub> − x<sub>j</sub> = i − j &nbsp;(diagonal) &nbsp;·&nbsp; x<sub>i</sub> − x<sub>j</sub> = j − i &nbsp;(antidiagonal)</span>
+  </header>
+
+  <section class="explorer" aria-label="Explorador 3D">
+    <div class="side">
+      <div class="group">
+        <span class="label">Vista</span>
+        <div class="seg" role="group" aria-label="Vista">
+          <button id="m-full" aria-pressed="true">Espacio completo</button>
+          <button id="m-slice" aria-pressed="false">Corte 3D</button>
+        </div>
+        <p class="hint" id="modehint"></p>
+      </div>
+      <div class="group">
+        <span class="label">Tamaño del tablero</span>
+        <div class="row">
+          <select id="selN" aria-label="N"></select>
+        </div>
+      </div>
+      <div class="group" id="g-sol">
+        <span class="label">Solución</span>
+        <div class="row">
+          <select id="selSol" aria-label="Solución"></select>
+          <button class="btn" id="btnT" title="Cambia a la solución traspuesta (la permutación inversa)">Traspuesta</button>
+        </div>
+      </div>
+      <div class="group" id="g-board">
+        <span class="label">Filas libres del corte</span>
+        <svg class="board" id="board" role="img" aria-label="Tablero de la solución"></svg>
+        <p class="hint">Toca una fila para liberarla. Las otras N − 3 reinas se quedan fijas.</p>
+      </div>
+      <div class="group">
+        <span class="label">Paredes</span>
+        <div class="toggles">
+          <label><input type="checkbox" id="t-col" checked><span class="sw" style="background:var(--col)"></span>Columna</label>
+          <label><input type="checkbox" id="t-diag" checked><span class="sw" style="background:var(--diag)"></span>Diagonal</label>
+          <label><input type="checkbox" id="t-anti" checked><span class="sw" style="background:var(--anti)"></span>Antidiagonal</label>
+          <label><input type="checkbox" id="t-only"><span class="sw" style="background:var(--cell)"></span>Solo las que tocan la cámara</label>
+        </div>
+      </div>
+      <div class="group">
+        <span class="label">Esta cámara</span>
+        <dl class="stats" id="stats"></dl>
+      </div>
+    </div>
+    <div class="stage">
+      <canvas id="gl" aria-label="Disposición de hiperplanos en 3D; arrastra para girar"></canvas>
+      <div class="tip" id="tip" hidden></div>
+      <p class="caption" id="caption"></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Lo que cambia con N</h2>
+    <div class="findings" id="findings"></div>
+  </section>
+
+  <section class="section">
+    <h2>El polinomio característico</h2>
+    <p class="note">χ<sub>N</sub>(q) cuenta las formas de poner N reinas en N filas de un tablero <em>toroidal</em> q×q, para primos q grandes (método de cuerpos finitos). Por Zaslavsky, |χ(−1)| es el número de cámaras y |χ(1)| el de cámaras acotadas. Cada polinomio se interpoló con N primos y se comprobó con dos primos más.</p>
+    <div class="tablewrap">
+      <table id="chitable"></table>
+    </div>
+  </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.147.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+const DATA = {"chi": {"2": {"N": 2, "chi": [0, -3, 1], "verified": true, "primes": [3, 5, 7, 11], "regions": 4, "bounded": 2, "Q": 0}, "3": {"N": 3, "chi": [0, 22, -9, 1], "verified": true, "primes": [5, 7, 11, 13, 17], "regions": 32, "bounded": 14, "Q": 0}, "4": {"N": 4, "chi": [0, -286, 119, -18, 1], "verified": true, "primes": [11, 13, 17, 19, 23, 29], "regions": 424, "bounded": 184, "Q": 2}, "5": {"N": 5, "chi": [0, 5232, -2170, 367, -30, 1], "verified": true, "primes": [13, 17, 19, 23, 29, 31, 37], "regions": 7800, "bounded": 3400, "Q": 10}, "6": {"N": 6, "chi": [0, -128494, 52082, -9159, 873, -45, 1], "verified": true, "primes": [19, 23, 29, 31, 37, 41, 43, 47], "regions": 190654, "bounded": 84742, "Q": 4}, "7": {"N": 7, "chi": [0, 3907356, -1547306, 276054, -28371, 1767, -63, 1], "verified": true, "primes": [29, 31, 37, 41, 43, 47, 53, 59, 61], "regions": 5760918, "bounded": 2609438, "Q": 40}, "8": {"N": 8, "chi": [0, -144148022, 55627262, -9915384, 1057285, -72678, 3210, -84, 1], "verified": true, "primes": [37, 41, 43, 47, 53, 59, 61, 67, 71, 73], "regions": 210823926, "bounded": 97448410, "Q": 92}}, "chambers": {"4": {"1302": [8, 0.7071], "2031": [8, 0.7071]}, "5": {"02413": [10, 0.7071], "03142": [11, 0.7071], "13024": [10, 0.7071], "14203": [10, 0.7071], "20314": [11, 0.7071], "24130": [11, 0.7071], "30241": [10, 0.7071], "31420": [10, 0.7071], "41302": [11, 0.7071], "42031": [10, 0.7071]}, "6": {"135024": [15, 0.8839], "251403": [15, 0.7071], "304152": [15, 0.7071], "420531": [15, 0.8839]}, "7": {"0246135": [17, 0.7071], "0362514": [17, 0.7071], "0415263": [17, 0.7071], "0531642": [17, 0.7071], "1306425": [16, 0.7071], "1350246": [17, 0.7071], "1403625": [16, 0.7071], "1420635": [16, 0.7071], "1463025": [18, 0.7071], "1526304": [16, 0.7071], "1642053": [17, 0.7071], "2051463": [15, 0.7071], "2053164": [18, 0.7071], "2461350": [17, 0.7071], "2514036": [17, 0.7071], "2613504": [16, 0.7071], "2630415": [16, 0.7071], "3025164": [15, 0.7071], "3041526": [17, 0.7071], "3164205": [17, 0.7071], "3502461": [17, 0.7071], "3625140": [17, 0.7071], "3641502": [15, 0.7071], "4036251": [16, 0.7071], "4053162": [16, 0.7071], "4152630": [17, 0.7071], "4205316": [17, 0.7071], "4613502": [18, 0.7071], "4615203": [15, 0.7071], "5024613": [17, 0.7071], "5140362": [16, 0.7071], "5203641": [18, 0.7071], "5246031": [16, 0.7071], "5263041": [16, 0.7071], "5316420": [17, 0.7071], "5360241": [16, 0.7071], "6135024": [17, 0.7071], "6251403": [17, 0.7071], "6304152": [17, 0.7071], "6420531": [17, 0.7071]}, "8": {"04752613": [18, 0.7071], "05726314": [18, 0.7071], "06357142": [19, 0.7071], "06471352": [18, 0.7071], "13572064": [18, 0.7071], "14602753": [20, 0.7071], "14630752": [18, 0.7071], "15063724": [20, 0.7071], "15720364": [20, 0.7071], "16257403": [19, 0.7071], "16470352": [18, 0.7071], "17502463": [17, 0.7071], "20647135": [19, 0.7071], "24170635": [20, 0.7071], "24175360": [19, 0.7071], "24603175": [19, 0.7071], "24730615": [20, 0.7071], "25147063": [19, 0.7071], "25160374": [20, 0.7071], "25164073": [20, 0.7071], "25307461": [18, 0.7071], "25317460": [18, 0.7071], "25703641": [18, 0.7071], "25704613": [19, 0.7071], "25713064": [20, 0.7071], "26174035": [20, 0.7071], "26175304": [20, 0.7071], "27360514": [19, 0.7071], "30471625": [20, 0.7071], "30475261": [19, 0.7071], "31475026": [20, 0.7071], "31625704": [20, 0.7071], "31625740": [18, 0.7071], "31640752": [19, 0.7071], "31746025": [20, 0.7071], "31750246": [18, 0.7071], "35041726": [20, 0.7071], "35716024": [20, 0.7071], "35720641": [20, 0.7071], "36074152": [19, 0.7071], "36271405": [19, 0.7071], "36415027": [18, 0.7071], "36420571": [17, 0.7071], "37025164": [20, 0.7071], "37046152": [20, 0.7071], "37420615": [20, 0.7071], "40357162": [20, 0.7071], "40731625": [20, 0.7071], "40752613": [20, 0.7071], "41357206": [17, 0.7071], "41362750": [18, 0.7071], "41506372": [19, 0.7071], "41703625": [19, 0.7071], "42057136": [20, 0.7071], "42061753": [20, 0.7071], "42736051": [20, 0.7071], "46027531": [18, 0.7071], "46031752": [20, 0.7071], "46137025": [19, 0.7071], "46152037": [18, 0.7071], "46152073": [20, 0.7071], "46302751": [20, 0.7071], "47302516": [19, 0.7071], "47306152": [20, 0.7071], "50417263": [19, 0.7071], "51602473": [20, 0.7071], "51603742": [20, 0.7071], "52064713": [20, 0.7071], "52073164": [19, 0.7071], "52074136": [18, 0.7071], "52460317": [18, 0.7071], "52470316": [18, 0.7071], "52613704": [20, 0.7071], "52617403": [20, 0.7071], "52630714": [19, 0.7071], "53047162": [20, 0.7071], "53174602": [19, 0.7071], "53602417": [19, 0.7071], "53607142": [20, 0.7071], "57130642": [19, 0.7071], "60275314": [17, 0.7071], "61307425": [18, 0.7071], "61520374": [19, 0.7071], "62057413": [20, 0.7071], "62714053": [20, 0.7071], "63147025": [18, 0.7071], "63175024": [20, 0.7071], "64205713": [18, 0.7071], "71306425": [18, 0.7071], "71420635": [19, 0.7071], "72051463": [18, 0.7071], "73025164": [18, 0.7071]}, "9": {"025713864": [22, 0.7071], "026174835": [22, 0.7071], "027581463": [20, 0.7071], "031758246": [22, 0.7071], "035281746": [22, 0.7071], "035714286": [22, 0.7071], "036271485": [22, 0.7071], "036814752": [21, 0.7071], "037286415": [21, 0.7071], "041582736": [22, 0.7071], "046152837": [22, 0.7071], "046827135": [23, 0.7071], "046831752": [23, 0.7071], "048157263": [22, 0.7071], "048531726": [22, 0.7071], "051863724": [22, 0.7071], "053168247": [22, 0.7071], "053172864": [22, 0.7071], "057263184": [22, 0.7071], "057413862": [22, 0.7071], "058417263": [22, 0.7071], "063581427": [20, 0.7071], "063724815": [22, 0.7071], "063728514": [22, 0.7071], "064718253": [22, 0.7071], "073168524": [22, 0.7071], "074258136": [21, 0.7071], "074286135": [23, 0.7071], "130685247": [22, 0.7071], "136028574": [23, 0.7071], "137285046": [21, 0.7071], "138620574": [20, 0.7071], "138642057": [20, 0.7071], "146027538": [22, 0.7071], "146302857": [22, 0.7071], "146825307": [22, 0.7071], "146837025": [23, 0.7071], "147025863": [23, 0.7071], "147085263": [22, 0.7071], "147582036": [21, 0.7071], "147582063": [22, 0.7071], "148307526": [21, 0.7071], "150268374": [23, 0.7071], "150637248": [22, 0.7071], "150642837": [22, 0.7071], "150847362": [21, 0.7071], "152073864": [23, 0.7071], "158247306": [22, 0.7071], "164083572": [21, 0.7071], "164703528": [20, 0.7071], "168520374": [22, 0.7071], "170368524": [23, 0.7071], "174285306": [22, 0.7071], "175820364": [22, 0.7071], "184273605": [21, 0.7071], "185247036": [21, 0.7071], "185263074": [21, 0.7071], "185360247": [22, 0.7071], "203681475": [22, 0.7071], "205741386": [22, 0.7071], "206175384": [21, 0.7071], "206471358": [22, 0.7071], "207386415": [22, 0.7071], "208641753": [22, 0.7071], "241703685": [21, 0.7071], "241706358": [22, 0.7071], "246031758": [22, 0.7071], "247185063": [22, 0.7071], "247186035": [23, 0.7071], "248136075": [21, 0.7071], "248306157": [21, 0.7071], "251603748": [22, 0.7071], "251840736": [24, 0.7071], "257036418": [21, 0.7071], "257048136": [22, 0.7071], "257138640": [23, 0.7071], "257408613": [22, 0.7071], "257418630": [21, 0.7071], "258073164": [23, 0.7071], "258146307": [21, 0.7071], "258170364": [23, 0.7071], "258470316": [21, 0.7071], "258603147": [21, 0.7071], "258613704": [20, 0.7071], "258630714": [20, 0.7071], "261370485": [24, 0.7071], "261748053": [23, 0.7071], "261753048": [22, 0.7071], "263184075": [22, 0.7071], "263185047": [21, 0.7071], "263748051": [21, 0.7071], "268041753": [20, 0.7071], "268314750": [22, 0.7071], "271386405": [22, 0.7071], "273681405": [22, 0.7071], "275081463": [22, 0.7071], "275380461": [21, 0.7071], "275814036": [21, 0.7071], "281470635": [22, 0.7071], "283075164": [23, 0.7071], "283175064": [23, 0.7071], "283741506": [20, 0.7071], "285146037": [22, 0.7071], "285306417": [22, 0.7071], "285713064": [22, 0.7071], "302581746": [21, 0.7071], "304186275": [23, 0.7071], "304716258": [22, 0.7071], "304815726": [24, 0.7071], "306815724": [22, 0.7071], "308526174": [23, 0.7071], "314702586": [22, 0.7071], "316207485": [23, 0.7071], "316804752": [22, 0.7071], "316807425": [23, 0.7071], "317286405": [22, 0.7071], "318257046": [21, 0.7071], "318407526": [22, 0.7071], "350417268": [22, 0.7071], "350847162": [23, 0.7071], "350862714": [22, 0.7071], "352814706": [22, 0.7071], "352817460": [22, 0.7071], "352860714": [23, 0.7071], "357140862": [20, 0.7071], "357146802": [22, 0.7071], "357160248": [23, 0.7071], "357206418": [23, 0.7071], "358207146": [23, 0.7071], "360285741": [22, 0.7071], "360581742": [22, 0.7071], "360741825": [20, 0.7071], "362580741": [22, 0.7071], "362714850": [22, 0.7071], "362750814": [22, 0.7071], "362751840": [22, 0.7071], "364180275": [23, 0.7071], "364180572": [22, 0.7071], "364185720": [20, 0.7071], "368147025": [24, 0.7071], "368150247": [23, 0.7071], "368520741": [23, 0.7071], "370461528": [22, 0.7071], "374205186": [22, 0.7071], "374206158": [21, 0.7071], "382516407": [21, 0.7071], "384205716": [22, 0.7071], "384206175": [22, 0.7071], "384702516": [22, 0.7071], "405317286": [21, 0.7071], "407316852": [20, 0.7071], "407526138": [22, 0.7071], "413068257": [23, 0.7071], "413862057": [20, 0.7071], "415026837": [23, 0.7071], "415827360": [22, 0.7071], "415863027": [22, 0.7071], "417036852": [20, 0.7071], "417068253": [23, 0.7071], "417263085": [23, 0.7071], "417268053": [22, 0.7071], "418057263": [22, 0.7071], "418526307": [21, 0.7071], "420518637": [23, 0.7071], "420571368": [22, 0.7071], "420617538": [22, 0.7071], "425817036": [23, 0.7071], "425860317": [22, 0.7071], "425861370": [22, 0.7071], "425863071": [23, 0.7071], "427318506": [23, 0.7071], "427368150": [22, 0.7071], "427518036": [23, 0.7071], "427518603": [22, 0.7071], "428317506": [23, 0.7071], "428571306": [22, 0.7071], "460317582": [22, 0.7071], "460571382": [23, 0.7071], "461370285": [22, 0.7071], "461370852": [23, 0.7071], "461520738": [22, 0.7071], "461570382": [23, 0.7071], "463025817": [23, 0.7071], "463027518": [22, 0.7071], "463028571": [22, 0.7071], "463071852": [23, 0.7071], "468271350": [22, 0.7071], "468317520": [22, 0.7071], "468370251": [23, 0.7071], "470362581": [21, 0.7071], "470831625": [22, 0.7071], "471620835": [22, 0.7071], "471625803": [23, 0.7071], "471820635": [23, 0.7071], "471852036": [20, 0.7071], "473025861": [22, 0.7071], "473061528": [22, 0.7071], "473862051": [23, 0.7071], "475026831": [20, 0.7071], "475820631": [23, 0.7071], "481362750": [22, 0.7071], "481572036": [20, 0.7071], "483571602": [21, 0.7071], "504186372": [22, 0.7071], "504682713": [22, 0.7071], "504683172": [22, 0.7071], "506372481": [21, 0.7071], "514682730": [21, 0.7071], "514683702": [22, 0.7071], "518427360": [22, 0.7071], "520368147": [23, 0.7071], "520738641": [23, 0.7071], "520741863": [24, 0.7071], "524703168": [20, 0.7071], "524708316": [22, 0.7071], "524708613": [23, 0.7071], "526137048": [22, 0.7071], "526138074": [22, 0.7071], "526174038": [22, 0.7071], "526308147": [22, 0.7071], "528147063": [20, 0.7071], "528307146": [22, 0.7071], "528603147": [22, 0.7071], "530681742": [23, 0.7071], "531682470": [23, 0.7071], "531728640": [23, 0.7071], "531742086": [22, 0.7071], "531748026": [20, 0.7071], "536028174": [23, 0.7071], "536071428": [22, 0.7071], "536074182": [22, 0.7071], "538026174": [22, 0.7071], "538041726": [23, 0.7071], "538471620": [22, 0.7071], "570481362": [22, 0.7071], "570631842": [21, 0.7071], "571602483": [22, 0.7071], "572081463": [23, 0.7071], "572084136": [22, 0.7071], "572681403": [23, 0.7071], "574186302": [22, 0.7071], "580362714": [23, 0.7071], "582073164": [22, 0.7071], "584073162": [24, 0.7071], "584172630": [22, 0.7071], "584702613": [23, 0.7071], "586307142": [21, 0.7071], "603175824": [22, 0.7071], "603582471": [22, 0.7071], "603742851": [22, 0.7071], "605147382": [20, 0.7071], "605713824": [23, 0.7071], "605813724": [23, 0.7071], "607418253": [22, 0.7071], "613074852": [21, 0.7071], "613508427": [21, 0.7071], "613807425": [22, 0.7071], "615207483": [22, 0.7071], "617502483": [22, 0.7071], "620574138": [22, 0.7071], "620847135": [20, 0.7071], "625140837": [21, 0.7071], "625703841": [21, 0.7071], "625704813": [22, 0.7071], "627135840": [22, 0.7071], "627140835": [23, 0.7071], "627518403": [24, 0.7071], "630258174": [20, 0.7071], "630275184": [20, 0.7071], "630285741": [21, 0.7071], "630418572": [21, 0.7071], "630718524": [23, 0.7071], "630742581": [21, 0.7071], "630815724": [23, 0.7071], "631470258": [21, 0.7071], "631480275": [22, 0.7071], "631750248": [23, 0.7071], "631840752": [22, 0.7071], "631852470": [21, 0.7071], "637048152": [24, 0.7071], "637285140": [22, 0.7071], "640582731": [21, 0.7071], "640752813": [21, 0.7071], "641702853": [23, 0.7071], "641703825": [22, 0.7071], "642857130": [22, 0.7071], "647182530": [22, 0.7071], "647185203": [21, 0.7071], "680247135": [22, 0.7071], "681502473": [22, 0.7071], "682417530": [22, 0.7071], "682713504": [21, 0.7071], "683147502": [22, 0.7071], "685207413": [22, 0.7071], "703528641": [22, 0.7071], "703625814": [21, 0.7071], "703641852": [21, 0.7071], "704615283": [21, 0.7071], "713068524": [22, 0.7071], "714603582": [22, 0.7071], "718520364": [23, 0.7071], "720368514": [22, 0.7071], "724185360": [20, 0.7071], "724805316": [21, 0.7071], "730641582": [22, 0.7071], "736815024": [23, 0.7071], "738041526": [21, 0.7071], "738246051": [22, 0.7071], "738251640": [22, 0.7071], "738620514": [23, 0.7071], "740581362": [21, 0.7071], "741306825": [22, 0.7071], "741306852": [21, 0.7071], "741803625": [22, 0.7071], "741863025": [23, 0.7071], "742051863": [23, 0.7071], "742063581": [22, 0.7071], "742586031": [22, 0.7071], "742861350": [22, 0.7071], "750246831": [20, 0.7071], "750268314": [20, 0.7071], "751603842": [21, 0.7071], "752860314": [23, 0.7071], "758203641": [22, 0.7071], "814602753": [23, 0.7071], "814630752": [21, 0.7071], "815720364": [22, 0.7071], "824170635": [22, 0.7071], "825160374": [22, 0.7071], "825164073": [22, 0.7071], "825307461": [20, 0.7071], "830471625": [22, 0.7071], "831475026": [22, 0.7071], "831625704": [22, 0.7071], "835716024": [22, 0.7071], "835720641": [22, 0.7071], "837025164": [22, 0.7071], "840357162": [22, 0.7071], "840731625": [22, 0.7071], "842057136": [23, 0.7071], "842061753": [23, 0.7071], "842736051": [22, 0.7071], "847306152": [22, 0.7071], "851602473": [21, 0.7071], "852074136": [21, 0.7071], "852617403": [22, 0.7071], "853174602": [22, 0.7071], "853607142": [22, 0.7071], "857130642": [22, 0.7071], "861307425": [20, 0.7071], "862714053": [22, 0.7071], "863175024": [22, 0.7071]}}, "walls": {"2": 3, "3": 9, "4": 18, "5": 30, "6": 45, "7": 63, "8": 84, "9": 108, "10": 135, "11": 165}, "findings": [{"big": "100 %", "t": "Todas las cámaras de soluciones están acotadas", "p": "Lo cumplen las 500 soluciones de N=4…9, cuando entre todas las cámaras solo lo está entre el 43 y el 46 % (N=4…8). Criterio exacto: el grafo de pares «cercanos» (|x<sub>i</sub>−x<sub>j</sub>| &lt; |i−j|) es conexo. Las filas 0 y N−1 siempre son cercanas."}, {"big": "1/√2", "t": "Pegadas a la pared", "p": "Cada solución está a 1/√2 de su pared más cercana, lo mínimo posible para un punto entero. Casi siempre ese es también el radio de la mayor bola que cabe dentro: las cámaras son finas. Excepción: en N=6, dos de las 4 soluciones tienen inradio 0,884 y sus traspuestas no. La disposición distingue filas de columnas, así que rompe la simetría de rotación del tablero."}, {"big": "8 → 22", "t": "Pocas paredes tocan cada cámara", "p": "Media de paredes que tocan la cámara, N=4…9: 8.0, 10.4, 15.0, 16.6, 19.1, 21.9. Crece como ~2,4·N, mientras que el total crece como 1,5·N². En N=7 las soluciones toroidales tocan más paredes (16.9) que las no toroidales (16.0)."}, {"big": "Q(N) ≪ cámaras", "t": "La topología cuenta cámaras, no soluciones", "p": "Cámaras por cada solución: N=4: 212, N=5: 780, N=6: 47.663, N=7: 144.022, N=8: 2.291.564. Contar cámaras es un problema limpio (un polinomio). Q(N) pregunta cuántas contienen un punto entero dentro del tablero, y esa capa aritmética es la difícil."}]};
+
+/* ---------- combinatoria ---------- */
+function solutions(N){
+  const out=[], x=new Array(N);
+  (function rec(r,u,d1,d2){
+    if(r===N){out.push(x.slice());return;}
+    for(let c=0;c<N;c++){
+      if(u>>c&1||d1>>(r+c)&1||d2>>(r-c+N)&1)continue;
+      x[r]=c;rec(r+1,u|1<<c,d1|1<<(r+c),d2|1<<(r-c+N));
+    }
+  })(0,0,0,0);
+  return out;
+}
+function perms(N){
+  const out=[];const a=[...Array(N).keys()];
+  (function p(k){if(k===N){out.push(a.slice());return;}
+    for(let i=k;i<N;i++){[a[k],a[i]]=[a[i],a[k]];p(k+1);[a[k],a[i]]=[a[i],a[k]];}})(0);
+  return out;
+}
+function attacks(s){let n=0;for(let i=0;i<s.length;i++)for(let j=i+1;j<s.length;j++){
+  const d=s[i]-s[j];if(d===0||Math.abs(d)===j-i)n++;}return n;}
+function inverse(s){const t=new Array(s.length);s.forEach((c,r)=>t[c]=r);return t;}
+const fam=(i,j,c)=>c===0?'col':(c===i-j?'diag':'anti'); // x_i - x_j = c
+/* hiperplanos de A_N: x_i - x_j = c */
+function walls(N){const H=[];for(let i=0;i<N;i++)for(let j=i+1;j<N;j++)
+  for(const c of [0,i-j,j-i])H.push({i,j,c,f:fam(i,j,c)});return H;}
+
+/* ---------- geometría 3D ---------- */
+const dot=(a,b)=>a[0]*b[0]+a[1]*b[1]+a[2]*b[2];
+function solve3(A,b){ // Cramer
+  const [a,b1,c]=A;
+  const det=a[0]*(b1[1]*c[2]-b1[2]*c[1])-a[1]*(b1[0]*c[2]-b1[2]*c[0])+a[2]*(b1[0]*c[1]-b1[1]*c[0]);
+  if(Math.abs(det)<1e-9)return null;
+  const r=[0,0,0];
+  for(let k=0;k<3;k++){const M=A.map((row,i)=>row.map((v,j)=>j===k?b[i]:v));
+    r[k]=(M[0][0]*(M[1][1]*M[2][2]-M[1][2]*M[2][1])-M[0][1]*(M[1][0]*M[2][2]-M[1][2]*M[2][0])+M[0][2]*(M[1][0]*M[2][1]-M[1][1]*M[2][0]))/det;}
+  return r;
+}
+/* politopo {y : a·y >= b}. Devuelve vértices, caras (con índice de restricción) y volumen. */
+function polytope(C){
+  const V=[],key=new Map();
+  for(let i=0;i<C.length;i++)for(let j=i+1;j<C.length;j++)for(let k=j+1;k<C.length;k++){
+    const v=solve3([C[i].a,C[j].a,C[k].a],[C[i].b,C[j].b,C[k].b]);if(!v)continue;
+    let ok=true;for(const h of C){if(dot(h.a,v)<h.b-1e-7){ok=false;break;}}
+    if(!ok)continue;const kk=v.map(t=>t.toFixed(5)).join(',');
+    if(!key.has(kk)){key.set(kk,V.length);V.push(v);}
+  }
+  const faces=[],seen=new Set();
+  C.forEach((h,hi)=>{
+    const idx=[];V.forEach((v,vi)=>{if(Math.abs(dot(h.a,v)-h.b)<1e-6)idx.push(vi);});
+    if(idx.length<3)return;
+    const fk=idx.slice().sort((a,b)=>a-b).join(',');if(seen.has(fk))return;seen.add(fk);
+    const cen=[0,1,2].map(t=>idx.reduce((s,vi)=>s+V[vi][t],0)/idx.length);
+    const n=h.a,L=Math.hypot(...n);const nn=n.map(t=>t/L);
+    let u=[V[idx[0]][0]-cen[0],V[idx[0]][1]-cen[1],V[idx[0]][2]-cen[2]];
+    const w=[nn[1]*u[2]-nn[2]*u[1],nn[2]*u[0]-nn[0]*u[2],nn[0]*u[1]-nn[1]*u[0]];
+    idx.sort((p,q)=>{const P=V[p].map((t,i)=>t-cen[i]),Q=V[q].map((t,i)=>t-cen[i]);
+      return Math.atan2(dot(P,w),dot(P,u))-Math.atan2(dot(Q,w),dot(Q,u));});
+    faces.push({idx,h:hi});
+  });
+  let vol=0;if(V.length){const c0=[0,1,2].map(t=>V.reduce((s,v)=>s+v[t],0)/V.length);
+    for(const f of faces)for(let k=1;k+1<f.idx.length;k++){
+      const a=V[f.idx[0]].map((t,i)=>t-c0[i]),b=V[f.idx[k]].map((t,i)=>t-c0[i]),c=V[f.idx[k+1]].map((t,i)=>t-c0[i]);
+      vol+=Math.abs(a[0]*(b[1]*c[2]-b[2]*c[1])-a[1]*(b[0]*c[2]-b[2]*c[0])+a[2]*(b[0]*c[1]-b[1]*c[0]))/6;}}
+  return {V,faces,vol};
+}
+/* base ortonormal del subespacio suma cero (Helmert) */
+function helmert(N){const B=[];for(let k=1;k<N;k++){const r=new Array(N).fill(0);
+  for(let i=0;i<k;i++)r[i]=1;r[k]=-k;const L=Math.hypot(...r);B.push(r.map(t=>t/L));}return B;}
+
+/* ---------- estado ---------- */
+const S={mode:'full',N:4,sol:0,free:[0,1,2],show:{col:true,diag:true,anti:true},only:false};
+const R=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- three.js ---------- */
+const canvas=document.getElementById('gl');
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});
+renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+const scene=new THREE.Scene();
+const camera=new THREE.PerspectiveCamera(40,1,0.1,200);
+const controls=new THREE.OrbitControls(camera,canvas);
+controls.enableDamping=true;controls.autoRotate=!R;controls.autoRotateSpeed=0.8;
+controls.addEventListener('start',()=>controls.autoRotate=false);
+scene.add(new THREE.AmbientLight(0xffffff,0.75));
+const dl=new THREE.DirectionalLight(0xffffff,0.55);dl.position.set(5,8,6);scene.add(dl);
+let world=new THREE.Group();scene.add(world);
+let pickables=[];
+
+function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim();}
+function col(v){return new THREE.Color(css(v));}
+function resize(){const r=canvas.parentElement.getBoundingClientRect();
+  renderer.setSize(r.width,r.height,false);camera.aspect=r.width/r.height;camera.updateProjectionMatrix();}
+new ResizeObserver(resize).observe(canvas.parentElement);
+
+function clear(){scene.remove(world);world.traverse(o=>{o.geometry&&o.geometry.dispose();o.material&&o.material.dispose();});
+  world=new THREE.Group();scene.add(world);pickables=[];}
+
+function planeMesh(n,d,color,opacity,clip){ // plano n·y=d recortado (disco de radio clip.r o cubo de semilado clip.h)
+  const L=Math.hypot(...n);const nn=new THREE.Vector3(...n).normalize();const p0=nn.clone().multiplyScalar(d/L);
+  let geo;
+  if(clip.r){const rr=Math.sqrt(Math.max(clip.r*clip.r-p0.lengthSq(),0));if(rr<1e-3)return null;
+    geo=new THREE.CircleGeometry(rr,64);}
+  else{ // polígono plano ∩ cubo
+    const h=clip.h,pts=[];const cs=[-h,h];
+    const E=[];for(const a of cs)for(const b of cs){E.push([[-h,a,b],[h,a,b]]);E.push([[a,-h,b],[a,h,b]]);E.push([[a,b,-h],[a,b,h]]);}
+    const nv=[n[0],n[1],n[2]];
+    for(const [P,Q] of E){const fp=dot(nv,P)-d,fq=dot(nv,Q)-d;if((fp<0)===(fq<0)&&Math.abs(fp)>1e-9&&Math.abs(fq)>1e-9)continue;
+      const t=Math.abs(fp-fq)<1e-12?0:fp/(fp-fq);pts.push(new THREE.Vector3(P[0]+t*(Q[0]-P[0]),P[1]+t*(Q[1]-P[1]),P[2]+t*(Q[2]-P[2])));}
+    if(pts.length<3)return null;
+    const c=pts.reduce((s,p)=>s.add(p),new THREE.Vector3()).multiplyScalar(1/pts.length);
+    const u=new THREE.Vector3().subVectors(pts[0],c).normalize(),w=new THREE.Vector3().crossVectors(nn,u);
+    pts.sort((a,b)=>{const A=a.clone().sub(c),B=b.clone().sub(c);return Math.atan2(A.dot(w),A.dot(u))-Math.atan2(B.dot(w),B.dot(u));});
+    const pos=[];for(let k=1;k+1<pts.length;k++)for(const p of [pts[0],pts[k],pts[k+1]])pos.push(p.x,p.y,p.z);
+    geo=new THREE.BufferGeometry();geo.setAttribute('position',new THREE.Float32BufferAttribute(pos,3));
+    const m=new THREE.Mesh(geo,new THREE.MeshBasicMaterial({color,transparent:true,opacity,side:THREE.DoubleSide,depthWrite:false}));
+    return m;
+  }
+  const m=new THREE.Mesh(geo,new THREE.MeshBasicMaterial({color,transparent:true,opacity,side:THREE.DoubleSide,depthWrite:false}));
+  m.position.copy(p0);m.quaternion.setFromUnitVectors(new THREE.Vector3(0,0,1),nn);return m;
+}
+function lineIn2D(n,d,color,r){ // recta n·y=d (z=0) recortada al disco
+  const L=Math.hypot(n[0],n[1]);const nn=[n[0]/L,n[1]/L],off=d/L,half=Math.sqrt(Math.max(r*r-off*off,0));
+  const p=[nn[0]*off,nn[1]*off],t=[-nn[1],nn[0]];
+  const g=new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(p[0]-t[0]*half,p[1]-t[1]*half,0),new THREE.Vector3(p[0]+t[0]*half,p[1]+t[1]*half,0)]);
+  return new THREE.Line(g,new THREE.LineBasicMaterial({color,transparent:true,opacity:.85}));
+}
+function cellMesh(P,color){
+  const pos=[];for(const f of P.faces)for(let k=1;k+1<f.idx.length;k++)for(const vi of [f.idx[0],f.idx[k],f.idx[k+1]])pos.push(...P.V[vi]);
+  const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(pos,3));g.computeVertexNormals();
+  const grp=new THREE.Group();
+  grp.add(new THREE.Mesh(g,new THREE.MeshLambertMaterial({color,transparent:true,opacity:.42,side:THREE.DoubleSide,depthWrite:false})));
+  const lp=[];for(const f of P.faces)for(let k=0;k<f.idx.length;k++){lp.push(...P.V[f.idx[k]],...P.V[f.idx[(k+1)%f.idx.length]]);}
+  const lg=new THREE.BufferGeometry();lg.setAttribute('position',new THREE.Float32BufferAttribute(lp,3));
+  grp.add(new THREE.LineSegments(lg,new THREE.LineBasicMaterial({color})));
+  return grp;
+}
+function sphere(p,r,color,data){const m=new THREE.Mesh(new THREE.SphereGeometry(r,20,14),new THREE.MeshLambertMaterial({color}));
+  m.position.set(...p);m.userData=data;pickables.push(m);world.add(m);return m;}
+
+/* ---------- vista completa (N=3,4): R^N módulo traslación ---------- */
+function buildFull(){
+  const N=S.N,B=helmert(N),mid=(N-1)/2;
+  const proj=x=>{const y=x.map(t=>t-mid);const r=B.map(b=>b.reduce((s,v,i)=>s+v*y[i],0));while(r.length<3)r.push(0);return r;};
+  const H=walls(N).map(w=>{const e=new Array(N).fill(0);e[w.i]=1;e[w.j]=-1;
+    const n=B.map(b=>b.reduce((s,v,i)=>s+v*e[i],0));while(n.length<3)n.push(0);return {...w,n,d:w.c};});
+  const P=perms(N),sols=solutions(N);const rad=Math.sqrt(P.map(proj).reduce((m,p)=>Math.max(m,dot(p,p)),0))+0.9;
+  const colors={col:col('--col'),diag:col('--diag'),anti:col('--anti')};
+  // cámaras de las soluciones
+  const cells=sols.map(s=>{const p=proj(s);
+    const C=H.map(h=>{const sg=Math.sign(dot(h.n,p)-h.d);return {a:h.n.map(t=>t*sg),b:h.d*sg,h};});
+    if(N===3)C.push({a:[0,0,1],b:-.01},{a:[0,0,-1],b:-.01});
+    return {s,p,P:polytope(C)};});
+  const facetSet=new Set();cells.forEach(c=>c.P.faces.forEach(f=>{if(c.P && f.h<H.length)facetSet.add(f.h);}));
+  H.forEach((h,hi)=>{if(!S.show[h.f])return;if(S.only&&!facetSet.has(hi))return;
+    const m=N===3?lineIn2D(h.n,h.d,colors[h.f],rad):planeMesh(h.n,h.d,colors[h.f],facetSet.has(hi)?.15:.045,{r:rad});if(m)world.add(m);});
+  // permutoedro: aristas entre permutaciones que intercambian valores v, v+1
+  const idx=new Map(P.map((s,k)=>[s.join(''),k]));const lp=[];
+  P.forEach(s=>{for(let v=0;v<N-1;v++){const t=s.map(c=>c===v?v+1:c===v+1?v:c);const a=s.join(''),b=t.join('');
+    if(a<b){lp.push(...proj(s),...proj(t));}}});
+  const lg=new THREE.BufferGeometry();lg.setAttribute('position',new THREE.Float32BufferAttribute(lp,3));
+  world.add(new THREE.LineSegments(lg,new THREE.LineBasicMaterial({color:col('--muted'),transparent:true,opacity:.45})));
+  cells.forEach(c=>world.add(cellMesh(c.P,col('--cell'))));
+  const solKeys=new Set(sols.map(s=>s.join(',')));
+  P.forEach(s=>{const k=s.join(','),isS=solKeys.has(k),a=attacks(s);
+    sphere(proj(s),isS?.11:.055,isS?col('--queen'):col('--lattice'),{s,a,isS});});
+  camera.position.set(rad*2.3,rad*1.6,rad*3.2);if(N===3)camera.position.set(0,0.01,rad*3);controls.target.set(0,0,0);
+  const cur=cells[S.sol];
+  stats([
+    ['Dimensión','ℝ'+N+' / traslación = ℝ'+(N-1)],
+    ['Paredes',H.length],['Cámaras en total',DATA.chi[N]?DATA.chi[N].regions.toLocaleString('es'):'—'],
+    ['Soluciones',sols.length],
+    ...(cur?[['Paredes que la tocan',cur.P.faces.length+' de '+H.length],['Vértices',cur.P.V.length],['Volumen',cur.P.vol.toFixed(3)]]:[])
+  ]);
+  caption(N===3
+    ? `<b>N = 3.</b> El plano cociente con sus 9 rectas y 32 regiones. Los 6 puntos son las permutaciones (un hexágono) y <b>todos caen sobre alguna recta</b>: por eso N = 3 no tiene solución.`
+    : `<b>N = 4.</b> 18 planos parten ℝ³ en 424 cámaras. Las 24 permutaciones forman un permutoedro, y solo 2 vértices (dorados) no tocan ningún plano. Cada una tiene su cámara, un poliedro con ${cells[0].P.faces.length} caras.`);
+  return cells;
+}
+
+/* ---------- corte 3D (cualquier N): libres 3 filas, el resto fijo ---------- */
+function buildSlice(){
+  const N=S.N,sols=solutions(N),s=sols[S.sol],F=S.free.slice().sort((a,b)=>a-b),mid=(N-1)/2,h=(N-1)/2+.5;
+  const pos=Object.fromEntries(F.map((r,k)=>[r,k]));
+  const C=[];const colors={col:col('--col'),diag:col('--diag'),anti:col('--anti')};
+  for(const w of walls(N)){
+    const fi=w.i in pos,fj=w.j in pos;if(!fi&&!fj)continue;
+    const n=[0,0,0];let d=w.c;
+    if(fi)n[pos[w.i]]+=1;else d-=s[w.i]; if(fj)n[pos[w.j]]-=1;else d+=s[w.j];
+    // n·(y+mid) = d  ->  n·y = d - mid*sum(n)
+    d-=mid*(n[0]+n[1]+n[2]);
+    C.push({n,d,f:w.f,w});
+  }
+  // planos repetidos (mismo n,d) se agrupan
+  const uniq=new Map();C.forEach(c=>{const k=c.n.join(',')+'|'+c.d.toFixed(4);if(!uniq.has(k))uniq.set(k,c);});
+  const U=[...uniq.values()];
+  const p=F.map(r=>s[r]-mid);
+  const HC=U.map(c=>{const sg=Math.sign(dot(c.n,p)-c.d);return {a:c.n.map(t=>t*sg),b:c.d*sg};});
+  for(let k=0;k<3;k++){const e=[0,0,0];e[k]=1;HC.push({a:e,b:-h});HC.push({a:e.map(t=>-t),b:-h});}
+  const P=polytope(HC);const facets=new Set(P.faces.map(f=>f.h).filter(i=>i<U.length));
+  U.forEach((c,ci)=>{if(!S.show[c.f])return;if(S.only&&!facets.has(ci))return;
+    const m=planeMesh(c.n,c.d,colors[c.f],facets.has(ci)?.22:.018,{h});if(m)world.add(m);});
+  // cubo del tablero
+  const box=new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(2*h,2*h,2*h)),new THREE.LineBasicMaterial({color:col('--muted'),transparent:true,opacity:.5}));
+  world.add(box);
+  world.add(cellMesh(P,col('--cell')));
+  // retícula: puntos enteros del corte; las otras soluciones que caben en él
+  const lat=[],others=[];
+  for(let a=0;a<N;a++)for(let b=0;b<N;b++)for(let c=0;c<N;c++){
+    const t=s.slice();t[F[0]]=a;t[F[1]]=b;t[F[2]]=c;const y=[a-mid,b-mid,c-mid];
+    if(attacks(t)===0)others.push({t,y});else lat.push(...y);}
+  const lg=new THREE.BufferGeometry();lg.setAttribute('position',new THREE.Float32BufferAttribute(lat,3));
+  world.add(new THREE.Points(lg,new THREE.PointsMaterial({color:col('--lattice'),size:N>8?.05:.07,transparent:true,opacity:.7})));
+  others.forEach(o=>{const me=o.t.join(',')===s.join(',');sphere(o.y,me?.13:.1,col('--queen'),{s:o.t,a:0,isS:true,me});});
+  // ejes
+  const ax=['--col','--diag','--anti'];
+  camera.position.set(h*3.2,h*2.3,h*3.9);controls.target.set(0,0,0);
+  const pre=(DATA.chambers[N]||{})[s.join('')];
+  stats([
+    ['Filas libres',F.map(r=>'x'+sub(r)).join(', ')],
+    ['Planos en el corte',U.length],
+    ['Caras de la celda',facets.size],
+    ['Volumen del corte',P.vol.toFixed(3)],
+    ['Soluciones en el corte',others.length],
+    ...(pre?[['Cámara completa',pre[0]+' de '+DATA.walls[N]+' paredes'],['Inradio',pre[1].toFixed(4)]]:[]),
+  ]);
+  caption(`<b>N = ${N}, corte por ${F.map(r=>'x'+sub(r)).join(', ')}.</b> Las demás reinas están fijas. Los ejes son las columnas de las 3 reinas libres, y la celda dorada es la cámara de la solución cortada por este espacio 3D.`+
+    (others.length>1?` Hay ${others.length-1} solución${others.length>2?'es':''} más que solo cambia${others.length>2?'n':''} esas 3 reinas.`:''));
+}
+const sub=n=>String(n).split('').map(d=>'₀₁₂₃₄₅₆₇₈₉'[d]).join('');
+
+/* ---------- UI ---------- */
+function stats(rows){document.getElementById('stats').innerHTML=rows.map(([k,v])=>`<dt>${k}</dt><dd>${v}</dd>`).join('');}
+function caption(h){document.getElementById('caption').innerHTML=h;}
+function drawBoard(){
+  const N=S.N,s=solutions(N)[S.sol],svg=document.getElementById('board'),z=24;
+  svg.setAttribute('viewBox',`0 0 ${N*z} ${N*z}`);
+  let o='';for(let r=0;r<N;r++){const fr=S.mode==='slice'&&S.free.includes(r);
+    for(let c=0;c<N;c++){o+=`<rect class="cellsq" data-r="${r}" x="${c*z}" y="${r*z}" width="${z}" height="${z}" fill="${(r+c)%2?'var(--line)':'var(--ground)'}" ${fr?'fill-opacity=".55"':''}/>`;}
+    if(fr)o+=`<rect x="0.75" y="${r*z+.75}" width="${N*z-1.5}" height="${z-1.5}" fill="none" stroke="var(--cell)" stroke-width="1.5" pointer-events="none"/>`;
+    if(s)o+=`<circle cx="${s[r]*z+z/2}" cy="${r*z+z/2}" r="${z*.3}" fill="${fr?'var(--queen)':'var(--ink)'}" pointer-events="none"/>`;}
+  svg.innerHTML=o;
+  svg.querySelectorAll('rect.cellsq').forEach(el=>el.addEventListener('click',()=>{
+    if(S.mode!=='slice')return;const r=+el.dataset.r;if(S.free.includes(r))return;
+    S.free=[...S.free.slice(1),r];render();}));
+}
+function fillSelects(){
+  const selN=document.getElementById('selN');const Ns=S.mode==='full'?[3,4]:[4,5,6,7,8,9,10];
+  if(!Ns.includes(S.N))S.N=Ns.includes(4)?4:Ns[0];
+  selN.innerHTML=Ns.map(n=>`<option value="${n}" ${n===S.N?'selected':''}>N = ${n}</option>`).join('');
+  const sols=solutions(S.N);if(S.sol>=sols.length)S.sol=0;
+  document.getElementById('selSol').innerHTML=sols.length?sols.map((s,k)=>{
+    const pre=(DATA.chambers[S.N]||{})[s.join('')];
+    return `<option value="${k}" ${k===S.sol?'selected':''}>${s.join(' ')}${pre?'  · '+pre[0]+' paredes':''}</option>`;}).join(''):'<option>no hay soluciones</option>';
+  document.getElementById('selSol').disabled=!sols.length;document.getElementById('btnT').disabled=!sols.length;
+  if(S.free.some(r=>r>=S.N))S.free=[0,1,2];
+}
+function render(){
+  fillSelects();clear();
+  document.getElementById('g-board').hidden=S.mode!=='slice';
+  document.getElementById('modehint').textContent=S.mode==='full'
+    ?'El espacio entero, sin cortar. Solo cabe en 3D para N ≤ 4.'
+    :'Libera 3 filas y fija las demás: un corte 3D del espacio de N dimensiones.';
+  if(S.mode==='full')buildFull();else buildSlice();
+  drawBoard();
+}
+document.getElementById('m-full').onclick=()=>{S.mode='full';setSeg();render();};
+document.getElementById('m-slice').onclick=()=>{S.mode='slice';if(S.N<5)S.N=8;setSeg();render();};
+function setSeg(){document.getElementById('m-full').setAttribute('aria-pressed',S.mode==='full');document.getElementById('m-slice').setAttribute('aria-pressed',S.mode==='slice');}
+document.getElementById('selN').onchange=e=>{S.N=+e.target.value;S.sol=0;S.free=[0,1,2];render();};
+document.getElementById('selSol').onchange=e=>{S.sol=+e.target.value;render();};
+document.getElementById('btnT').onclick=()=>{const sols=solutions(S.N);const t=inverse(sols[S.sol]).join(',');
+  const k=sols.findIndex(s=>s.join(',')===t);if(k>=0){S.sol=k;render();}};
+for(const f of ['col','diag','anti'])document.getElementById('t-'+f).onchange=e=>{S.show[f]=e.target.checked;render();};
+document.getElementById('t-only').onchange=e=>{S.only=e.target.checked;render();};
+
+/* hover */
+const ray=new THREE.Raycaster(),mouse=new THREE.Vector2(),tip=document.getElementById('tip');
+canvas.addEventListener('pointermove',e=>{const r=canvas.getBoundingClientRect();
+  mouse.set((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1);ray.setFromCamera(mouse,camera);
+  const hit=ray.intersectObjects(pickables)[0];
+  if(hit){const u=hit.object.userData;tip.hidden=false;tip.style.left=(e.clientX-r.left)+'px';tip.style.top=(e.clientY-r.top)+'px';
+    tip.textContent='('+u.s.join(', ')+')  '+(u.isS?(u.me?'esta solución':'solución'):u.a+' ataque'+(u.a>1?'s':''));}
+  else tip.hidden=true;});
+canvas.addEventListener('pointerleave',()=>tip.hidden=true);
+
+/* tema */
+const rerender=()=>render();
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',rerender);
+new MutationObserver(rerender).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+
+(function loop(){requestAnimationFrame(loop);controls.update();renderer.render(scene,camera);})();
+
+/* ---------- tabla y hallazgos ---------- */
+function polyStr(c){const t=[];for(let k=c.length-1;k>=1;k--){const v=c[k];if(!v)continue;
+  const a=Math.abs(v),sg=v<0?'−':'+';const m=(a===1?'':a.toLocaleString('es'))+(k>1?'q'+(k>1?'<sup>'+k+'</sup>':''):'q');
+  t.push((t.length?' '+sg+' ':(v<0?'−':''))+m);}return t.join('');}
+(function table(){
+  const rows=Object.values(DATA.chi).sort((a,b)=>a.N-b.N);
+  document.getElementById('chitable').innerHTML=
+    '<thead><tr><th>N</th><th class="poly">χ<sub>N</sub>(q)</th><th>Cámaras</th><th>Acotadas</th><th>% acotadas</th><th>Soluciones Q(N)</th><th>Cámaras por solución</th></tr></thead><tbody>'+
+    rows.map(r=>`<tr><td>${r.N}</td><td class="poly">${polyStr(r.chi)}</td><td>${r.regions.toLocaleString('es')}</td><td>${r.bounded.toLocaleString('es')}</td><td>${(100*r.bounded/r.regions).toFixed(1)}%</td><td class="q">${r.Q}</td><td>${r.Q?Math.round(r.regions/r.Q).toLocaleString('es'):'—'}</td></tr>`).join('')+'</tbody>';
+})();
+document.getElementById('findings').innerHTML=DATA.findings.map(f=>`<div class="finding"><span class="big">${f.big}</span><h3>${f.t}</h3><p>${f.p}</p></div>`).join('');
+
+render();
+</script>

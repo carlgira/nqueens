@@ -1,0 +1,50 @@
+N=13 control=0 G=69188 pares_sin_simetria=598390940 listas=576111605
+saltos_por_lista 1:554866311 2:20277832 3:925580 4:37292 5:2154 6:697 7:380 8:269 9:164 10:130 11:84 12:88 13:65 14:56 15:43 16:46 17:36 18:34 19:39 20:22 21:16 22:31 23:17 24:16 25:15 26:19 27:6 28:22 29:20 30:12 31:9 32:6 33:5 34:7 35:7 36:6 37:3 38:5 39:5 40:5 41:3 42:3 43:3 44:4 45:3 47:2 48:1 49:1 50:2 51:2 52:3 53:1 54:2 55:2 57:1 58:4 59:2 60:1 61:1 62:1 71:1 76:1 77:1 82:1 83:1 86:1 130:1 690:1 3317:1
+clase constante aciertos 11:1 15:1 29:1 64:3
+  mejor saltos=3317 lista=1 1 1 1 1 1 1 1 1 1 1 1 1 
+  mejor saltos=690 lista=2 2 2 2 2 2 2 2 2 2 2 2 2 
+  mejor saltos=130 lista=3 3 3 3 3 3 3 3 3 3 3 3 3 
+  mejor saltos=29 lista=4 4 4 4 4 4 4 4 4 4 4 4 4 
+  mejor saltos=15 lista=6 6 6 6 6 6 6 6 6 6 6 6 6 
+  mejor saltos=11 lista=5 5 5 5 5 5 5 5 5 5 5 5 5 
+clase rampa aciertos 5:1 8:1 11:1 12:1 15:1 16:1 17:1
+  mejor saltos=17 lista=8 7 6 5 4 3 2 1 0 12 11 10 9 
+  mejor saltos=16 lista=10 9 8 7 6 5 4 3 2 1 0 12 11 
+  mejor saltos=15 lista=9 8 7 6 5 4 3 2 1 0 12 11 10 
+  mejor saltos=12 lista=7 6 5 4 3 2 1 0 12 11 10 9 8 
+  mejor saltos=11 lista=11 10 9 8 7 6 5 4 3 2 1 0 12 
+  mejor saltos=8 lista=6 5 4 3 2 1 0 12 11 10 9 8 7 
+clase casi aciertos 2:21421 3:4835 4:1834 5:903 6:512 7:340 8:242 9:152 10:127 11:82 12:84 13:63 14:55 15:41 16:45 17:33 18:34 19:39 20:22 21:16 22:31 23:17 24:16 25:15 26:19 27:6 28:22 29:19 30:12 31:9 32:6 33:5 34:7 35:7 36:6 37:3 38:5 39:5 40:5 41:3 42:3 43:3 44:4 45:3 47:2 48:1 49:1 50:2 51:2 52:3 53:1 54:2 55:2 57:1 58:4 59:2 60:1 61:1 62:1 64:6
+  mejor saltos=86 lista=5 8 0 0 0 0 0 0 0 0 0 0 0 
+  mejor saltos=83 lista=8 0 0 0 0 0 0 0 0 0 0 5 0 
+  mejor saltos=82 lista=10 0 0 0 0 0 0 0 0 0 0 3 0 
+  mejor saltos=77 lista=6 7 0 0 0 0 0 0 0 0 0 0 0 
+  mejor saltos=76 lista=0 0 2 0 0 0 0 0 0 0 0 0 11 
+  mejor saltos=71 lista=1 0 0 0 0 0 0 0 0 0 0 12 0 
+clase global aciertos 2:20256411 3:920745 4:35458 5:1250 6:185 7:40 8:26 9:12 10:3 12:3 13:2 14:1 17:2
+  mejor saltos=17 lista=0 0 1 0 0 9 3 10 4 0 0 12 0 
+  mejor saltos=17 lista=0 0 0 1 0 0 9 3 10 4 0 0 12 
+  mejor saltos=14 lista=0 4 7 0 2 0 0 12 0 1 1 0 12 
+  mejor saltos=13 lista=0 0 4 7 0 2 0 0 11 0 6 9 0 
+  mejor saltos=13 lista=0 1 0 12 12 0 1 0 0 11 0 6 9 
+  mejor saltos=12 lista=0 0 0 0 0 2 8 0 7 11 10 0 1 
+cadena constante 3:943 4:189 5:23 6:2
+  mas_larga L=6 U=0 3 1 11 8 10 7 4 2 12 6 9 5  d=1 1 1 1 1 1 1 1 1 1 1 1 1 
+cadena rampa
+cadena casi 4:2
+  mas_larga L=4 U=7 3 8 12 4 0 11 5 1 10 6 2 9  d=8 2 3 9 10 4 1 5 12 6 0 7 11 
+cadena global 3:8
+  mas_larga L=3 U=6 12 9 7 1 3 11 8 4 0 10 5 2  d=7 8 8 7 8 12 12 8 7 8 8 7 4 
+grafo K=4 minfuera=5 nodos=37930 aristas=598372 componentes=3645 mayor=28986
+camino_posa longitud=665 de 28986 en la mayor componente
+paso 0 lista=5 3 5 5 5 5 11 11 1 10 11 9 10 
+paso 1 lista=10 0 0 0 0 3 0 1 3 0 12 0 10 
+paso 2 lista=4 12 5 4 9 8 1 5 5 5 5 1 1 
+paso 3 lista=0 5 11 0 7 6 0 8 7 7 1 1 12 
+paso 4 lista=9 9 8 9 10 7 12 7 9 11 4 6 3 
+paso 5 lista=4 12 8 4 10 3 4 2 7 5 8 11 0 
+paso 6 lista=3 0 11 0 0 0 10 0 3 0 0 10 2 
+paso 7 lista=2 2 4 1 0 0 0 11 0 4 1 2 12 
+paso 8 lista=10 1 7 8 5 8 8 7 9 7 2 10 9 
+paso 9 lista=11 10 3 6 9 2 2 3 1 12 5 11 3 
+paso 10 lista=5 4 10 0 12 11 1 0 2 2 11 5 2 

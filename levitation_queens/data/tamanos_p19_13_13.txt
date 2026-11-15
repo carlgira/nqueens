@@ -1,0 +1,59 @@
+p=19 = 13 + 13 - 7
+ version toroidal: nº de sub-soluciones de 13, de 13, y de parejas (A, B) con solape tambien solucion
+   0:c1x8                      665    665  50160
+   1:c1x8                        0      0      0
+   2:c2x16                       0      0      0
+   3:c2x24                       0      0      0
+   4:c4x144                      0      0      0
+   5:c5x72                       0      0      0
+   6:c5x72                       0      0      0
+   7:c5x72                       0      0      0
+   8:c5x72                       0      0      0
+   9:c5x72                       9      9      0
+   10:c5x72                      0      0      0
+   11:c5x144                     0      0      0
+   12:c6x72                      5      5      0
+   13:c6x144 SIN EXPLICAR        0      0      0
+   14:c6x144 SIN EXPLICAR        0      0      0
+   15:c6x144 SIN EXPLICAR        1      1      0
+   16:c6x144 SIN EXPLICAR        3      3      0
+   17:c6x144 SIN EXPLICAR        0      0      0
+   18:c6x144 SIN EXPLICAR        0      0      0
+   19:c6x144 SIN EXPLICAR        0      0      0
+   20:c6x144                     0      0      0
+   21:c6x144 SIN EXPLICAR        0      0      0
+   22:c6x144 SIN EXPLICAR        1      1      0
+   azar 0                        0      0      0
+   azar 1                        0      0      0
+   azar 2                        0      0      0
+   azar 3                        0      0      0
+   azar 4                        0      0      0
+ version normal: nº de sub-soluciones de 13, de 13, y de parejas (A, B) con solape tambien solucion
+   0:c1x8                      665    665  50160
+   1:c1x8                        8      8      0
+   2:c2x16                       5      5      0
+   3:c2x24                       2      2      0
+   4:c4x144                      0      0      0
+   5:c5x72                       5      5      0
+   6:c5x72                       0      0      0
+   7:c5x72                      14     14      0
+   8:c5x72                       4      4      0
+   9:c5x72                      10     10      0
+   10:c5x72                      5      5      0
+   11:c5x144                     6      6      0
+   12:c6x72                      9      9      0
+   13:c6x144 SIN EXPLICAR        0      0      0
+   14:c6x144 SIN EXPLICAR        0      0      0
+   15:c6x144 SIN EXPLICAR        1      1      0
+   16:c6x144 SIN EXPLICAR        4      4      6   ej. A=[0, 1, 4, 5, 6, 8, 9, 10, 12, 13, 15, 16, 17] B=[1, 2, 3, 4, 6, 7, 8, 11, 13, 14, 15, 17, 18]
+   17:c6x144 SIN EXPLICAR        0      0      0
+   18:c6x144 SIN EXPLICAR        2      2      0
+   19:c6x144 SIN EXPLICAR        0      0      0
+   20:c6x144                     4      4      0
+   21:c6x144 SIN EXPLICAR        4      4      0
+   22:c6x144 SIN EXPLICAR        4      4      0
+   azar 0                        0      0      0
+   azar 1                        0      0      0
+   azar 2                        0      0      0
+   azar 3                        0      0      0
+   azar 4                        0      0      0

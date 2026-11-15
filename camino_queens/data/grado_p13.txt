@@ -1,0 +1,5 @@
+p = 13   toroidales 4524  (enumeradas con x_0 = 0: 348)
+  D   grado(x)   grado mínimo de las 8   subárbol p^(D+1)   densidad acumulada  (azar: 1.49e-11)
+   1        130         130               169          0.769 / 0.769
+   7       1352        1352               8.16e+08          1.82e-06 / 1.82e-06
+   9       3042        3042               1.38e+11          3.28e-08 / 3.28e-08

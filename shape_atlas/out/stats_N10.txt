@@ -1,0 +1,114 @@
+##### N=10  (todas las soluciones + 40000 permutaciones al azar + casi-soluciones por intercambio)
+Rasgos:
+  L         longitud de arco
+  area      área algebraica ½∮(x dy−y dx)
+  rmin      |z| mínimo (refinado)
+  rmax      |z| máximo
+  msr       ⟨|z|²⟩ en t uniforme
+  m4        ⟨|z|⁴⟩ en t uniforme
+  ani       anisotropía del trazo (inercia, peso ds)
+  cen       |centroide del trazo|/rmax
+  tabs      curvatura absoluta total (vueltas)
+  minspeed  velocidad mínima |z'|
+  zt1       |z(2π/N)| (punto marcado)
+  nzero     pasos exactos por el origen
+  nzlat     pasos por el origen en t=2πk/N
+  wind      número de giro alrededor del origen (−99 si pasa por él)
+  turn      número de rotación de la tangente
+  ncross    autointersecciones
+  nlobes    lóbulos (máximos locales de |z|)
+  ninfl     inflexiones
+  ncusp     cúspides (z'=0)
+
+muestras: sol=724 casi=543 perm(≥2 conflictos)=39865 azar=5000
+
+--- codificación E0 ---
+rasgo            sol       casi       perm       azar   AUC_s/p  AUC_s/c  rango_sol (frac. no-sol perms dentro)
+L              106.6      107.3      109.5      110.5     0.388    0.476  [87.89, 117.4]  0.985
+area           172.8      172.8      172.8      172.8     0.500    0.500  [172.8, 172.8]  1.000
+rmin       1.241e-16  1.184e-16  1.314e-16     0.2678     0.485    0.515  [0, 5.161e-16]  1.000
+rmax           6.752      6.548      6.242      6.078     0.653    0.564  [4.863, 9.881]  0.986
+msr               10         10         10         10     0.500    0.500  [10, 10]  1.000
+m4             241.6      226.5      202.9      190.1     0.668    0.567  [146.1, 639.4]  0.972
+ani          0.04678    0.04692    0.04701    0.04704     0.488    0.500  [0.001066, 0.1312]  0.999
+cen          0.06297    0.06034    0.05647    0.05577     0.550    0.518  [0.005209, 0.1592]  0.995
+tabs           8.421      8.355  1.614e+07      8.208     0.536    0.513  [7.058, 10]  0.992
+minspeed       2.454      2.394      2.309      2.256     0.492    0.486  [0.003138, 9.766]  0.997
+zt1            2.075      2.168      2.952      2.815     0.320    0.459  [0.618, 5.236]  0.903
+nzero          1.331      1.157      1.081     0.0352     0.509    0.499  [1, 9]  1.000
+nzlat           1.05      1.083      1.053      0.033     0.492    0.485  [1, 4]  0.999
+wind             -99        -99        -99       2.01     0.500    0.500  [-99, -99]  1.000
+turn           8.138      8.109      8.043      7.941     0.522    0.506  [6, 10]  1.000
+ncross          26.1      25.16      25.84      25.93     0.463    0.510  [11, 75]  0.998
+nlobes         6.727      6.656      6.486      6.528     0.574    0.521  [5, 9]  0.999
+ninfl          1.685      1.794      1.664      1.846     0.491    0.476  [0, 8]  1.000
+ncusp              0          0  0.0002258          0     0.500    0.500  [0, 0]  1.000
+LDA (5-fold CV) con 13 rasgos geométricos puros: AUC sol vs perms = 0.645
+
+--- codificación E1 ---
+rasgo            sol       casi       perm       azar   AUC_s/p  AUC_s/c  rango_sol (frac. no-sol perms dentro)
+L              106.6        107      109.5      102.9     0.389    0.493  [87.89, 117.4]  0.986
+area           172.8      172.8      172.8      154.8     0.500    0.500  [172.8, 172.8]  1.000
+rmin       1.664e-16  1.732e-16  1.679e-16  1.467e-16     0.489    0.479  [0, 8.951e-16]  1.000
+rmax           6.752      6.578       6.25      5.559     0.651    0.552  [4.863, 9.881]  0.987
+msr               10         10         10      8.979     0.500    0.500  [10, 10]  1.000
+m4             241.6      229.4      203.4        164     0.667    0.550  [146.1, 639.4]  0.973
+ani          0.04678    0.04659    0.04694    0.04337     0.489    0.499  [0.001066, 0.1312]  1.000
+cen          0.06297    0.05984    0.05655    0.05197     0.549    0.523  [0.005209, 0.1592]  0.995
+tabs           8.421      8.343  1.404e+07      8.148     0.537    0.524  [7.058, 10]  0.992
+minspeed       2.454      2.197      2.309      2.498     0.492    0.513  [0.003138, 9.766]  0.997
+zt1            2.075      2.168      2.952      2.815     0.320    0.459  [0.618, 5.236]  0.903
+nzero          1.331      1.164      1.078      1.124     0.510    0.500  [1, 9]  1.000
+nzlat           1.05      1.079      1.052      1.098     0.492    0.486  [1, 4]  0.999
+wind             -99        -99        -99        -99     0.500    0.500  [-99, -99]  1.000
+turn           8.138      8.079      8.044      7.927     0.524    0.517  [6, 10]  1.000
+ncross          26.1      25.27      25.86      31.73     0.462    0.512  [11, 75]  0.999
+nlobes         6.727      6.645      6.491      6.212     0.573    0.525  [5, 9]  0.999
+ninfl          1.685      1.853       1.68       1.48     0.489    0.468  [0, 8]  1.000
+ncusp              0          0  0.0001003          0     0.500    0.500  [0, 0]  1.000
+LDA (5-fold CV) con 13 rasgos geométricos puros: AUC sol vs perms = 0.635
+
+--- codificación E2 ---
+rasgo            sol       casi       perm       azar   AUC_s/p  AUC_s/c  rango_sol (frac. no-sol perms dentro)
+L              699.6      727.5      869.9       1177     0.004    0.189  [635, 740.9]  0.028
+area            2592       2709       3365       4512     0.000    0.000  [2592, 2592]  0.000
+rmin        0.004943    0.02717     0.1786     0.1655     0.141    0.428  [5.551e-17, 0.435]  0.867
+rmax              30         30         30         30     0.500    0.500  [30, 30]  1.000
+msr               30         32      42.64      50.41     0.000    0.000  [30, 30]  0.000
+m4         1.149e+04   1.16e+04  1.234e+04  1.329e+04     0.005    0.208  [1.135e+04, 1.174e+04]  0.057
+ani          0.03756    0.03733     0.0361    0.03258     0.559    0.515  [0.02299, 0.04969]  0.919
+cen          0.04693    0.04522     0.0373    0.02608     0.856    0.597  [0.03557, 0.06137]  0.588
+tabs            37.7      36.85      34.01      40.34     0.924    0.632  [32.83, 42.11]  0.746
+minspeed       4.719      5.687      8.536      13.53     0.368    0.454  [0.001208, 19.63]  0.902
+zt1                0          0          0          0     0.500    0.500  [0, 0]  1.000
+nzero           3.53      2.836     0.8338      0.587     0.866    0.596  [0, 6]  0.999
+nzlat              0          0          0          0     0.500    0.500  [0, 0]  1.000
+wind          -94.58      -80.3     -18.86     -10.87     0.195    0.442  [-99, 29]  0.996
+turn           36.65      35.78      32.82      39.51     0.898    0.610  [31, 42]  0.864
+ncross           559        532      490.5      758.3     0.774    0.618  [405, 710]  0.898
+nlobes         30.32      29.86      27.68      31.68     0.763    0.553  [24, 36]  0.969
+ninfl          8.635      8.991      9.073       5.52     0.489    0.490  [0, 24]  0.994
+ncusp              0          0  5.017e-05          0     0.500    0.500  [0, 0]  1.000
+LDA (5-fold CV) con 16 rasgos geométricos puros: AUC sol vs perms = 0.988
+
+== Órbitas de forma (N=10, 724 soluciones) ==
+S: cizalla a (misma curva, misma orientación)
+   órbitas con solución: 724 | tableros en ellas: 7240 | permutaciones: 748 | soluciones: 724
+   ⇒ techo de precisión de CUALQUIER clasificador que solo vea la forma: 0.9679 (con recall 1, solo permutaciones)
+   máx. soluciones en una misma órbita: 1 ; peor fracción sol/perms en una órbita: 0.250
+G: cizalla a + giro b (misma forma salvo rotación)
+   órbitas con solución: 548 | tableros en ellas: 54800 | permutaciones: 5600 | soluciones: 724
+   ⇒ techo de precisión de CUALQUIER clasificador que solo vea la forma: 0.1293 (con recall 1, solo permutaciones)
+   máx. soluciones en una misma órbita: 6 ; peor fracción sol/perms en una órbita: 0.025
+G+espejo (forma salvo isometría)
+   órbitas con solución: 274 | tableros en ellas: 54800 | permutaciones: 5600 | soluciones: 724
+   ⇒ techo de precisión de CUALQUIER clasificador que solo vea la forma: 0.1293 (con recall 1, solo permutaciones)
+   máx. soluciones en una misma órbita: 12 ; peor fracción sol/perms en una órbita: 0.025
+
+Balance de color de las soluciones (#casillas pares − #impares):  -2:362 +2:362
+   (en E2 y N par, para toda permutación z(π) = 2·Σ_r(−1)^{r+c_r+1}: la curva pasa por el origen en t=π ⇔ balance 0)
+Control: diferencia relativa máx. de rasgos geométricos entre solución y su cizalla+giro (50 casos): 8.00e-02
+   rasgo rmax difiere en 14/50 casos
+   rasgo tabs difiere en 13/50 casos
+   rasgo ncross difiere en 1/50 casos
+E2: área de toda solución = 2591.813939 (= π·825.0); idéntica en todas; mínimo exceso en permutaciones con conflicto = 18.8496 (= π·6.000)

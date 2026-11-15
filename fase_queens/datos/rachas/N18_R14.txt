@@ -1,0 +1,1 @@
+N=18 R=14: 0 tableros iniciales (no toroidales; toroidales aparte 0)  (125.0s)

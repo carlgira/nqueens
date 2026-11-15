@@ -1,0 +1,9 @@
+centro,filas=2,parejas_celdas=18,recetas=9,utiles=0,mejor=0 de 14744 (1-1 0, 1-2 0, 2-2 0),filas:
+centro,filas=4,parejas_celdas=36,recetas=36,utiles=0,mejor=0 de 14744 (1-1 0, 1-2 0, 2-2 0),filas:
+centro,filas=6,parejas_celdas=54,recetas=84,utiles=3,mejor=16 de 14744 (1-1 0, 1-2 8, 2-2 8),filas: +-2 +-3 +-5
+centro,filas=8,parejas_celdas=72,recetas=126,utiles=0,mejor=0 de 14744 (1-1 0, 1-2 0, 2-2 0),filas:
+centro,filas=10,parejas_celdas=90,recetas=126,utiles=0,mejor=0 de 14744 (1-1 0, 1-2 0, 2-2 0),filas:
+centro,filas=12,parejas_celdas=108,recetas=84,utiles=3,mejor=16 de 14744 (1-1 0, 1-2 8, 2-2 8),filas: +-1 +-2 +-3 +-5 +-7 +-8
+centro,filas=14,parejas_celdas=126,recetas=36,utiles=0,mejor=0 de 14744 (1-1 0, 1-2 0, 2-2 0),filas:
+centro,filas=16,parejas_celdas=144,recetas=9,utiles=0,mejor=0 de 14744 (1-1 0, 1-2 0, 2-2 0),filas:
+centro,filas=18,parejas_celdas=162,recetas=1,utiles=1,mejor=776 de 14744 (1-1 16, 1-2 0, 2-2 760),filas: +-1 +-2 +-3 +-4 +-5 +-6 +-7 +-8 +-9

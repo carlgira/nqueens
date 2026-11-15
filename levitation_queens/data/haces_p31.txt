@@ -1,0 +1,2 @@
+p=31 haz 2+1: 960 orbitas de traslacion (22 s) | clase 3 [w,w]: 960
+p=31 haz 2+2: 1200 orbitas de traslacion (773 s) | clase 4 [w,w]: 1200

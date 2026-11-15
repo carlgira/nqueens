@@ -1,0 +1,1 @@
+N=20 R=18: 0 encontrados (para en el primero) [no existe: busqueda completa]  (313.5s, nodos 2202612489)

@@ -1,0 +1,9 @@
+N = 7   soluciones 40   bases 40   falso 44
+  [real]
+    1) molde desplazado (parejas con ≤7 reinas cambiadas: 1560; 24 desplazamientos v):
+       sin dar la vuelta:  ninguna cadena de 3
+       dando la vuelta:  7 sol:616   | explicadas por D4: 616 sí / 0 no
+  [falso]
+    1) molde desplazado (parejas con ≤7 reinas cambiadas: 1720; 24 desplazamientos v):
+       sin dar la vuelta:  ninguna cadena de 3
+       dando la vuelta:  ninguna cadena de 3

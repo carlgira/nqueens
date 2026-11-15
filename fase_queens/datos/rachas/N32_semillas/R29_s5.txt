@@ -1,0 +1,1 @@
+N=32 R=29: 0 encontrados (para en el primero) [tiempo agotado]  (900.0s, nodos 2979659776)

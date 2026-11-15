@@ -1,0 +1,73 @@
+N = 5   soluciones 10
+  0: filas por columna 0 2 4 1 3   [Q....|...Q.|.Q...|....Q|..Q..]
+  1: filas por columna 0 3 1 4 2   [Q....|..Q..|....Q|.Q...|...Q.]
+  2: filas por columna 1 3 0 2 4   [..Q..|Q....|...Q.|.Q...|....Q]
+  3: filas por columna 1 4 2 0 3   [...Q.|Q....|..Q..|....Q|.Q...]
+  4: filas por columna 2 0 3 1 4   [.Q...|...Q.|Q....|..Q..|....Q]
+  5: filas por columna 2 4 1 3 0   [....Q|..Q..|Q....|...Q.|.Q...]
+  6: filas por columna 3 0 2 4 1   [.Q...|....Q|..Q..|Q....|...Q.]
+  7: filas por columna 3 1 4 2 0   [....Q|.Q...|...Q.|Q....|..Q..]
+  8: filas por columna 4 1 3 0 2   [...Q.|.Q...|....Q|..Q..|Q....]
+  9: filas por columna 4 2 0 3 1   [..Q..|....Q|.Q...|...Q.|Q....]
+  tableros alcanzables desde una solución: 53130
+  distancias (nº de saltos) entre soluciones:
+        0  1  2  3  4  5  6  7  8  9
+    0   0  4  6  4  4  6  6  4  6  6
+    1   4  0  4  6  6  6  4  6  4  6
+    2   6  4  0  4  4  6  6  6  6  4
+    3   4  6  4  0  6  4  4  6  4  6
+    4   4  6  4  6  0  4  4  6  6  6
+    5   6  6  6  4  4  0  6  4  6  4
+    6   6  4  6  4  4  6  0  4  6  4
+    7   4  6  6  6  6  4  4  0  4  6
+    8   6  4  6  4  6  6  6  4  0  4
+    9   6  6  4  6  6  4  4  6  4  0
+  recorrido más corto por las 10 soluciones: 36 saltos
+    orden: 9 8 7 6 4 5 3 2 1 0
+    saltos de cada tramo: 4 4 4 4 4 4 4 4 4
+  movimientos de cada tramo (uno de los caminos más cortos):
+    tramo 9 → 8 (4 saltos)
+       1. reina (0,2) → (0,3)
+       2. reina (1,4) ↓ (2,4)
+       3. reina (2,1) ↑ (1,1)
+       4. reina (3,3) ← (3,2)   ← solución 8
+    tramo 8 → 7 (4 saltos)
+       1. reina (0,3) → (0,4)
+       2. reina (2,4) ← (2,3)
+       3. reina (3,2) ↓ (4,2)
+       4. reina (4,0) ↑ (3,0)   ← solución 7
+    tramo 7 → 6 (4 saltos)
+       1. reina (0,4) ↓ (1,4)
+       2. reina (1,1) ↑ (0,1)
+       3. reina (2,3) ← (2,2)
+       4. reina (4,2) → (4,3)   ← solución 6
+    tramo 6 → 4 (4 saltos)
+       1. reina (1,4) ← (1,3)
+       2. reina (2,2) ↓ (3,2)
+       3. reina (3,0) ↑ (2,0)
+       4. reina (4,3) → (4,4)   ← solución 4
+    tramo 4 → 5 (4 saltos)
+       1. reina (0,1) ↘ (1,2)
+       2. reina (1,3) ↗ (0,4)
+       3. reina (3,2) ↙ (4,1)
+       4. reina (4,4) ↖ (3,3)   ← solución 5
+    tramo 5 → 3 (4 saltos)
+       1. reina (0,4) ← (0,3)
+       2. reina (1,2) ↓ (2,2)
+       3. reina (2,0) ↑ (1,0)
+       4. reina (3,3) → (3,4)   ← solución 3
+    tramo 3 → 2 (4 saltos)
+       1. reina (0,3) ← (0,2)
+       2. reina (2,2) → (2,3)
+       3. reina (3,4) ↓ (4,4)
+       4. reina (4,1) ↑ (3,1)   ← solución 2
+    tramo 2 → 1 (4 saltos)
+       1. reina (0,2) ↓ (1,2)
+       2. reina (1,0) ↑ (0,0)
+       3. reina (2,3) → (2,4)
+       4. reina (4,4) ← (4,3)   ← solución 1
+    tramo 1 → 0 (4 saltos)
+       1. reina (1,2) → (1,3)
+       2. reina (2,4) ↓ (3,4)
+       3. reina (3,1) ↑ (2,1)
+       4. reina (4,3) ← (4,2)   ← solución 0

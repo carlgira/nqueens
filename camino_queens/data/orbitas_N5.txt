@@ -1,0 +1,22 @@
+N = 5   soluciones 10   grupos de simetría 2 (tamaños: 8 2)
+  distancia entre grupos (mínima entre orientaciones) y dentro de cada grupo:
+        0  1
+    0   4  4
+    1   4  4
+  parejas de grupos 1 (frente a 45 parejas de soluciones); tableros intermedios usados: 3
+  recorrido más corto por un miembro de cada grupo: 4 saltos (1 tramos)
+     orden: 1 0   saltos: 4
+     órdenes de grupos que alcanzan el óptimo: 2 de 2 (cada uno cuenta también al revés)
+  secuencias al azar por los grupos: saltos  mín 4  mediana 4  máx 4
+  representantes canónicos (filas por columna):
+     grupo  0 (8): 4 1 3 0 2
+     grupo  1 (2): 1 4 2 0 3
+  salto entre grupos según cuántas reinas cambian de sitio (reinas: saltos×parejas):
+     4 reinas:  4×1
+  árbol mínimo entre grupos: 4 saltos en total; aristas 0-1(4)
+     tamaños de salto en el árbol: 4×1   grados: 1 1   diámetro: 1 aristas
+  regla 'al grupo más cercano': 0 -(4)- 1   total 4
+  exploración en profundidad, parando con todas las soluciones: tableros  mín 24205  mediana 47673 (89.7 %)  máx 53129
+  exploración en profundidad, parando con un miembro de cada grupo: tableros  mín 103  mediana 7934 (14.9 %)  máx 47833
+  exploración en anchura, parando con todas las soluciones: tableros  mín 28370  mediana 34621 (65.2 %)  máx 40829
+  exploración en anchura, parando con un miembro de cada grupo: tableros  mín 2449  mediana 5685 (10.7 %)  máx 9461

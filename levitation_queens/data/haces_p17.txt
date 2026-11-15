@@ -1,0 +1,3 @@
+p=17 haz 2+1: 96 orbitas de traslacion (0 s) | clase 3 [i,i]: 96
+p=17 haz 3+1: 64 orbitas de traslacion (2 s) | clase 4 [i,i]: 48 · clase 4 [s,s]: 16
+p=17 haz 2+2: 0 orbitas de traslacion (0 s) | 

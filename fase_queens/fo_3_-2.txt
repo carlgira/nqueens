@@ -1,0 +1,1 @@
+N=8 sim2 M=3 (P=12, AMAX=1, R=2000): 11 grupos, media 8.73  tamanos: 10 10 9 9 10 9 9 9 9 8 4

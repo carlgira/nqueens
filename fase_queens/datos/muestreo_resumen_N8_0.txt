@@ -1,0 +1,5 @@
+N=8 sol MM=4: 276000000 bucles probados, firmas distintas con >=3 soluciones: 161
+  bucles por numero de soluciones distintas: 1:275498672 2:501121 3:202 4:5
+  con >=3 soluciones, por clase de huecos (igual / bloques / otra):
+     3 soluciones: 0 / 0 / 202
+     4 soluciones: 0 / 3 / 2

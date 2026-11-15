@@ -1,0 +1,13 @@
+  ejemplo L=9 W=2: 0 2 8 5 7 13 10 12 4 6 3 9 11 1   pares de costura (i,j | filas): (0,13|0,1) (3,13|5,1)
+  ejemplo L=11 W=2: 0 3 8 10 2 6 9 12 4 13 7 5 11 1   pares de costura (i,j | filas): (0,13|0,1) (1,13|3,1)
+  ejemplo L=11 W=2: 0 3 10 7 11 6 2 12 5 8 13 9 4 1   pares de costura (i,j | filas): (0,13|0,1) (1,13|3,1)
+  ejemplo L=9 W=2: 0 5 8 1 12 7 11 6 3 10 13 4 2 9   pares de costura (i,j | filas): (0,12|0,2) (1,12|5,2)
+N = 14   soluciones 365596   toroidales 0   no toroidales 365596   teoría≠medida: 0
+  trayectoria más larga L (soluciones):  1:237118  2:94796  3:23242  4:6340  5:2212  6:928  7:520  8:248  9:152  10:24  11:16
+  con paso c=1 (L1):                    1:292680  2:55058  3:12462  4:3322  5:1154  6:456  7:260  8:116  9:68  10:12  11:8
+  pares de costura W:                   2:15008  4:103432  5:130864  6:94728  7:20884  8:680
+  L media según W:  W=2: 3.44 (15008)  W=4: 1.73 (103432)  W=5: 1.39 (130864)  W=6: 1.17 (94728)  W=7: 1.03 (20884)  W=8: 1.00 (680)
+  distancia d de los pares de costura, todas:  1:63992 2:108728 3:145840 4:174328 5:195738 6:220404 8:220404 9:195738 10:174328 11:145840 12:108728 13:63992
+  con L ≥ 9 (192 soluciones): W →  2:192
+     distancia d de sus pares de costura:  9:64 10:16 11:48 12:176 13:80
+     con una misma reina en todos sus pares de costura: 112 de 192   (en todas las no toroidales: 3648 de 365596)

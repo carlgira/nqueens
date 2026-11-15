@@ -1,0 +1,8 @@
+# minrectas_toro CAP=7 (la ultima fila agrupa clase > 7)
+H 1 460
+H 2 16928
+H 4 209484
+H 5 1350008
+H 6 28443272
+H 7 98597136
+H 8 232760

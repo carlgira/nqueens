@@ -1,0 +1,13 @@
+p = 13   clase t   soluciones (x_0=0) 348   falso 348   caminos 2000
+  k   tableros del subárbol   real: máx  media     falso: máx  media    máx real / máx falso
+   1   p^1                          10     2.6           2     2.0     5.00
+   2   p^2                          18     8.8           4     3.4     4.50
+   3   p^3                          26    18.9           8     5.1     3.25
+   4   p^4                          34    27.2          10     7.0     3.40
+   5   p^5                          42    35.4          18     9.5     2.33
+   6   p^6                          52    44.4          22    13.4     2.36
+   7   p^7                         114    73.3          30    21.3     3.80
+   8   p^8                         132   114.9          73    55.0     1.81
+   9   p^9                         348   348.0         348   348.0     1.00
+  mejor camino real en k=4 (base 34): perfil 1 4 18 26 34 42 50 114 132 348
+  base: 0 4 12 5 11 6 10 3 1 8 2 9 7

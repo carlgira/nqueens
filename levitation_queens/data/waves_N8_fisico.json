@@ -1,0 +1,6326 @@
+{
+ "N": 8,
+ "delta": 0.001,
+ "fisico": true,
+ "n_soluciones": 92,
+ "n_clases": 12,
+ "modelo": "f(i,j) = sum A cos(2pi(k0*i + k1*j)/N + fase); reinas = N casillas con f > umbral",
+ "soluciones": [
+  {
+   "id": 0,
+   "solucion": [
+    0,
+    4,
+    7,
+    5,
+    2,
+    6,
+    1,
+    3
+   ],
+   "clase": 0,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.476604,
+   "margen": 0.093585,
+   "ondas": [
+    {
+     "k": [
+      3,
+      -2
+     ],
+     "amplitud": 1.076142,
+     "fase_rad": -0.507923,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 123.69
+    },
+    {
+     "k": [
+      2,
+      3
+     ],
+     "amplitud": 1.061873,
+     "fase_rad": 1.227743,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 33.69
+    },
+    {
+     "k": [
+      1,
+      3
+     ],
+     "amplitud": 0.983703,
+     "fase_rad": 0.576631,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 18.435
+    },
+    {
+     "k": [
+      1,
+      -2
+     ],
+     "amplitud": 0.701301,
+     "fase_rad": -0.700147,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 153.435
+    },
+    {
+     "k": [
+      2,
+      -3
+     ],
+     "amplitud": 0.672124,
+     "fase_rad": 0.583128,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 146.31
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 1,
+   "solucion": [
+    0,
+    5,
+    7,
+    2,
+    6,
+    3,
+    1,
+    4
+   ],
+   "clase": 1,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.147023,
+   "margen": 0.091685,
+   "ondas": [
+    {
+     "k": [
+      3,
+      2
+     ],
+     "amplitud": 1.065691,
+     "fase_rad": 1.923742,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 56.31
+    },
+    {
+     "k": [
+      2,
+      -3
+     ],
+     "amplitud": 0.89346,
+     "fase_rad": 0.021255,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 146.31
+    },
+    {
+     "k": [
+      1,
+      -3
+     ],
+     "amplitud": 0.849892,
+     "fase_rad": -1.647152,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 161.565
+    },
+    {
+     "k": [
+      3,
+      -2
+     ],
+     "amplitud": 0.426542,
+     "fase_rad": -0.01574,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 123.69
+    },
+    {
+     "k": [
+      1,
+      2
+     ],
+     "amplitud": 0.352536,
+     "fase_rad": -0.045991,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 26.565
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 2,
+   "solucion": [
+    0,
+    6,
+    3,
+    5,
+    7,
+    1,
+    4,
+    2
+   ],
+   "clase": 1,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.147023,
+   "margen": 0.091685,
+   "ondas": [
+    {
+     "k": [
+      2,
+      3
+     ],
+     "amplitud": 1.065691,
+     "fase_rad": 1.923742,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 33.69
+    },
+    {
+     "k": [
+      -3,
+      2
+     ],
+     "amplitud": 0.89346,
+     "fase_rad": 0.021255,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -56.31
+    },
+    {
+     "k": [
+      -3,
+      1
+     ],
+     "amplitud": 0.849892,
+     "fase_rad": -1.647152,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -71.565
+    },
+    {
+     "k": [
+      -2,
+      3
+     ],
+     "amplitud": 0.426542,
+     "fase_rad": -0.01574,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -33.69
+    },
+    {
+     "k": [
+      2,
+      1
+     ],
+     "amplitud": 0.352536,
+     "fase_rad": -0.045991,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 63.435
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 3,
+   "solucion": [
+    0,
+    6,
+    4,
+    7,
+    1,
+    3,
+    5,
+    2
+   ],
+   "clase": 0,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.476604,
+   "margen": 0.093585,
+   "ondas": [
+    {
+     "k": [
+      -2,
+      3
+     ],
+     "amplitud": 1.076142,
+     "fase_rad": -0.507923,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -33.69
+    },
+    {
+     "k": [
+      3,
+      2
+     ],
+     "amplitud": 1.061873,
+     "fase_rad": 1.227743,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 56.31
+    },
+    {
+     "k": [
+      3,
+      1
+     ],
+     "amplitud": 0.983703,
+     "fase_rad": 0.576631,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 71.565
+    },
+    {
+     "k": [
+      -2,
+      1
+     ],
+     "amplitud": 0.701301,
+     "fase_rad": -0.700147,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -63.435
+    },
+    {
+     "k": [
+      -3,
+      2
+     ],
+     "amplitud": 0.672124,
+     "fase_rad": 0.583128,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -56.31
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 4,
+   "solucion": [
+    1,
+    3,
+    5,
+    7,
+    2,
+    0,
+    6,
+    4
+   ],
+   "clase": 2,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.426698,
+   "margen": 0.090422,
+   "ondas": [
+    {
+     "k": [
+      2,
+      3
+     ],
+     "amplitud": 1.039771,
+     "fase_rad": -2.864118,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 33.69
+    },
+    {
+     "k": [
+      3,
+      -2
+     ],
+     "amplitud": 1.025984,
+     "fase_rad": 1.913849,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 123.69
+    },
+    {
+     "k": [
+      3,
+      -1
+     ],
+     "amplitud": 0.950457,
+     "fase_rad": -1.362029,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 108.435
+    },
+    {
+     "k": [
+      2,
+      1
+     ],
+     "amplitud": 0.677598,
+     "fase_rad": -1.485546,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 63.435
+    },
+    {
+     "k": [
+      3,
+      2
+     ],
+     "amplitud": 0.649408,
+     "fase_rad": 0.583128,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 56.31
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 5,
+   "solucion": [
+    1,
+    4,
+    6,
+    0,
+    2,
+    7,
+    5,
+    3
+   ],
+   "clase": 3,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.147023,
+   "margen": 0.091685,
+   "ondas": [
+    {
+     "k": [
+      2,
+      1
+     ],
+     "amplitud": 1.065691,
+     "fase_rad": -0.352946,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 63.435
+    },
+    {
+     "k": [
+      3,
+      -2
+     ],
+     "amplitud": 0.89346,
+     "fase_rad": -0.806653,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 123.69
+    },
+    {
+     "k": [
+      1,
+      -3
+     ],
+     "amplitud": 0.849892,
+     "fase_rad": 2.279838,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 161.565
+    },
+    {
+     "k": [
+      2,
+      -1
+     ],
+     "amplitud": 0.426542,
+     "fase_rad": 1.555056,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 116.565
+    },
+    {
+     "k": [
+      2,
+      3
+     ],
+     "amplitud": 0.352536,
+     "fase_rad": 1.616788,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 33.69
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 6,
+   "solucion": [
+    1,
+    4,
+    6,
+    3,
+    0,
+    7,
+    5,
+    2
+   ],
+   "clase": 4,
+   "ondas_min": 4,
+   "exacto": true,
+   "cota_inferior": 4,
+   "umbral": 1.058712,
+   "margen": 0.032111,
+   "ondas": [
+    {
+     "k": [
+      1,
+      3
+     ],
+     "amplitud": 1.007528,
+     "fase_rad": 3.019272,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 18.435
+    },
+    {
+     "k": [
+      2,
+      1
+     ],
+     "amplitud": 0.853644,
+     "fase_rad": -0.182641,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 63.435
+    },
+    {
+     "k": [
+      1,
+      2
+     ],
+     "amplitud": 0.536247,
+     "fase_rad": -2.32625,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 26.565
+    },
+    {
+     "k": [
+      3,
+      2
+     ],
+     "amplitud": 0.436521,
+     "fase_rad": -2.297836,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 56.31
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 7,
+   "solucion": [
+    1,
+    5,
+    0,
+    6,
+    3,
+    7,
+    2,
+    4
+   ],
+   "clase": 5,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.534382,
+   "margen": 0.097247,
+   "ondas": [
+    {
+     "k": [
+      3,
+      -2
+     ],
+     "amplitud": 1.118251,
+     "fase_rad": 1.062873,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 123.69
+    },
+    {
+     "k": [
+      2,
+      3
+     ],
+     "amplitud": 1.103423,
+     "fase_rad": -1.128451,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 33.69
+    },
+    {
+     "k": [
+      1,
+      3
+     ],
+     "amplitud": 1.022195,
+     "fase_rad": -1.779564,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 18.435
+    },
+    {
+     "k": [
+      1,
+      -2
+     ],
+     "amplitud": 0.728742,
+     "fase_rad": 0.870649,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 153.435
+    },
+    {
+     "k": [
+      2,
+      -3
+     ],
+     "amplitud": 0.698424,
+     "fase_rad": 2.939323,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 146.31
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 8,
+   "solucion": [
+    1,
+    5,
+    7,
+    2,
+    0,
+    3,
+    6,
+    4
+   ],
+   "clase": 6,
+   "ondas_min": 4,
+   "exacto": true,
+   "cota_inferior": 4,
+   "umbral": 1.140023,
+   "margen": 0.017061,
+   "ondas": [
+    {
+     "k": [
+      1,
+      -3
+     ],
+     "amplitud": 1.003684,
+     "fase_rad": 3.055891,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 161.565
+    },
+    {
+     "k": [
+      3,
+      2
+     ],
+     "amplitud": 0.911925,
+     "fase_rad": 2.822293,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 56.31
+    },
+    {
+     "k": [
+      3,
+      1
+     ],
+     "amplitud": 0.381954,
+     "fase_rad": -0.55853,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 71.565
+    },
+    {
+     "k": [
+      2,
+      1
+     ],
+     "amplitud": 0.320792,
+     "fase_rad": -0.453795,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 63.435
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 9,
+   "solucion": [
+    1,
+    6,
+    2,
+    5,
+    7,
+    4,
+    0,
+    3
+   ],
+   "clase": 7,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.426698,
+   "margen": 0.090422,
+   "ondas": [
+    {
+     "k": [
+      3,
+      -2
+     ],
+     "amplitud": 1.039771,
+     "fase_rad": 0.277475,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 123.69
+    },
+    {
+     "k": [
+      2,
+      3
+     ],
+     "amplitud": 1.025984,
+     "fase_rad": 2.79854,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 33.69
+    },
+    {
+     "k": [
+      1,
+      3
+     ],
+     "amplitud": 0.950457,
+     "fase_rad": -0.208767,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 18.435
+    },
+    {
+     "k": [
+      1,
+      -2
+     ],
+     "amplitud": 0.677598,
+     "fase_rad": 1.656047,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 153.435
+    },
+    {
+     "k": [
+      2,
+      -3
+     ],
+     "amplitud": 0.649408,
+     "fase_rad": 2.153924,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 146.31
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 10,
+   "solucion": [
+    1,
+    6,
+    4,
+    7,
+    0,
+    3,
+    5,
+    2
+   ],
+   "clase": 8,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.147023,
+   "margen": 0.091685,
+   "ondas": [
+    {
+     "k": [
+      2,
+      3
+     ],
+     "amplitud": 1.065691,
+     "fase_rad": -1.923742,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 33.69
+    },
+    {
+     "k": [
+      1,
+      -2
+     ],
+     "amplitud": 0.89346,
+     "fase_rad": -3.120338,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 153.435
+    },
+    {
+     "k": [
+      3,
+      1
+     ],
+     "amplitud": 0.849892,
+     "fase_rad": -1.49444,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 71.565
+    },
+    {
+     "k": [
+      2,
+      -3
+     ],
+     "amplitud": 0.426542,
+     "fase_rad": -0.01574,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 146.31
+    },
+    {
+     "k": [
+      2,
+      1
+     ],
+     "amplitud": 0.352536,
+     "fase_rad": 0.045991,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 63.435
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 11,
+   "solucion": [
+    1,
+    7,
+    5,
+    0,
+    2,
+    4,
+    6,
+    3
+   ],
+   "clase": 7,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.476604,
+   "margen": 0.093585,
+   "ondas": [
+    {
+     "k": [
+      -2,
+      -3
+     ],
+     "amplitud": 1.076142,
+     "fase_rad": -2.078719,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -146.31
+    },
+    {
+     "k": [
+      3,
+      -2
+     ],
+     "amplitud": 1.061873,
+     "fase_rad": 1.227743,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 123.69
+    },
+    {
+     "k": [
+      3,
+      -1
+     ],
+     "amplitud": 0.983703,
+     "fase_rad": -0.994165,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 108.435
+    },
+    {
+     "k": [
+      -2,
+      -1
+     ],
+     "amplitud": 0.701301,
+     "fase_rad": 0.870649,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -116.565
+    },
+    {
+     "k": [
+      -3,
+      -2
+     ],
+     "amplitud": 0.672124,
+     "fase_rad": 0.583128,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -123.69
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 12,
+   "solucion": [
+    2,
+    0,
+    6,
+    4,
+    7,
+    1,
+    3,
+    5
+   ],
+   "clase": 5,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.534382,
+   "margen": 0.097247,
+   "ondas": [
+    {
+     "k": [
+      -2,
+      3
+     ],
+     "amplitud": 1.118251,
+     "fase_rad": 1.062873,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -33.69
+    },
+    {
+     "k": [
+      3,
+      2
+     ],
+     "amplitud": 1.103423,
+     "fase_rad": -1.128451,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 56.31
+    },
+    {
+     "k": [
+      3,
+      1
+     ],
+     "amplitud": 1.022195,
+     "fase_rad": -1.779564,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 71.565
+    },
+    {
+     "k": [
+      -2,
+      1
+     ],
+     "amplitud": 0.728742,
+     "fase_rad": 0.870649,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -63.435
+    },
+    {
+     "k": [
+      -3,
+      2
+     ],
+     "amplitud": 0.698424,
+     "fase_rad": 2.939323,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -56.31
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 13,
+   "solucion": [
+    2,
+    4,
+    1,
+    7,
+    0,
+    6,
+    3,
+    5
+   ],
+   "clase": 9,
+   "ondas_min": 3,
+   "exacto": true,
+   "cota_inferior": 3,
+   "umbral": 1.04044,
+   "margen": 0.298816,
+   "ondas": [
+    {
+     "k": [
+      3,
+      -2
+     ],
+     "amplitud": 1.105542,
+     "fase_rad": -2.701082,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 123.69
+    },
+    {
+     "k": [
+      1,
+      3
+     ],
+     "amplitud": 0.700434,
+     "fase_rad": 1.501047,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 18.435
+    },
+    {
+     "k": [
+      2,
+      -3
+     ],
+     "amplitud": 0.457669,
+     "fase_rad": -0.358878,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 146.31
+    }
+   ],
+   "una_onda_libre": [
+    3.0,
+    -1.875
+   ]
+  },
+  {
+   "id": 14,
+   "solucion": [
+    2,
+    4,
+    1,
+    7,
+    5,
+    3,
+    6,
+    0
+   ],
+   "clase": 1,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.147023,
+   "margen": 0.091685,
+   "ondas": [
+    {
+     "k": [
+      -2,
+      3
+     ],
+     "amplitud": 1.065691,
+     "fase_rad": 0.352946,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -33.69
+    },
+    {
+     "k": [
+      3,
+      2
+     ],
+     "amplitud": 0.89346,
+     "fase_rad": 2.377449,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 56.31
+    },
+    {
+     "k": [
+      3,
+      1
+     ],
+     "amplitud": 0.849892,
+     "fase_rad": 0.709042,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 71.565
+    },
+    {
+     "k": [
+      2,
+      3
+     ],
+     "amplitud": 0.426542,
+     "fase_rad": 1.555056,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 33.69
+    },
+    {
+     "k": [
+      -2,
+      1
+     ],
+     "amplitud": 0.352536,
+     "fase_rad": -1.616788,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -63.435
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 15,
+   "solucion": [
+    2,
+    4,
+    6,
+    0,
+    3,
+    1,
+    7,
+    5
+   ],
+   "clase": 5,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.426698,
+   "margen": 0.090422,
+   "ondas": [
+    {
+     "k": [
+      2,
+      -3
+     ],
+     "amplitud": 1.039771,
+     "fase_rad": 0.277475,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 146.31
+    },
+    {
+     "k": [
+      -3,
+      -2
+     ],
+     "amplitud": 1.025984,
+     "fase_rad": 1.227743,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -123.69
+    },
+    {
+     "k": [
+      -3,
+      -1
+     ],
+     "amplitud": 0.950457,
+     "fase_rad": 1.362029,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -108.435
+    },
+    {
+     "k": [
+      2,
+      -1
+     ],
+     "amplitud": 0.677598,
+     "fase_rad": 1.656047,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 116.565
+    },
+    {
+     "k": [
+      3,
+      -2
+     ],
+     "amplitud": 0.649408,
+     "fase_rad": -2.558465,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 123.69
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 16,
+   "solucion": [
+    2,
+    4,
+    7,
+    3,
+    0,
+    6,
+    1,
+    5
+   ],
+   "clase": 10,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.147023,
+   "margen": 0.091685,
+   "ondas": [
+    {
+     "k": [
+      1,
+      2
+     ],
+     "amplitud": 1.065691,
+     "fase_rad": -1.21785,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 26.565
+    },
+    {
+     "k": [
+      2,
+      -3
+     ],
+     "amplitud": 0.89346,
+     "fase_rad": -0.021255,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 146.31
+    },
+    {
+     "k": [
+      3,
+      -1
+     ],
+     "amplitud": 0.849892,
+     "fase_rad": 1.49444,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 108.435
+    },
+    {
+     "k": [
+      1,
+      -2
+     ],
+     "amplitud": 0.426542,
+     "fase_rad": 3.125853,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 153.435
+    },
+    {
+     "k": [
+      3,
+      2
+     ],
+     "amplitud": 0.352536,
+     "fase_rad": 3.095601,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 56.31
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 17,
+   "solucion": [
+    2,
+    5,
+    1,
+    4,
+    7,
+    0,
+    6,
+    3
+   ],
+   "clase": 11,
+   "ondas_min": 4,
+   "exacto": true,
+   "cota_inferior": 4,
+   "umbral": 1.312064,
+   "margen": 0.032726,
+   "ondas": [
+    {
+     "k": [
+      2,
+      -3
+     ],
+     "amplitud": 1.149244,
+     "fase_rad": -2.514487,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 146.31
+    },
+    {
+     "k": [
+      1,
+      2
+     ],
+     "amplitud": 1.106673,
+     "fase_rad": 2.698919,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 26.565
+    },
+    {
+     "k": [
+      3,
+      -1
+     ],
+     "amplitud": 1.017439,
+     "fase_rad": 2.922975,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 108.435
+    },
+    {
+     "k": [
+      3,
+      1
+     ],
+     "amplitud": 0.355032,
+     "fase_rad": -0.271969,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 71.565
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 18,
+   "solucion": [
+    2,
+    5,
+    1,
+    6,
+    0,
+    3,
+    7,
+    4
+   ],
+   "clase": 3,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.18545,
+   "margen": 0.094757,
+   "ondas": [
+    {
+     "k": [
+      -1,
+      -2
+     ],
+     "amplitud": 1.101393,
+     "fase_rad": -2.709141,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -153.435
+    },
+    {
+     "k": [
+      2,
+      -3
+     ],
+     "amplitud": 0.923393,
+     "fase_rad": -1.592051,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 146.31
+    },
+    {
+     "k": [
+      3,
+      -1
+     ],
+     "amplitud": 0.878365,
+     "fase_rad": -2.432551,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 108.435
+    },
+    {
+     "k": [
+      1,
+      -2
+     ],
+     "amplitud": 0.440831,
+     "fase_rad": 0.769658,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 153.435
+    },
+    {
+     "k": [
+      -3,
+      -2
+     ],
+     "amplitud": 0.364346,
+     "fase_rad": -2.310203,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -123.69
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 19,
+   "solucion": [
+    2,
+    5,
+    1,
+    6,
+    4,
+    0,
+    7,
+    3
+   ],
+   "clase": 4,
+   "ondas_min": 4,
+   "exacto": true,
+   "cota_inferior": 4,
+   "umbral": 1.058712,
+   "margen": 0.032111,
+   "ondas": [
+    {
+     "k": [
+      -3,
+      -1
+     ],
+     "amplitud": 1.007528,
+     "fase_rad": -0.12232,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -108.435
+    },
+    {
+     "k": [
+      -1,
+      -2
+     ],
+     "amplitud": 0.853644,
+     "fase_rad": -2.538835,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -153.435
+    },
+    {
+     "k": [
+      -2,
+      -1
+     ],
+     "amplitud": 0.536247,
+     "fase_rad": 1.600741,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -116.565
+    },
+    {
+     "k": [
+      -2,
+      -3
+     ],
+     "amplitud": 0.436521,
+     "fase_rad": 0.058359,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -146.31
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 20,
+   "solucion": [
+    2,
+    5,
+    3,
+    0,
+    7,
+    4,
+    6,
+    1
+   ],
+   "clase": 8,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.147023,
+   "margen": 0.091685,
+   "ondas": [
+    {
+     "k": [
+      -2,
+      3
+     ],
+     "amplitud": 1.065691,
+     "fase_rad": 2.788646,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -33.69
+    },
+    {
+     "k": [
+      -1,
+      -2
+     ],
+     "amplitud": 0.89346,
+     "fase_rad": 2.377449,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -153.435
+    },
+    {
+     "k": [
+      -3,
+      1
+     ],
+     "amplitud": 0.849892,
+     "fase_rad": 2.432551,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -71.565
+    },
+    {
+     "k": [
+      -2,
+      -3
+     ],
+     "amplitud": 0.426542,
+     "fase_rad": -1.586536,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -146.31
+    },
+    {
+     "k": [
+      -2,
+      1
+     ],
+     "amplitud": 0.352536,
+     "fase_rad": -1.524805,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -63.435
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 21,
+   "solucion": [
+    2,
+    5,
+    3,
+    1,
+    7,
+    4,
+    6,
+    0
+   ],
+   "clase": 0,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.534382,
+   "margen": 0.097247,
+   "ondas": [
+    {
+     "k": [
+      2,
+      3
+     ],
+     "amplitud": 1.118251,
+     "fase_rad": 1.062873,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 33.69
+    },
+    {
+     "k": [
+      -3,
+      2
+     ],
+     "amplitud": 1.103423,
+     "fase_rad": -1.128451,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -56.31
+    },
+    {
+     "k": [
+      -3,
+      1
+     ],
+     "amplitud": 1.022195,
+     "fase_rad": -1.779564,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -71.565
+    },
+    {
+     "k": [
+      2,
+      1
+     ],
+     "amplitud": 0.728742,
+     "fase_rad": 0.870649,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 63.435
+    },
+    {
+     "k": [
+      3,
+      2
+     ],
+     "amplitud": 0.698424,
+     "fase_rad": 2.939323,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 56.31
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 22,
+   "solucion": [
+    2,
+    5,
+    7,
+    0,
+    3,
+    6,
+    4,
+    1
+   ],
+   "clase": 4,
+   "ondas_min": 4,
+   "exacto": true,
+   "cota_inferior": 4,
+   "umbral": 1.375961,
+   "margen": 0.038252,
+   "ondas": [
+    {
+     "k": [
+      -1,
+      3
+     ],
+     "amplitud": 1.242739,
+     "fase_rad": 2.276518,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -18.435
+    },
+    {
+     "k": [
+      -2,
+      1
+     ],
+     "amplitud": 1.016914,
+     "fase_rad": -1.753437,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -63.435
+    },
+    {
+     "k": [
+      -1,
+      2
+     ],
+     "amplitud": 0.695918,
+     "fase_rad": 3.134924,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -26.565
+    },
+    {
+     "k": [
+      -3,
+      2
+     ],
+     "amplitud": 0.657969,
+     "fase_rad": 1.601936,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -56.31
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 23,
+   "solucion": [
+    2,
+    5,
+    7,
+    0,
+    4,
+    6,
+    1,
+    3
+   ],
+   "clase": 11,
+   "ondas_min": 4,
+   "exacto": true,
+   "cota_inferior": 4,
+   "umbral": 1.258802,
+   "margen": 0.031398,
+   "ondas": [
+    {
+     "k": [
+      -3,
+      -2
+     ],
+     "amplitud": 1.102592,
+     "fase_rad": 2.197902,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -123.69
+    },
+    {
+     "k": [
+      2,
+      -1
+     ],
+     "amplitud": 1.061748,
+     "fase_rad": 1.91352,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 116.565
+    },
+    {
+     "k": [
+      -1,
+      -3
+     ],
+     "amplitud": 0.976137,
+     "fase_rad": 0.566781,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -161.565
+    },
+    {
+     "k": [
+      1,
+      -3
+     ],
+     "amplitud": 0.34062,
+     "fase_rad": -2.628163,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 161.565
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 24,
+   "solucion": [
+    2,
+    5,
+    7,
+    1,
+    3,
+    0,
+    6,
+    4
+   ],
+   "clase": 10,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.147023,
+   "margen": 0.091685,
+   "ondas": [
+    {
+     "k": [
+      -2,
+      1
+     ],
+     "amplitud": 1.065691,
+     "fase_rad": -2.788646,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -63.435
+    },
+    {
+     "k": [
+      3,
+      2
+     ],
+     "amplitud": 0.89346,
+     "fase_rad": 2.33494,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 56.31
+    },
+    {
+     "k": [
+      1,
+      3
+     ],
+     "amplitud": 0.849892,
+     "fase_rad": 2.279838,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 18.435
+    },
+    {
+     "k": [
+      2,
+      1
+     ],
+     "amplitud": 0.426542,
+     "fase_rad": -1.586536,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 63.435
+    },
+    {
+     "k": [
+      -2,
+      3
+     ],
+     "amplitud": 0.352536,
+     "fase_rad": 1.524805,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -33.69
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 25,
+   "solucion": [
+    2,
+    6,
+    1,
+    7,
+    4,
+    0,
+    3,
+    5
+   ],
+   "clase": 10,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.18545,
+   "margen": 0.094757,
+   "ondas": [
+    {
+     "k": [
+      -1,
+      -2
+     ],
+     "amplitud": 1.101393,
+     "fase_rad": 2.709141,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -153.435
+    },
+    {
+     "k": [
+      -2,
+      3
+     ],
+     "amplitud": 0.923393,
+     "fase_rad": 0.764144,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -33.69
+    },
+    {
+     "k": [
+      -3,
+      1
+     ],
+     "amplitud": 0.878365,
+     "fase_rad": -0.076356,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -71.565
+    },
+    {
+     "k": [
+      -1,
+      2
+     ],
+     "amplitud": 0.440831,
+     "fase_rad": -2.371935,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -26.565
+    },
+    {
+     "k": [
+      -3,
+      -2
+     ],
+     "amplitud": 0.364346,
+     "fase_rad": -0.831389,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -123.69
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 26,
+   "solucion": [
+    2,
+    6,
+    1,
+    7,
+    5,
+    3,
+    0,
+    4
+   ],
+   "clase": 6,
+   "ondas_min": 4,
+   "exacto": true,
+   "cota_inferior": 4,
+   "umbral": 1.316679,
+   "margen": 0.019705,
+   "ondas": [
+    {
+     "k": [
+      3,
+      1
+     ],
+     "amplitud": 1.159213,
+     "fase_rad": -0.8711,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 71.565
+    },
+    {
+     "k": [
+      -2,
+      3
+     ],
+     "amplitud": 1.053235,
+     "fase_rad": 1.251496,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -33.69
+    },
+    {
+     "k": [
+      -1,
+      3
+     ],
+     "amplitud": 0.441141,
+     "fase_rad": -1.343928,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -18.435
+    },
+    {
+     "k": [
+      -1,
+      2
+     ],
+     "amplitud": 0.370502,
+     "fase_rad": -1.239194,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -26.565
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 27,
+   "solucion": [
+    2,
+    7,
+    3,
+    6,
+    0,
+    5,
+    1,
+    4
+   ],
+   "clase": 2,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.426698,
+   "margen": 0.090422,
+   "ondas": [
+    {
+     "k": [
+      3,
+      -2
+     ],
+     "amplitud": 1.039771,
+     "fase_rad": 1.848271,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 123.69
+    },
+    {
+     "k": [
+      -2,
+      -3
+     ],
+     "amplitud": 1.025984,
+     "fase_rad": -0.442345,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -146.31
+    },
+    {
+     "k": [
+      -1,
+      -3
+     ],
+     "amplitud": 0.950457,
+     "fase_rad": 2.564962,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -161.565
+    },
+    {
+     "k": [
+      1,
+      -2
+     ],
+     "amplitud": 0.677598,
+     "fase_rad": -3.056342,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 153.435
+    },
+    {
+     "k": [
+      2,
+      -3
+     ],
+     "amplitud": 0.649408,
+     "fase_rad": -1.773066,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 146.31
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 28,
+   "solucion": [
+    3,
+    0,
+    4,
+    7,
+    1,
+    6,
+    2,
+    5
+   ],
+   "clase": 3,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.147023,
+   "margen": 0.091685,
+   "ondas": [
+    {
+     "k": [
+      1,
+      2
+     ],
+     "amplitud": 1.065691,
+     "fase_rad": -0.352946,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 26.565
+    },
+    {
+     "k": [
+      -2,
+      3
+     ],
+     "amplitud": 0.89346,
+     "fase_rad": -0.806653,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -33.69
+    },
+    {
+     "k": [
+      -3,
+      1
+     ],
+     "amplitud": 0.849892,
+     "fase_rad": 2.279838,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -71.565
+    },
+    {
+     "k": [
+      -1,
+      2
+     ],
+     "amplitud": 0.426542,
+     "fase_rad": 1.555056,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -26.565
+    },
+    {
+     "k": [
+      3,
+      2
+     ],
+     "amplitud": 0.352536,
+     "fase_rad": 1.616788,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 56.31
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 29,
+   "solucion": [
+    3,
+    0,
+    4,
+    7,
+    5,
+    2,
+    6,
+    1
+   ],
+   "clase": 7,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.476604,
+   "margen": 0.093585,
+   "ondas": [
+    {
+     "k": [
+      -3,
+      -2
+     ],
+     "amplitud": 1.076142,
+     "fase_rad": -2.078719,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -123.69
+    },
+    {
+     "k": [
+      -2,
+      3
+     ],
+     "amplitud": 1.061873,
+     "fase_rad": 1.227743,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -33.69
+    },
+    {
+     "k": [
+      -1,
+      3
+     ],
+     "amplitud": 0.983703,
+     "fase_rad": -0.994165,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -18.435
+    },
+    {
+     "k": [
+      -1,
+      -2
+     ],
+     "amplitud": 0.701301,
+     "fase_rad": 0.870649,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -153.435
+    },
+    {
+     "k": [
+      -2,
+      -3
+     ],
+     "amplitud": 0.672124,
+     "fase_rad": 0.583128,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -146.31
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 30,
+   "solucion": [
+    3,
+    1,
+    4,
+    7,
+    5,
+    0,
+    2,
+    6
+   ],
+   "clase": 6,
+   "ondas_min": 4,
+   "exacto": true,
+   "cota_inferior": 4,
+   "umbral": 1.140023,
+   "margen": 0.017061,
+   "ondas": [
+    {
+     "k": [
+      -1,
+      3
+     ],
+     "amplitud": 1.003684,
+     "fase_rad": -1.656498,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -18.435
+    },
+    {
+     "k": [
+      -3,
+      -2
+     ],
+     "amplitud": 0.911925,
+     "fase_rad": -1.104698,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -123.69
+    },
+    {
+     "k": [
+      -3,
+      -1
+     ],
+     "amplitud": 0.381954,
+     "fase_rad": 2.583063,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -108.435
+    },
+    {
+     "k": [
+      -2,
+      -1
+     ],
+     "amplitud": 0.320792,
+     "fase_rad": -2.80999,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -116.565
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 31,
+   "solucion": [
+    3,
+    1,
+    6,
+    2,
+    5,
+    7,
+    0,
+    4
+   ],
+   "clase": 8,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.18545,
+   "margen": 0.094757,
+   "ondas": [
+    {
+     "k": [
+      -3,
+      2
+     ],
+     "amplitud": 1.101393,
+     "fase_rad": 2.003248,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -56.31
+    },
+    {
+     "k": [
+      2,
+      1
+     ],
+     "amplitud": 0.923393,
+     "fase_rad": -1.549542,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 63.435
+    },
+    {
+     "k": [
+      -1,
+      3
+     ],
+     "amplitud": 0.878365,
+     "fase_rad": -2.279838,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -18.435
+    },
+    {
+     "k": [
+      3,
+      2
+     ],
+     "amplitud": 0.440831,
+     "fase_rad": 2.340454,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 56.31
+    },
+    {
+     "k": [
+      -1,
+      2
+     ],
+     "amplitud": 0.364346,
+     "fase_rad": -0.739407,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -26.565
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 32,
+   "solucion": [
+    3,
+    1,
+    6,
+    2,
+    5,
+    7,
+    4,
+    0
+   ],
+   "clase": 0,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.426698,
+   "margen": 0.090422,
+   "ondas": [
+    {
+     "k": [
+      -3,
+      -2
+     ],
+     "amplitud": 1.039771,
+     "fase_rad": -2.864118,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -123.69
+    },
+    {
+     "k": [
+      -2,
+      3
+     ],
+     "amplitud": 1.025984,
+     "fase_rad": -0.343053,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -33.69
+    },
+    {
+     "k": [
+      -1,
+      3
+     ],
+     "amplitud": 0.950457,
+     "fase_rad": -0.208767,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -18.435
+    },
+    {
+     "k": [
+      -1,
+      -2
+     ],
+     "amplitud": 0.677598,
+     "fase_rad": -1.485546,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -153.435
+    },
+    {
+     "k": [
+      -2,
+      -3
+     ],
+     "amplitud": 0.649408,
+     "fase_rad": -0.987668,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -146.31
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 33,
+   "solucion": [
+    3,
+    1,
+    6,
+    4,
+    0,
+    7,
+    5,
+    2
+   ],
+   "clase": 11,
+   "ondas_min": 4,
+   "exacto": true,
+   "cota_inferior": 4,
+   "umbral": 1.15613,
+   "margen": 0.028837,
+   "ondas": [
+    {
+     "k": [
+      3,
+      -2
+     ],
+     "amplitud": 1.01266,
+     "fase_rad": -1.729089,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 123.69
+    },
+    {
+     "k": [
+      -2,
+      -1
+     ],
+     "amplitud": 0.975149,
+     "fase_rad": 0.342724,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -116.565
+    },
+    {
+     "k": [
+      1,
+      -3
+     ],
+     "amplitud": 0.89652,
+     "fase_rad": 1.352179,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 161.565
+    },
+    {
+     "k": [
+      -1,
+      -3
+     ],
+     "amplitud": 0.312838,
+     "fase_rad": 2.869624,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -161.565
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 34,
+   "solucion": [
+    3,
+    1,
+    7,
+    4,
+    6,
+    0,
+    2,
+    5
+   ],
+   "clase": 10,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.18545,
+   "margen": 0.094757,
+   "ondas": [
+    {
+     "k": [
+      2,
+      -1
+     ],
+     "amplitud": 1.101393,
+     "fase_rad": -2.003248,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 116.565
+    },
+    {
+     "k": [
+      -3,
+      -2
+     ],
+     "amplitud": 0.923393,
+     "fase_rad": -1.592051,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -123.69
+    },
+    {
+     "k": [
+      -1,
+      -3
+     ],
+     "amplitud": 0.878365,
+     "fase_rad": -0.861754,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -161.565
+    },
+    {
+     "k": [
+      -2,
+      -1
+     ],
+     "amplitud": 0.440831,
+     "fase_rad": 2.340454,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -116.565
+    },
+    {
+     "k": [
+      2,
+      -3
+     ],
+     "amplitud": 0.364346,
+     "fase_rad": 0.739407,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 146.31
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 35,
+   "solucion": [
+    3,
+    1,
+    7,
+    5,
+    0,
+    2,
+    4,
+    6
+   ],
+   "clase": 2,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.534382,
+   "margen": 0.097247,
+   "ondas": [
+    {
+     "k": [
+      -2,
+      -3
+     ],
+     "amplitud": 1.118251,
+     "fase_rad": -0.507923,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -146.31
+    },
+    {
+     "k": [
+      -3,
+      2
+     ],
+     "amplitud": 1.103423,
+     "fase_rad": 1.128451,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -56.31
+    },
+    {
+     "k": [
+      -3,
+      1
+     ],
+     "amplitud": 1.022195,
+     "fase_rad": -2.932825,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -71.565
+    },
+    {
+     "k": [
+      -2,
+      -1
+     ],
+     "amplitud": 0.728742,
+     "fase_rad": 2.441445,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -116.565
+    },
+    {
+     "k": [
+      -3,
+      -2
+     ],
+     "amplitud": 0.698424,
+     "fase_rad": 2.939323,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -123.69
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 36,
+   "solucion": [
+    3,
+    5,
+    0,
+    4,
+    1,
+    7,
+    2,
+    6
+   ],
+   "clase": 5,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.426698,
+   "margen": 0.090422,
+   "ondas": [
+    {
+     "k": [
+      -3,
+      2
+     ],
+     "amplitud": 1.039771,
+     "fase_rad": 0.277475,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -56.31
+    },
+    {
+     "k": [
+      -2,
+      -3
+     ],
+     "amplitud": 1.025984,
+     "fase_rad": 1.227743,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -146.31
+    },
+    {
+     "k": [
+      -1,
+      -3
+     ],
+     "amplitud": 0.950457,
+     "fase_rad": 1.362029,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -161.565
+    },
+    {
+     "k": [
+      -1,
+      2
+     ],
+     "amplitud": 0.677598,
+     "fase_rad": 1.656047,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -26.565
+    },
+    {
+     "k": [
+      -2,
+      3
+     ],
+     "amplitud": 0.649408,
+     "fase_rad": -2.558465,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -33.69
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 37,
+   "solucion": [
+    3,
+    5,
+    7,
+    1,
+    6,
+    0,
+    2,
+    4
+   ],
+   "clase": 9,
+   "ondas_min": 3,
+   "exacto": true,
+   "cota_inferior": 3,
+   "umbral": 1.04044,
+   "margen": 0.298816,
+   "ondas": [
+    {
+     "k": [
+      -2,
+      -3
+     ],
+     "amplitud": 1.105542,
+     "fase_rad": 1.130286,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -146.31
+    },
+    {
+     "k": [
+      3,
+      -1
+     ],
+     "amplitud": 0.700434,
+     "fase_rad": 0.855148,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 108.435
+    },
+    {
+     "k": [
+      -3,
+      -2
+     ],
+     "amplitud": 0.457669,
+     "fase_rad": -1.997316,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -123.69
+    }
+   ],
+   "una_onda_libre": [
+    -1.875,
+    -3.0
+   ]
+  },
+  {
+   "id": 38,
+   "solucion": [
+    3,
+    5,
+    7,
+    2,
+    0,
+    6,
+    4,
+    1
+   ],
+   "clase": 3,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.147023,
+   "margen": 0.091685,
+   "ondas": [
+    {
+     "k": [
+      -2,
+      1
+     ],
+     "amplitud": 1.065691,
+     "fase_rad": -1.923742,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -63.435
+    },
+    {
+     "k": [
+      -3,
+      -2
+     ],
+     "amplitud": 0.89346,
+     "fase_rad": 3.120338,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -123.69
+    },
+    {
+     "k": [
+      -1,
+      -3
+     ],
+     "amplitud": 0.849892,
+     "fase_rad": 1.49444,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -161.565
+    },
+    {
+     "k": [
+      -2,
+      -1
+     ],
+     "amplitud": 0.426542,
+     "fase_rad": -0.01574,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -116.565
+    },
+    {
+     "k": [
+      -2,
+      3
+     ],
+     "amplitud": 0.352536,
+     "fase_rad": 0.045991,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -33.69
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 39,
+   "solucion": [
+    3,
+    6,
+    0,
+    7,
+    4,
+    1,
+    5,
+    2
+   ],
+   "clase": 11,
+   "ondas_min": 4,
+   "exacto": true,
+   "cota_inferior": 4,
+   "umbral": 1.258802,
+   "margen": 0.031398,
+   "ondas": [
+    {
+     "k": [
+      -2,
+      -3
+     ],
+     "amplitud": 1.102592,
+     "fase_rad": 2.197902,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -146.31
+    },
+    {
+     "k": [
+      -1,
+      2
+     ],
+     "amplitud": 1.061748,
+     "fase_rad": 1.91352,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -26.565
+    },
+    {
+     "k": [
+      -3,
+      -1
+     ],
+     "amplitud": 0.976137,
+     "fase_rad": 0.566781,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -108.435
+    },
+    {
+     "k": [
+      -3,
+      1
+     ],
+     "amplitud": 0.34062,
+     "fase_rad": -2.628163,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -71.565
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 40,
+   "solucion": [
+    3,
+    6,
+    2,
+    7,
+    1,
+    4,
+    0,
+    5
+   ],
+   "clase": 2,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.476604,
+   "margen": 0.093585,
+   "ondas": [
+    {
+     "k": [
+      -3,
+      2
+     ],
+     "amplitud": 1.076142,
+     "fase_rad": 1.062873,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -56.31
+    },
+    {
+     "k": [
+      2,
+      3
+     ],
+     "amplitud": 1.061873,
+     "fase_rad": -2.79854,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 33.69
+    },
+    {
+     "k": [
+      1,
+      3
+     ],
+     "amplitud": 0.983703,
+     "fase_rad": -0.576631,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 18.435
+    },
+    {
+     "k": [
+      -1,
+      2
+     ],
+     "amplitud": 0.701301,
+     "fase_rad": -2.270944,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -26.565
+    },
+    {
+     "k": [
+      -2,
+      3
+     ],
+     "amplitud": 0.672124,
+     "fase_rad": -0.987668,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -33.69
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 41,
+   "solucion": [
+    3,
+    6,
+    4,
+    1,
+    5,
+    0,
+    2,
+    7
+   ],
+   "clase": 1,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.18545,
+   "margen": 0.094757,
+   "ondas": [
+    {
+     "k": [
+      -3,
+      -2
+     ],
+     "amplitud": 1.101393,
+     "fase_rad": -2.003248,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -123.69
+    },
+    {
+     "k": [
+      -2,
+      3
+     ],
+     "amplitud": 0.923393,
+     "fase_rad": 0.806653,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -33.69
+    },
+    {
+     "k": [
+      -1,
+      3
+     ],
+     "amplitud": 0.878365,
+     "fase_rad": -0.076356,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -18.435
+    },
+    {
+     "k": [
+      -3,
+      2
+     ],
+     "amplitud": 0.440831,
+     "fase_rad": -0.801138,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -56.31
+    },
+    {
+     "k": [
+      -1,
+      -2
+     ],
+     "amplitud": 0.364346,
+     "fase_rad": -2.402186,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -153.435
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 42,
+   "solucion": [
+    3,
+    6,
+    4,
+    2,
+    0,
+    5,
+    7,
+    1
+   ],
+   "clase": 7,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.534382,
+   "margen": 0.097247,
+   "ondas": [
+    {
+     "k": [
+      2,
+      -3
+     ],
+     "amplitud": 1.118251,
+     "fase_rad": -0.507923,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 146.31
+    },
+    {
+     "k": [
+      -3,
+      -2
+     ],
+     "amplitud": 1.103423,
+     "fase_rad": -1.128451,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -123.69
+    },
+    {
+     "k": [
+      -3,
+      -1
+     ],
+     "amplitud": 1.022195,
+     "fase_rad": 2.932825,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -108.435
+    },
+    {
+     "k": [
+      2,
+      -1
+     ],
+     "amplitud": 0.728742,
+     "fase_rad": 2.441445,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 116.565
+    },
+    {
+     "k": [
+      3,
+      -2
+     ],
+     "amplitud": 0.698424,
+     "fase_rad": 2.939323,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 123.69
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 43,
+   "solucion": [
+    3,
+    7,
+    0,
+    2,
+    5,
+    1,
+    6,
+    4
+   ],
+   "clase": 8,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.147023,
+   "margen": 0.091685,
+   "ondas": [
+    {
+     "k": [
+      3,
+      -2
+     ],
+     "amplitud": 1.065691,
+     "fase_rad": 2.788646,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 123.69
+    },
+    {
+     "k": [
+      -2,
+      -1
+     ],
+     "amplitud": 0.89346,
+     "fase_rad": 2.377449,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -116.565
+    },
+    {
+     "k": [
+      1,
+      -3
+     ],
+     "amplitud": 0.849892,
+     "fase_rad": 2.432551,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 161.565
+    },
+    {
+     "k": [
+      -3,
+      -2
+     ],
+     "amplitud": 0.426542,
+     "fase_rad": -1.586536,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -123.69
+    },
+    {
+     "k": [
+      1,
+      -2
+     ],
+     "amplitud": 0.352536,
+     "fase_rad": -1.524805,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 153.435
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 44,
+   "solucion": [
+    3,
+    7,
+    0,
+    4,
+    6,
+    1,
+    5,
+    2
+   ],
+   "clase": 4,
+   "ondas_min": 4,
+   "exacto": true,
+   "cota_inferior": 4,
+   "umbral": 1.375961,
+   "margen": 0.038252,
+   "ondas": [
+    {
+     "k": [
+      3,
+      -1
+     ],
+     "amplitud": 1.242739,
+     "fase_rad": 2.276518,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 108.435
+    },
+    {
+     "k": [
+      1,
+      -2
+     ],
+     "amplitud": 1.016914,
+     "fase_rad": -1.753437,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 153.435
+    },
+    {
+     "k": [
+      2,
+      -1
+     ],
+     "amplitud": 0.695918,
+     "fase_rad": 3.134924,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 116.565
+    },
+    {
+     "k": [
+      2,
+      -3
+     ],
+     "amplitud": 0.657969,
+     "fase_rad": 1.601936,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 146.31
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 45,
+   "solucion": [
+    3,
+    7,
+    4,
+    2,
+    0,
+    6,
+    1,
+    5
+   ],
+   "clase": 6,
+   "ondas_min": 4,
+   "exacto": true,
+   "cota_inferior": 4,
+   "umbral": 1.399405,
+   "margen": 0.020943,
+   "ondas": [
+    {
+     "k": [
+      -3,
+      -1
+     ],
+     "amplitud": 1.232045,
+     "fase_rad": 2.270493,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -108.435
+    },
+    {
+     "k": [
+      2,
+      -3
+     ],
+     "amplitud": 1.119409,
+     "fase_rad": 0.466098,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 146.31
+    },
+    {
+     "k": [
+      1,
+      -3
+     ],
+     "amplitud": 0.468858,
+     "fase_rad": -2.914724,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 161.565
+    },
+    {
+     "k": [
+      1,
+      -2
+     ],
+     "amplitud": 0.39378,
+     "fase_rad": -2.024592,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 153.435
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 46,
+   "solucion": [
+    4,
+    0,
+    3,
+    5,
+    7,
+    1,
+    6,
+    2
+   ],
+   "clase": 6,
+   "ondas_min": 4,
+   "exacto": true,
+   "cota_inferior": 4,
+   "umbral": 1.140023,
+   "margen": 0.017061,
+   "ondas": [
+    {
+     "k": [
+      -3,
+      1
+     ],
+     "amplitud": 1.003684,
+     "fase_rad": 3.055891,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -71.565
+    },
+    {
+     "k": [
+      2,
+      3
+     ],
+     "amplitud": 0.911925,
+     "fase_rad": 2.822293,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 33.69
+    },
+    {
+     "k": [
+      1,
+      3
+     ],
+     "amplitud": 0.381954,
+     "fase_rad": -0.55853,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 18.435
+    },
+    {
+     "k": [
+      1,
+      2
+     ],
+     "amplitud": 0.320792,
+     "fase_rad": -0.453795,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 26.565
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 47,
+   "solucion": [
+    4,
+    0,
+    7,
+    3,
+    1,
+    6,
+    2,
+    5
+   ],
+   "clase": 4,
+   "ondas_min": 4,
+   "exacto": true,
+   "cota_inferior": 4,
+   "umbral": 1.058712,
+   "margen": 0.032111,
+   "ondas": [
+    {
+     "k": [
+      3,
+      1
+     ],
+     "amplitud": 1.007528,
+     "fase_rad": 3.019272,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 71.565
+    },
+    {
+     "k": [
+      1,
+      2
+     ],
+     "amplitud": 0.853644,
+     "fase_rad": -0.182641,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 26.565
+    },
+    {
+     "k": [
+      2,
+      1
+     ],
+     "amplitud": 0.536247,
+     "fase_rad": -2.32625,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 63.435
+    },
+    {
+     "k": [
+      2,
+      3
+     ],
+     "amplitud": 0.436521,
+     "fase_rad": -2.297836,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 33.69
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 48,
+   "solucion": [
+    4,
+    0,
+    7,
+    5,
+    2,
+    6,
+    1,
+    3
+   ],
+   "clase": 8,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.147023,
+   "margen": 0.091685,
+   "ondas": [
+    {
+     "k": [
+      3,
+      2
+     ],
+     "amplitud": 1.065691,
+     "fase_rad": -1.923742,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 56.31
+    },
+    {
+     "k": [
+      -2,
+      1
+     ],
+     "amplitud": 0.89346,
+     "fase_rad": -3.120338,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -63.435
+    },
+    {
+     "k": [
+      1,
+      3
+     ],
+     "amplitud": 0.849892,
+     "fase_rad": -1.49444,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 18.435
+    },
+    {
+     "k": [
+      -3,
+      2
+     ],
+     "amplitud": 0.426542,
+     "fase_rad": -0.01574,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -56.31
+    },
+    {
+     "k": [
+      1,
+      2
+     ],
+     "amplitud": 0.352536,
+     "fase_rad": 0.045991,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 26.565
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 49,
+   "solucion": [
+    4,
+    1,
+    3,
+    5,
+    7,
+    2,
+    0,
+    6
+   ],
+   "clase": 7,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.426698,
+   "margen": 0.090422,
+   "ondas": [
+    {
+     "k": [
+      2,
+      3
+     ],
+     "amplitud": 1.039771,
+     "fase_rad": 1.848271,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 33.69
+    },
+    {
+     "k": [
+      -3,
+      2
+     ],
+     "amplitud": 1.025984,
+     "fase_rad": 0.442345,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -56.31
+    },
+    {
+     "k": [
+      -3,
+      1
+     ],
+     "amplitud": 0.950457,
+     "fase_rad": -2.564962,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -71.565
+    },
+    {
+     "k": [
+      2,
+      1
+     ],
+     "amplitud": 0.677598,
+     "fase_rad": -3.056342,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 63.435
+    },
+    {
+     "k": [
+      3,
+      2
+     ],
+     "amplitud": 0.649408,
+     "fase_rad": -1.773066,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 56.31
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 50,
+   "solucion": [
+    4,
+    1,
+    3,
+    6,
+    2,
+    7,
+    5,
+    0
+   ],
+   "clase": 1,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.18545,
+   "margen": 0.094757,
+   "ondas": [
+    {
+     "k": [
+      -3,
+      2
+     ],
+     "amplitud": 1.101393,
+     "fase_rad": -0.432452,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -56.31
+    },
+    {
+     "k": [
+      -2,
+      -3
+     ],
+     "amplitud": 0.923393,
+     "fase_rad": -1.549542,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -146.31
+    },
+    {
+     "k": [
+      -1,
+      -3
+     ],
+     "amplitud": 0.878365,
+     "fase_rad": -2.432551,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -161.565
+    },
+    {
+     "k": [
+      -3,
+      -2
+     ],
+     "amplitud": 0.440831,
+     "fase_rad": -2.371935,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -123.69
+    },
+    {
+     "k": [
+      -1,
+      2
+     ],
+     "amplitud": 0.364346,
+     "fase_rad": -0.831389,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -26.565
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 51,
+   "solucion": [
+    4,
+    1,
+    5,
+    0,
+    6,
+    3,
+    7,
+    2
+   ],
+   "clase": 2,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.534382,
+   "margen": 0.097247,
+   "ondas": [
+    {
+     "k": [
+      -3,
+      -2
+     ],
+     "amplitud": 1.118251,
+     "fase_rad": -0.507923,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -123.69
+    },
+    {
+     "k": [
+      2,
+      -3
+     ],
+     "amplitud": 1.103423,
+     "fase_rad": 1.128451,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 146.31
+    },
+    {
+     "k": [
+      1,
+      -3
+     ],
+     "amplitud": 1.022195,
+     "fase_rad": -2.932825,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 161.565
+    },
+    {
+     "k": [
+      -1,
+      -2
+     ],
+     "amplitud": 0.728742,
+     "fase_rad": 2.441445,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -153.435
+    },
+    {
+     "k": [
+      -2,
+      -3
+     ],
+     "amplitud": 0.698424,
+     "fase_rad": 2.939323,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -146.31
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 52,
+   "solucion": [
+    4,
+    1,
+    7,
+    0,
+    3,
+    6,
+    2,
+    5
+   ],
+   "clase": 11,
+   "ondas_min": 4,
+   "exacto": true,
+   "cota_inferior": 4,
+   "umbral": 1.15613,
+   "margen": 0.028837,
+   "ondas": [
+    {
+     "k": [
+      -2,
+      3
+     ],
+     "amplitud": 1.01266,
+     "fase_rad": -1.729089,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -33.69
+    },
+    {
+     "k": [
+      -1,
+      -2
+     ],
+     "amplitud": 0.975149,
+     "fase_rad": 0.342724,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -153.435
+    },
+    {
+     "k": [
+      -3,
+      1
+     ],
+     "amplitud": 0.89652,
+     "fase_rad": 1.352179,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -71.565
+    },
+    {
+     "k": [
+      -3,
+      -1
+     ],
+     "amplitud": 0.312838,
+     "fase_rad": 2.869624,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -108.435
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 53,
+   "solucion": [
+    4,
+    2,
+    0,
+    5,
+    7,
+    1,
+    3,
+    6
+   ],
+   "clase": 3,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.18545,
+   "margen": 0.094757,
+   "ondas": [
+    {
+     "k": [
+      -2,
+      -1
+     ],
+     "amplitud": 1.101393,
+     "fase_rad": -2.709141,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -116.565
+    },
+    {
+     "k": [
+      -3,
+      2
+     ],
+     "amplitud": 0.923393,
+     "fase_rad": -1.592051,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -56.31
+    },
+    {
+     "k": [
+      -1,
+      3
+     ],
+     "amplitud": 0.878365,
+     "fase_rad": -2.432551,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -18.435
+    },
+    {
+     "k": [
+      -2,
+      1
+     ],
+     "amplitud": 0.440831,
+     "fase_rad": 0.769658,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -63.435
+    },
+    {
+     "k": [
+      -2,
+      -3
+     ],
+     "amplitud": 0.364346,
+     "fase_rad": -2.310203,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -146.31
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 54,
+   "solucion": [
+    4,
+    2,
+    0,
+    6,
+    1,
+    7,
+    5,
+    3
+   ],
+   "clase": 9,
+   "ondas_min": 3,
+   "exacto": true,
+   "cota_inferior": 3,
+   "umbral": 1.04044,
+   "margen": 0.298816,
+   "ondas": [
+    {
+     "k": [
+      -2,
+      3
+     ],
+     "amplitud": 1.105542,
+     "fase_rad": -2.701082,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -33.69
+    },
+    {
+     "k": [
+      3,
+      1
+     ],
+     "amplitud": 0.700434,
+     "fase_rad": 1.501047,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 71.565
+    },
+    {
+     "k": [
+      -3,
+      2
+     ],
+     "amplitud": 0.457669,
+     "fase_rad": -0.358878,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -56.31
+    }
+   ],
+   "una_onda_libre": [
+    -1.875,
+    3.0
+   ]
+  },
+  {
+   "id": 55,
+   "solucion": [
+    4,
+    2,
+    7,
+    3,
+    6,
+    0,
+    5,
+    1
+   ],
+   "clase": 5,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.426698,
+   "margen": 0.090422,
+   "ondas": [
+    {
+     "k": [
+      -3,
+      -2
+     ],
+     "amplitud": 1.039771,
+     "fase_rad": -1.293321,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -123.69
+    },
+    {
+     "k": [
+      -2,
+      3
+     ],
+     "amplitud": 1.025984,
+     "fase_rad": -2.699248,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -33.69
+    },
+    {
+     "k": [
+      -1,
+      3
+     ],
+     "amplitud": 0.950457,
+     "fase_rad": -2.564962,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -18.435
+    },
+    {
+     "k": [
+      -1,
+      -2
+     ],
+     "amplitud": 0.677598,
+     "fase_rad": 0.085251,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -153.435
+    },
+    {
+     "k": [
+      -2,
+      -3
+     ],
+     "amplitud": 0.649408,
+     "fase_rad": 1.368526,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -146.31
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 56,
+   "solucion": [
+    4,
+    6,
+    0,
+    2,
+    7,
+    5,
+    3,
+    1
+   ],
+   "clase": 2,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.426698,
+   "margen": 0.090422,
+   "ondas": [
+    {
+     "k": [
+      -2,
+      3
+     ],
+     "amplitud": 1.039771,
+     "fase_rad": 1.848271,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -33.69
+    },
+    {
+     "k": [
+      -3,
+      -2
+     ],
+     "amplitud": 1.025984,
+     "fase_rad": -0.442345,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -123.69
+    },
+    {
+     "k": [
+      -3,
+      -1
+     ],
+     "amplitud": 0.950457,
+     "fase_rad": 2.564962,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -108.435
+    },
+    {
+     "k": [
+      -2,
+      1
+     ],
+     "amplitud": 0.677598,
+     "fase_rad": -3.056342,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -63.435
+    },
+    {
+     "k": [
+      -3,
+      2
+     ],
+     "amplitud": 0.649408,
+     "fase_rad": -1.773066,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -56.31
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 57,
+   "solucion": [
+    4,
+    6,
+    0,
+    3,
+    1,
+    7,
+    5,
+    2
+   ],
+   "clase": 10,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.147023,
+   "margen": 0.091685,
+   "ondas": [
+    {
+     "k": [
+      2,
+      1
+     ],
+     "amplitud": 1.065691,
+     "fase_rad": -1.21785,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 63.435
+    },
+    {
+     "k": [
+      -3,
+      2
+     ],
+     "amplitud": 0.89346,
+     "fase_rad": -0.021255,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -56.31
+    },
+    {
+     "k": [
+      -1,
+      3
+     ],
+     "amplitud": 0.849892,
+     "fase_rad": 1.49444,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -18.435
+    },
+    {
+     "k": [
+      -2,
+      1
+     ],
+     "amplitud": 0.426542,
+     "fase_rad": 3.125853,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -63.435
+    },
+    {
+     "k": [
+      2,
+      3
+     ],
+     "amplitud": 0.352536,
+     "fase_rad": 3.095601,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 33.69
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 58,
+   "solucion": [
+    4,
+    6,
+    1,
+    3,
+    7,
+    0,
+    2,
+    5
+   ],
+   "clase": 11,
+   "ondas_min": 4,
+   "exacto": true,
+   "cota_inferior": 4,
+   "umbral": 1.15613,
+   "margen": 0.028837,
+   "ondas": [
+    {
+     "k": [
+      3,
+      2
+     ],
+     "amplitud": 1.01266,
+     "fase_rad": -0.158293,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 56.31
+    },
+    {
+     "k": [
+      -2,
+      1
+     ],
+     "amplitud": 0.975149,
+     "fase_rad": 1.128122,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -63.435
+    },
+    {
+     "k": [
+      1,
+      3
+     ],
+     "amplitud": 0.89652,
+     "fase_rad": -2.574812,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 18.435
+    },
+    {
+     "k": [
+      -1,
+      3
+     ],
+     "amplitud": 0.312838,
+     "fase_rad": -1.057367,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -18.435
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 59,
+   "solucion": [
+    4,
+    6,
+    1,
+    5,
+    2,
+    0,
+    3,
+    7
+   ],
+   "clase": 0,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.426698,
+   "margen": 0.090422,
+   "ondas": [
+    {
+     "k": [
+      -3,
+      2
+     ],
+     "amplitud": 1.039771,
+     "fase_rad": -1.293321,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -56.31
+    },
+    {
+     "k": [
+      -2,
+      -3
+     ],
+     "amplitud": 1.025984,
+     "fase_rad": -2.699248,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -146.31
+    },
+    {
+     "k": [
+      -1,
+      -3
+     ],
+     "amplitud": 0.950457,
+     "fase_rad": -2.564962,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -161.565
+    },
+    {
+     "k": [
+      -1,
+      2
+     ],
+     "amplitud": 0.677598,
+     "fase_rad": 0.085251,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -26.565
+    },
+    {
+     "k": [
+      -2,
+      3
+     ],
+     "amplitud": 0.649408,
+     "fase_rad": 1.368526,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -33.69
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 60,
+   "solucion": [
+    4,
+    6,
+    1,
+    5,
+    2,
+    0,
+    7,
+    3
+   ],
+   "clase": 8,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.18545,
+   "margen": 0.094757,
+   "ondas": [
+    {
+     "k": [
+      -3,
+      -2
+     ],
+     "amplitud": 1.101393,
+     "fase_rad": 0.432452,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -123.69
+    },
+    {
+     "k": [
+      2,
+      -1
+     ],
+     "amplitud": 0.923393,
+     "fase_rad": -2.33494,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 116.565
+    },
+    {
+     "k": [
+      -1,
+      -3
+     ],
+     "amplitud": 0.878365,
+     "fase_rad": 1.647152,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -161.565
+    },
+    {
+     "k": [
+      3,
+      -2
+     ],
+     "amplitud": 0.440831,
+     "fase_rad": 0.769658,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 123.69
+    },
+    {
+     "k": [
+      -1,
+      -2
+     ],
+     "amplitud": 0.364346,
+     "fase_rad": -2.310203,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -153.435
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 61,
+   "solucion": [
+    4,
+    6,
+    3,
+    0,
+    2,
+    7,
+    5,
+    1
+   ],
+   "clase": 6,
+   "ondas_min": 4,
+   "exacto": true,
+   "cota_inferior": 4,
+   "umbral": 1.399405,
+   "margen": 0.020943,
+   "ondas": [
+    {
+     "k": [
+      -1,
+      -3
+     ],
+     "amplitud": 1.232045,
+     "fase_rad": 2.270493,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -161.565
+    },
+    {
+     "k": [
+      -3,
+      2
+     ],
+     "amplitud": 1.119409,
+     "fase_rad": 0.466098,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -56.31
+    },
+    {
+     "k": [
+      -3,
+      1
+     ],
+     "amplitud": 0.468858,
+     "fase_rad": -2.914724,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -71.565
+    },
+    {
+     "k": [
+      -2,
+      1
+     ],
+     "amplitud": 0.39378,
+     "fase_rad": -2.024592,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -63.435
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 62,
+   "solucion": [
+    4,
+    7,
+    3,
+    0,
+    2,
+    5,
+    1,
+    6
+   ],
+   "clase": 7,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.534382,
+   "margen": 0.097247,
+   "ondas": [
+    {
+     "k": [
+      -3,
+      2
+     ],
+     "amplitud": 1.118251,
+     "fase_rad": -0.507923,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -56.31
+    },
+    {
+     "k": [
+      -2,
+      -3
+     ],
+     "amplitud": 1.103423,
+     "fase_rad": -1.128451,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -146.31
+    },
+    {
+     "k": [
+      -1,
+      -3
+     ],
+     "amplitud": 1.022195,
+     "fase_rad": 2.932825,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -161.565
+    },
+    {
+     "k": [
+      -1,
+      2
+     ],
+     "amplitud": 0.728742,
+     "fase_rad": 2.441445,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -26.565
+    },
+    {
+     "k": [
+      -2,
+      3
+     ],
+     "amplitud": 0.698424,
+     "fase_rad": 2.939323,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -33.69
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 63,
+   "solucion": [
+    4,
+    7,
+    3,
+    0,
+    6,
+    1,
+    5,
+    2
+   ],
+   "clase": 3,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.147023,
+   "margen": 0.091685,
+   "ondas": [
+    {
+     "k": [
+      1,
+      -2
+     ],
+     "amplitud": 1.065691,
+     "fase_rad": -1.923742,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 153.435
+    },
+    {
+     "k": [
+      -2,
+      -3
+     ],
+     "amplitud": 0.89346,
+     "fase_rad": 3.120338,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -146.31
+    },
+    {
+     "k": [
+      -3,
+      -1
+     ],
+     "amplitud": 0.849892,
+     "fase_rad": 1.49444,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -108.435
+    },
+    {
+     "k": [
+      -1,
+      -2
+     ],
+     "amplitud": 0.426542,
+     "fase_rad": -0.01574,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -153.435
+    },
+    {
+     "k": [
+      3,
+      -2
+     ],
+     "amplitud": 0.352536,
+     "fase_rad": 0.045991,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 123.69
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 64,
+   "solucion": [
+    5,
+    0,
+    4,
+    1,
+    7,
+    2,
+    6,
+    3
+   ],
+   "clase": 2,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.426698,
+   "margen": 0.090422,
+   "ondas": [
+    {
+     "k": [
+      3,
+      2
+     ],
+     "amplitud": 1.039771,
+     "fase_rad": -2.864118,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 56.31
+    },
+    {
+     "k": [
+      -2,
+      3
+     ],
+     "amplitud": 1.025984,
+     "fase_rad": 1.913849,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -33.69
+    },
+    {
+     "k": [
+      -1,
+      3
+     ],
+     "amplitud": 0.950457,
+     "fase_rad": -1.362029,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -18.435
+    },
+    {
+     "k": [
+      1,
+      2
+     ],
+     "amplitud": 0.677598,
+     "fase_rad": -1.485546,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 26.565
+    },
+    {
+     "k": [
+      2,
+      3
+     ],
+     "amplitud": 0.649408,
+     "fase_rad": 0.583128,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 33.69
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 65,
+   "solucion": [
+    5,
+    1,
+    6,
+    0,
+    2,
+    4,
+    7,
+    3
+   ],
+   "clase": 6,
+   "ondas_min": 4,
+   "exacto": true,
+   "cota_inferior": 4,
+   "umbral": 1.140023,
+   "margen": 0.017061,
+   "ondas": [
+    {
+     "k": [
+      3,
+      -1
+     ],
+     "amplitud": 1.003684,
+     "fase_rad": -1.656498,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 108.435
+    },
+    {
+     "k": [
+      -2,
+      -3
+     ],
+     "amplitud": 0.911925,
+     "fase_rad": -1.104698,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -146.31
+    },
+    {
+     "k": [
+      -1,
+      -3
+     ],
+     "amplitud": 0.381954,
+     "fase_rad": 2.583063,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -161.565
+    },
+    {
+     "k": [
+      -1,
+      -2
+     ],
+     "amplitud": 0.320792,
+     "fase_rad": -2.80999,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -153.435
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 66,
+   "solucion": [
+    5,
+    1,
+    6,
+    0,
+    3,
+    7,
+    4,
+    2
+   ],
+   "clase": 10,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.18545,
+   "margen": 0.094757,
+   "ondas": [
+    {
+     "k": [
+      -1,
+      2
+     ],
+     "amplitud": 1.101393,
+     "fase_rad": -2.003248,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -26.565
+    },
+    {
+     "k": [
+      -2,
+      -3
+     ],
+     "amplitud": 0.923393,
+     "fase_rad": -1.592051,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -146.31
+    },
+    {
+     "k": [
+      -3,
+      -1
+     ],
+     "amplitud": 0.878365,
+     "fase_rad": -0.861754,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -108.435
+    },
+    {
+     "k": [
+      -1,
+      -2
+     ],
+     "amplitud": 0.440831,
+     "fase_rad": 2.340454,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -153.435
+    },
+    {
+     "k": [
+      -3,
+      2
+     ],
+     "amplitud": 0.364346,
+     "fase_rad": 0.739407,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -56.31
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 67,
+   "solucion": [
+    5,
+    2,
+    0,
+    6,
+    4,
+    7,
+    1,
+    3
+   ],
+   "clase": 10,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.18545,
+   "margen": 0.094757,
+   "ondas": [
+    {
+     "k": [
+      -2,
+      -1
+     ],
+     "amplitud": 1.101393,
+     "fase_rad": 2.709141,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -116.565
+    },
+    {
+     "k": [
+      3,
+      -2
+     ],
+     "amplitud": 0.923393,
+     "fase_rad": 0.764144,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 123.69
+    },
+    {
+     "k": [
+      1,
+      -3
+     ],
+     "amplitud": 0.878365,
+     "fase_rad": -0.076356,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 161.565
+    },
+    {
+     "k": [
+      2,
+      -1
+     ],
+     "amplitud": 0.440831,
+     "fase_rad": -2.371935,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 116.565
+    },
+    {
+     "k": [
+      -2,
+      -3
+     ],
+     "amplitud": 0.364346,
+     "fase_rad": -0.831389,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -146.31
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 68,
+   "solucion": [
+    5,
+    2,
+    0,
+    7,
+    3,
+    1,
+    6,
+    4
+   ],
+   "clase": 11,
+   "ondas_min": 4,
+   "exacto": true,
+   "cota_inferior": 4,
+   "umbral": 1.312064,
+   "margen": 0.032726,
+   "ondas": [
+    {
+     "k": [
+      -3,
+      2
+     ],
+     "amplitud": 1.149244,
+     "fase_rad": -2.514487,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -56.31
+    },
+    {
+     "k": [
+      2,
+      1
+     ],
+     "amplitud": 1.106673,
+     "fase_rad": 2.698919,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 63.435
+    },
+    {
+     "k": [
+      -1,
+      3
+     ],
+     "amplitud": 1.017439,
+     "fase_rad": 2.922975,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -18.435
+    },
+    {
+     "k": [
+      1,
+      3
+     ],
+     "amplitud": 0.355032,
+     "fase_rad": -0.271969,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 18.435
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 69,
+   "solucion": [
+    5,
+    2,
+    0,
+    7,
+    4,
+    1,
+    3,
+    6
+   ],
+   "clase": 4,
+   "ondas_min": 4,
+   "exacto": true,
+   "cota_inferior": 4,
+   "umbral": 1.058712,
+   "margen": 0.032111,
+   "ondas": [
+    {
+     "k": [
+      -1,
+      -3
+     ],
+     "amplitud": 1.007528,
+     "fase_rad": -0.12232,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -161.565
+    },
+    {
+     "k": [
+      -2,
+      -1
+     ],
+     "amplitud": 0.853644,
+     "fase_rad": -2.538835,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -116.565
+    },
+    {
+     "k": [
+      -1,
+      -2
+     ],
+     "amplitud": 0.536247,
+     "fase_rad": 1.600741,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -153.435
+    },
+    {
+     "k": [
+      -3,
+      -2
+     ],
+     "amplitud": 0.436521,
+     "fase_rad": 0.058359,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -123.69
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 70,
+   "solucion": [
+    5,
+    2,
+    4,
+    6,
+    0,
+    3,
+    1,
+    7
+   ],
+   "clase": 0,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.426698,
+   "margen": 0.090422,
+   "ondas": [
+    {
+     "k": [
+      2,
+      -3
+     ],
+     "amplitud": 1.039771,
+     "fase_rad": -1.293321,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 146.31
+    },
+    {
+     "k": [
+      -3,
+      -2
+     ],
+     "amplitud": 1.025984,
+     "fase_rad": -2.699248,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -123.69
+    },
+    {
+     "k": [
+      -3,
+      -1
+     ],
+     "amplitud": 0.950457,
+     "fase_rad": -2.564962,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -108.435
+    },
+    {
+     "k": [
+      2,
+      -1
+     ],
+     "amplitud": 0.677598,
+     "fase_rad": 0.085251,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 116.565
+    },
+    {
+     "k": [
+      3,
+      -2
+     ],
+     "amplitud": 0.649408,
+     "fase_rad": 1.368526,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 123.69
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 71,
+   "solucion": [
+    5,
+    2,
+    4,
+    7,
+    0,
+    3,
+    1,
+    6
+   ],
+   "clase": 8,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.18545,
+   "margen": 0.094757,
+   "ondas": [
+    {
+     "k": [
+      -2,
+      -3
+     ],
+     "amplitud": 1.101393,
+     "fase_rad": 0.432452,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -146.31
+    },
+    {
+     "k": [
+      -1,
+      2
+     ],
+     "amplitud": 0.923393,
+     "fase_rad": -2.33494,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -26.565
+    },
+    {
+     "k": [
+      -3,
+      -1
+     ],
+     "amplitud": 0.878365,
+     "fase_rad": 1.647152,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -108.435
+    },
+    {
+     "k": [
+      -2,
+      3
+     ],
+     "amplitud": 0.440831,
+     "fase_rad": 0.769658,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -33.69
+    },
+    {
+     "k": [
+      -2,
+      -1
+     ],
+     "amplitud": 0.364346,
+     "fase_rad": -2.310203,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -116.565
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 72,
+   "solucion": [
+    5,
+    2,
+    6,
+    1,
+    3,
+    7,
+    0,
+    4
+   ],
+   "clase": 4,
+   "ondas_min": 4,
+   "exacto": true,
+   "cota_inferior": 4,
+   "umbral": 1.454654,
+   "margen": 0.04044,
+   "ondas": [
+    {
+     "k": [
+      -3,
+      1
+     ],
+     "amplitud": 1.313812,
+     "fase_rad": 0.705721,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -71.565
+    },
+    {
+     "k": [
+      -1,
+      2
+     ],
+     "amplitud": 1.075072,
+     "fase_rad": -0.968039,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -26.565
+    },
+    {
+     "k": [
+      -2,
+      1
+     ],
+     "amplitud": 0.735719,
+     "fase_rad": 2.349526,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -63.435
+    },
+    {
+     "k": [
+      -2,
+      3
+     ],
+     "amplitud": 0.695599,
+     "fase_rad": 2.387334,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -33.69
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 73,
+   "solucion": [
+    5,
+    2,
+    6,
+    1,
+    7,
+    4,
+    0,
+    3
+   ],
+   "clase": 3,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.18545,
+   "margen": 0.094757,
+   "ondas": [
+    {
+     "k": [
+      -1,
+      2
+     ],
+     "amplitud": 1.101393,
+     "fase_rad": -1.138344,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -26.565
+    },
+    {
+     "k": [
+      2,
+      3
+     ],
+     "amplitud": 0.923393,
+     "fase_rad": 0.764144,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 33.69
+    },
+    {
+     "k": [
+      3,
+      1
+     ],
+     "amplitud": 0.878365,
+     "fase_rad": -1.647152,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 71.565
+    },
+    {
+     "k": [
+      1,
+      2
+     ],
+     "amplitud": 0.440831,
+     "fase_rad": 2.340454,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 26.565
+    },
+    {
+     "k": [
+      -3,
+      2
+     ],
+     "amplitud": 0.364346,
+     "fase_rad": -0.739407,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -56.31
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 74,
+   "solucion": [
+    5,
+    2,
+    6,
+    3,
+    0,
+    7,
+    1,
+    4
+   ],
+   "clase": 11,
+   "ondas_min": 4,
+   "exacto": true,
+   "cota_inferior": 4,
+   "umbral": 1.15613,
+   "margen": 0.028837,
+   "ondas": [
+    {
+     "k": [
+      2,
+      3
+     ],
+     "amplitud": 1.01266,
+     "fase_rad": -0.158293,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 33.69
+    },
+    {
+     "k": [
+      1,
+      -2
+     ],
+     "amplitud": 0.975149,
+     "fase_rad": 1.128122,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 153.435
+    },
+    {
+     "k": [
+      3,
+      1
+     ],
+     "amplitud": 0.89652,
+     "fase_rad": -2.574812,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 71.565
+    },
+    {
+     "k": [
+      3,
+      -1
+     ],
+     "amplitud": 0.312838,
+     "fase_rad": -1.057367,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 108.435
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 75,
+   "solucion": [
+    5,
+    3,
+    0,
+    4,
+    7,
+    1,
+    6,
+    2
+   ],
+   "clase": 10,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.147023,
+   "margen": 0.091685,
+   "ondas": [
+    {
+     "k": [
+      1,
+      -2
+     ],
+     "amplitud": 1.065691,
+     "fase_rad": -2.788646,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 153.435
+    },
+    {
+     "k": [
+      2,
+      3
+     ],
+     "amplitud": 0.89346,
+     "fase_rad": 2.33494,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 33.69
+    },
+    {
+     "k": [
+      3,
+      1
+     ],
+     "amplitud": 0.849892,
+     "fase_rad": 2.279838,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 71.565
+    },
+    {
+     "k": [
+      1,
+      2
+     ],
+     "amplitud": 0.426542,
+     "fase_rad": -1.586536,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 26.565
+    },
+    {
+     "k": [
+      3,
+      -2
+     ],
+     "amplitud": 0.352536,
+     "fase_rad": 1.524805,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 123.69
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 76,
+   "solucion": [
+    5,
+    3,
+    1,
+    7,
+    4,
+    6,
+    0,
+    2
+   ],
+   "clase": 5,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.476604,
+   "margen": 0.093585,
+   "ondas": [
+    {
+     "k": [
+      2,
+      3
+     ],
+     "amplitud": 1.076142,
+     "fase_rad": 2.633669,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 33.69
+    },
+    {
+     "k": [
+      -3,
+      2
+     ],
+     "amplitud": 1.061873,
+     "fase_rad": 2.79854,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -56.31
+    },
+    {
+     "k": [
+      -3,
+      1
+     ],
+     "amplitud": 0.983703,
+     "fase_rad": 2.147427,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -71.565
+    },
+    {
+     "k": [
+      2,
+      1
+     ],
+     "amplitud": 0.701301,
+     "fase_rad": 2.441445,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 63.435
+    },
+    {
+     "k": [
+      3,
+      2
+     ],
+     "amplitud": 0.672124,
+     "fase_rad": -0.987668,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 56.31
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 77,
+   "solucion": [
+    5,
+    3,
+    6,
+    0,
+    2,
+    4,
+    1,
+    7
+   ],
+   "clase": 1,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.18545,
+   "margen": 0.094757,
+   "ondas": [
+    {
+     "k": [
+      -2,
+      -3
+     ],
+     "amplitud": 1.101393,
+     "fase_rad": -2.003248,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -146.31
+    },
+    {
+     "k": [
+      3,
+      -2
+     ],
+     "amplitud": 0.923393,
+     "fase_rad": 0.806653,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 123.69
+    },
+    {
+     "k": [
+      3,
+      -1
+     ],
+     "amplitud": 0.878365,
+     "fase_rad": -0.076356,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 108.435
+    },
+    {
+     "k": [
+      2,
+      -3
+     ],
+     "amplitud": 0.440831,
+     "fase_rad": -0.801138,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 146.31
+    },
+    {
+     "k": [
+      -2,
+      -1
+     ],
+     "amplitud": 0.364346,
+     "fase_rad": -2.402186,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -116.565
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 78,
+   "solucion": [
+    5,
+    3,
+    6,
+    0,
+    7,
+    1,
+    4,
+    2
+   ],
+   "clase": 9,
+   "ondas_min": 3,
+   "exacto": true,
+   "cota_inferior": 3,
+   "umbral": 1.04044,
+   "margen": 0.298816,
+   "ondas": [
+    {
+     "k": [
+      3,
+      2
+     ],
+     "amplitud": 1.105542,
+     "fase_rad": -1.130286,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 56.31
+    },
+    {
+     "k": [
+      1,
+      -3
+     ],
+     "amplitud": 0.700434,
+     "fase_rad": -0.855148,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 161.565
+    },
+    {
+     "k": [
+      2,
+      3
+     ],
+     "amplitud": 0.457669,
+     "fase_rad": 1.997316,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 33.69
+    }
+   ],
+   "una_onda_libre": [
+    3.0,
+    1.875
+   ]
+  },
+  {
+   "id": 79,
+   "solucion": [
+    5,
+    7,
+    1,
+    3,
+    0,
+    6,
+    4,
+    2
+   ],
+   "clase": 5,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.426698,
+   "margen": 0.090422,
+   "ondas": [
+    {
+     "k": [
+      -2,
+      -3
+     ],
+     "amplitud": 1.039771,
+     "fase_rad": -1.293321,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -146.31
+    },
+    {
+     "k": [
+      3,
+      -2
+     ],
+     "amplitud": 1.025984,
+     "fase_rad": -2.699248,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 123.69
+    },
+    {
+     "k": [
+      3,
+      -1
+     ],
+     "amplitud": 0.950457,
+     "fase_rad": -2.564962,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 108.435
+    },
+    {
+     "k": [
+      -2,
+      -1
+     ],
+     "amplitud": 0.677598,
+     "fase_rad": 0.085251,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -116.565
+    },
+    {
+     "k": [
+      -3,
+      -2
+     ],
+     "amplitud": 0.649408,
+     "fase_rad": 1.368526,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -123.69
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 80,
+   "solucion": [
+    6,
+    0,
+    2,
+    7,
+    5,
+    3,
+    1,
+    4
+   ],
+   "clase": 7,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.426698,
+   "margen": 0.090422,
+   "ondas": [
+    {
+     "k": [
+      -2,
+      3
+     ],
+     "amplitud": 1.039771,
+     "fase_rad": 0.277475,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -33.69
+    },
+    {
+     "k": [
+      3,
+      2
+     ],
+     "amplitud": 1.025984,
+     "fase_rad": 2.79854,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 56.31
+    },
+    {
+     "k": [
+      3,
+      1
+     ],
+     "amplitud": 0.950457,
+     "fase_rad": -0.208767,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 71.565
+    },
+    {
+     "k": [
+      -2,
+      1
+     ],
+     "amplitud": 0.677598,
+     "fase_rad": 1.656047,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -63.435
+    },
+    {
+     "k": [
+      -3,
+      2
+     ],
+     "amplitud": 0.649408,
+     "fase_rad": 2.153924,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -56.31
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 81,
+   "solucion": [
+    6,
+    1,
+    3,
+    0,
+    7,
+    4,
+    2,
+    5
+   ],
+   "clase": 8,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.18545,
+   "margen": 0.094757,
+   "ondas": [
+    {
+     "k": [
+      2,
+      -3
+     ],
+     "amplitud": 1.101393,
+     "fase_rad": 2.003248,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 146.31
+    },
+    {
+     "k": [
+      1,
+      2
+     ],
+     "amplitud": 0.923393,
+     "fase_rad": -1.549542,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 26.565
+    },
+    {
+     "k": [
+      3,
+      -1
+     ],
+     "amplitud": 0.878365,
+     "fase_rad": -2.279838,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 108.435
+    },
+    {
+     "k": [
+      2,
+      3
+     ],
+     "amplitud": 0.440831,
+     "fase_rad": 2.340454,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 33.69
+    },
+    {
+     "k": [
+      2,
+      -1
+     ],
+     "amplitud": 0.364346,
+     "fase_rad": -0.739407,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 116.565
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 82,
+   "solucion": [
+    6,
+    1,
+    5,
+    2,
+    0,
+    3,
+    7,
+    4
+   ],
+   "clase": 7,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.426698,
+   "margen": 0.090422,
+   "ondas": [
+    {
+     "k": [
+      3,
+      2
+     ],
+     "amplitud": 1.039771,
+     "fase_rad": 1.848271,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 56.31
+    },
+    {
+     "k": [
+      2,
+      -3
+     ],
+     "amplitud": 1.025984,
+     "fase_rad": 0.442345,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 146.31
+    },
+    {
+     "k": [
+      1,
+      -3
+     ],
+     "amplitud": 0.950457,
+     "fase_rad": -2.564962,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 161.565
+    },
+    {
+     "k": [
+      1,
+      2
+     ],
+     "amplitud": 0.677598,
+     "fase_rad": -3.056342,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 26.565
+    },
+    {
+     "k": [
+      2,
+      3
+     ],
+     "amplitud": 0.649408,
+     "fase_rad": -1.773066,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 33.69
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 83,
+   "solucion": [
+    6,
+    2,
+    0,
+    5,
+    7,
+    4,
+    1,
+    3
+   ],
+   "clase": 6,
+   "ondas_min": 4,
+   "exacto": true,
+   "cota_inferior": 4,
+   "umbral": 1.316679,
+   "margen": 0.019705,
+   "ondas": [
+    {
+     "k": [
+      1,
+      3
+     ],
+     "amplitud": 1.159213,
+     "fase_rad": -0.8711,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 18.435
+    },
+    {
+     "k": [
+      3,
+      -2
+     ],
+     "amplitud": 1.053235,
+     "fase_rad": 1.251496,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 123.69
+    },
+    {
+     "k": [
+      3,
+      -1
+     ],
+     "amplitud": 0.441141,
+     "fase_rad": -1.343928,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 108.435
+    },
+    {
+     "k": [
+      2,
+      -1
+     ],
+     "amplitud": 0.370502,
+     "fase_rad": -1.239194,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 116.565
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 84,
+   "solucion": [
+    6,
+    2,
+    7,
+    1,
+    4,
+    0,
+    5,
+    3
+   ],
+   "clase": 5,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.476604,
+   "margen": 0.093585,
+   "ondas": [
+    {
+     "k": [
+      3,
+      2
+     ],
+     "amplitud": 1.076142,
+     "fase_rad": 2.633669,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 56.31
+    },
+    {
+     "k": [
+      2,
+      -3
+     ],
+     "amplitud": 1.061873,
+     "fase_rad": 2.79854,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 146.31
+    },
+    {
+     "k": [
+      1,
+      -3
+     ],
+     "amplitud": 0.983703,
+     "fase_rad": 2.147427,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 161.565
+    },
+    {
+     "k": [
+      1,
+      2
+     ],
+     "amplitud": 0.701301,
+     "fase_rad": 2.441445,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 26.565
+    },
+    {
+     "k": [
+      2,
+      3
+     ],
+     "amplitud": 0.672124,
+     "fase_rad": -0.987668,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 33.69
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 85,
+   "solucion": [
+    6,
+    3,
+    1,
+    4,
+    7,
+    0,
+    2,
+    5
+   ],
+   "clase": 4,
+   "ondas_min": 4,
+   "exacto": true,
+   "cota_inferior": 4,
+   "umbral": 1.454654,
+   "margen": 0.04044,
+   "ondas": [
+    {
+     "k": [
+      1,
+      -3
+     ],
+     "amplitud": 1.313812,
+     "fase_rad": 0.705721,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 161.565
+    },
+    {
+     "k": [
+      2,
+      -1
+     ],
+     "amplitud": 1.075072,
+     "fase_rad": -0.968039,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 116.565
+    },
+    {
+     "k": [
+      1,
+      -2
+     ],
+     "amplitud": 0.735719,
+     "fase_rad": 2.349526,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 153.435
+    },
+    {
+     "k": [
+      3,
+      -2
+     ],
+     "amplitud": 0.695599,
+     "fase_rad": 2.387334,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 123.69
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 86,
+   "solucion": [
+    6,
+    3,
+    1,
+    7,
+    5,
+    0,
+    2,
+    4
+   ],
+   "clase": 3,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.18545,
+   "margen": 0.094757,
+   "ondas": [
+    {
+     "k": [
+      2,
+      -1
+     ],
+     "amplitud": 1.101393,
+     "fase_rad": -1.138344,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 116.565
+    },
+    {
+     "k": [
+      3,
+      2
+     ],
+     "amplitud": 0.923393,
+     "fase_rad": 0.764144,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 56.31
+    },
+    {
+     "k": [
+      1,
+      3
+     ],
+     "amplitud": 0.878365,
+     "fase_rad": -1.647152,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 18.435
+    },
+    {
+     "k": [
+      2,
+      1
+     ],
+     "amplitud": 0.440831,
+     "fase_rad": 2.340454,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 63.435
+    },
+    {
+     "k": [
+      2,
+      -3
+     ],
+     "amplitud": 0.364346,
+     "fase_rad": -0.739407,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 146.31
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 87,
+   "solucion": [
+    6,
+    4,
+    2,
+    0,
+    5,
+    7,
+    1,
+    3
+   ],
+   "clase": 2,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.476604,
+   "margen": 0.093585,
+   "ondas": [
+    {
+     "k": [
+      2,
+      -3
+     ],
+     "amplitud": 1.076142,
+     "fase_rad": 1.062873,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 146.31
+    },
+    {
+     "k": [
+      3,
+      2
+     ],
+     "amplitud": 1.061873,
+     "fase_rad": -2.79854,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 56.31
+    },
+    {
+     "k": [
+      3,
+      1
+     ],
+     "amplitud": 0.983703,
+     "fase_rad": -0.576631,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 71.565
+    },
+    {
+     "k": [
+      2,
+      -1
+     ],
+     "amplitud": 0.701301,
+     "fase_rad": -2.270944,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 116.565
+    },
+    {
+     "k": [
+      3,
+      -2
+     ],
+     "amplitud": 0.672124,
+     "fase_rad": -0.987668,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 123.69
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 88,
+   "solucion": [
+    7,
+    1,
+    3,
+    0,
+    6,
+    4,
+    2,
+    5
+   ],
+   "clase": 0,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.426698,
+   "margen": 0.090422,
+   "ondas": [
+    {
+     "k": [
+      -2,
+      -3
+     ],
+     "amplitud": 1.039771,
+     "fase_rad": -2.864118,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -146.31
+    },
+    {
+     "k": [
+      3,
+      -2
+     ],
+     "amplitud": 1.025984,
+     "fase_rad": -0.343053,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 123.69
+    },
+    {
+     "k": [
+      3,
+      -1
+     ],
+     "amplitud": 0.950457,
+     "fase_rad": -0.208767,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 108.435
+    },
+    {
+     "k": [
+      -2,
+      -1
+     ],
+     "amplitud": 0.677598,
+     "fase_rad": -1.485546,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": -116.565
+    },
+    {
+     "k": [
+      -3,
+      -2
+     ],
+     "amplitud": 0.649408,
+     "fase_rad": -0.987668,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -123.69
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 89,
+   "solucion": [
+    7,
+    1,
+    4,
+    2,
+    0,
+    6,
+    3,
+    5
+   ],
+   "clase": 1,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.18545,
+   "margen": 0.094757,
+   "ondas": [
+    {
+     "k": [
+      2,
+      -3
+     ],
+     "amplitud": 1.101393,
+     "fase_rad": -0.432452,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 146.31
+    },
+    {
+     "k": [
+      -3,
+      -2
+     ],
+     "amplitud": 0.923393,
+     "fase_rad": -1.549542,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -123.69
+    },
+    {
+     "k": [
+      -3,
+      -1
+     ],
+     "amplitud": 0.878365,
+     "fase_rad": -2.432551,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": -108.435
+    },
+    {
+     "k": [
+      -2,
+      -3
+     ],
+     "amplitud": 0.440831,
+     "fase_rad": -2.371935,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": -146.31
+    },
+    {
+     "k": [
+      2,
+      -1
+     ],
+     "amplitud": 0.364346,
+     "fase_rad": -0.831389,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 116.565
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 90,
+   "solucion": [
+    7,
+    2,
+    0,
+    5,
+    1,
+    4,
+    6,
+    3
+   ],
+   "clase": 1,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.147023,
+   "margen": 0.091685,
+   "ondas": [
+    {
+     "k": [
+      3,
+      -2
+     ],
+     "amplitud": 1.065691,
+     "fase_rad": 0.352946,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 123.69
+    },
+    {
+     "k": [
+      2,
+      3
+     ],
+     "amplitud": 0.89346,
+     "fase_rad": 2.377449,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 33.69
+    },
+    {
+     "k": [
+      1,
+      3
+     ],
+     "amplitud": 0.849892,
+     "fase_rad": 0.709042,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 18.435
+    },
+    {
+     "k": [
+      3,
+      2
+     ],
+     "amplitud": 0.426542,
+     "fase_rad": 1.555056,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 56.31
+    },
+    {
+     "k": [
+      1,
+      -2
+     ],
+     "amplitud": 0.352536,
+     "fase_rad": -1.616788,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 153.435
+    }
+   ],
+   "una_onda_libre": null
+  },
+  {
+   "id": 91,
+   "solucion": [
+    7,
+    3,
+    0,
+    2,
+    5,
+    1,
+    6,
+    4
+   ],
+   "clase": 0,
+   "ondas_min": 5,
+   "exacto": true,
+   "cota_inferior": 5,
+   "umbral": 1.534382,
+   "margen": 0.097247,
+   "ondas": [
+    {
+     "k": [
+      3,
+      2
+     ],
+     "amplitud": 1.118251,
+     "fase_rad": 1.062873,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 56.31
+    },
+    {
+     "k": [
+      2,
+      -3
+     ],
+     "amplitud": 1.103423,
+     "fase_rad": -1.128451,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 146.31
+    },
+    {
+     "k": [
+      1,
+      -3
+     ],
+     "amplitud": 1.022195,
+     "fase_rad": -1.779564,
+     "longitud_onda_casillas": 2.529822,
+     "direccion_grados": 161.565
+    },
+    {
+     "k": [
+      1,
+      2
+     ],
+     "amplitud": 0.728742,
+     "fase_rad": 0.870649,
+     "longitud_onda_casillas": 3.577709,
+     "direccion_grados": 26.565
+    },
+    {
+     "k": [
+      2,
+      3
+     ],
+     "amplitud": 0.698424,
+     "fase_rad": 2.939323,
+     "longitud_onda_casillas": 2.218801,
+     "direccion_grados": 33.69
+    }
+   ],
+   "una_onda_libre": null
+  }
+ ]
+}

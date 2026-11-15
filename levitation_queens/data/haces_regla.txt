@@ -1,0 +1,146 @@
+p=19 haz 2+2 (data/haces_base_p19_2_2.txt)
+ |H|=6 (3 clases): 32 soluciones base
+     disjuntas: 32
+     exacta: 32
+     azar: disjuntas: 0
+     azar: exacta: 0
+     algun trozo es bloque: 32
+     azar: bloque: 0
+p=31 haz 2+2 (data/haces_base_p31_2_2.txt)
+ |H|=6 (5 clases): 160 soluciones base
+     disjuntas: 160
+     exacta: 160
+     azar: disjuntas: 0
+     azar: exacta: 0
+     algun trozo es bloque: 160
+     azar: bloque: 0
+p=29 haz 2+2 (data/haces_base_p29_2_2.txt)
+ |H|=4 (7 clases) [E=H: disjuntas esta probado]: 1200 soluciones base
+     disjuntas: 1200
+     exacta: 1040
+     azar: disjuntas: 0
+     azar: exacta: 0
+     algun trozo es bloque: 792
+     azar: bloque: 1
+     no exacta y con solape de paralelas: 160
+       filas en solape = 3: 96
+       filas en solape = 1: 64
+p=37 haz 2+2 (data/haces_base_p37_2_2.txt)
+ |H|=4 (9 clases) [E=H: disjuntas esta probado]: 17568 soluciones base
+     disjuntas: 17568
+     exacta: 15152
+     azar: disjuntas: 0
+     azar: exacta: 0
+     algun trozo es bloque: 13184
+     azar: bloque: 12
+     no exacta y con solape de paralelas: 2416
+       filas en solape = 3: 1344
+       filas en solape = 1: 1056
+       filas en solape = 6: 16
+ |H|=6 (6 clases): 672 soluciones base
+     disjuntas: 672
+     exacta: 672
+     azar: disjuntas: 0
+     azar: exacta: 0
+     algun trozo es bloque: 656
+     azar: bloque: 0
+p=41 haz 2+2 (data/haces_base_p41_2_2.txt)
+ |H|=4 (10 clases) [E=H: disjuntas esta probado]: 58240 soluciones base
+     disjuntas: 58240
+     exacta: 52176
+     azar: disjuntas: 0
+     azar: exacta: 0
+     algun trozo es bloque: 45568
+     azar: bloque: 28
+     no exacta y con solape de paralelas: 6064
+       filas en solape = 7: 32
+       filas en solape = 4: 32
+       filas en solape = 3: 3584
+       filas en solape = 6: 80
+       filas en solape = 1: 2080
+       filas en solape = 2: 192
+       filas en solape = 5: 64
+ |H|=8 (5 clases): 160 soluciones base
+     disjuntas: 160
+     exacta: 160
+     azar: disjuntas: 0
+     azar: exacta: 0
+     algun trozo es bloque: 80
+     azar: bloque: 0
+ |H|=10 (4 clases): 32 soluciones base
+     disjuntas: 32
+     exacta: 32
+     azar: disjuntas: 0
+     azar: exacta: 0
+     algun trozo es bloque: 16
+     azar: bloque: 0
+p=29 haz 3+1 (data/haces_base_p29_3_1.txt)
+ |H|=4 (7 clases) [E=H: disjuntas esta probado]: 6702 soluciones base
+     disjuntas: 6702
+     exacta: 6702
+     azar: disjuntas: 0
+     azar: exacta: 0
+p=37 haz 2+1 (data/haces_base_p37_2_1.txt)
+ |H|=4 (9 clases) [E=H: disjuntas esta probado]: 2388 soluciones base
+     disjuntas: 2388
+     exacta: 2388
+     azar: disjuntas: 0
+     azar: exacta: 0
+ |H|=6 (6 clases): 200 soluciones base
+     disjuntas: 200
+     exacta: 200
+     azar: disjuntas: 0
+     azar: exacta: 0
+p=29 haz 3+2 (data/haces_base_p29_3_2_i.txt)
+ |H|=4 (7 clases) [E=H: disjuntas esta probado]: 6120 soluciones base
+     disjuntas: 6108
+     exacta: 5004
+     azar: disjuntas: 0
+     azar: exacta: 0
+     no exacta y con solape de paralelas: 1068
+       filas en solape = 3: 144
+     rectas no identificadas: 12
+       filas en solape = 2: 312
+       filas en solape = 1: 564
+       filas en solape = 0: 36
+       filas en solape = 6: 48
+p=43 haz 2+2 (data/haces_base_p43_2_2.txt)
+ |H|=6 (7 clases): 1856 soluciones base
+     disjuntas: 1856
+     exacta: 1664
+     azar: disjuntas: 0
+     azar: exacta: 0
+     algun trozo es bloque: 1632
+     azar: bloque: 0
+     no exacta y con solape de paralelas: 192
+       filas en solape = 3: 192
+p=43 haz 3+1 (data/haces_base_p43_3_1.txt)
+ |H|=6 (7 clases): 7552 soluciones base
+     disjuntas: 7552
+     exacta: 7552
+     azar: disjuntas: 0
+     azar: exacta: 0
+p=41 haz 3+1 (data/haces_base_p41_3_1.txt)
+ |H|=4 (10 clases) [E=H: disjuntas esta probado]: 380226 soluciones base
+     disjuntas: 380226
+     exacta: 380226
+     azar: disjuntas: 0
+     azar: exacta: 0
+ |H|=8 (5 clases): 120 soluciones base
+     disjuntas: 120
+     exacta: 120
+     azar: disjuntas: 0
+     azar: exacta: 0
+ |H|=10 (4 clases): 156 soluciones base
+     disjuntas: 0
+     exacta: 0
+     no exacta y con solape de paralelas: 156
+       filas en solape = 36: 24
+     azar: disjuntas: 0
+     azar: exacta: 0
+       filas en solape = 16: 36
+       filas en solape = 30: 12
+       filas en solape = 22: 12
+       filas en solape = 26: 36
+       filas en solape = 14: 24
+       filas en solape = 18: 12

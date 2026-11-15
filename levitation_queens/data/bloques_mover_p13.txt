@@ -1,0 +1,15 @@
+p=13: 507 bloques distintos; por tamaño {4: 195, 6: 312}
+  0:c1x2      -> 2:c2x6 {4: 39}
+  1:c1x8      -> 3:c2x8 {6: 26}
+  2:c2x6      -> 0:c1x2 {4: 1}, 2:c2x6 {2: 4, 4: 2}, 4:c3x12 {4: 4}
+  3:c2x8      -> 1:c1x8 {6: 2}
+  4:c3x12     -> 2:c2x6 {4: 2}, 4:c3x12 {2: 4}
+  bloques que dan otra toroidal, por tamaño (real | azar):
+     4 filas: 48/975 = 4.92 %  |  0/4198 = 0.00 %
+     6 filas: 36/1560 = 2.31 %  |  19/7556 = 0.25 %
+  por subgrupo mas grande del bloque (|G|: aciertos/probados): {2: '8/1950', 3: '0/260', 4: '48/195', 6: '28/130'}
+  ronda 0 (una espiral): ['0:c1x2', '1:c1x8']
+  ronda 1: + ['2:c2x6', '3:c2x8']
+  ronda 2: + ['4:c3x12']
+  alcanzadas 5 de 5 soluciones distintas = 36 de 36 orbitas de traslacion
+  no alcanzadas: []

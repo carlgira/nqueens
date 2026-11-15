@@ -1,0 +1,125 @@
+
+==== N=8  Q=92  espectro sol/nulo (gamma: cociente), picos locales con cociente > 3
+  g=  4.8  amp      1.5  nulo   0.39  cociente    3.8
+  g= 11.8  amp      1.8  nulo   0.29  cociente    6.4
+  g= 13.8  amp      0.9  nulo   0.26  cociente    3.7
+  g= 16.6  amp      1.5  nulo   0.25  cociente    6.3
+  g= 21.0  amp      1.3  nulo   0.26  cociente    4.8
+  g= 23.4  amp      1.1  nulo   0.26  cociente    4.3
+  g= 32.4  amp      0.9  nulo   0.25  cociente    3.6
+  g= 33.1  amp      0.8  nulo   0.19  cociente    4.0
+  cociente medio en 1..40: 1.86
+
+==== N=9  Q=352  espectro sol/nulo (gamma: cociente), picos locales con cociente > 3
+  g=  5.4  amp      2.6  nulo   0.67  cociente    3.8
+  g= 11.8  amp      4.3  nulo   0.40  cociente   10.6
+  g= 18.3  amp      1.5  nulo   0.33  cociente    4.6
+  g= 23.2  amp      2.3  nulo   0.31  cociente    7.3
+  g= 29.5  amp      1.2  nulo   0.28  cociente    4.3
+  g= 29.8  amp      1.3  nulo   0.30  cociente    4.3
+  g= 39.9  amp      1.0  nulo   0.27  cociente    3.9
+  cociente medio en 1..40: 1.83
+
+==== N=10  Q=724  espectro sol/nulo (gamma: cociente), picos locales con cociente > 3
+  g=  5.7  amp      3.6  nulo   1.08  cociente    3.3
+  g=  6.6  amp      3.8  nulo   0.81  cociente    4.7
+  g=  7.9  amp      2.7  nulo   0.76  cociente    3.6
+  g= 10.0  amp      2.3  nulo   0.62  cociente    3.7
+  g= 12.1  amp      6.2  nulo   0.46  cociente   13.4
+  g= 14.3  amp      1.9  nulo   0.56  cociente    3.4
+  g= 16.9  amp      1.9  nulo   0.43  cociente    4.4
+  g= 18.3  amp      2.1  nulo   0.40  cociente    5.4
+  g= 23.3  amp      3.7  nulo   0.42  cociente    8.9
+  g= 29.6  amp      2.3  nulo   0.33  cociente    6.9
+  g= 31.0  amp      1.2  nulo   0.33  cociente    3.6
+  g= 35.5  amp      1.2  nulo   0.38  cociente    3.3
+  cociente medio en 1..40: 2.13
+
+==== N=11  Q=2680  espectro sol/nulo (gamma: cociente), picos locales con cociente > 3
+  g=  2.4  amp     11.0  nulo   2.21  cociente    5.0
+  g=  5.6  amp     18.0  nulo   1.46  cociente   12.4
+  g=  6.7  amp      6.9  nulo   1.36  cociente    5.1
+  g=  8.0  amp      6.7  nulo   1.12  cociente    6.0
+  g=  8.9  amp      6.9  nulo   1.07  cociente    6.4
+  g= 10.4  amp      3.7  nulo   0.91  cociente    4.0
+  g= 12.0  amp     19.4  nulo   0.75  cociente   25.9
+  g= 14.2  amp      5.9  nulo   0.71  cociente    8.3
+  g= 17.0  amp      7.6  nulo   0.62  cociente   12.3
+  g= 19.1  amp      4.8  nulo   0.54  cociente    8.8
+  g= 20.3  amp      3.9  nulo   0.63  cociente    6.2
+  g= 23.3  amp     10.9  nulo   0.61  cociente   17.8
+  g= 25.4  amp      2.9  nulo   0.59  cociente    4.9
+  g= 26.3  amp      1.8  nulo   0.53  cociente    3.3
+  g= 27.6  amp      2.4  nulo   0.50  cociente    4.7
+  g= 29.2  amp      6.0  nulo   0.57  cociente   10.6
+  g= 30.6  amp      3.2  nulo   0.44  cociente    7.3
+  g= 31.6  amp      3.5  nulo   0.44  cociente    8.0
+  g= 35.4  amp      3.6  nulo   0.46  cociente    7.9
+  g= 37.7  amp      3.3  nulo   0.39  cociente    8.6
+  cociente medio en 1..40: 4.05
+
+==== N=12  Q=14200  espectro sol/nulo (gamma: cociente), picos locales con cociente > 3
+  g=  2.5  amp     20.3  nulo   6.04  cociente    3.4
+  g=  5.3  amp     78.7  nulo   2.23  cociente   35.2
+  g=  6.5  amp     48.9  nulo   1.66  cociente   29.4
+  g=  8.1  amp     13.6  nulo   2.15  cociente    6.3
+  g= 10.2  amp      9.1  nulo   1.63  cociente    5.6
+  g= 11.0  amp     12.5  nulo   2.21  cociente    5.7
+  g= 12.1  amp    109.0  nulo   1.49  cociente   73.0
+  g= 13.4  amp     14.0  nulo   1.57  cociente    8.9
+  g= 17.4  amp     25.8  nulo   1.42  cociente   18.2
+  g= 18.5  amp     27.8  nulo   1.44  cociente   19.4
+  g= 18.9  amp     20.9  nulo   1.21  cociente   17.3
+  g= 23.4  amp     44.7  nulo   1.09  cociente   41.0
+  g= 24.6  amp      6.9  nulo   0.84  cociente    8.2
+  g= 28.2  amp      3.9  nulo   1.03  cociente    3.8
+  g= 29.4  amp     21.9  nulo   0.90  cociente   24.3
+  g= 33.6  amp      4.5  nulo   1.17  cociente    3.8
+  g= 34.4  amp      9.6  nulo   0.97  cociente    9.8
+  g= 35.3  amp     19.6  nulo   1.08  cociente   18.2
+  g= 37.6  amp      3.5  nulo   0.74  cociente    4.8
+  g= 39.3  amp      6.1  nulo   0.57  cociente   10.7
+  cociente medio en 1..40: 7.91
+
+==== N=13  Q=73712  espectro sol/nulo (gamma: cociente), picos locales con cociente > 3
+  g=  1.2  amp     34.8  nulo   8.92  cociente    3.9
+  g=  1.8  amp     88.1  nulo  17.86  cociente    4.9
+  g=  2.3  amp     70.7  nulo  11.60  cociente    6.1
+  g=  3.2  amp    104.1  nulo  11.78  cociente    8.8
+  g=  3.9  amp     62.1  nulo   8.53  cociente    7.3
+  g=  4.4  amp     32.5  nulo   8.44  cociente    3.9
+  g=  5.8  amp    288.1  nulo   6.67  cociente   43.2
+  g=  6.5  amp    245.4  nulo   6.07  cociente   40.4
+  g=  6.8  amp    192.0  nulo   4.52  cociente   42.4
+  g=  7.4  amp     37.4  nulo   5.05  cociente    7.4
+  g=  8.1  amp     58.7  nulo   6.49  cociente    9.0
+  g=  8.8  amp     51.8  nulo   4.57  cociente   11.3
+  g=  9.9  amp     48.4  nulo   3.73  cociente   13.0
+  g= 11.1  amp     33.9  nulo   3.58  cociente    9.5
+  g= 12.3  amp    344.0  nulo   3.42  cociente  100.7
+  g= 13.0  amp     60.4  nulo   5.07  cociente   11.9
+  g= 14.3  amp      9.5  nulo   3.05  cociente    3.1
+  g= 15.5  amp     57.0  nulo   2.49  cociente   22.9
+  g= 17.2  amp     88.0  nulo   2.48  cociente   35.5
+  g= 18.2  amp    117.2  nulo   2.42  cociente   48.5
+  g= 18.7  amp     81.9  nulo   1.86  cociente   44.0
+  g= 20.1  amp     14.5  nulo   2.16  cociente    6.7
+  g= 21.0  amp     21.3  nulo   3.05  cociente    7.0
+  g= 22.1  amp     13.6  nulo   2.57  cociente    5.3
+  g= 23.3  amp    148.2  nulo   2.46  cociente   60.3
+  g= 24.3  amp     47.8  nulo   2.06  cociente   23.3
+  g= 26.0  amp     31.3  nulo   1.72  cociente   18.2
+  g= 27.3  amp     12.7  nulo   2.00  cociente    6.3
+  g= 28.3  amp     25.3  nulo   2.42  cociente   10.5
+  g= 29.3  amp    107.4  nulo   1.50  cociente   71.4
+  g= 30.7  amp     16.7  nulo   2.68  cociente    6.2
+  g= 31.5  amp     12.1  nulo   1.83  cociente    6.6
+  g= 31.9  amp     11.6  nulo   1.96  cociente    5.9
+  g= 32.8  amp     15.7  nulo   2.26  cociente    6.9
+  g= 34.5  amp     16.5  nulo   2.22  cociente    7.5
+  g= 35.3  amp     94.7  nulo   2.21  cociente   42.9
+  g= 35.9  amp     54.9  nulo   1.72  cociente   31.8
+  g= 37.2  amp     24.0  nulo   1.93  cociente   12.4
+  g= 38.7  amp     29.3  nulo   1.55  cociente   18.8
+  g= 39.4  amp      5.9  nulo   1.57  cociente    3.8
+  cociente medio en 1..40: 13.40

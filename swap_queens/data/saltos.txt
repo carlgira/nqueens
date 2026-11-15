@@ -1,0 +1,208 @@
+N=8 control=0 G=92 listas=1913
+saltos_por_lista 1:24 2:1721 3:4 4:150 6:12 8:1 28:1
+saltos=3 filas_fuera_de_recta 4:4
+saltos=4 filas_fuera_de_recta 1:4 2:6 3:4 4:36 5:100
+saltos=6 filas_fuera_de_recta 1:2 2:1 3:2 4:7
+saltos=8 filas_fuera_de_recta 0:1
+saltos=28 filas_fuera_de_recta 0:1
+mejor saltos=28 fuera=0 lista=1 1 1 1 1 1 1 1 
+mejor saltos=8 fuera=0 lista=2 2 2 2 2 2 2 2 
+mejor saltos=6 fuera=1 lista=1 2 3 0 5 6 7 0 
+mejor saltos=6 fuera=4 lista=2 0 0 6 6 0 0 2 
+mejor saltos=6 fuera=4 lista=2 1 2 1 6 5 6 1 
+mejor saltos=6 fuera=3 lista=3 4 5 2 3 4 5 6 
+mejor saltos=6 fuera=2 lista=3 5 7 5 3 1 3 5 
+mejor saltos=6 fuera=4 lista=4 3 4 3 4 3 4 7 
+mejor saltos=6 fuera=4 lista=1 6 5 6 1 2 1 2 
+mejor saltos=6 fuera=4 lista=1 7 7 1 1 7 7 1 
+mejor saltos=6 fuera=4 lista=2 2 2 2 6 6 6 6 
+mejor saltos=6 fuera=3 lista=2 3 4 5 6 3 4 5 
+N=8 control=1 G=92 listas=4179
+saltos_por_lista 1:4172 2:7
+N=9 control=0 G=352 listas=27640
+saltos_por_lista 1:157 2:24575 3:18 4:2554 5:1 6:308 8:23 10:2 34:1 108:1
+saltos=3 filas_fuera_de_recta 6:18
+saltos=4 filas_fuera_de_recta 0:1 2:80 3:137 4:794 5:1179 6:363
+saltos=5 filas_fuera_de_recta 6:1
+saltos=6 filas_fuera_de_recta 0:2 2:11 3:24 4:81 5:146 6:44
+saltos=8 filas_fuera_de_recta 0:5 3:4 4:6 5:5 6:3
+saltos=10 filas_fuera_de_recta 0:1 4:1
+saltos=34 filas_fuera_de_recta 0:1
+saltos=64+ filas_fuera_de_recta 0:1
+mejor saltos=108 fuera=0 lista=1 1 1 1 1 1 1 1 1 
+mejor saltos=34 fuera=0 lista=2 2 2 2 2 2 2 2 2 
+mejor saltos=10 fuera=0 lista=3 3 3 3 3 3 3 3 3 
+mejor saltos=10 fuera=4 lista=3 5 5 7 5 7 5 5 3 
+mejor saltos=8 fuera=5 lista=0 1 4 3 1 1 3 4 1 
+mejor saltos=8 fuera=4 lista=1 1 3 5 1 1 3 1 2 
+mejor saltos=8 fuera=4 lista=2 1 3 1 1 5 3 1 1 
+mejor saltos=8 fuera=4 lista=2 3 5 5 6 2 2 0 2 
+mejor saltos=8 fuera=4 lista=3 6 6 3 0 0 0 0 0 
+mejor saltos=8 fuera=6 lista=3 6 7 8 1 5 7 8 0 
+mejor saltos=8 fuera=5 lista=3 2 6 6 2 6 6 2 3 
+mejor saltos=8 fuera=3 lista=4 0 8 7 8 5 4 7 2 
+N=9 control=1 G=352 listas=61677
+saltos_por_lista 1:61578 2:99
+N=10 control=0 G=724 listas=123514
+saltos_por_lista 1:300 2:116429 3:18 4:6250 5:4 6:443 8:53 10:5 12:6 16:1 18:1 20:2 48:1 168:1
+saltos=3 filas_fuera_de_recta 5:17 6:1
+saltos=4 filas_fuera_de_recta 1:5 2:74 3:106 4:391 5:981 6:3380 7:1313
+saltos=5 filas_fuera_de_recta 5:4
+saltos=6 filas_fuera_de_recta 1:3 2:8 3:11 4:25 5:39 6:242 7:115
+saltos=8 filas_fuera_de_recta 0:1 2:3 3:1 4:5 5:4 6:35 7:4
+saltos=10 filas_fuera_de_recta 2:1 4:2 6:2
+saltos=12 filas_fuera_de_recta 0:1 2:3 4:1 6:1
+saltos=16 filas_fuera_de_recta 2:1
+saltos=18 filas_fuera_de_recta 2:1
+saltos=20 filas_fuera_de_recta 0:1 2:1
+saltos=48 filas_fuera_de_recta 0:1
+saltos=64+ filas_fuera_de_recta 0:1
+mejor saltos=168 fuera=0 lista=1 1 1 1 1 1 1 1 1 1 
+mejor saltos=48 fuera=0 lista=2 2 2 2 2 2 2 2 2 2 
+mejor saltos=20 fuera=0 lista=3 3 3 3 3 3 3 3 3 3 
+mejor saltos=20 fuera=2 lista=3 8 8 8 8 8 8 8 8 3 
+mejor saltos=18 fuera=2 lista=2 7 7 7 7 7 7 7 7 2 
+mejor saltos=16 fuera=2 lista=4 9 9 9 9 9 9 9 9 4 
+mejor saltos=12 fuera=2 lista=0 1 1 1 1 2 1 1 1 1 
+mejor saltos=12 fuera=4 lista=0 0 3 5 0 0 5 7 0 0 
+mejor saltos=12 fuera=6 lista=5 6 5 3 4 6 7 5 4 5 
+mejor saltos=12 fuera=2 lista=1 6 6 6 6 6 6 6 6 1 
+mejor saltos=12 fuera=0 lista=4 4 4 4 4 4 4 4 4 4 
+mejor saltos=12 fuera=2 lista=1 1 1 1 2 1 1 1 1 0 
+N=10 control=1 G=724 listas=261655
+saltos_por_lista 1:261584 2:71
+N=11 control=0 G=2592 listas=1648873
+saltos_por_lista 1:1271 2:1617978 3:24 4:28766 5:1 6:759 8:59 10:8 12:3 20:2 50:1 336:1
+saltos=3 filas_fuera_de_recta 5:4 6:6 7:14
+saltos=4 filas_fuera_de_recta 0:2 2:144 3:161 4:344 5:1292 6:6938 7:18078 8:1807
+saltos=5 filas_fuera_de_recta 6:1
+saltos=6 filas_fuera_de_recta 0:1 2:45 3:21 4:25 5:33 6:195 7:393 8:46
+saltos=8 filas_fuera_de_recta 0:1 2:30 3:6 4:4 5:2 6:8 7:1 8:7
+saltos=10 filas_fuera_de_recta 2:4 4:4
+saltos=12 filas_fuera_de_recta 2:3
+saltos=20 filas_fuera_de_recta 2:2
+saltos=50 filas_fuera_de_recta 0:1
+saltos=64+ filas_fuera_de_recta 0:1
+mejor saltos=336 fuera=0 lista=1 1 1 1 1 1 1 1 1 1 1 
+mejor saltos=50 fuera=0 lista=2 2 2 2 2 2 2 2 2 2 2 
+mejor saltos=20 fuera=2 lista=5 0 0 0 0 0 0 0 0 0 6 
+mejor saltos=20 fuera=2 lista=1 0 0 0 0 0 0 0 0 0 10 
+mejor saltos=12 fuera=2 lista=1 1 1 1 0 1 1 1 2 1 1 
+mejor saltos=12 fuera=2 lista=1 1 2 1 1 1 0 1 1 1 1 
+mejor saltos=12 fuera=2 lista=0 2 0 0 0 0 0 0 0 9 0 
+mejor saltos=10 fuera=2 lista=4 0 0 0 0 0 0 0 0 7 0 
+mejor saltos=10 fuera=2 lista=1 4 9 1 1 1 1 1 1 1 1 
+mejor saltos=10 fuera=4 lista=5 0 6 2 0 0 0 0 0 9 0 
+mejor saltos=10 fuera=4 lista=2 2 2 3 2 10 3 2 2 3 2 
+mejor saltos=10 fuera=4 lista=0 2 0 0 0 0 0 9 5 0 6 
+N=11 control=1 G=2592 listas=3354858
+saltos_por_lista 1:3351782 2:3074 3:2
+saltos=3 filas_fuera_de_recta 7:2
+mejor saltos=3 fuera=7 lista=2 1 6 7 9 4 5 8 5 9 10 
+mejor saltos=3 fuera=7 lista=2 7 6 8 5 10 5 2 5 7 9 
+N=12 control=0 G=14200 listas=48598124
+saltos_por_lista 1:6295 2:46886307 3:265 4:1613466 5:20 6:82402 8:8090 10:703 12:194 14:111 16:74 18:59 20:46 22:22 24:17 26:5 28:12 30:7 32:7 34:4 36:4 42:2 44:4 46:2 50:2 62:1 184:1 612:1 2640:1
+saltos=3 filas_fuera_de_recta 7:70 8:187 9:8
+saltos=4 filas_fuera_de_recta 2:483 3:1842 4:6330 5:24008 6:116828 7:475867 8:851400 9:136697 10:11
+saltos=5 filas_fuera_de_recta 7:6 8:14
+saltos=6 filas_fuera_de_recta 2:260 3:446 4:780 5:1972 6:7371 7:26238 8:39723 9:5608 10:4
+saltos=8 filas_fuera_de_recta 2:176 3:112 4:226 5:250 6:730 7:2417 8:3703 9:476
+saltos=10 filas_fuera_de_recta 2:111 3:69 4:47 5:32 6:60 7:154 8:204 9:26
+saltos=12 filas_fuera_de_recta 2:88 3:42 4:31 5:4 6:15 7:4 8:10
+saltos=14 filas_fuera_de_recta 2:63 3:30 4:10 5:4 7:4
+saltos=16 filas_fuera_de_recta 2:57 3:7 4:10
+saltos=18 filas_fuera_de_recta 0:1 2:31 3:15 4:10 5:2
+saltos=20 filas_fuera_de_recta 2:22 3:8 4:16
+saltos=22 filas_fuera_de_recta 2:14 3:6 4:2
+saltos=24 filas_fuera_de_recta 2:7 3:6 4:4
+saltos=26 filas_fuera_de_recta 2:4 3:1
+saltos=28 filas_fuera_de_recta 2:10 3:2
+saltos=30 filas_fuera_de_recta 2:2 3:2 4:3
+saltos=32 filas_fuera_de_recta 0:1 2:4 3:2
+saltos=34 filas_fuera_de_recta 2:4
+saltos=36 filas_fuera_de_recta 3:4
+saltos=42 filas_fuera_de_recta 2:2
+saltos=44 filas_fuera_de_recta 2:4
+saltos=46 filas_fuera_de_recta 4:2
+saltos=50 filas_fuera_de_recta 2:2
+saltos=62 filas_fuera_de_recta 0:1
+saltos=64+ filas_fuera_de_recta 0:3
+mejor saltos=2640 fuera=0 lista=1 1 1 1 1 1 1 1 1 1 1 1 
+mejor saltos=612 fuera=0 lista=2 2 2 2 2 2 2 2 2 2 2 2 
+mejor saltos=184 fuera=0 lista=3 3 3 3 3 3 3 3 3 3 3 3 
+mejor saltos=62 fuera=0 lista=4 4 4 4 4 4 4 4 4 4 4 4 
+mejor saltos=50 fuera=2 lista=4 0 8 0 0 0 0 0 0 0 0 0 
+mejor saltos=50 fuera=2 lista=0 0 0 0 0 0 0 0 0 4 0 8 
+mejor saltos=46 fuera=4 lista=4 6 0 0 0 6 8 0 0 0 0 0 
+mejor saltos=46 fuera=4 lista=0 0 0 0 0 4 6 0 0 0 6 8 
+mejor saltos=44 fuera=2 lista=5 7 0 0 0 0 0 0 0 0 0 0 
+mejor saltos=44 fuera=2 lista=0 0 2 0 0 0 0 0 0 0 10 0 
+mejor saltos=44 fuera=2 lista=0 0 0 0 0 0 0 0 0 0 5 7 
+mejor saltos=44 fuera=2 lista=0 2 0 0 0 0 0 0 0 10 0 0 
+N=12 control=1 G=14200 listas=100799043
+saltos_por_lista 1:100785187 2:13855 3:1
+saltos=3 filas_fuera_de_recta 7:1
+mejor saltos=3 fuera=7 lista=4 3 4 3 8 10 8 8 4 4 8 8 
+N=13 control=0 G=71216 listas=1208822968
+saltos_por_lista 1:33211 2:1155529334 3:1356 4:48888544 5:27 6:3742163 8:476052 10:62862 12:6781 13:1014 14:1613 16:758 18:455 20:322 22:195 24:226 26:74474 28:760 30:233 32:134 34:100 36:85 38:66 40:45 42:46 44:53 46:56 48:31 50:28 52:1286 54:135 56:160 58:48 60:35 62:27 64:24 66:19 68:23 70:12 72:9 74:12 76:10 78:6 80:11 82:6 84:6 86:6 88:13 90:4 92:6 94:10 96:2 98:2 100:3 102:6 104:4 106:6 112:5 114:2 116:8 118:4 120:2 122:2 124:6 128:2 136:1 142:2 154:2 156:1 160:2 164:2 166:2 182:2 184:1 232:1 2072:1 2086:1 2134:1 2534:1 4764:1 15178:1
+saltos=3 filas_fuera_de_recta 2:4 3:12 4:12 5:12 6:148 7:262 8:570 9:330 10:6
+saltos=4 filas_fuera_de_recta 2:942 3:8808 4:41273 5:118168 6:523117 7:2793557 8:15390184 9:29072735 10:939760
+saltos=5 filas_fuera_de_recta 2:1 4:1 6:2 7:7 8:10 9:6
+saltos=6 filas_fuera_de_recta 2:564 3:3600 4:8935 5:15760 6:52788 7:225978 8:1185474 9:2178417 10:70647
+saltos=8 filas_fuera_de_recta 2:384 3:1740 4:3079 5:3234 6:9279 7:30743 8:149456 9:268683 10:9454
+saltos=10 filas_fuera_de_recta 0:2 2:282 3:868 4:1226 5:735 6:1407 7:3973 8:18458 9:34667 10:1244
+saltos=12 filas_fuera_de_recta 2:260 3:547 4:548 5:260 6:228 7:586 8:1473 9:2775 10:104
+saltos=13 filas_fuera_de_recta 8:1014
+saltos=14 filas_fuera_de_recta 2:240 3:408 4:340 5:58 6:82 7:88 8:305 9:92
+saltos=16 filas_fuera_de_recta 2:192 3:275 4:150 5:30 6:34 7:10 8:56 9:11
+saltos=18 filas_fuera_de_recta 2:154 3:158 4:108 5:12 6:17 7:2 8:2 9:2
+saltos=20 filas_fuera_de_recta 2:111 3:112 4:90 5:4 6:2 7:3
+saltos=22 filas_fuera_de_recta 0:2 2:86 3:69 4:34 5:4
+saltos=24 filas_fuera_de_recta 0:2 2:110 3:76 4:30 5:2 6:6
+saltos=26 filas_fuera_de_recta 2:82 3:66 4:20 5:2 6:2 7:4991 8:27550 9:32154 10:9607
+saltos=28 filas_fuera_de_recta 0:1 2:98 3:42 4:32 7:71 8:263 9:229 10:24
+saltos=30 filas_fuera_de_recta 0:2 2:58 3:38 4:24 7:11 8:57 9:41 10:2
+saltos=32 filas_fuera_de_recta 0:2 2:54 3:22 4:21 8:15 9:20
+saltos=34 filas_fuera_de_recta 0:2 2:68 3:14 4:9 6:4 7:1 9:2
+saltos=36 filas_fuera_de_recta 2:60 3:20 4:3 9:2
+saltos=38 filas_fuera_de_recta 2:48 3:16 4:2
+saltos=40 filas_fuera_de_recta 2:31 3:4 4:10
+saltos=42 filas_fuera_de_recta 2:42 3:2 4:2
+saltos=44 filas_fuera_de_recta 2:45 4:8
+saltos=46 filas_fuera_de_recta 2:50 3:4 4:2
+saltos=48 filas_fuera_de_recta 2:27 4:4
+saltos=50 filas_fuera_de_recta 2:22 3:2 4:4
+saltos=52 filas_fuera_de_recta 2:38 3:2 4:2 6:748 8:496
+saltos=54 filas_fuera_de_recta 2:22 3:6 6:98 8:9
+saltos=56 filas_fuera_de_recta 2:36 4:4 6:118 8:2
+saltos=58 filas_fuera_de_recta 2:26 3:4 6:18
+saltos=60 filas_fuera_de_recta 2:17 4:5 6:13
+saltos=62 filas_fuera_de_recta 2:18 4:2 6:7
+saltos=64+ filas_fuera_de_recta 0:6 2:206 3:18 4:11 6:12
+mejor saltos=15178 fuera=0 lista=1 1 1 1 1 1 1 1 1 1 1 1 1 
+mejor saltos=4764 fuera=0 lista=2 2 2 2 2 2 2 2 2 2 2 2 2 
+mejor saltos=2534 fuera=0 lista=3 3 3 3 3 3 3 3 3 3 3 3 3 
+mejor saltos=2134 fuera=0 lista=4 4 4 4 4 4 4 4 4 4 4 4 4 
+mejor saltos=2086 fuera=0 lista=6 6 6 6 6 6 6 6 6 6 6 6 6 
+mejor saltos=2072 fuera=0 lista=5 5 5 5 5 5 5 5 5 5 5 5 5 
+mejor saltos=232 fuera=2 lista=5 0 0 0 0 0 0 0 0 0 0 0 8 
+mejor saltos=184 fuera=2 lista=2 0 0 0 0 0 0 0 0 0 0 0 11 
+mejor saltos=182 fuera=2 lista=5 8 0 0 0 0 0 0 0 0 0 0 0 
+mejor saltos=182 fuera=2 lista=0 0 0 0 0 0 0 0 0 0 0 5 8 
+mejor saltos=166 fuera=2 lista=5 0 0 0 0 0 0 0 0 0 0 8 0 
+mejor saltos=166 fuera=2 lista=0 5 0 0 0 0 0 0 0 0 0 0 8 
+N=13 control=1 G=71216 listas=2535533780
+saltos_por_lista 1:2535243867 2:289886 3:27
+saltos=3 filas_fuera_de_recta 2:1 4:1 6:1 7:1 8:7 9:16
+mejor saltos=3 fuera=7 lista=3 12 6 12 0 8 7 6 2 4 3 9 6 
+mejor saltos=3 fuera=9 lista=1 10 11 8 3 10 3 12 7 6 7 7 6 
+mejor saltos=3 fuera=9 lista=6 1 11 4 6 10 4 3 3 4 11 7 8 
+mejor saltos=3 fuera=9 lista=0 3 12 5 6 3 5 2 1 0 10 1 4 
+mejor saltos=3 fuera=4 lista=1 9 6 4 1 1 1 1 1 11 1 1 1 
+mejor saltos=3 fuera=9 lista=2 4 7 6 3 11 0 1 1 3 2 3 9 
+mejor saltos=3 fuera=9 lista=4 7 5 12 1 2 12 4 4 9 5 0 0 
+mejor saltos=3 fuera=8 lista=5 5 12 11 5 8 0 0 11 5 5 1 10 
+mejor saltos=3 fuera=9 lista=6 10 0 8 5 4 8 11 3 3 12 7 1 
+mejor saltos=3 fuera=6 lista=6 5 10 0 4 5 5 5 5 10 5 5 0 
+mejor saltos=3 fuera=8 lista=3 7 12 0 2 5 11 11 12 5 8 10 5 
+mejor saltos=3 fuera=9 lista=6 5 1 0 8 6 12 0 0 8 11 0 8 

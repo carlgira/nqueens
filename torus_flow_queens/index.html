@@ -1,0 +1,513 @@
+<title>Río de Reinas</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: el toro ocupa el escenario; a la derecha, el mapa desenrollado, la vuelta en curso y la cadena de soluciones. Tema único oscuro: es un mapa de calor sobre agua. */
+:root {
+  --ink: #0b1220;         /* fondo: agua profunda */
+  --deep: #111b2e;        /* paneles */
+  --line: #24324d;        /* bordes */
+  --mute: #8494b3;        /* texto secundario */
+  --fg: #e6ecf7;          /* texto */
+  --cold: #3fd0d8;        /* la partícula, lo frío */
+  --hot: #ffb35c;         /* calor */
+  --bad: #ff6b81;         /* conflicto */
+  --display: "Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+  --body: "IBM Plex Sans", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  color-scheme: dark;
+}
+html, body { height: 100%; }
+body { background: var(--ink); color: var(--fg); font-family: var(--body); font-size: 14px; line-height: 1.5; }
+.wrap { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 18px 28px; max-width: 1400px; margin: 0 auto; display: grid; gap: 16px; }
+header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(26px, 3.4vw, 40px); letter-spacing: -0.02em; margin: 0; text-wrap: balance; }
+h1 em { font-style: normal; color: var(--cold); }
+.lede { color: var(--mute); max-width: 70ch; margin: 0; }
+.grid { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+@media (max-width: 900px) { .grid { grid-template-columns: minmax(0, 1fr); } }
+.stage { position: relative; background: radial-gradient(ellipse at 50% 40%, #13213a 0%, var(--ink) 70%); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; aspect-ratio: 4 / 3; max-width: 100%; }
+.stage canvas { width: 100%; height: 100%; display: block; touch-action: none; }
+.hud { position: absolute; left: 12px; top: 10px; font-family: var(--mono); font-size: 12px; color: var(--mute); pointer-events: none; display: grid; gap: 2px; }
+.hud b { color: var(--fg); font-weight: 500; }
+.chip { display: inline-block; padding: 1px 8px; border-radius: 99px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.04em; border: 1px solid currentColor; }
+.chip.lock { color: var(--hot); } .chip.flow { color: var(--cold); }
+.side { display: grid; gap: 14px; min-width: 0; }
+.panel { background: var(--deep); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: grid; gap: 10px; min-width: 0; }
+.panel h2 { font-family: var(--display); font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--mute); margin: 0; display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+.row2 { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 14px; align-items: center; }
+#flat, #board { display: block; image-rendering: pixelated; border-radius: 4px; max-width: 100%; }
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; font-variant-numeric: tabular-nums; }
+.stats div { display: grid; }
+.stats span { font-size: 11px; color: var(--mute); text-transform: uppercase; letter-spacing: 0.06em; }
+.stats b { font-family: var(--mono); font-weight: 500; font-size: 18px; }
+.chain { display: flex; flex-wrap: wrap; gap: 8px; max-height: 260px; overflow-y: auto; }
+.link { display: grid; gap: 2px; justify-items: center; font-family: var(--mono); font-size: 10px; color: var(--mute); }
+.link canvas { border-radius: 3px; border: 1px solid var(--line); }
+.link.rep canvas { border-color: var(--hot); }
+.link.rep { color: var(--hot); }
+.empty { color: var(--mute); font-size: 13px; }
+.controls { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 16px; }
+@media (max-width: 480px) { .controls { grid-template-columns: minmax(0, 1fr); } .stats { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+.ctl { display: grid; gap: 2px; min-width: 0; }
+.ctl label { font-size: 12px; color: var(--mute); display: flex; justify-content: space-between; gap: 6px; }
+.ctl label output { font-family: var(--mono); color: var(--fg); }
+input[type=range] { width: 100%; accent-color: var(--cold); }
+select { background: var(--ink); color: var(--fg); border: 1px solid var(--line); border-radius: 6px; padding: 4px 6px; font: inherit; }
+.btns { display: flex; flex-wrap: wrap; gap: 8px; }
+button { font: 500 13px var(--body); color: var(--fg); background: var(--ink); border: 1px solid var(--line); border-radius: 6px; padding: 6px 12px; cursor: pointer; }
+button:hover { border-color: var(--cold); }
+button.on { border-color: var(--cold); color: var(--cold); }
+button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--cold); outline-offset: 2px; }
+.law { font-family: var(--mono); font-size: 12px; color: var(--mute); }
+.law b { color: var(--fg); font-weight: 500; }
+.notes { color: var(--mute); max-width: 75ch; font-size: 13px; display: grid; gap: 6px; }
+.notes p { margin: 0; }
+.notes code { font-family: var(--mono); color: var(--fg); font-size: 12px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Río de <em>Reinas</em></h1>
+    <p class="lede">Un líquido recorre el toro, una fila por unidad de tiempo, y corre hacia lo frío de la fila que viene. Cada reina depositada calienta su columna y sus diagonales. Cada vuelta completa deja N reinas; si no se atacan, la vuelta es una solución.</p>
+  </header>
+
+  <div class="grid">
+    <div class="stage" id="stage">
+      <canvas id="gl" aria-label="Toro 3D con mapa de calor y la partícula"></canvas>
+      <div class="hud">
+        <div>vuelta <b id="hLap">0</b> · fila <b id="hRow">0</b></div>
+        <div>βM* = <b id="hLaw">0</b> <span class="chip" id="hRegime">—</span></div>
+      </div>
+    </div>
+
+    <div class="side">
+      <div class="panel">
+        <h2>Toro desenrollado <span>columnas → · filas ↓</span></h2>
+        <div class="row2">
+          <canvas id="flat" width="200" height="200" aria-label="Mapa de calor desenrollado"></canvas>
+          <div style="display:grid;gap:8px;min-width:0">
+            <canvas id="board" width="120" height="120" aria-label="Vuelta en curso"></canvas>
+            <div class="law">vuelta en curso<br><span id="lapStr">—</span></div>
+          </div>
+        </div>
+        <div class="stats">
+          <div><span>Vueltas</span><b id="sLaps">0</b></div>
+          <div><span>Aciertos</span><b id="sHit">0%</b></div>
+          <div><span>Distintas</span><b id="sDist">0</b></div>
+          <div><span>Repetidas</span><b id="sRep">0</b></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Cadena de soluciones <span id="cover">0 / 92</span></h2>
+        <div class="chain" id="chain"><p class="empty">Cada vez que una vuelta cierra una solución nueva aparece aquí, con las vueltas que la sostuvo. Borde ámbar = ya visitada.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>Condiciones del río <span class="law">la partícula y el líquido se reinician al cambiar N o x₀</span></h2>
+    <div class="btns">
+      <button id="pLock">Se fija en una (repite)</button>
+      <button id="pChain" class="on">Encadena</button>
+      <button id="pLong">Estancias largas</button>
+      <button id="pPause">Pausa</button>
+      <button id="pReset">Reiniciar</button>
+    </div>
+    <div class="controls">
+      <div class="ctl"><label for="cN">Tablero <output id="oN"></output></label>
+        <select id="cN">
+          <option value="8,0" selected>8 × 8 clásico (92)</option>
+          <option value="10,0">10 × 10 clásico (724)</option>
+          <option value="12,0">12 × 12 clásico (14200)</option>
+          <option value="7,1">7 × 7 toroidal (28)</option>
+          <option value="11,1">11 × 11 toroidal (88)</option>
+        </select></div>
+      <div class="ctl"><label for="cSpeed">Velocidad <output id="oSpeed"></output></label><input id="cSpeed" type="range" min="0" max="7" step="1" value="2"></div>
+      <div class="ctl"><label for="cBeta">β · fuerza de la memoria <output id="oBeta"></output></label><input id="cBeta" type="range" min="0" max="1.5" step="0.005" value="0.0314"></div>
+      <div class="ctl"><label for="cLam">λ · olvido por fila <output id="oLam"></output></label><input id="cLam" type="range" min="-3" max="-0.5" step="0.01" value="-2.3"></div>
+      <div class="ctl"><label for="cAlpha">α · pendiente del río (col/fila) <output id="oAlpha"></output></label><input id="cAlpha" type="range" min="0" max="5" step="0.05" value="2"></div>
+      <div class="ctl"><label for="cT">T · temperatura del líquido <output id="oT"></output></label><input id="cT" type="range" min="0.03" max="0.6" step="0.01" value="0.15"></div>
+      <div class="ctl"><label for="cX0">x₀ · columna inicial <output id="oX0"></output></label><input id="cX0" type="range" min="0" max="1" step="0.01" value="0.04"></div>
+    </div>
+    <div class="notes">
+      <p><b>El campo.</b> <code>dr/dt = 1</code>, <code>dv/dt = (u − v)/τ</code>, <code>u = κ·|Z|·sin(arg Z − φ)</code>, con <code>Z = Σ w_c e^{iφ_c}</code> y <code>w_c = exp(−E_c/T)</code>. E_c mezcla suavemente el calor de la fila recién cruzada y el de la siguiente. Cada reina nace con intensidad cero, sus rayas crecen hacia fuera a 3 filas por unidad de tiempo y se apaga justo antes de que la partícula vuelva a su fila. La memoria β·M se carga poco a poco cerca de cada centro de fila y decae con λ. Nada salta: el mapa de calor se desliza. Los puntos claros que se mueven son el líquido: trazadores que siguen el mismo campo y se juntan en los canales fríos.</p>
+      <p><b>La ley del umbral.</b> Una solución recorrida en bucle magnetiza sus celdas hasta M* = 1/(1−e^{−λN}). Medido en N = 8 (800 vueltas): con βM* ≈ 0.5 la órbita se queda en una solución; por encima de βM* ≈ 1 se suelta y encadena decenas. Cerca de la frontera (βM* ≈ 0.8, λ = 0.05) sostiene cada solución muchas vueltas y no repite ninguna.</p>
+      <p><b>Superficie o interior.</b> Si el río fuera fijo en el tiempo, dos vueltas no podrían cruzarse en la superficie (unicidad de la EDO): el orden cíclico de las columnas se conservaría fila a fila y solo se podrían encadenar familias tipo rotación. La memoria del líquido es la dimensión extra que deja a las vueltas cruzarse, como si la partícula pudiera hundirse dentro del toro.</p>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(() => {
+"use strict";
+const TOTAL = { "8,0": 92, "10,0": 724, "12,0": 14200, "7,1": 28, "11,1": 88 };
+const $ = id => document.getElementById(id);
+
+// ---------------- simulación (port de core.py, tiempo continuo) ----------------
+const smooth = (u, a, b) => { let t = (u - a) / (b - a); t = t < 0 ? 0 : t > 1 ? 1 : t; return t * t * (3 - 2 * t); };
+class Sim {
+  constructor(o) {
+    Object.assign(this, { A: 1, s: 0.3, eps: 0.02, tau: 0.12, c: 3, dt: 0.02 }, o);
+    const n = this.n;
+    this.kappa = 3 * n;
+    this.t = 0; this.x = this.x0; this.v = 0;
+    this.qt = new Float64Array(n).fill(-1e9);   // instante en que nació la reina de cada fila
+    this.qx = new Float64Array(n);              // su columna continua
+    this.mem = Array.from({ length: n }, () => new Float64Array(n));
+    this.cos = Float64Array.from({ length: n }, (_, c) => Math.cos(2 * Math.PI * c / n));
+    this.sin = Float64Array.from({ length: n }, (_, c) => Math.sin(2 * Math.PI * c / n));
+    this.lap = []; this.onLap = null; this.onQueen = null;
+  }
+  wrap(u) { const n = this.n; return ((u + n / 2) % n + n) % n - n / 2; }
+  label(x) { const n = this.n; return ((x + 0.5) % n + n) % n - 0.5; }
+  strength(age) { const n = this.n; return smooth(age, 0.1, 0.6) * (1 - smooth(age, n - 1.0, n - 0.55)); }
+  // calor de las reinas en la fila continua r, columna x, instante t (sin memoria)
+  queens(r, x, t, skip) {
+    const n = this.n, s2 = 2 * this.s * this.s, rm = ((r % n) + n) % n;
+    const edge = this.tor ? 1 : smooth(rm, 0, 0.35) * (1 - smooth(rm, n - 0.35, n));
+    let h = 0;
+    for (let j = 0; j < n; j++) {
+      if (j === skip) continue;
+      const age = t - this.qt[j], S = this.strength(age);
+      if (S < 1e-4) continue;
+      let d = rm - (j + 0.5); if (this.tor) d = this.wrap(d);
+      const reach = smooth(this.c * age - Math.abs(d), 0, 0.5);
+      if (reach < 1e-4) continue;
+      const u0 = this.wrap(x - this.qx[j]);
+      let u1, u2;
+      if (this.tor) { u1 = this.wrap(u0 - d); u2 = this.wrap(u0 + d); }
+      else { const a = this.label(x) - this.label(this.qx[j]); u1 = a - d; u2 = a + d; }
+      h += S * reach * (Math.exp(-u0 * u0 / s2) + edge * (Math.exp(-u1 * u1 / s2) + Math.exp(-u2 * u2 / s2)));
+    }
+    return this.A * h;
+  }
+  current(x, t, now = t) {   // t = posición en filas; now = instante del campo
+    const n = this.n, k = Math.floor(t - 0.5), p = t - (k + 0.5), sig = smooth(p, 0.02, 0.3);
+    const e = new Float64Array(n);
+    const parts = [[((k % n) + n) % n, 1 - sig, x], [(((k + 1) % n) + n) % n, sig, x + this.alpha * (1 - p)]];
+    for (const [row, w, lead] of parts) {
+      if (w < 1e-6) continue;
+      for (let c = 0; c < n; c++) {
+        const d = this.wrap(c - lead);
+        e[c] += w * (this.queens(row + 0.5, c, now, row) + this.beta * this.mem[row][c] + this.eps * d * d);
+      }
+    }
+    let m = Infinity; for (let c = 0; c < n; c++) { e[c] /= this.T; if (e[c] < m) m = e[c]; }
+    let W = 0, zr = 0, zi = 0;
+    for (let c = 0; c < n; c++) { const w = Math.exp(-(e[c] - m)); W += w; zr += w * this.cos[c]; zi += w * this.sin[c]; }
+    zr /= W; zi /= W;
+    return this.kappa * Math.hypot(zr, zi) * n / (2 * Math.PI) * Math.sin(Math.atan2(zi, zr) - 2 * Math.PI * x / n);
+  }
+  step() {
+    const n = this.n, dt = this.dt;
+    const u = this.current(this.x, this.t);
+    this.v += dt * (u - this.v) / this.tau;
+    this.x = ((this.x + dt * this.v) % n + n) % n;
+    const cOld = Math.floor(this.t - 0.5);
+    this.t += dt;
+    // memoria: pulso suave alrededor del centro de fila, repartido entre columnas cercanas
+    const fr = (this.t % 1) - 0.5, pulse = Math.exp(-fr * fr / (2 * 0.0225)) / (0.15 * Math.sqrt(2 * Math.PI));
+    const row = Math.floor(this.t % n), f = Math.exp(-this.lam * dt);
+    for (const r of this.mem) for (let k = 0; k < n; k++) r[k] *= f;
+    let tot = 0; const sh = new Float64Array(n);
+    for (let c = 0; c < n; c++) { const d = this.wrap(c - this.x); sh[c] = Math.exp(-d * d / 0.18); tot += sh[c]; }
+    for (let c = 0; c < n; c++) this.mem[row][c] += dt * pulse * sh[c] / tot;
+    if (Math.floor(this.t - 0.5) !== cOld) {      // centro de fila: nace una reina
+      const qr = ((Math.floor(this.t - 0.5) % n) + n) % n;
+      this.qt[qr] = this.t; this.qx[qr] = this.x;
+      this.lap.push(((Math.round(this.x) % n) + n) % n);
+      if (this.onQueen) this.onQueen();
+      if (qr === n - 1) { if (this.lap.length === n && this.onLap) this.onLap(this.lap.slice()); this.lap = []; }
+    }
+  }
+  // calor total para la textura: reinas + memoria interpolada entre filas y columnas
+  field(r, x) {
+    const n = this.n, rm = ((r % n) + n) % n, f = rm - 0.5, i0 = ((Math.floor(f) % n) + n) % n, w1 = f - Math.floor(f);
+    const a = this.mem[i0], b = this.mem[(i0 + 1) % n];
+    let m = 0;
+    for (let c = 0; c < n; c++) { const d = this.wrap(x - c); if (d > 1.2 || d < -1.2) continue; m += ((1 - w1) * a[c] + w1 * b[c]) * Math.exp(-d * d / 0.18); }
+    return this.queens(r, x, this.t, -1) + this.beta * m;
+  }
+}
+
+function isSolution(cols, tor) {
+  const n = cols.length;
+  if (new Set(cols).size !== n) return false;
+  for (let i = 0; i < n; i++) for (let j = i + 1; j < n; j++) {
+    const d = cols[j] - cols[i], k = j - i;
+    if (tor) { if (((d - k) % n + n) % n === 0 || ((d + k) % n + n) % n === 0) return false; }
+    else if (Math.abs(d) === k) return false;
+  }
+  return true;
+}
+function conflicts(cols, n, tor) {        // filas en conflicto dentro de una vuelta parcial
+  const bad = new Set();
+  for (let i = 0; i < cols.length; i++) for (let j = i + 1; j < cols.length; j++) {
+    const d = cols[j] - cols[i], k = j - i;
+    const hit = d === 0 || (tor ? (((d - k) % n + n) % n === 0 || ((d + k) % n + n) % n === 0) : Math.abs(d) === k);
+    if (hit) { bad.add(i); bad.add(j); }
+  }
+  return bad;
+}
+
+// ---------------- estado y controles ----------------
+const P = { n: 8, tor: false, beta: 0.0314, lam: Math.pow(10, -2.3), alpha: 2, T: 0.15, x0: 0.3 };
+const SPEEDS = [0.5, 1, 2, 5, 15, 50, 150, 500];   // filas por segundo
+let speedIx = 2, paused = false;
+let sim, stats, tracers;
+
+function law() { return P.beta / (1 - Math.exp(-P.lam * P.n)); }
+
+function reset() {
+  sim = new Sim({ n: P.n, tor: P.tor, beta: P.beta, lam: P.lam, alpha: P.alpha, T: P.T, x0: P.x0 });
+  sim.onLap = onLap; sim.onQueen = () => { queenDirty = true; };
+  stats = { laps: 0, hits: 0, seen: new Map(), links: [], reps: 0, last: null };
+  $("chain").innerHTML = '<p class="empty">Cada vez que una vuelta cierra una solución nueva aparece aquí, con las vueltas que la sostuvo. Borde ámbar = ya visitada.</p>';
+  tracers = Array.from({ length: 420 }, () => spawn());
+  trail.length = 0; texDirty = true; queenDirty = true; rebuildGrid();
+  updateStats();
+}
+function spawn() { return { r: Math.random() * P.n, x: Math.random() * P.n, age: Math.random() * 60 }; }
+
+function onLap(cols) {
+  stats.laps++;
+  if (!isSolution(cols, P.tor)) { stats.last = null; return; }
+  stats.hits++;
+  const key = cols.join(",");
+  if (stats.last && stats.last.key === key) { stats.last.dwell++; stats.last.el.lastChild.textContent = linkLabel(stats.last); return; }
+  const rep = stats.seen.has(key);
+  if (rep) stats.reps++;
+  stats.seen.set(key, (stats.seen.get(key) || 0) + 1);
+  const link = { key, cols, lap: stats.laps, dwell: 1, rep };
+  link.el = makeLink(link);
+  const ch = $("chain");
+  if (ch.querySelector(".empty")) ch.innerHTML = "";
+  ch.prepend(link.el);
+  while (ch.children.length > 60) ch.lastChild.remove();
+  stats.links.push(link); stats.last = link;
+}
+function linkLabel(l) { return `v${l.lap} ×${l.dwell}`; }
+function makeLink(l) {
+  const d = document.createElement("div"); d.className = "link" + (l.rep ? " rep" : "");
+  const c = document.createElement("canvas"); const s = 4, n = P.n; c.width = c.height = n * s;
+  const g = c.getContext("2d");
+  for (let i = 0; i < n; i++) for (let j = 0; j < n; j++) { g.fillStyle = (i + j) % 2 ? "#16233b" : "#1d2c48"; g.fillRect(j * s, i * s, s, s); }
+  g.fillStyle = l.rep ? "#ffb35c" : "#3fd0d8";
+  l.cols.forEach((col, i) => g.fillRect(col * s, i * s, s, s));
+  c.style.width = c.style.height = Math.max(36, n * 4) + "px";
+  const t = document.createElement("span"); t.textContent = linkLabel(l);
+  d.append(c, t); return d;
+}
+
+function bindRange(id, out, fmt, set, reset0) {
+  const el = $(id);
+  const f = () => { set(+el.value); $(out).textContent = fmt(+el.value); $("hLaw").textContent = law().toFixed(2); regimeChip(); if (reset0) reset(); };
+  el.addEventListener("input", f); f();
+}
+function regimeChip() {
+  const e = $("hRegime"), L = law();
+  if (L < 0.8) { e.textContent = "se fija"; e.className = "chip lock"; }
+  else if (L < 1.0) { e.textContent = "frontera"; e.className = "chip flow"; }
+  else { e.textContent = "encadena"; e.className = "chip flow"; }
+}
+function pushParams() { if (!sim) return; sim.beta = P.beta; sim.lam = P.lam; sim.alpha = P.alpha; sim.T = P.T; texDirty = true; }
+
+// ---------------- three.js ----------------
+const canvas = $("gl");
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+renderer.setPixelRatio(Math.min(2, window.devicePixelRatio || 1));
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(38, 4 / 3, 0.1, 100);
+const R = 2.25, RT = 0.95;
+const TW = 200, TH = 72;
+const texCanvas = document.createElement("canvas"); texCanvas.width = TW; texCanvas.height = TH;
+const tctx = texCanvas.getContext("2d");
+const img = tctx.createImageData(TW, TH);
+const texture = new THREE.CanvasTexture(texCanvas);
+texture.flipY = false; texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+const torus = new THREE.Mesh(new THREE.TorusGeometry(R, RT, 96, 220),
+  new THREE.MeshStandardMaterial({ map: texture, roughness: 0.55, metalness: 0.05 }));
+scene.add(torus);
+scene.add(new THREE.AmbientLight(0xbfd4ff, 0.75));
+const dl = new THREE.DirectionalLight(0xffffff, 0.75); dl.position.set(3, 5, 6); scene.add(dl);
+
+// mapa toro: theta = 2 pi r / N (vuelta larga, filas), phi = 2 pi (x+0.5)/N (tubo, columnas)
+function torusPoint(r, x, lift = 0) {
+  const th = 2 * Math.PI * r / P.n, ph = 2 * Math.PI * (x + 0.5) / P.n, rr = RT + lift;
+  return new THREE.Vector3((R + rr * Math.cos(ph)) * Math.cos(th), (R + rr * Math.cos(ph)) * Math.sin(th), rr * Math.sin(ph));
+}
+const particle = new THREE.Mesh(new THREE.SphereGeometry(0.075, 20, 16), new THREE.MeshBasicMaterial({ color: 0x9ff6ff }));
+const halo = new THREE.Mesh(new THREE.SphereGeometry(0.16, 20, 16), new THREE.MeshBasicMaterial({ color: 0x3fd0d8, transparent: true, opacity: 0.25 }));
+scene.add(particle, halo);
+const TRAIL = 900, trail = [];
+const trailGeo = new THREE.BufferGeometry();
+trailGeo.setAttribute("position", new THREE.BufferAttribute(new Float32Array(TRAIL * 3), 3));
+trailGeo.setAttribute("color", new THREE.BufferAttribute(new Float32Array(TRAIL * 3), 3));
+const trailLine = new THREE.Line(trailGeo, new THREE.LineBasicMaterial({ vertexColors: true, transparent: true, opacity: 0.95 }));
+scene.add(trailLine);
+const NT = 420;
+const trGeo = new THREE.BufferGeometry();
+trGeo.setAttribute("position", new THREE.BufferAttribute(new Float32Array(NT * 3), 3));
+const trPts = new THREE.Points(trGeo, new THREE.PointsMaterial({ color: 0xcfe9ff, size: 0.028, transparent: true, opacity: 0.55 }));
+scene.add(trPts);
+// reinas de la ventana: discos sobre la superficie
+const queenGroup = new THREE.Group(); scene.add(queenGroup);
+const qGeo = new THREE.SphereGeometry(0.06, 12, 10);
+let queenMeshes = [];
+function rebuildGrid() {
+  queenGroup.clear(); queenMeshes = [];
+  for (let j = 0; j < P.n; j++) { const m = new THREE.Mesh(qGeo, new THREE.MeshBasicMaterial({ color: 0xffd28a })); m.visible = false; queenGroup.add(m); queenMeshes.push(m); }
+}
+
+// cámara orbital mínima
+let yaw = 0.6, pitch = 0.95, dist = 8.2, drag = null;
+canvas.addEventListener("pointerdown", e => { drag = [e.clientX, e.clientY]; canvas.setPointerCapture(e.pointerId); });
+canvas.addEventListener("pointermove", e => { if (!drag) return; yaw -= (e.clientX - drag[0]) * 0.006; pitch = Math.max(0.15, Math.min(1.5, pitch - (e.clientY - drag[1]) * 0.006)); drag = [e.clientX, e.clientY]; });
+canvas.addEventListener("pointerup", () => drag = null);
+canvas.addEventListener("wheel", e => { e.preventDefault(); dist = Math.max(4.5, Math.min(14, dist * (1 + e.deltaY * 0.001))); }, { passive: false });
+function placeCamera() {
+  camera.position.set(dist * Math.sin(pitch) * Math.cos(yaw), dist * Math.sin(pitch) * Math.sin(yaw), dist * Math.cos(pitch));
+  camera.up.set(0, 0, 1); camera.lookAt(0, 0, 0);
+}
+function resize() {
+  const w = canvas.clientWidth, h = canvas.clientHeight;
+  renderer.setSize(w, h, false); camera.aspect = w / h; camera.updateProjectionMatrix();
+}
+new ResizeObserver(resize).observe(canvas);
+
+// colormap: agua fría -> ámbar -> blanco rosado
+function cmap(v) {
+  v = Math.max(0, Math.min(1, v));
+  const st = [[0, 12, 34, 58], [0.25, 18, 74, 104], [0.5, 120, 98, 80], [0.75, 255, 168, 80], [1, 255, 236, 214]];
+  for (let i = 1; i < st.length; i++) if (v <= st[i][0]) {
+    const a = st[i - 1], b = st[i], f = (v - a[0]) / (b[0] - a[0]);
+    return [a[1] + f * (b[1] - a[1]), a[2] + f * (b[2] - a[2]), a[3] + f * (b[3] - a[3])];
+  }
+  return st[4].slice(1);
+}
+let texDirty = true, queenDirty = true;
+function drawTexture() {
+  const n = P.n, d = img.data;
+  for (let py = 0; py < TH; py++) {
+    const x = (py + 0.5) / TH * n - 0.5;
+    for (let px = 0; px < TW; px++) {
+      const r = (px + 0.5) / TW * n;
+      const h = sim.field(r, x);
+      let [cr, cg, cb] = cmap(h / 4.5);
+      // rejilla del tablero
+      const fx = ((x + 0.5) % 1 + 1) % 1, fr = r % 1;
+      if (fx < 0.035 || fr < 0.012) { cr = cr * 0.7 + 30; cg = cg * 0.7 + 45; cb = cb * 0.7 + 70; }
+      const k = (py * TW + px) * 4; d[k] = cr; d[k + 1] = cg; d[k + 2] = cb; d[k + 3] = 255;
+    }
+  }
+  tctx.putImageData(img, 0, 0);
+  if (!P.tor) { tctx.fillStyle = "rgba(255,107,129,0.75)"; tctx.fillRect(0, 0, TW, 1.5); tctx.fillRect(0, TH - 1.5, TW, 1.5); }  // costura de columnas
+  tctx.fillStyle = "rgba(230,236,247,0.6)"; tctx.fillRect(0, 0, 1.5, TH);  // costura de vueltas
+  texture.needsUpdate = true;
+  drawFlat();
+}
+// mapa plano: columnas en horizontal, filas en vertical
+function drawFlat() {
+  const f = $("flat"), g = f.getContext("2d"), S = f.width;
+  g.save(); g.clearRect(0, 0, S, S);
+  g.setTransform(0, S / TW, S / TH, 0, 0, 0);   // transpuesta
+  g.drawImage(texCanvas, 0, 0);
+  g.restore();
+  const n = P.n, cs = S / n;
+  for (let j = 0; j < n; j++) { const S = sim.strength(sim.t - sim.qt[j]); if (S < 0.02) continue;
+    g.globalAlpha = S; g.fillStyle = "#ffd28a"; g.beginPath(); g.arc((sim.label(sim.qx[j]) + 0.5) * cs, (j + 0.5) * cs, cs * 0.18, 0, 7); g.fill(); }
+  g.globalAlpha = 1;
+  g.fillStyle = "#9ff6ff"; g.beginPath(); g.arc((sim.label(sim.x) + 0.5) * cs, (sim.t % n) * cs, cs * 0.22, 0, 7); g.fill();
+}
+function drawBoard() {
+  const b = $("board"), g = b.getContext("2d"), n = P.n, S = b.width, cs = S / n;
+  for (let i = 0; i < n; i++) for (let j = 0; j < n; j++) { g.fillStyle = (i + j) % 2 ? "#16233b" : "#1d2c48"; g.fillRect(j * cs, i * cs, cs, cs); }
+  const lap = sim.lap, bad = conflicts(lap, n, P.tor);
+  lap.forEach((c, i) => { g.fillStyle = bad.has(i) ? "#ff6b81" : "#3fd0d8"; g.beginPath(); g.arc((c + 0.5) * cs, (i + 0.5) * cs, cs * 0.32, 0, 7); g.fill(); });
+  $("lapStr").textContent = lap.length ? lap.map(c => c.toString(36).toUpperCase()).join(" ") : "—";
+}
+function updateStats() {
+  $("sLaps").textContent = stats.laps;
+  $("sHit").textContent = stats.laps ? Math.round(100 * stats.hits / stats.laps) + "%" : "0%";
+  $("sDist").textContent = stats.seen.size;
+  $("sRep").textContent = stats.reps;
+  $("cover").textContent = `${stats.seen.size} / ${TOTAL[P.n + "," + (P.tor ? 1 : 0)]}`;
+  $("hLap").textContent = Math.floor(sim.t / P.n); $("hRow").textContent = Math.floor(sim.t % P.n);
+}
+
+// ---------------- bucle ----------------
+const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+let lastT = performance.now(), acc = 0;
+function frame(now) {
+  const dtw = Math.min(0.1, (now - lastT) / 1000); lastT = now;
+  if (!paused) {
+    acc += dtw * SPEEDS[speedIx] / sim.dt;
+    let steps = Math.min(Math.floor(acc), 40000); acc -= steps;
+    const stride = Math.max(1, Math.floor(steps / 60));
+    for (let k = 0; k < steps; k++) {
+      sim.step();
+      if (k % stride === 0) { trail.push([sim.t, sim.x]); if (trail.length > TRAIL) trail.shift(); }
+    }
+    // trazadores (el líquido) a velocidad de pantalla
+    const tdt = Math.min(dtw * Math.min(SPEEDS[speedIx], 3), 0.05);
+    for (const p of tracers) {
+      const v = sim.current(p.x, sim.t + sim.wrap(p.r - sim.t), sim.t);
+      p.x = ((p.x + tdt * v) % P.n + P.n) % P.n; p.r = (p.r + tdt) % P.n; p.age += tdt;
+      if (p.age > 2.5) Object.assign(p, spawn(), { age: 0 });
+    }
+  }
+  if (!paused || texDirty) { texDirty = false; drawTexture(); }
+  if (queenDirty) { queenDirty = false; drawBoard(); updateStats(); }
+  // escena
+  const pp = torusPoint(sim.t % P.n, sim.x, 0.06); particle.position.copy(pp); halo.position.copy(pp);
+  halo.scale.setScalar(1 + 0.15 * Math.sin(now / 250));
+  const pos = trailGeo.attributes.position.array, col = trailGeo.attributes.color.array;
+  let prev = null;
+  for (let i = 0; i < TRAIL; i++) {
+    const tp = trail[Math.max(0, trail.length - TRAIL + i)] || [sim.t, sim.x];
+    const q = torusPoint(tp[0] % P.n, tp[1], 0.04);
+    pos.set([q.x, q.y, q.z], i * 3);
+    const a = i / TRAIL; col.set([0.25 * a, 0.82 * a, 0.85 * a], i * 3);
+  }
+  trailGeo.attributes.position.needsUpdate = true; trailGeo.attributes.color.needsUpdate = true;
+  const tpos = trGeo.attributes.position.array;
+  tracers.forEach((p, i) => { const q = torusPoint(p.r, p.x, 0.02); tpos[i * 3] = q.x; tpos[i * 3 + 1] = q.y; tpos[i * 3 + 2] = q.z; });
+  trGeo.attributes.position.needsUpdate = true;
+  for (let j = 0; j < P.n; j++) { const m = queenMeshes[j]; if (!m) continue;
+    const S = sim.strength(sim.t - sim.qt[j]); m.visible = S > 0.02;
+    if (m.visible) { m.scale.setScalar(0.3 + 0.7 * S); m.position.copy(torusPoint(j + 0.5, sim.qx[j], 0.03)); } }
+  if (!drag && !reduce && !paused) yaw += dtw * 0.04;
+  placeCamera(); renderer.render(scene, camera);
+  requestAnimationFrame(frame);
+}
+
+// controles
+bindRange("cBeta", "oBeta", v => v.toFixed(3), v => { P.beta = v; pushParams(); });
+bindRange("cLam", "oLam", v => Math.pow(10, v).toFixed(4), v => { P.lam = Math.pow(10, v); pushParams(); });
+bindRange("cAlpha", "oAlpha", v => v.toFixed(2), v => { P.alpha = v; pushParams(); });
+bindRange("cT", "oT", v => v.toFixed(2), v => { P.T = v; pushParams(); });
+bindRange("cSpeed", "oSpeed", v => SPEEDS[v] + " filas/s", v => { speedIx = v; });
+$("cX0").addEventListener("input", () => { P.x0 = +$("cX0").value * P.n; $("oX0").textContent = P.x0.toFixed(2); reset(); });
+$("oX0").textContent = P.x0.toFixed(2);
+$("cN").addEventListener("change", () => { const [n, t] = $("cN").value.split(",").map(Number); P.n = n; P.tor = !!t; P.x0 = +$("cX0").value * n; $("oX0").textContent = P.x0.toFixed(2); $("hLaw").textContent = law().toFixed(2); regimeChip(); reset(); });
+function preset(btn, beta, lg) {
+  for (const b of ["pLock", "pChain", "pLong"]) $(b).classList.toggle("on", b === btn);
+  $("cLam").value = lg; $("cLam").dispatchEvent(new Event("input"));
+  $("cBeta").value = beta; $("cBeta").dispatchEvent(new Event("input"));
+}
+const lamOf = lg => Math.pow(10, lg);
+$("pLock").onclick = () => { preset("pLock", 0.5 * (1 - Math.exp(-lamOf(-0.82) * P.n)), -0.82); reset(); };
+$("pChain").onclick = () => { preset("pChain", 0.8 * (1 - Math.exp(-lamOf(-2.3) * P.n)), -2.3); reset(); };
+$("pLong").onclick = () => { preset("pLong", 0.8 * (1 - Math.exp(-lamOf(-1.3) * P.n)), -1.3); reset(); };
+$("pPause").onclick = () => { paused = !paused; $("pPause").textContent = paused ? "Seguir" : "Pausa"; $("pPause").classList.toggle("on", paused); };
+$("pReset").onclick = reset;
+
+reset();
+resize();
+requestAnimationFrame(frame);
+})();
+</script>

@@ -1,0 +1,33 @@
+p=19
+  F0 una espiral              :     16 construidas,    2 soluciones distintas nuevas  (0 s)
+  F1 dos espirales            :     40 construidas,    2 soluciones distintas nuevas  (0 s)
+  parejas de pendientes con H pequeño: {6: 4, 9: 8} (|H|: nº de parejas)
+  F2 haz 2+1 (doble reclamo)  :     56 construidas,    0 soluciones distintas nuevas  (0 s)
+  F2 haz 3+1 (doble reclamo)  :    784 construidas,    0 soluciones distintas nuevas  (1 s)
+  F2 haz 2+2 (doble reclamo)  :    416 construidas,    1 soluciones distintas nuevas  (1 s)
+  F2 haz 4+1 (doble reclamo)  :   4928 construidas,    0 soluciones distintas nuevas  (20 s)
+  F2 haz 3+2 (doble reclamo)  :   9504 construidas,    0 soluciones distintas nuevas  (43 s)
+  F3 centro de simetria       :    544 construidas,    7 soluciones distintas nuevas  (43 s)
+  F4 mover bloques            : 14 soluciones exploradas,    2 distintas nuevas  (44 s)
+  resumen (soluciones distintas / orbitas de traslacion, sin repetir):
+     F0 una espiral              :     2 / 16
+     F1 dos espirales            :     2 / 40
+     F2 haz 2+2 (doble reclamo)  :     1 / 144
+     F3 centro de simetria       :     7 / 504
+     F4 mover bloques            :     2 / 288
+  VALIDACION exhaustiva: generadas 14 de 23 soluciones distintas = 992 de 2288 orbitas de traslacion (43.4 %); todas las generadas estan en la lista
+  no generadas: ['13:c6x144', '14:c6x144', '15:c6x144', '16:c6x144', '17:c6x144', '18:c6x144', '19:c6x144', '21:c6x144', '22:c6x144']
+     0:c1x8    <- F0 una espiral
+     1:c1x8    <- F0 una espiral
+     2:c2x16   <- F1 dos espirales
+     3:c2x24   <- F1 dos espirales
+     4:c4x144  <- F2 haz 2+2 (doble reclamo)
+     5:c5x72   <- F3 centro de simetria
+     6:c5x72   <- F3 centro de simetria
+     7:c5x72   <- F3 centro de simetria
+     8:c5x72   <- F3 centro de simetria
+     9:c5x72   <- F3 centro de simetria
+     10:c5x72   <- F3 centro de simetria
+     11:c5x144  <- F4 mover bloques
+     12:c6x72   <- F3 centro de simetria
+     20:c6x144  <- F4 mover bloques

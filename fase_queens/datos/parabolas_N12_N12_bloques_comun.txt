@@ -1,0 +1,1 @@
+# cadenas (indices en datos/tableros_N12_N12_bloques.txt) de longitud >= 5, aceleracion comun

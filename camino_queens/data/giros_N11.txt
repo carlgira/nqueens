@@ -1,0 +1,6 @@
+N = 11   soluciones 2680   toroidales 88   no toroidales 2592   teoría≠medida: 0
+  trayectoria más larga L (soluciones):  1:1962  2:532  3:82  4:12  5:4
+  con paso c=1 (L1):                    1:2256  2:286  3:42  4:6  5:2
+  pares de costura W:                   3:328  4:1252  5:872  6:140
+  L media según W:  W=3: 1.62 (328)  W=4: 1.37 (1252)  W=5: 1.09 (872)  W=6: 1.00 (140)
+  distancia d de los pares de costura, todas:  1:552 2:880 3:1208 4:1328 5:1628 6:1628 7:1328 8:1208 9:880 10:552

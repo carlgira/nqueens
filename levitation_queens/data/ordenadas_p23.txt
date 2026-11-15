@@ -1,0 +1,17 @@
+p=23
+  F0 una espiral              :     20 construidas,    3 soluciones distintas nuevas  (0 s)
+  F1 dos espirales            :     32 construidas,    3 soluciones distintas nuevas  (0 s)
+  parejas de pendientes con H pequeño: {11: 16} (|H|: nº de parejas)
+  F2 haz 2+1 (doble reclamo)  :      0 construidas,    0 soluciones distintas nuevas  (0 s)
+  F2 haz 3+1 (doble reclamo)  :      0 construidas,    0 soluciones distintas nuevas  (0 s)
+  F2 haz 2+2 (doble reclamo)  :      0 construidas,    0 soluciones distintas nuevas  (0 s)
+  F2 haz 4+1 (doble reclamo)  :      0 construidas,    0 soluciones distintas nuevas  (0 s)
+  F2 haz 3+2 (doble reclamo)  :      0 construidas,    0 soluciones distintas nuevas  (0 s)
+  F3 centro de simetria       :   7456 construidas,   99 soluciones distintas nuevas  (10 s)
+  F4 mover bloques            : 184 soluciones exploradas,   79 distintas nuevas  (115 s)
+  resumen (soluciones distintas / orbitas de traslacion, sin repetir):
+     F0 una espiral              :     3 / 20
+     F1 dos espirales            :     3 / 32
+     F3 centro de simetria       :    99 / 7436
+     F4 mover bloques            :    79 / 11616
+  total generado: 184 soluciones distintas = 19104 orbitas de traslacion

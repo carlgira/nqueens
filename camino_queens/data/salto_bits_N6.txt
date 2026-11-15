@@ -1,0 +1,11 @@
+N = 6   soluciones 4
+  caminos por pareja (6 parejas):
+    reinas que cambian de sitio (A AND NOT B):  6:6
+    longitud del camino (saltos):  6:4  8:2
+    caminos más largos que su emparejamiento ideal (por bloqueos): 0 de 6
+    caminos que pasan por otra solución por el camino: 0 de 6
+  grafo de todos los caminos: 34 tableros intermedios distintos
+    nº de caminos de pareja que pasan por cada intermedio:  1:34
+    pares de reinas atacándose en los intermedios (todos):  1:1  2:6  3:12  4:10  5:5
+    ídem, solo en los compartidos por ≥2 caminos:
+  secuencias al azar por todas las soluciones (20000): saltos  mín 18  mediana 20  media 20.0  máx 22   (la mejor posible con estos caminos: 18)

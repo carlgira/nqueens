@@ -1,0 +1,39 @@
+N=10 grupos=92 aristas=34 islas=59
+forma islas3+=6 familias=3 en_repetidas=4 mayor_familia=4 mayor_isla_repetida=3
+vector islas3+=6 familias=6 en_repetidas=0 mayor_familia=0 mayor_isla_repetida=0 | barajado familias=6.0 en_repetidas=0.1 mayor_familia=0.1 mayor_isla=0.1
+lugar islas3+=6 familias=6 en_repetidas=0 mayor_familia=0 mayor_isla_repetida=0 | barajado familias=5.7 en_repetidas=0.7 mayor_familia=0.7 mayor_isla=1.1
+N=11 grupos=329 aristas=105 islas=230
+forma islas3+=18 familias=7 en_repetidas=13 mayor_familia=11 mayor_isla_repetida=3
+vector islas3+=18 familias=17 en_repetidas=2 mayor_familia=2 mayor_isla_repetida=3 | barajado familias=17.1 en_repetidas=1.8 mayor_familia=1.4 mayor_isla=1.9
+  familia isla=3 copias=2 etiquetas: g1 g1 g2
+lugar islas3+=18 familias=17 en_repetidas=2 mayor_familia=2 mayor_isla_repetida=3 | barajado familias=17.5 en_repetidas=0.8 mayor_familia=0.8 mayor_isla=1.1
+  familia isla=3 copias=2 etiquetas: g1 g1 g2
+N=12 grupos=1787 aristas=786 islas=1068
+forma islas3+=138 familias=37 en_repetidas=113 mayor_familia=46 mayor_isla_repetida=6
+vector islas3+=138 familias=119 en_repetidas=27 mayor_familia=12 mayor_isla_repetida=4 | barajado familias=126.8 en_repetidas=17.6 mayor_familia=5.8 mayor_isla=3.5
+  familia isla=4 copias=2 etiquetas: g1 g2 g3 g1 g2 g1
+  familia isla=4 copias=2 etiquetas: (5,7) (1,3) (2,9)
+  familia isla=4 copias=2 etiquetas: (5,10) (4,6) g1
+  familia isla=3 copias=3 etiquetas: g1 (2,3)
+  familia isla=3 copias=12 etiquetas: g1 g2 g1
+  familia isla=3 copias=2 etiquetas: (1,10) g1
+lugar islas3+=138 familias=125 en_repetidas=16 mayor_familia=12 mayor_isla_repetida=4 | barajado familias=130.2 en_repetidas=10.7 mayor_familia=6.2 mayor_isla=3.4
+  familia isla=4 copias=2 etiquetas: g1 g2 g3 g1 g2 g1
+  familia isla=3 copias=12 etiquetas: g1 g2 g1
+  familia isla=3 copias=2 etiquetas: g2 g1
+N=13 grupos=8661 aristas=4567 islas=4554
+forma islas3+=678 familias=165 en_repetidas=547 mayor_familia=244 mayor_isla_repetida=8
+vector islas3+=678 familias=555 en_repetidas=174 mayor_familia=22 mayor_isla_repetida=4 | barajado familias=587.6 en_repetidas=127.6 mayor_familia=22.3 mayor_isla=4.0
+  familia isla=4 copias=2 etiquetas: (1,5) (3,11) g1
+  familia isla=4 copias=2 etiquetas: g1 g2 g3 g1 g2 g1
+  familia isla=4 copias=3 etiquetas: g1 g3 g1 g2
+  familia isla=4 copias=2 etiquetas: (2,10) g1 g2 g1
+  familia isla=4 copias=2 etiquetas: g1 (1,11) (1,11) g1
+  familia isla=4 copias=2 etiquetas: (1,4) g1 (1,4) g1
+lugar islas3+=678 familias=601 en_repetidas=107 mayor_familia=22 mayor_isla_repetida=4 | barajado familias=638.0 en_repetidas=53.1 mayor_familia=21.9 mayor_isla=3.7
+  familia isla=4 copias=2 etiquetas: g1 g2 g3 g1 g2 g1
+  familia isla=4 copias=3 etiquetas: g1 g3 g1 g2
+  familia isla=4 copias=2 etiquetas: L4630 L2836 g1
+  familia isla=4 copias=5 etiquetas: g1 g1 g1
+  familia isla=4 copias=2 etiquetas: g2 g1 g3
+  familia isla=4 copias=2 etiquetas: g1 g1 g2 g3

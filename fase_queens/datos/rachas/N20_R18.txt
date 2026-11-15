@@ -1,0 +1,1 @@
+N=20 R=18: 0 tableros iniciales (no toroidales; toroidales aparte 0) [tiempo agotado: cota inferior]  (1800.1s)

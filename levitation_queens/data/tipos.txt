@@ -1,0 +1,49 @@
+
+p=13   (orden del grupo sin traslaciones: 96)
+  clase 3:
+       12 orbitas de traslacion,   1 coberturas minimas, simetria central si:  HAZ 2+1 [i,i] |H|=4
+
+p=17   (orden del grupo sin traslaciones: 128)
+  clase 3:
+       16 orbitas de traslacion,   1 coberturas minimas, simetria central si:  HAZ 2+1 [i,i] |H|=4
+       16 orbitas de traslacion,   1 coberturas minimas, simetria central si:  HAZ 2+1 [i,i] |H|=4
+       32 orbitas de traslacion,   1 coberturas minimas, simetria central no:  HAZ 2+1 [i,i] |H|=4
+       32 orbitas de traslacion,   1 coberturas minimas, simetria central no:  HAZ 2+1 [i,i] |H|=4
+  clase 4:
+       16 orbitas de traslacion,   1 coberturas minimas, simetria central si:  HAZ 3+1 [i,i] |H|=4
+       32 orbitas de traslacion,   1 coberturas minimas, simetria central no:  HAZ 3+1 [i,i] |H|=4
+       16 orbitas de traslacion,   3 coberturas minimas, simetria central si:  HAZ 3+1 [s,s] |H|=8 / RADIAL [s,s,s,s]
+       32 orbitas de traslacion,   1 coberturas minimas, simetria central si:  RADIAL [.,.,s,s]
+       16 orbitas de traslacion,   1 coberturas minimas, simetria central si:  RADIAL [i,i,s,s]
+        4 orbitas de traslacion,   1 coberturas minimas, simetria central si:  RADIAL [s,s,s,s]
+        8 orbitas de traslacion,   1 coberturas minimas, simetria central si:  RADIAL [s,s,s,s]
+  clase 5:
+       32 orbitas de traslacion,   5 coberturas minimas, simetria central no:  otra
+      128 orbitas de traslacion,   3 coberturas minimas, simetria central no:  otra
+  clase 6:
+       16 orbitas de traslacion,  17 coberturas minimas, simetria central si:  otra
+       64 orbitas de traslacion, 286 coberturas minimas, simetria central no:  otra
+
+p=19   (orden del grupo sin traslaciones: 144)
+  clase 4:
+      144 orbitas de traslacion,   1 coberturas minimas, simetria central no:  HAZ 2+2 [w,w] |H|=6
+  clase 5:
+       72 orbitas de traslacion,   3 coberturas minimas, simetria central si:  HAZ 3+2 [.,.] |H|=18 / HAZ 3+2 [.,w] |H|=18
+       72 orbitas de traslacion,  20 coberturas minimas, simetria central si:  HAZ 3+2 [.,.] |H|=18 / HAZ 4+1 [.,-w] |H|=18
+       72 orbitas de traslacion,   3 coberturas minimas, simetria central si:  RADIAL [-w,.,.,.,w]
+       72 orbitas de traslacion,   1 coberturas minimas, simetria central si:  otra
+       72 orbitas de traslacion,   1 coberturas minimas, simetria central si:  otra
+       72 orbitas de traslacion,   3 coberturas minimas, simetria central si:  otra
+      144 orbitas de traslacion,   1 coberturas minimas, simetria central no:  otra
+  clase 6:
+       72 orbitas de traslacion,  32 coberturas minimas, simetria central si:  HAZ 3+3 [.,-w] |H|=18
+      144 orbitas de traslacion, 232 coberturas minimas, simetria central no:  otra
+      144 orbitas de traslacion,  22 coberturas minimas, simetria central no:  otra
+      144 orbitas de traslacion, 153 coberturas minimas, simetria central no:  otra
+      144 orbitas de traslacion,  23 coberturas minimas, simetria central no:  otra
+      144 orbitas de traslacion,  29 coberturas minimas, simetria central no:  otra
+      144 orbitas de traslacion,  45 coberturas minimas, simetria central no:  otra
+      144 orbitas de traslacion,  69 coberturas minimas, simetria central no:  otra
+      144 orbitas de traslacion, 289 coberturas minimas, simetria central no:  otra
+      144 orbitas de traslacion,  26 coberturas minimas, simetria central no:  otra
+      144 orbitas de traslacion,  15 coberturas minimas, simetria central no:  otra

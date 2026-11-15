@@ -1,0 +1,38 @@
+N = 10   soluciones 724 (toroidales 0, no toroidales 724)   falso 724
+  (real: bases no toroidales, aciertos en todas: 8 de 724 son toroidal de N+1 menos una esquina)
+  [real: bases no toroidales, aciertos en todas]  bases 184 (pares muestreados por base: 100)
+    recta              (la fijan 2):  ninguna
+    parábola          (la fijan 3):  ninguna
+    diagonal (λ_i)    (la fijan 3):  ninguna
+    girar filas (r+c mod N) (la fijan 2):  3 sol:18  4 sol:8   | explicadas por D4: 6 sí / 20 no;  tocan alguna toroidal: 0;  toroidal(N+1)−esquina: todas 0, alguna 1; de las de ≥5: 0 de 0
+    girar columnas (i+c) (la fijan 2):  3 sol:18  4 sol:8   | explicadas por D4: 6 sí / 20 no;  tocan alguna toroidal: 0;  toroidal(N+1)−esquina: todas 0, alguna 1; de las de ≥5: 0 de 0
+    afín mod N (a·r+c, a≠1) (la fijan 2):  ninguna
+    otra permutación  (la fijan 2):  3 sol:42  4 sol:8   | explicadas por D4: 34 sí / 16 no;  tocan alguna toroidal: 0;  toroidal(N+1)−esquina: todas 16, alguna 24; de las de ≥5: 0 de 0
+    ejemplo (girar filas (r+c mod N), 4 soluciones):
+       0  3  6  9  5  8  1  4  2  7
+       1  4  7  0  6  9  2  5  3  8
+       2  5  8  1  7  0  3  6  4  9
+       3  6  9  2  8  1  4  7  5  0
+    ejemplo (girar columnas (i+c), 4 soluciones):
+       0  4  6  9  3  1  8  2  5  7
+       4  6  9  3  1  8  2  5  7  0
+       6  9  3  1  8  2  5  7  0  4
+       9  3  1  8  2  5  7  0  4  6
+    ejemplo (otra permutación, 4 soluciones):
+       4  9  3  8  2  7  1  6  0  5
+       2  5  8  0  3  6  9  1  4  7
+       3  7  0  4  8  1  5  9  2  6
+       8  6  4  2  0  9  7  5  3  1
+  (falso: 0 de 724 son toroidal de N+1 menos una esquina)
+  [falso]  bases 181 (pares muestreados por base: 100)
+    recta              (la fijan 2):  ninguna
+    parábola          (la fijan 3):  ninguna
+    diagonal (λ_i)    (la fijan 3):  ninguna
+    girar filas (r+c mod N) (la fijan 2):  ninguna
+    girar columnas (i+c) (la fijan 2):  ninguna
+    afín mod N (a·r+c, a≠1) (la fijan 2):  ninguna
+    otra permutación  (la fijan 2):  3 sol:24   | explicadas por D4: 0 sí / 24 no;  tocan alguna toroidal: 0;  toroidal(N+1)−esquina: todas 0, alguna 0; de las de ≥5: 0 de 0
+    ejemplo (otra permutación, 3 soluciones):
+       2  6  0  8  7  9  3  1  5  4
+       9  2  4  8  6  0  3  5  7  1
+       0  9  1  8  2  4  3  7  6  5
